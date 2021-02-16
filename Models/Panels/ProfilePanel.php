@@ -227,4 +227,10 @@ class ProfilePanel extends XotBasePanel {
         //ddd($user);ddd($row);
         return $row;
     }
+
+    /*
+    public function destroyCallback(){
+        $this->row->
+    }
+    */
 }

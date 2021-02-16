@@ -1,2 +1,5 @@
 .git-rewrite
 *.lock
+node_modules
+package-lock.json
+

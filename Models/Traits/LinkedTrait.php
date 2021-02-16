@@ -263,7 +263,7 @@ trait LinkedTrait {
     //------- mutators -------------
 
     /**
-     * @return false|mixed|string
+     * @return bool|mixed|string
      */
     public function postType() {
         $post_type = collect(config('xra.model'))->search(get_class($this));

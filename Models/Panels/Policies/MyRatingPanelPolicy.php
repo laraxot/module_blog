@@ -12,7 +12,7 @@ class MyRatingPanelPolicy extends XotBasePanelPolicy {
     /**
      * @param \Modules\Xot\Contracts\UserContract $user
      * @param \Modules\Xot\Contracts\PanelContract $panel
-     * @return false
+     * @return bool
      */
     public function create(\Modules\Xot\Contracts\UserContract $user, \Modules\Xot\Contracts\PanelContract $panel):bool {
         return false;

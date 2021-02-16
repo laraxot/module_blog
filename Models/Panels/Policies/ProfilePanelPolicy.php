@@ -23,12 +23,12 @@ class ProfilePanelPolicy extends XotBasePanelPolicy {
         return true;
     }
 
-    /**
-     * @return false
-     */
+    /*
     public function edit(UserContract $user, PanelContract $panel): bool {
+
         return false;
     }
+    */
 
     /**
      * caso particalare.

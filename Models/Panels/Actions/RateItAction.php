@@ -35,7 +35,7 @@ class RateItAction extends XotBasePanelAction {
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|string|void|null
      */
-    public function btn($params = []) {
+    public function btn(array $params = []) {
         extract($params);
         if (! isset($row)) {
             return 'row not set';

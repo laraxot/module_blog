@@ -21,7 +21,7 @@ trait ContainerTrait {
     protected UserRepository $repository;
 
     /**
-     * @return false|\Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed|string
+     * @return bool|\Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed|string
      */
     public function getModel() {
         //return new Post;

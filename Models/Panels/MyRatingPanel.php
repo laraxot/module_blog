@@ -115,7 +115,7 @@ class MyRatingPanel extends XotBasePanel {
         return [];
     }
     /*// deprecated ??
-    public function bodyContentView($params = []) {
+    public function bodyContentView(array $params = []) {
         //ddd($params);
         extract($params);
         //$route_params = \Route::current()->parameters();

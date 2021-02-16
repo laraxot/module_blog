@@ -1,13 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Blog\Models;
 
 //--------- models --------
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\Blog\Models\Traits\PrivacyTrait;
+use Modules\Food\Database\Factories\ProfileFactory;
 use Modules\Geo\Models\Traits\GeoTrait;
 use Modules\LU\Models\Traits\HasProfileTrait;
-use Modules\LU\Models\User;
 //--- TRAITS ---
+use Modules\LU\Models\User;
 use Modules\Xot\Models\Traits\WidgetTrait;
 
 //--- services
@@ -15,106 +20,107 @@ use Modules\Xot\Models\Traits\WidgetTrait;
 //use Modules\Xot\Models\XotBaseModel;
 
 /**
- * Modules\Blog\Models\Profile
+ * Modules\Blog\Models\Profile.
  *
- * @property int $id
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property string|null $deleted_ip
- * @property string|null $created_ip
- * @property string|null $updated_ip
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $deleted_at
- * @property string|null $premise
- * @property string|null $premise_short
- * @property string|null $locality
- * @property string|null $locality_short
- * @property string|null $postal_town
- * @property string|null $postal_town_short
- * @property string|null $administrative_area_level_3
- * @property string|null $administrative_area_level_3_short
- * @property string|null $administrative_area_level_2
- * @property string|null $administrative_area_level_2_short
- * @property string|null $administrative_area_level_1
- * @property string|null $administrative_area_level_1_short
- * @property string|null $country
- * @property string|null $country_short
- * @property string|null $street_number
- * @property string|null $street_number_short
- * @property string|null $route
- * @property string|null $route_short
- * @property string|null $postal_code
- * @property string|null $postal_code_short
- * @property string|null $googleplace_url
- * @property string|null $googleplace_url_short
- * @property string|null $point_of_interest
- * @property string|null $point_of_interest_short
- * @property string|null $political
- * @property string|null $political_short
- * @property string|null $campground
- * @property string|null $campground_short
- * @property string|null $phone
- * @property string|null $website
- * @property string|null $email
- * @property string|null $formatted_address
- * @property string|null $min_order
- * @property string|null $delivery_cost
- * @property string|null $delivery_options
- * @property int|null $order_action
- * @property string|null $price_currency
- * @property string|null $price_range
- * @property string|null $latitude
- * @property string|null $longitude
- * @property string|null $firstname
- * @property string|null $surname
- * @property string|null $address
- * @property int|null $auth_user_id
- * @property int|null $status
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
- * @property-read int|null $articles_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $containerWidgets
- * @property-read int|null $container_widgets_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $favorites
- * @property-read int|null $favorites_count
- * @property-read mixed $create_url
- * @property-read mixed $destroy_url
- * @property-read mixed $detach_url
- * @property-read mixed $edit_url
- * @property-read mixed $first_name
- * @property-read mixed $full_address
- * @property-read mixed $full_name
- * @property mixed $guid
- * @property mixed $image_src
- * @property-read mixed $index_edit_url
- * @property-read mixed $index_url
- * @property-read mixed $lang
- * @property-read mixed $movedown_url
- * @property-read mixed $moveup_url
- * @property-read mixed $post_type
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Privacy[] $privacies
- * @property mixed $routename
- * @property-read mixed $show_url
- * @property-read mixed $subtitle
- * @property-read mixed $sur_name
- * @property-read mixed $title
- * @property mixed $txt
- * @property-read mixed $update_url
- * @property mixed $url
- * @property-read mixed $user_handle
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Image[] $images
- * @property-read int|null $images_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $myFavorites
- * @property-read int|null $my_favorites_count
- * @property-read \Modules\Blog\Models\Post|null $post
- * @property-read int|null $privacies_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Privacy[] $privacies_vecia
- * @property-read int|null $privacies_vecia_count
- * @property-read Profile|null $profile
- * @property-read User|null $user
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
- * @property-read int|null $widgets_count
+ * @property int                                                                      $id
+ * @property string|null                                                              $created_by
+ * @property string|null                                                              $updated_by
+ * @property string|null                                                              $deleted_by
+ * @property string|null                                                              $deleted_ip
+ * @property string|null                                                              $created_ip
+ * @property string|null                                                              $updated_ip
+ * @property \Illuminate\Support\Carbon|null                                          $created_at
+ * @property \Illuminate\Support\Carbon|null                                          $updated_at
+ * @property string|null                                                              $deleted_at
+ * @property string|null                                                              $premise
+ * @property string|null                                                              $premise_short
+ * @property string|null                                                              $locality
+ * @property string|null                                                              $locality_short
+ * @property string|null                                                              $postal_town
+ * @property string|null                                                              $postal_town_short
+ * @property string|null                                                              $administrative_area_level_3
+ * @property string|null                                                              $administrative_area_level_3_short
+ * @property string|null                                                              $administrative_area_level_2
+ * @property string|null                                                              $administrative_area_level_2_short
+ * @property string|null                                                              $administrative_area_level_1
+ * @property string|null                                                              $administrative_area_level_1_short
+ * @property string|null                                                              $country
+ * @property string|null                                                              $country_short
+ * @property string|null                                                              $street_number
+ * @property string|null                                                              $street_number_short
+ * @property string|null                                                              $route
+ * @property string|null                                                              $route_short
+ * @property string|null                                                              $postal_code
+ * @property string|null                                                              $postal_code_short
+ * @property string|null                                                              $googleplace_url
+ * @property string|null                                                              $googleplace_url_short
+ * @property string|null                                                              $point_of_interest
+ * @property string|null                                                              $point_of_interest_short
+ * @property string|null                                                              $political
+ * @property string|null                                                              $political_short
+ * @property string|null                                                              $campground
+ * @property string|null                                                              $campground_short
+ * @property string|null                                                              $phone
+ * @property string|null                                                              $website
+ * @property string|null                                                              $email
+ * @property string|null                                                              $formatted_address
+ * @property string|null                                                              $min_order
+ * @property string|null                                                              $delivery_cost
+ * @property string|null                                                              $delivery_options
+ * @property int|null                                                                 $order_action
+ * @property string|null                                                              $price_currency
+ * @property string|null                                                              $price_range
+ * @property string|null                                                              $latitude
+ * @property string|null                                                              $longitude
+ * @property string|null                                                              $firstname
+ * @property string|null                                                              $surname
+ * @property string|null                                                              $address
+ * @property int|null                                                                 $auth_user_id
+ * @property int|null                                                                 $status
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[]  $articles
+ * @property int|null                                                                 $articles_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]    $containerWidgets
+ * @property int|null                                                                 $container_widgets_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $favorites
+ * @property int|null                                                                 $favorites_count
+ * @property mixed                                                                    $create_url
+ * @property mixed                                                                    $destroy_url
+ * @property mixed                                                                    $detach_url
+ * @property mixed                                                                    $edit_url
+ * @property mixed                                                                    $first_name
+ * @property mixed                                                                    $full_address
+ * @property mixed                                                                    $full_name
+ * @property mixed                                                                    $guid
+ * @property mixed                                                                    $image_src
+ * @property mixed                                                                    $index_edit_url
+ * @property mixed                                                                    $index_url
+ * @property mixed                                                                    $lang
+ * @property mixed                                                                    $movedown_url
+ * @property mixed                                                                    $moveup_url
+ * @property mixed                                                                    $post_type
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Privacy[]  $privacies
+ * @property mixed                                                                    $routename
+ * @property mixed                                                                    $show_url
+ * @property mixed                                                                    $subtitle
+ * @property mixed                                                                    $sur_name
+ * @property mixed                                                                    $title
+ * @property mixed                                                                    $txt
+ * @property mixed                                                                    $update_url
+ * @property mixed                                                                    $url
+ * @property mixed                                                                    $user_handle
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Image[]    $images
+ * @property int|null                                                                 $images_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $myFavorites
+ * @property int|null                                                                 $my_favorites_count
+ * @property \Modules\Blog\Models\Post|null                                           $post
+ * @property int|null                                                                 $privacies_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Privacy[]  $privacies_vecia
+ * @property int|null                                                                 $privacies_vecia_count
+ * @property Profile|null                                                             $profile
+ * @property User|null                                                                $user
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]    $widgets
+ * @property int|null                                                                 $widgets_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -178,7 +184,9 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile withDistance($lat, $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @mixin \Eloquent
+ *
  * @property string|null $bio
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
  */
@@ -187,15 +195,27 @@ class Profile extends BaseModelLang {
     use HasProfileTrait;
     use GeoTrait;
     use WidgetTrait;
+    use HasFactory;
+
     /**
      * se non metto $connection  quando faccio la relazione con lu, prende la connection di lu.
      *
      **/
     protected $connection = 'mysql'; // this will use the specified database conneciton
+
     /**
      * @var string[]
      */
     protected $fillable = ['id', 'auth_user_id', 'phone', 'email', 'bio'];
+
+    /**
+     * Create a new factory instance for the model.
+     *
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    protected static function newFactory() {
+        return ProfileFactory::new();
+    }
 
     //------- RELATIONSHIP ----------
 
@@ -205,8 +225,6 @@ class Profile extends BaseModelLang {
     public function articles() {
         return $this->hasMany(Article::class, 'auth_user_id', 'auth_user_id');
     }
-
-
 
     //---- mutators ---
     /*  ------------------ utilizza quello di HasProfileTrait
