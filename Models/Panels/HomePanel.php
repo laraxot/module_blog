@@ -1,75 +1,67 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-
 //--- Services --
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
- * Class HomePanel
- * @package Modules\Blog\Models\Panels
+ * Class HomePanel.
  */
-class HomePanel extends XotBasePanel
-{
+class HomePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
-     *
-     * @var string
      */
     protected static string $model = 'Modules\Blog\Models\Home';
-
 
     /**
      * @return object[]
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
-            (object)[
+            (object) [
                 'type' => 'Id',
                 'name' => 'id',
             ],
-            (object)[
+            (object) [
                 'type' => 'Text',
                 //'name' => 'post[title]',
                 'name' => 'post.title',
                 'col_bs_size' => 12,
             ],
             //*/
-            (object)[
+            (object) [
                 'type' => 'Textarea',
                 //'name' => 'post[subtitle]'
                 'name' => 'post.subtitle',
                 'except' => ['index'],
                 'col_bs_size' => 12,
             ],
-            (object)[
+            (object) [
                 'type' => 'Wysiwyg',
                 //'name' => 'post[subtitle]'
                 'name' => 'post.txt',
                 'except' => ['index'],
                 'col_bs_size' => 12,
             ],
-            (object)[
+            (object) [
                 'type' => 'Image',
                 'name' => 'icon_src',
             ],
         ];
     }
 
-
     /**
      * Get the actions available for the resource.
      *
-     *
      * @return array
      */
-    public function actions()
-    {
+    public function actions() {
         return [
-            new Actions\ArtisanAction(request()->input('cmd')),
+            new Actions\ArtisanAction(request()->input('cmd', '')),
             new \Modules\Blog\Models\Panels\Actions\RateItAction(),
             new Actions\TestAction(),
         ];
@@ -78,8 +70,7 @@ class HomePanel extends XotBasePanel
     /**
      * @return bool
      */
-    public function hasLang()
-    {
+    public function hasLang() {
         return true;
     }
 }
