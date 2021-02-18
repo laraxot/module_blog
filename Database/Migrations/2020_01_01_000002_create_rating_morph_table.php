@@ -45,6 +45,11 @@ class CreateRatingMorphTable extends XotBaseMigration {
                 if ($this->hasColumn('related_id')) {
                     $table->renameColumn('related_id', 'rating_id');
                 }
+
+                if (! $this->hasColumn('rating_id')) {
+                    $table->integer('rating_id')->after('post_id');
+                }
+
                 if ($this->hasColumn('related_type')) {
                     $table->dropColumn('related_type');
                 }
