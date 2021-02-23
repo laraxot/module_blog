@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -46,3 +47,53 @@ class ArtisanAction extends XotBasePanelAction {
 
     //end handle
 }
+=======
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models\Panels\Actions;
+
+//-------- models -----------
+
+//-------- services --------
+use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
+//-------- bases -----------
+use Modules\Xot\Services\ArtisanService;
+
+/**
+ * Class ArtisanAction.
+ */
+class ArtisanAction extends XotBasePanelAction {
+    public bool $onContainer = false; //onlyContainer
+
+    public bool $onItem = true; //onlyContainer
+
+    public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
+
+    protected string $cmd;
+
+    protected array $cmd_params;
+
+    /**
+     * ArtisanAction constructor.
+     */
+    public function __construct(string $cmd, array $cmd_params = []) {
+        $this->cmd = $cmd;
+        $this->cmd_params = $cmd_params;
+    }
+
+    /**
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     *
+     * @return mixed
+     */
+    public function handle() {
+        $out = ArtisanService::act($this->cmd);
+
+        return $out;
+    }
+
+    //end handle
+}
+>>>>>>> b665d0938279a050d707ca03721252dde228daf1

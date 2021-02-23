@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -16,3 +17,23 @@ class PhotoPolicy extends XotBasePolicy {
         return true;
     }
 }
+=======
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models\Policies;
+
+use Modules\Xot\Contracts\ModelContract;
+use Modules\Xot\Contracts\UserContract;
+use Modules\Xot\Models\Policies\XotBasePolicy;
+
+/**
+ * Class PhotoPolicy.
+ */
+class PhotoPolicy extends XotBasePolicy {
+    public function rate(UserContract $user, ModelContract $post): bool {
+        return true;
+    }
+}
+>>>>>>> b665d0938279a050d707ca03721252dde228daf1
