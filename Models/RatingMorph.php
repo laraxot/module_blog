@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -62,68 +61,3 @@ class RatingMorph extends BaseMorphPivot {
         return $this->hasOne(Rating::class); //, 'id', 'rating_id');
     }
 }
-=======
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Blog\Models;
-
-/**
- * Modules\Blog\Models\RatingMorph.
- *
- * @property int                              $id
- * @property string|null                      $post_type
- * @property int|null                         $post_id
- * @property string|null                      $related_type
- * @property int|null                         $rating_id
- * @property \Modules\Blog\Models\Rating|null $rating
- * @property string|null                      $created_by
- * @property string|null                      $updated_by
- * @property string|null                      $deleted_by
- * @property \Illuminate\Support\Carbon|null  $created_at
- * @property \Illuminate\Support\Carbon|null  $updated_at
- * @property int|null                         $auth_user_id
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph query()
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereAuthUserId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph wherePostId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereRating($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereRatingId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereRelatedType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereUpdatedBy($value)
- * @mixin \Eloquent
- * @property int|null $value
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereValue($value)
- * @property int|null $related_id
- * @method static \Illuminate\Database\Eloquent\Builder|RatingMorph whereRelatedId($value)
- */
-class RatingMorph extends BaseMorphPivot {
-    /**
-     * @var string[]
-     */
-    protected $fillable = [
-        'id',
-        'post_id', 'post_type',
-        'rating_id', /* 'related_type',  */
-        'value',
-        'auth_user_id',
-    ];
-
-    //-------- RELATIONSHIP -----------
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
-    public function rating() {
-        return $this->hasOne(Rating::class); //, 'id', 'rating_id');
-    }
-}
->>>>>>> b665d0938279a050d707ca03721252dde228daf1

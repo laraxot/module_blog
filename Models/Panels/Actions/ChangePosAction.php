@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -31,37 +30,3 @@ class ChangePosAction extends XotBasePanelAction {
         dddx($this->row);
     }
 }
-=======
-<?php
-
-declare(strict_types=1);
-
-namespace Modules\Blog\Models\Panels\Actions;
-
-//-------- services --------
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
-
-//-------- bases -----------
-
-/**
- * Class ChangePosAction.
- */
-class ChangePosAction extends XotBasePanelAction {
-    //public bool $onContainer = false;
-
-    public bool $onItem = true;
-    //onlyContainer
-    //mettere freccette su e giù
-
-    public string $icon = '<i class="fa fa-arrow-up"></i><i class="fa fa-arrow-down"></i>';
-
-        /**
-    * Perform the action
-* @return mixed
-     */
-    public function handle() {
-        //return 'ciao';
-        dddx($this->row);
-    }
-}
->>>>>>> b665d0938279a050d707ca03721252dde228daf1
