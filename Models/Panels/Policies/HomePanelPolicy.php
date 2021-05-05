@@ -12,7 +12,7 @@ use Modules\Xot\Models\Panels\Policies\XotBasePanelPolicy;
  * Class HomePanelPolicy.
  */
 class HomePanelPolicy extends XotBasePanelPolicy {
-    public function artisan(UserContract $user, PanelContract $panel): bool {
+    public function artisan(?UserContract $user, PanelContract $panel): bool {
         return true;
     }
 
