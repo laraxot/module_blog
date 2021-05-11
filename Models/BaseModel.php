@@ -2,18 +2,19 @@
 
 namespace Modules\Blog\Models;
 
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
+//---------- traits
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
-//---------- traits
 use Modules\Xot\Traits\Updater;
 
 /**
- * Class BaseModel
- * @package Modules\Blog\Models
+ * Class BaseModel.
  */
 abstract class BaseModel extends Model {
     use Updater;
     use Searchable;
+    //use Cachable;
 
     /**
      * @var string[]
