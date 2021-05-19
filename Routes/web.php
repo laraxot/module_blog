@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,7 +13,8 @@
 |
 */
 /*
-Route::prefix('blog')->group(function() {
+
+Route::prefix('blog')->group(function (): void {
     Route::get('/', 'BlogController@index');
 });
-*/
+//*/
