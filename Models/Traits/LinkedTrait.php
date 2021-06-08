@@ -61,7 +61,7 @@ trait LinkedTrait {
         }
 
         return $this->morphOne(Post::class, 'post')//, null, 'id')
-                ->where('lang', App::getLocale());
+            ->where('lang', App::getLocale());
     }
 
     /**
@@ -69,7 +69,7 @@ trait LinkedTrait {
      */
     public function postLang(string $lang) {
         return $this->morphOne(Post::class, 'post')//, null, 'id')
-                ->where('lang', $lang);
+            ->where('lang', $lang);
     }
 
     /**
@@ -308,13 +308,6 @@ trait LinkedTrait {
         return $lang;
     }
 
-    public function setGuidAttribute(?string $value): void {
-        if ('' == $value && null != $this->post) {
-            $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
-            $res = $this->post->save();
-        }
-    }
-
     /**
      * @return mixed
      */
@@ -411,9 +404,27 @@ trait LinkedTrait {
         return $this->getPostAttr(__FUNCTION__, $value);
     }
     */
-    //public function setTitleAttribute($value)       {return $this->setPostAttr(__FUNCTION__,$value);}
-    //public function setSubtitleAttribute($value)    {return $this->setPostAttr(__FUNCTION__,$value);}
-    //  public function setGuidAttribute($value)        {return $this->setPostAttr(__FUNCTION__,$value);}
+    /*
+    public function setTitleAttribute(?string $value): void {
+        $this->setPostAttr(__FUNCTION__, $value);
+    }
+
+    public function setSubtitleAttribute(?string $value): void {
+        $this->setPostAttr(__FUNCTION__, $value);
+    }
+    */
+    public function setGuidAttribute(?string $value): void {
+        if ('' == $value && null != $this->post) {
+            $this->post->guid = Str::slug($this->attributes['title'].' '.$this->attributes['subtitle']);
+            $res = $this->post->save();
+        }
+    }
+
+    /*
+    public function setGuidAttribute(?string $value): void {
+        $this->setPostAttr(__FUNCTION__, $value);
+    }
+    */
 
     public function setImageSrcAttribute(?string $value): void {
         $this->setPostAttr(__FUNCTION__, $value);
@@ -622,7 +633,7 @@ trait LinkedTrait {
             return $query->where('post_id', $guid);
         //return $query->where('post.post_id',$guid);
         } else {
-            return $query->whereHas('post', function ($query) use ($guid) {
+            return $query->whereHas('post', function ($query) use ($guid): void {
                 $query->where('guid', $guid);
             });
         }
