@@ -46,6 +46,8 @@ class CreatePostsTable extends XotBaseMigration {
                 // if (!$this->hasColumn( 'post_type')) {
                 //     $table->string('post_type', 40)->after('type')->index()->nullable();
                 // }
+                //Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
+                /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
                     ->listTableDetails($table->getTable());
@@ -53,7 +55,7 @@ class CreatePostsTable extends XotBaseMigration {
                 if (! $schema_builder->hasIndex($this->getTable().'_'.'guid'.'_index')) {
                     $table->string('guid', 100)->index()->change();
                 }
-
+                */
                 if (! $this->hasColumn('guid')) {
                     $table->string('guid')->nullable();
                 }
@@ -128,6 +130,9 @@ class CreatePostsTable extends XotBaseMigration {
                 }
 
                 //------- CHANGE INDEX-------
+
+                //Doctrine\DBAL\Driver\PDOMySql\Driver
+                /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
                     ->listTableDetails($table->getTable());
@@ -141,6 +146,7 @@ class CreatePostsTable extends XotBaseMigration {
                 if (! $schema_builder->hasIndex($this->getTable().'_'.'lang'.'_index')) {
                     $table->string('lang', 3)->nullable()->index()->change();
                 }
+                */
                 //-------- CHANGE FIELD -------------
                 $table->text('subtitle')->nullable()->change();
             }
