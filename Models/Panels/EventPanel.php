@@ -1,31 +1,25 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Http\Request;
 //--- Services --
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 //---- bases --
 
 /**
- * Class EventPanel
- * @package Modules\Blog\Models\Panels
+ * Class EventPanel.
  */
 class EventPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
-     *
-     * @var string
      */
     protected static string $model = 'Modules\Blog\Models\Event';
 
-
     /**
      * Get the fields displayed by the resource.
-     *
-     *
-     * @return array
      */
     public function fields(): array {
         return [
@@ -47,20 +41,20 @@ class EventPanel extends XotBasePanel {
             ],
             (object) [
                 'type' => 'Text',
-                'name' => 'title',
+                'name' => 'post.title',
             ],
             (object) [
                 'type' => 'Text',
-                'name' => 'subtitle',
+                'name' => 'post.subtitle',
             ],
+            /*
             (object) [
                 'type' => 'Text', //'Html5UploadImg',
                 'name' => 'image_src',
                 'col_bs_size' => 6,
                 'except' => ['index'],
             ],
+            */
         ];
     }
-
-
 }
