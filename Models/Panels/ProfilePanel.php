@@ -106,7 +106,7 @@ class ProfilePanel extends XotBasePanel {
             ],
             (object) [
                 'type' => 'PivotFields', //-- da aggiornare
-                'name' => Str::plural('privacy'),
+                'name' => 'privacies',
                 'col_bs_size' => 12,
                 'rules' => 'pivot_rules',
                 'except' => ['index'],
