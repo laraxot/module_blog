@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
+//use Laravel\Scout\Searchable;
 //---------- traits
 use Modules\Blog\Models\Traits\LinkedTrait;
 use Modules\Xot\Contracts\ModelContract;
@@ -19,7 +19,7 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class XotBaseModel extends Model implements ModelContract {
     use Updater;
-    use Searchable;
+    //use Searchable;
     use LinkedTrait;
     //-------------
     /*

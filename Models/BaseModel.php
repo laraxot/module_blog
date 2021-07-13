@@ -5,7 +5,7 @@ namespace Modules\Blog\Models;
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 //---------- traits
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
+//use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
 
 /**
@@ -13,7 +13,7 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class BaseModel extends Model {
     use Updater;
-    use Searchable;
+    //use Searchable;
     //use Cachable;
 
     /**
