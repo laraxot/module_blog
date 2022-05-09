@@ -1,0 +1,91 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models\Traits\Relationships;
+
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Modules\Blog\Models\Article;
+use Modules\Blog\Models\Category;
+use Modules\Blog\Models\Comment;
+use Modules\LU\Models\User;
+use Modules\Xot\Models\Image;
+
+/**
+ * Undocumented trait.
+ */
+trait ArticleRelationship {
+    public function sons(): HasMany {
+        return $this->hasMany(Article::class, 'parent_id', 'id')->with(['post'])->orderBy('pos');
+    }
+
+    public function articles(): HasMany {
+        return $this->hasMany(Article::class, 'parent_id', 'id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    public function categories() {
+        return $this->morphRelated(Category::class, true);
+    }
+
+    public function images(): MorphMany {
+        return $this->morphMany(Image::class, 'post');
+    }
+
+    /*
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    /* --- move to module Tag
+    public function tags() {
+        return $this->morphRelated(Tag::class, true);
+    }
+    */
+
+    /**
+     * The author that belong to the article.
+     */
+    /*
+    public function author() {
+        //return $this->belongsTo('App\User')->withTrashed(); withTrashed cos'è?
+        //return $this->fullName;
+        return $this->belongsTo(User::class)->withDefault(
+            [
+                'id' => 1,
+                'guid' => 'guest',
+                'name' => 'Guest Author',
+            ]
+        );
+    }
+    */
+
+    /*
+    * Get the tags of the article
+    *
+    * @return \Illuminate\Database\Eloquent\Collection
+       move to module tag
+    public function tags()
+    {
+       return $this->belongsToMany(Tag::class);
+    }
+    */
+
+    /*
+     * Get the comments of the article.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     commmenti son sia di un articolo, o di un prodotto.. percio' morph many
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
+    */
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function comments() {
+        return $this->morphMany(Comment::class, 'post');
+    }
+}

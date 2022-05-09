@@ -1,0 +1,33 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models\Panels\Actions;
+
+//-------- models -----------
+
+//-------- services --------
+
+use Illuminate\Contracts\Support\Renderable;
+use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
+
+//-------- bases -----------
+
+/**
+ * Class PersonalInfoAction.
+ */
+class PersonalInfoAction extends XotBasePanelAction {
+    public bool $onContainer = false; //onlyContainer
+
+    public bool $onItem = true; //onlyContainer
+
+    //public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
+
+    public function handle(): Renderable {
+        //dddx($this->panel->view());
+
+        return $this->panel->view();
+    }
+
+    //end handle
+}

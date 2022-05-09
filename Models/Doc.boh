@@ -1,0 +1,207 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models;
+
+use Carbon\Carbon;
+//----- traits ----
+use Modules\LU\Models\Traits\HasProfileTrait;
+use Modules\Rating\Models\Traits\RatingTrait;
+use Modules\Tag\Models\Traits\HasTagTrait;
+
+//------services---------
+
+//--- models ---
+
+/**
+ * Modules\Blog\Models\Doc.
+ *
+ * @property int                                                                      $id
+ * @property string|null                                                              $parent_type
+ * @property int|null                                                                 $parent_id
+ * @property int|null                                                                 $pos
+ * @property string|null                                                              $article_type
+ * @property \Illuminate\Support\Carbon|null                                          $published_at
+ * @property string|null                                                              $updated_by
+ * @property string|null                                                              $created_by
+ * @property \Illuminate\Support\Carbon|null                                          $created_at
+ * @property \Illuminate\Support\Carbon|null                                          $updated_at
+ * @property int|null                                                                 $user_id
+ * @property int|null                                                                 $is_featured
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[]  $articles
+ * @property int|null                                                                 $articles_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Comment[]  $comments
+ * @property int|null                                                                 $comments_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $favorites
+ * @property int|null                                                                 $favorites_count
+ * @property mixed                                                                    $create_url
+ * @property mixed                                                                    $destroy_url
+ * @property mixed                                                                    $detach_url
+ * @property mixed                                                                    $edit_url
+ * @property mixed                                                                    $email
+ * @property mixed                                                                    $first_name
+ * @property mixed                                                                    $full_name
+ * @property mixed                                                                    $guid
+ * @property mixed                                                                    $image_src
+ * @property mixed                                                                    $index_edit_url
+ * @property mixed                                                                    $index_url
+ * @property mixed                                                                    $lang
+ * @property mixed                                                                    $movedown_url
+ * @property mixed                                                                    $moveup_url
+ * @property mixed                                                                    $my_rating
+ * @property mixed                                                                    $post_type
+ * @property mixed                                                                    $ratings_avg
+ * @property int|null                                                                 $ratings_count
+ * @property mixed                                                                    $routename
+ * @property mixed                                                                    $show_url
+ * @property mixed                                                                    $subtitle
+ * @property mixed                                                                    $sur_name
+ * @property mixed                                                                    $title
+ * @property mixed                                                                    $txt
+ * @property mixed                                                                    $update_url
+ * @property mixed                                                                    $url
+ * @property mixed                                                                    $user_handle
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Image[]    $images
+ * @property int|null                                                                 $images_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $myFavorites
+ * @property int|null                                                                 $my_favorites_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $myRatings
+ * @property int|null                                                                 $my_ratings_count
+ * @property \Modules\Lang\Models\Post|null                                           $post
+ * @property \Modules\Blog\Models\Profile|null                                        $profile
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratingObjectives
+ * @property int|null                                                                 $rating_objectives_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[]  $sons
+ * @property int|null                                                                 $sons_count
+ * @property \Modules\LU\Models\User|null                                             $user
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereArticleType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereAuthUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereIsFeatured($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereParentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereParentType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc wherePos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc wherePublishedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc withRating()
+ * @mixin \Eloquent
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereRatingsAvg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc whereRatingsCount($value)
+ * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $linkable
+ * @property-read \Modules\LU\Models\PermUser|null $perm
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
+ * @property-read int|null $posts_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[] $tags
+ * @property-read int|null $tags_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Doc ofTag(int $tag_cat_id, int $tag_id)
+ * @mixin IdeHelperDoc
+ */
+class Doc extends BaseModelLang {
+    use RatingTrait;
+    use HasProfileTrait;
+    use HasTagTrait;
+    /**
+     * @var string[]
+     */
+    protected $fillable = [
+        'id', 'pos', 'article_type', 'published_at',
+        'parent_id', 'parent_type', 'is_featured', 'user_id',
+        'ratings_avg', 'ratings_count',
+    ];
+    /**
+     * @var string[]
+     */
+    protected $appends = ['title'];
+    /* https://itnext.io/7-things-you-need-to-know-to-get-the-most-out-of-your-laravel-model-4f915acbb47c */
+
+    //--------- relationship ---------------
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function sons():\Illuminate\Database\Eloquent\Relations\HasMany {
+        return $this->hasMany(Article::class, 'parent_id', 'id')->orderBy('pos');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function articles():\Illuminate\Database\Eloquent\Relations\HasMany {
+        return $this->hasMany(Article::class, 'parent_id', 'id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    public function categories() {
+        return $this->morphRelated(Category::class, true);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function images() {
+        return $this->morphMany(Image::class, 'post');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     */
+    /* -- hasTagTrait
+    public function tags() {
+        return $this->morphRelated(Tag::class, true);
+    }
+    */
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function comments() {
+        return $this->morphMany(Comment::class, 'post');
+    }
+
+    //---------- mututars -----------
+
+    /**
+     * @param mixed $value
+     *
+     * @return int|null
+     */
+    public function getParentIdAttribute($value) {
+        if (null !== $value) {
+            return $value;
+        }
+
+        if (null == $this->getKey()) {
+            return null;
+        }
+
+        $value = 0;
+        $this->parent_id = $value;
+        $this->save();
+
+        return $value;
+    }
+
+    /*
+    public function setPublishedAtAttribute($value) {
+        dddx($value);
+        if (\is_string($value)) {
+            //$value = Carbon::now();
+            //config('app.date_format')
+            $value=Carbon::createFromFormat('d/m/Y H:i', $value);
+        }
+        $this->attributes['published_at'] = $value;
+    }
+    //*/
+}//end model

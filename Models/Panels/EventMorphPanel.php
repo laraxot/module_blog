@@ -1,0 +1,67 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models\Panels;
+
+//--- Services --
+
+use Modules\Xot\Models\Panels\XotBasePanel;
+
+/**
+ * Class EventMorphPanel.
+ */
+class EventMorphPanel extends XotBasePanel {
+    /**
+     * The model the resource corresponds to.
+     */
+    public static string $model = 'Modules\Blog\Models\EventMorph';
+
+    /**
+     * @return object[]
+     */
+    public function fields(): array {
+        return [
+            (object) [
+                'type' => 'Id',
+                'name' => 'id',
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'BigInt',
+                'name' => 'post_id',
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'post_type',
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'BigInt',
+                'name' => 'event_id',
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'String',
+                'name' => 'related_type',
+                'comment' => null,
+            ],
+            (object) [
+                'type' => 'Integer',
+                'name' => 'user_id',
+                'comment' => null,
+            ],
+        ];
+    }
+
+    /**
+     * Get the actions available for the resource.
+     *
+
+     * @return array
+     */
+    public function actions():array {
+        return [];
+    }
+}
