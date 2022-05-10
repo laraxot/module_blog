@@ -11,6 +11,7 @@ return [
     'without' => ['placeholder' => 'Escludi'],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'title' => [
         'placeholder' => 'Cerca',
     ],
@@ -21,4 +22,6 @@ return [
         'placeholder' => 'Cerca',
     ],
 >>>>>>> 7995957 (.)
+=======
+>>>>>>> eed9a9f (first)
 ];

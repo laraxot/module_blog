@@ -44,12 +44,15 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
 =======
 >>>>>>> 9225dd6 (up)
+=======
+>>>>>>> eed9a9f (first)
     /*
     "id" => "trallala"
         "parent_id" => 0
@@ -62,6 +65,7 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     //--------- relationship ---------------
@@ -92,6 +96,8 @@ class Page extends BaseModel {
 
     //--------- relationship ---------------
 >>>>>>> 5bff340 (first)
+=======
+>>>>>>> eed9a9f (first)
 
     public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
         return $this->hasMany(self::class, 'parent_id', 'id');
@@ -106,6 +112,7 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // ---------------------------------------------
 =======
     //---------------------------------------------
@@ -134,6 +141,9 @@ class Page extends BaseModel {
 =======
     //---------------------------------------------
 >>>>>>> 5bff340 (first)
+=======
+    // ---------------------------------------------
+>>>>>>> eed9a9f (first)
 
     /**
      * Undocumented function.
@@ -141,6 +151,7 @@ class Page extends BaseModel {
      * @return void
      */
     public function getRows() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +177,11 @@ class Page extends BaseModel {
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> e302e92 (.)
+=======
+        $nss = [];
+        $nss[] = 'pub_theme';
+        $main_module = config('xra.main_module');
+>>>>>>> eed9a9f (first)
         if ('' != $main_module) {
             $nss[] = strtolower($main_module);
         }
@@ -184,6 +200,7 @@ class Page extends BaseModel {
             }
             */
             $tmp = collect(File::files($pages_path))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -247,6 +264,10 @@ class Page extends BaseModel {
 >>>>>>> ffb8c7b (first)
 =======
 >>>>>>> 5bff340 (first)
+=======
+            ->map(
+                function ($file) use ($ns) {
+>>>>>>> eed9a9f (first)
                     $title = $file->getFilenameWithoutExtension();
                     $title = Str::before($title, '.blade');
 
@@ -255,6 +276,7 @@ class Page extends BaseModel {
                         'parent_id' => 0,
                         'guid' => $title,
                         'title' => $title,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -292,6 +314,9 @@ class Page extends BaseModel {
 >>>>>>> ffb8c7b (first)
 =======
 >>>>>>> 5bff340 (first)
+=======
+                        'ns' => $ns,
+>>>>>>> eed9a9f (first)
                     ];
                 }
             )->filter(
@@ -299,6 +324,7 @@ class Page extends BaseModel {
                     return ! in_array($item['guid'], ['index', 'show']);
                 }
             )->all();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -375,3 +401,12 @@ class Page extends BaseModel {
     }
 }//end model
 >>>>>>> 5bff340 (first)
+=======
+            $pages = $pages->merge($tmp);
+        }
+        // dddx($pages);
+
+        return $pages;
+    }
+}// end model
+>>>>>>> eed9a9f (first)
