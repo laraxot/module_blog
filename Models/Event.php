@@ -41,11 +41,15 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  * @property mixed                                                                $url
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+ *
+>>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\EventFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Event newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Event newQuery()
@@ -121,6 +125,7 @@ class Event extends BaseModelLang {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
      
@@ -137,6 +142,9 @@ class Event extends BaseModelLang {
 =======
 
 >>>>>>> 7936983 (up)
+=======
+
+>>>>>>> 9225dd6 (up)
     public function address() {// fare HasPlaceTrait
         $row = $this->morphOne(Place::class, 'post'); //->withDefault('aaaa')
 

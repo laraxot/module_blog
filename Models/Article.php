@@ -64,11 +64,15 @@ use Modules\Tag\Models\Traits\HasTagTrait;
  * @property \Modules\LU\Models\User                                                  $user
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+ *
+>>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Article approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article article($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article author($id)
@@ -101,11 +105,15 @@ use Modules\Tag\Models\Traits\HasTagTrait;
  * @mixin \Eloquent
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+ *
+>>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\ArticleFactory factory(...$parameters)
  * @mixin IdeHelperArticle
  */

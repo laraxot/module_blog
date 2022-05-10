@@ -45,11 +45,15 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+ *
+>>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Comment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -69,16 +73,23 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment withRating()
  * @mixin \Eloquent
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 9225dd6 (up)
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
 <<<<<<< HEAD
  *
+<<<<<<< HEAD
 =======
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+>>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\CommentFactory factory(...$parameters)
  * @mixin IdeHelperComment
  */

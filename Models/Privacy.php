@@ -47,6 +47,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 >>>>>>> 9f39ec2 (first)
@@ -60,6 +61,8 @@ namespace Modules\Blog\Models;
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+>>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -79,14 +82,18 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+>>>>>>> 9225dd6 (up)
  * @property int $post_id
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy wherePostId($value)
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -113,6 +120,8 @@ namespace Modules\Blog\Models;
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 7936983 (up)
+=======
+>>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\PrivacyFactory factory(...$parameters)
  * @mixin IdeHelperPrivacy
  */
