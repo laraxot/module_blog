@@ -129,6 +129,9 @@ class Page extends BaseModel {
             */
             $tmp = collect(File::files($pages_path))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9bcf56c (.)
             ->filter(
                 function($item){
                     return Str::endsWith($item->getFilename(), '.blade.php');
@@ -181,6 +184,7 @@ class Page extends BaseModel {
 <<<<<<< HEAD
                         'ns' => $ns,
                     //    'ext' => $file->getExtension(),
+<<<<<<< HEAD
 =======
 >>>>>>> 9f39ec2 (first)
 =======
@@ -190,6 +194,8 @@ class Page extends BaseModel {
 =======
                         'ns' => $ns,
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 9bcf56c (.)
                     ];
                 }
             )->filter(
@@ -203,9 +209,10 @@ class Page extends BaseModel {
 <<<<<<< HEAD
             $pages = $pages->merge($tmp);
         }
-
+        
         return $pages->all();
     }
+<<<<<<< HEAD
 }// end model
 =======
 
@@ -236,3 +243,6 @@ class Page extends BaseModel {
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> e302e92 (.)
+=======
+}// end model
+>>>>>>> 9bcf56c (.)
