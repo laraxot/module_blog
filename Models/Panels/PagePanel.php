@@ -9,6 +9,7 @@ namespace Modules\Blog\Models\Panels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
 =======
 >>>>>>> 9f39ec2 (first)
@@ -19,6 +20,9 @@ use Illuminate\Contracts\Support\Renderable;
 =======
 use Illuminate\Contracts\Support\Renderable;
 >>>>>>> eed9a9f (first)
+=======
+use Illuminate\Contracts\Support\Renderable;
+>>>>>>> 7936983 (up)
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -71,8 +75,11 @@ class PagePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
      * index navigation.
      */
     public function indexNav(): ?Renderable {
@@ -90,6 +97,7 @@ class PagePanel extends XotBasePanel {
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 9f39ec2 (first)
 =======
@@ -98,6 +106,8 @@ class PagePanel extends XotBasePanel {
 >>>>>>> 5bff340 (first)
 =======
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
      * Get the fields displayed by the resource.
      */
     public function fields(): array {
@@ -194,6 +204,7 @@ class PagePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array
@@ -208,6 +219,8 @@ class PagePanel extends XotBasePanel {
 >>>>>>> 5bff340 (first)
 =======
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
      */
     public function actions(): array {
         return [

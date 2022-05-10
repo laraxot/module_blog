@@ -39,8 +39,11 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
     /*
     "id" => "trallala"
         "parent_id" => 0
@@ -51,6 +54,7 @@ class Page extends BaseModel {
 
     // --------- relationship ---------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     //--------- relationship ---------------
@@ -65,6 +69,8 @@ class Page extends BaseModel {
 >>>>>>> 5bff340 (first)
 =======
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
 
     public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
         return $this->hasMany(self::class, 'parent_id', 'id');
@@ -74,6 +80,7 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // ---------------------------------------------
 =======
     //---------------------------------------------
@@ -87,6 +94,9 @@ class Page extends BaseModel {
 =======
     // ---------------------------------------------
 >>>>>>> eed9a9f (first)
+=======
+    // ---------------------------------------------
+>>>>>>> 7936983 (up)
 
     /**
      * Undocumented function.
@@ -98,6 +108,9 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7936983 (up)
         $nss = [];
         $nss[] = 'pub_theme';
         $main_module = config('xra.main_module');
@@ -140,6 +153,7 @@ class Page extends BaseModel {
             )
             ->map(
                 function ($file) use ($ns) {
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ffb8c7b (first)
@@ -170,6 +184,8 @@ class Page extends BaseModel {
             ->map(
                 function ($file) use ($ns) {
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
                     $title = $file->getFilenameWithoutExtension();
                     $title = Str::before($title, '.blade');
 
@@ -178,6 +194,7 @@ class Page extends BaseModel {
                         'parent_id' => 0,
                         'guid' => $title,
                         'title' => $title,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +213,10 @@ class Page extends BaseModel {
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> 9bcf56c (.)
+=======
+                        'ns' => $ns,
+                    //    'ext' => $file->getExtension(),
+>>>>>>> 7936983 (up)
                     ];
                 }
             )->filter(
@@ -207,13 +228,17 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7936983 (up)
             $pages = $pages->merge($tmp);
         }
-        
+
         return $pages->all();
     }
 <<<<<<< HEAD
 }// end model
+<<<<<<< HEAD
 =======
 
         return $pages;
@@ -246,3 +271,5 @@ class Page extends BaseModel {
 =======
 }// end model
 >>>>>>> 9bcf56c (.)
+=======
+>>>>>>> 7936983 (up)

@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -18,19 +19,25 @@
 =======
 >>>>>>> eed9a9f (first)
 =======
+=======
+>>>>>>> 7936983 (up)
 /**
- * 
+ *
  */
+<<<<<<< HEAD
 >>>>>>> 9bcf56c (.)
+=======
+>>>>>>> 7936983 (up)
 declare(strict_types=1);
 
 namespace Modules\Blog\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-<<<<<<< HEAD
-=======
 use Modules\Xot\Services\PanelService;
+<<<<<<< HEAD
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
 
 /**
  * Undocumented class.
@@ -75,6 +82,7 @@ class PagesController extends Controller {
     public function show() {
         [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
+<<<<<<< HEAD
         $view = 'pub_theme::pages.'.$last_item;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +98,8 @@ class PagesController extends Controller {
     public function show() {
         [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
+=======
+>>>>>>> 7936983 (up)
         $_panel = PanelService::make()->getRequestPanel();
 
         //$_panel = PanelService::make()->get(xotModel('page'));
@@ -116,6 +126,7 @@ class PagesController extends Controller {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> eed9a9f (first)
@@ -125,3 +136,5 @@ class PagesController extends Controller {
 =======
 }
 >>>>>>> 9bcf56c (.)
+=======
+>>>>>>> 7936983 (up)

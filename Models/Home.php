@@ -38,9 +38,12 @@ use Sushi\Sushi;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
  * @property int|null                                                              $widgets_count
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Home newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
@@ -54,13 +57,14 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
-<<<<<<< HEAD
- *
  * @property string|null $name
+<<<<<<< HEAD
  *
 =======
  * @property string|null $name
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Home whereName($value)
  * @method static \Modules\Blog\Database\Factories\HomeFactory factory(...$parameters)
  * @mixin IdeHelperHome
@@ -73,22 +77,23 @@ class Home extends BaseModelLang {
     /**
      * @var string[]
      */
-<<<<<<< HEAD
-    protected $fillable = ['id', 'name', 'icon_src'];
-=======
     protected $fillable = ['id', 'name', 'icon_src','created_by','updated_by'];
+<<<<<<< HEAD
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
 
     protected $rows = [
         [
             'id' => 'home',
             'name' => 'New York',
             'icon_src' => '',
-<<<<<<< HEAD
-=======
             'created_by'=>'xot',
             'updated_by'=>'xot',
+<<<<<<< HEAD
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 7936983 (up)
         ],
     ];
 
