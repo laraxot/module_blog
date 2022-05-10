@@ -43,6 +43,7 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> eed9a9f (first)
 =======
@@ -87,11 +88,16 @@ class Page extends BaseModel {
 
     //--------- relationship ---------------
 >>>>>>> ffb8c7b (first)
+=======
+
+    //--------- relationship ---------------
+>>>>>>> 5bff340 (first)
 
     public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +131,9 @@ class Page extends BaseModel {
 =======
     //---------------------------------------------
 >>>>>>> ffb8c7b (first)
+=======
+    //---------------------------------------------
+>>>>>>> 5bff340 (first)
 
     /**
      * Undocumented function.
@@ -132,6 +141,7 @@ class Page extends BaseModel {
      * @return void
      */
     public function getRows() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -197,6 +207,8 @@ class Page extends BaseModel {
 >>>>>>> 9f39ec2 (first)
 =======
 >>>>>>> ffb8c7b (first)
+=======
+>>>>>>> 5bff340 (first)
         $pub_theme_path = FileService::getViewNameSpacePath('pub_theme');
         $pages_path = $pub_theme_path.DIRECTORY_SEPARATOR.'pages';
         /*
@@ -211,6 +223,7 @@ class Page extends BaseModel {
         $pages = collect(File::files($pages_path))
             ->map(
                 function ($file) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -232,6 +245,8 @@ class Page extends BaseModel {
 >>>>>>> 9f39ec2 (first)
 =======
 >>>>>>> ffb8c7b (first)
+=======
+>>>>>>> 5bff340 (first)
                     $title = $file->getFilenameWithoutExtension();
                     $title = Str::before($title, '.blade');
 
@@ -240,6 +255,7 @@ class Page extends BaseModel {
                         'parent_id' => 0,
                         'guid' => $title,
                         'title' => $title,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,6 +290,8 @@ class Page extends BaseModel {
 >>>>>>> 9f39ec2 (first)
 =======
 >>>>>>> ffb8c7b (first)
+=======
+>>>>>>> 5bff340 (first)
                     ];
                 }
             )->filter(
@@ -281,6 +299,7 @@ class Page extends BaseModel {
                     return ! in_array($item['guid'], ['index', 'show']);
                 }
             )->all();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -350,3 +369,9 @@ class Page extends BaseModel {
     }
 }//end model
 >>>>>>> ffb8c7b (first)
+=======
+
+        return $pages;
+    }
+}//end model
+>>>>>>> 5bff340 (first)

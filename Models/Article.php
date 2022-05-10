@@ -67,6 +67,7 @@ use Modules\Tag\Models\Traits\HasTagTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -81,6 +82,9 @@ use Modules\Tag\Models\Traits\HasTagTrait;
 =======
  *
 >>>>>>> ffb8c7b (first)
+=======
+ *
+>>>>>>> 5bff340 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Article approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article article($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article author($id)
@@ -116,6 +120,7 @@ use Modules\Tag\Models\Traits\HasTagTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -130,6 +135,9 @@ use Modules\Tag\Models\Traits\HasTagTrait;
 =======
  *
 >>>>>>> ffb8c7b (first)
+=======
+ *
+>>>>>>> 5bff340 (first)
  * @method static \Modules\Blog\Database\Factories\ArticleFactory factory(...$parameters)
  * @mixin IdeHelperArticle
  */
