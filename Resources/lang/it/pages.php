@@ -9,7 +9,10 @@ return [
     ],
     'start_with' => ['placeholder' => 'Inizia con...'],
     'without' => ['placeholder' => 'Escludi'],
+<<<<<<< HEAD
     'title' => [
         'placeholder' => 'Cerca',
     ],
+=======
+>>>>>>> eed9a9f (first)
 ];

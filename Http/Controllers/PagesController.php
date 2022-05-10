@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /**
  *
  */
@@ -13,15 +14,22 @@
 >>>>>>> ffb8c7b (first)
 =======
 >>>>>>> 5bff340 (first)
+=======
+>>>>>>> eed9a9f (first)
 declare(strict_types=1);
 
 namespace Modules\Blog\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Services\PanelService;
+>>>>>>> eed9a9f (first)
 
 /**
  * Undocumented class.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,11 +44,15 @@ class PagesController extends Controller {
 =======
 class PagesController extends Controller {
 >>>>>>> 5bff340 (first)
+=======
+class PagesController extends Controller {
+>>>>>>> eed9a9f (first)
     /**
      * Undocumented function.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,8 +80,24 @@ class PagesController extends Controller {
         $view_params = [
             'view' => $view,
             'lang' => app()->getLocale(),
+=======
+    public function show() {
+        [$containers,$items] = params2ContainerItem();
+        $last_item = last($items);
+
+        $_panel = PanelService::make()->get(xotModel('page'));
+        $view = 'pub_theme::pages.'.$last_item;
+        $view_params = [
+            'view' => $view,
+            'lang' => app()->getLocale(),
+            '_panel' => $_panel,
+>>>>>>> eed9a9f (first)
         ];
 
         return view()->make($view, $view_params);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> eed9a9f (first)

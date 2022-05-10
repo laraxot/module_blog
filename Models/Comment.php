@@ -43,7 +43,10 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratingObjectives
  * @property int|null                                                                 $rating_objectives_count
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
+<<<<<<< HEAD
  *
+=======
+>>>>>>> eed9a9f (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Comment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -63,10 +66,15 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment withRating()
  * @mixin \Eloquent
+<<<<<<< HEAD
  *
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  *
+=======
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
+ * @property int|null                                                             $posts_count
+>>>>>>> eed9a9f (first)
  * @method static \Modules\Blog\Database\Factories\CommentFactory factory(...$parameters)
  * @mixin IdeHelperComment
  */
