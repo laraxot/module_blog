@@ -8,8 +8,8 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
 
-//use Illuminate\Http\Request;
-//use Illuminate\Http\Response;
+// use Illuminate\Http\Request;
+// use Illuminate\Http\Response;
 /*
 -- molti esempi sanitize
 https://www.codermen.com/blog/59/how-to-use-advance-validation-in-laravel-the-smart-way-
@@ -42,15 +42,15 @@ http://www.coding4developers.com/laravel/customize-validation-error-response-in-
  * Class PivotRequiredRule.
  */
 class PivotRequiredRule implements Rule {
-    public ?string $field_name; //il mio nome
+    public ?string $field_name; // il mio nome
 
-    public ?string $field_name_required; //il campo che deve essere obbligatorio
+    public ?string $field_name_required; // il campo che deve essere obbligatorio
 
     /**
      * Create a new rule instance.
      */
     public function __construct(string $field_name, ?string $field_name_required = null) {
-        //dddx($field_name);
+        // dddx($field_name);
         $this->field_name = $field_name;
         $this->field_name_required = $field_name_required;
     }
@@ -64,16 +64,16 @@ class PivotRequiredRule implements Rule {
      * @return bool
      */
     public function passes($attribute, $value) {
-        $key_required = substr($attribute, 0, -strlen((string) $this->field_name)).''.$this->field_name_required;
-        //$data = (\Request::all());//phpstan
-        $data = (request()->all()); //phpstan
+        $key_required = substr($attribute, 0, -\strlen((string) $this->field_name)).''.$this->field_name_required;
+        // $data = (\Request::all());//phpstan
+        $data = (request()->all()); // phpstan
         $value_required = Arr::get($data, $key_required);
         $value = (int) $value;
         if ($value && ! $value_required) {
             return false;
         }
-        //return false;
-        //dddx($data);
+        // return false;
+        // dddx($data);
         return true;
     }
 

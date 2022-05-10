@@ -1,6 +1,6 @@
 <?php
 
-
+declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
@@ -15,7 +15,7 @@ class CreateStatusesTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-         //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -26,6 +26,4 @@ class CreateStatusesTable extends XotBaseMigration {
             }
         );
     }
-
-    
 }

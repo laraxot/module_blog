@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
-//-------- models -----------
+// -------- models -----------
 use Modules\Lang\Models\Post;
-//-------- services --------
+// -------- services --------
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
-//-------- bases -----------
+// -------- bases -----------
 
 /**
  * Class DeleteNoPostIdAction.
@@ -28,5 +28,5 @@ class DeleteNoPostIdAction extends XotBasePanelAction {
         return '<h3>+Fatto</h3>';
     }
 
-    //end handle
+    // end handle
 }

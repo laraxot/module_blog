@@ -15,22 +15,21 @@ class CreateArticlesTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
-                    $table->increments('id');
-                    $table->nullableMorphs('parent');
-                    $table->integer('pos')->nullable();
-                    $table->string('article_type', 50)->nullable();
-                    $table->datetime('published_at')->nullable();
-                    $table->string('updated_by', 155)->nullable();
-                    $table->string('created_by', 155)->nullable();
-                    $table->timestamps();
-                }
+                $table->increments('id');
+                $table->nullableMorphs('parent');
+                $table->integer('pos')->nullable();
+                $table->string('article_type', 50)->nullable();
+                $table->datetime('published_at')->nullable();
+                $table->string('updated_by', 155)->nullable();
+                $table->string('created_by', 155)->nullable();
+                $table->timestamps();
+            }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_by')) {

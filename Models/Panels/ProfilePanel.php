@@ -6,7 +6,7 @@ namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-//--- Services --
+// --- Services --
 use Modules\Blog\Events\StoreProfileEvent;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -27,27 +27,27 @@ class ProfilePanel extends XotBasePanel {
             (object) [
                 'type' => 'Id',
                 'name' => 'id',
-                //'rules' => 'required',
+                // 'rules' => 'required',
                 'comment' => null,
             ],
             (object) [
                 'type' => 'String',
                 'name' => 'user.first_name',
-                //'rules' => 'required',
+                // 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 6,
             ],
             (object) [
                 'type' => 'String',
                 'name' => 'user.last_name',
-                //'rules' => 'required',
+                // 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 6,
             ],
             (object) [
                 'type' => 'String',
                 'name' => 'user.handle',
-                //'rules' => 'required',
+                // 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 6,
             ],
@@ -61,12 +61,12 @@ class ProfilePanel extends XotBasePanel {
             (object) [
                 'type' => 'AddressGoogle',
                 'name' => 'indirizzo',
-                //'rules' => 'required',
+                // 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 12,
             ],
             (object) [
-                'type' => 'PivotFields', //-- da aggiornare
+                'type' => 'PivotFields', // -- da aggiornare
                 'name' => 'privacies',
                 'col_size' => 12,
                 'rules' => 'pivot_rules',
@@ -91,7 +91,7 @@ class ProfilePanel extends XotBasePanel {
      * @param int $size
      */
     public function avatar($size = 100): ?string {
-        if (null == $this->row) {
+        if (null === $this->row) {
             throw new \Exception('row is null');
         }
         /*
@@ -101,16 +101,16 @@ class ProfilePanel extends XotBasePanel {
         */
         $user = $this->row->user;
 
-        if (! is_object($user) && is_object($this->row)) {
+        if (! \is_object($user) && \is_object($this->row)) {
             if (isset($this->row->user_id) && method_exists($this->row, 'user')) {
                 $this->row->user()->create();
             }
-            //dddx($this->row);
+            // dddx($this->row);
             return null;
         }
 
-        $email = \md5(\mb_strtolower(\trim((string) $user->email)));
-        $default = \urlencode('https://tracker.moodle.org/secure/attachment/30912/f3.png');
+        $email = md5(mb_strtolower(trim((string) $user->email)));
+        $default = urlencode('https://tracker.moodle.org/secure/attachment/30912/f3.png');
 
         return "https://www.gravatar.com/avatar/$email?d=$default&s=$size";
     }
@@ -135,23 +135,23 @@ class ProfilePanel extends XotBasePanel {
             'lang' => app()->getLocale(),
         ];
 
-        if (is_object($row->post)) {
+        if (\is_object($row->post)) {
             $row->post->update($post_data);
         } else {
             $row->post()->create($post_data);
         }
 
         $res = event(new StoreProfileEvent($user));
-        //$this->generateUUIDVerificationToken($user);
+        // $this->generateUUIDVerificationToken($user);
         \Auth::guard()->login($user, true);
-        //$this->guard()->login($user); ???
+        // $this->guard()->login($user); ???
         \Session::flash('swal', [
             'type' => 'success',
             'title' => trans('food::profile.store_success.title'),
             'text' => trans('food::profile.store_success.text'),
             'footer' => trans('food::profile.store_success.footer'),
         ]);
-        //dddx($user);dddx($row);
+        // dddx($user);dddx($row);
         return $row;
     }
 
@@ -162,11 +162,11 @@ class ProfilePanel extends XotBasePanel {
     */
 
     public function isSuperAdmin(): bool {
-        //232 Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
-        //$user = $this->row->user;
+        // 232 Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
+        // $user = $this->row->user;
         $user = $this->row->getRelationValue('user');
 
-        if (is_object($user->perm) && $user->perm->perm_type >= 4) {  //superadmin
+        if (\is_object($user->perm) && $user->perm->perm_type >= 4) {  // superadmin
             return true;
         }
 

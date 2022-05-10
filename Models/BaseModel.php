@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 use GeneaLabs\LaravelModelCaching\Traits\Cachable;
-//---------- traits
+// ---------- traits
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-////use Laravel\Scout\Searchable;
+// //use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
 use Modules\Xot\Traits\Updater;
@@ -16,10 +16,10 @@ use Modules\Xot\Traits\Updater;
  * Class BaseModel.
  */
 abstract class BaseModel extends Model {
-    use Updater;
-    //use Searchable;
-    //use Cachable;
     use HasFactory;
+    // use Searchable;
+    // use Cachable;
+    use Updater;
     protected $connection = 'blog';
 
     /**
@@ -30,7 +30,7 @@ abstract class BaseModel extends Model {
      * @var array
      */
     protected $casts = [
-        //'published_at' => 'datetime:Y-m-d', // da verificare
+        // 'published_at' => 'datetime:Y-m-d', // da verificare
     ];
 
     /**
@@ -49,7 +49,7 @@ abstract class BaseModel extends Model {
      * @var array
      */
     protected $hidden = [
-        //'password'
+        // 'password'
     ];
     /**
      * @var bool
@@ -62,6 +62,6 @@ abstract class BaseModel extends Model {
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     protected static function newFactory() {
-        return FactoryService::newFactory(get_called_class());
+        return FactoryService::newFactory(static::class);
     }
 }

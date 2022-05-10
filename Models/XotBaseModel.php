@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
-////use Laravel\Scout\Searchable;
-//---------- traits
+// //use Laravel\Scout\Searchable;
+// ---------- traits
 
 use Modules\Lang\Models\Traits\LinkedTrait;
 use Modules\Xot\Traits\Updater;
@@ -18,10 +18,10 @@ use Modules\Xot\Traits\Updater;
  * @property \Modules\Lang\Models\Post|null $post
  */
 abstract class XotBaseModel extends Model {
-    use Updater;
-    //use Searchable;
     use LinkedTrait;
-    //-------------
+    // use Searchable;
+    use Updater;
+    // -------------
     /*
     protected $lang;
     protected $post;

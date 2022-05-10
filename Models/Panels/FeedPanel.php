@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//--- Services --
+// --- Services --
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -56,19 +56,11 @@ class FeedPanel extends XotBasePanel {
 
     /**
      * Get the fields displayed by the resource.
-     *
-     * @return array
-        'col_size' => 6,
-        'sortable' => 1,
-        'rules' => 'required',
-        'rules_messages' => ['it'=>['required'=>'Nome Obbligatorio']],
         'value'=>'..',
      */
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
     public function actions(): array {
         return [];

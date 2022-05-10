@@ -38,7 +38,7 @@ class FiveCharactersRule implements Rule {
      * @return bool
      */
     public function passes($attribute, $value) {
-        return 5 === strlen($value);
+        return 5 === \strlen($value);
     }
 
     /**
@@ -47,7 +47,7 @@ class FiveCharactersRule implements Rule {
      * @return string
      */
     public function message() {
-        //return 'The :attribute must be 5 characters';
+        // return 'The :attribute must be 5 characters';
         return trans('validation.only_uppercase');
     }
 }

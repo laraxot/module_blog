@@ -8,8 +8,7 @@ namespace Modules\Blog\Models\Policies;
 use App\Post;
 use App\User;
 */
-//use Modules\Food\Models\Post;
-
+// use Modules\Food\Models\Post;
 
 use Modules\Xot\Contracts\UserContract;
 use Modules\Xot\Models\Policies\XotBasePolicy;

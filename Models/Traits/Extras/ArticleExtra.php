@@ -15,7 +15,7 @@ trait ArticleExtra {
     }
 
     public function body(): ?string {
-        //return $this->body;
+        // return $this->body;
         return $this->txt;
     }
 
@@ -36,8 +36,8 @@ trait ArticleExtra {
     }
 
     public function canonicalUrl(): string {
-        //return $this->originalUrl() ?: route('articles.show', $this->slug);
-        if (null != $this->originalUrl()) {
+        // return $this->originalUrl() ?: route('articles.show', $this->slug);
+        if (null !== $this->originalUrl()) {
             return $this->originalUrl();
         }
 
@@ -99,7 +99,7 @@ trait ArticleExtra {
     public function readTime() {
         $minutes = round(str_word_count(''.$this->body()) / 200);
 
-        return 0 == $minutes ? 1 : $minutes;
+        return 0 === $minutes ? 1 : $minutes;
     }
 
     public function shouldBeSearchable() {

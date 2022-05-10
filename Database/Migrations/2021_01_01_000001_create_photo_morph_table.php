@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-//----- models -----
+// ----- models -----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -17,7 +16,7 @@ class CreatePhotoMorphTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
         function (Blueprint $table) {
             $table->increments('id');
@@ -34,10 +33,10 @@ class CreatePhotoMorphTable extends XotBaseMigration {
         }
         );
 
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-                if ($this->hasColumn( 'related_id')) {
+                if ($this->hasColumn('related_id')) {
                     $table->renameColumn('related_id', 'photo_id');
                 }
                 if ($this->hasColumn('auth_user_id')) {

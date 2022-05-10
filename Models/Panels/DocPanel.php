@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Http\Request;
-//--- Services --
+// --- Services --
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -21,7 +20,7 @@ class DocPanel extends XotBasePanel {
     /**
      * Get the fields displayed by the resource.
      */
-    //'col_size' => 6,
+    // 'col_size' => 6,
     //	'sortable' => 1,
     //	'rules' => 'required',
     //	'rules_messages' => ['it'=>['required'=>'Nome Obbligatorio']],
@@ -74,10 +73,8 @@ class DocPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
-    public function actions():array {
+    public function actions(): array {
         return [];
     }
 }

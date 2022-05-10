@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//--- Services --
+// --- Services --
 use Modules\Xot\Models\Panels\XotBasePanel;
 
-//---- bases --
+// ---- bases --
 
 /**
  * Class EventPanel.
@@ -29,7 +29,7 @@ class EventPanel extends XotBasePanel {
                 'col_size' => 2,
             ],
             (object) [
-                //'type' => 'DateTime2Fields',
+                // 'type' => 'DateTime2Fields',
                 'type' => 'DateTime',
                 'name' => 'date_start',
                 'col_size' => 5,

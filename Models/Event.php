@@ -10,7 +10,7 @@ use Modules\Blog\Database\Factories\EventFactory;
 use Modules\Geo\Models\Place;
 use Modules\Geo\Models\Traits\HasPlaceTrait;
 
-//----- models -----
+// ----- models -----
 
 /**
  * Modules\Blog\Models\Event.
@@ -39,39 +39,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  * @property mixed                                                                $url
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
->>>>>>> 9225dd6 (up)
-=======
- *
->>>>>>> 9f39ec2 (first)
-=======
- *
->>>>>>> ffb8c7b (first)
-=======
- *
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
->>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\EventFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Event newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Event newQuery()
@@ -97,7 +65,7 @@ class Event extends BaseModelLang {
     /**
      * @var string[]
      */
-    protected $fillable = ['id', 'date_start', 'date_end'/*,'formatted_address'*/];
+    protected $fillable = ['id', 'date_start', 'date_end'/* ,'formatted_address' */];
 
     /**
      * @var string[]
@@ -107,7 +75,7 @@ class Event extends BaseModelLang {
     /**
      * @var array
      */
-    protected $appends = [/*'formatted_address'*/];
+    protected $appends = [/* 'formatted_address' */];
 
     /**
      * @var string[]
@@ -138,59 +106,11 @@ class Event extends BaseModelLang {
         return EventFactory::new();
     }
 
-    //----- relationship -----
+    // ----- relationship -----
 
     /* spostato in HasPlaceTrait
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-     
->>>>>>> 9f39ec2 (first)
-=======
-     
->>>>>>> ffb8c7b (first)
-=======
-     
->>>>>>> 5bff340 (first)
-=======
-     
->>>>>>> eed9a9f (first)
-=======
-
->>>>>>> 7936983 (up)
-=======
-
->>>>>>> 9225dd6 (up)
-=======
-     
->>>>>>> 9f39ec2 (first)
-=======
-     
->>>>>>> ffb8c7b (first)
-=======
-     
->>>>>>> 5bff340 (first)
-=======
-     
->>>>>>> eed9a9f (first)
-=======
-
->>>>>>> 7936983 (up)
-=======
-
->>>>>>> 9225dd6 (up)
     public function address() {// fare HasPlaceTrait
         $row = $this->morphOne(Place::class, 'post'); //->withDefault('aaaa')
 
@@ -198,7 +118,7 @@ class Event extends BaseModelLang {
     }
     */
 
-    //----- mutators -----
+    // ----- mutators -----
 
     /*
      * @param mixed $value
@@ -222,4 +142,4 @@ class Event extends BaseModelLang {
         }
     }
     */
-}//end model
+}// end model

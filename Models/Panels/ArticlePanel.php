@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//-------- Services -----
+// -------- Services -----
 use Modules\Rating\Models\Panels\Actions\RateItAction;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
-//---- bases --
+// ---- bases --
 
 /**
  * Class ArticlePanel.
@@ -76,12 +76,12 @@ class ArticlePanel extends XotBasePanel {
             (object) [
                 'type' => 'Image',
                 'name' => 'post.image_src',
-                //'except' => ['index'],
+                // 'except' => ['index'],
                 'col_size' => 12,
             ],
             (object) [
                 'type' => 'WysiwygSceditor',
-                //'type' => 'WysiwygVue',
+                // 'type' => 'WysiwygVue',
                 'name' => 'post.txt',
                 'except' => ['index'],
                 'col_size' => 12,
@@ -165,7 +165,7 @@ class ArticlePanel extends XotBasePanel {
     public function actions(): array {
         return [
             new RateItAction(),
-            //new Actions\ChangePosAction(),
+            // new Actions\ChangePosAction(),
         ];
     }
 }

@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-//----- models -----
+// ----- models -----
 use Modules\Blog\Models\ArticleMorph as MyModel;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
@@ -22,7 +21,7 @@ class CreateArticleMorphTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //----- create -----
+        // ----- create -----
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -39,31 +38,28 @@ class CreateArticleMorphTable extends XotBaseMigration {
             }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-            if ($this->hasColumn( 'related_id')) {
-                $table->dropColumn('related_id');
-            }
+                if ($this->hasColumn('related_id')) {
+                    $table->dropColumn('related_id');
+                }
 
-            if (! $this->hasColumn( 'article_id')) {
-                $table->integer('article_id');
-            }
+                if (! $this->hasColumn('article_id')) {
+                    $table->integer('article_id');
+                }
 
-            if (! $this->hasColumn( 'title')) {
-                $table->string('title');
-            }
+                if (! $this->hasColumn('title')) {
+                    $table->string('title');
+                }
 
-            if (! $this->hasColumn( 'value')) {
-                $table->string('value');
-            }
+                if (! $this->hasColumn('value')) {
+                    $table->string('value');
+                }
 
-            if ($this->hasColumn( 'auth_user_id')) {
-                $table->renameColumn('auth_user_id', 'user_id');
-            }
-        });
+                if ($this->hasColumn('auth_user_id')) {
+                    $table->renameColumn('auth_user_id', 'user_id');
+                }
+            });
     }
-
-
 }

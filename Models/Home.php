@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-//use Modules\Rating\Models\Traits\RatingTrait;
-//------services---------
-//--- TRAITS ---
+// use Modules\Rating\Models\Traits\RatingTrait;
+// ------services---------
+// --- TRAITS ---
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Sushi\Sushi;
 
@@ -37,39 +37,7 @@ use Sushi\Sushi;
  * @property mixed                                                                 $url
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
  * @property int|null                                                              $widgets_count
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
  *
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
->>>>>>> 9225dd6 (up)
-=======
- *
->>>>>>> 9f39ec2 (first)
-=======
- *
->>>>>>> ffb8c7b (first)
-=======
- *
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
->>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Home newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
@@ -83,139 +51,34 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 9225dd6 (up)
- *
->>>>>>> 9225dd6 (up)
- * @property string|null $name
-<<<<<<< HEAD
- *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- * @property string|null $name
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
  *
  * @property string|null $name
  *
->>>>>>> 9f39ec2 (first)
-=======
- *
- * @property string|null $name
- *
->>>>>>> ffb8c7b (first)
-=======
- *
- * @property string|null $name
- *
->>>>>>> 5bff340 (first)
-=======
- * @property string|null $name
->>>>>>> eed9a9f (first)
-=======
- * @property string|null $name
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Home whereName($value)
  * @method static \Modules\Blog\Database\Factories\HomeFactory factory(...$parameters)
  * @mixin IdeHelperHome
  */
 class Home extends BaseModelLang {
-    use WidgetTrait;
     use Sushi;
+    use WidgetTrait;
 
-    //use RatingTrait; // non si vota la home
+    // use RatingTrait; // non si vota la home
     /**
      * @var string[]
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    protected $fillable = ['id', 'name', 'icon_src','created_by','updated_by'];
-<<<<<<< HEAD
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
-    protected $fillable = ['id', 'name', 'icon_src'];
->>>>>>> 9225dd6 (up)
-=======
-    protected $fillable = ['id', 'name', 'icon_src'];
->>>>>>> 9f39ec2 (first)
-=======
-    protected $fillable = ['id', 'name', 'icon_src'];
->>>>>>> ffb8c7b (first)
-=======
-    protected $fillable = ['id', 'name', 'icon_src'];
->>>>>>> 5bff340 (first)
-=======
-    protected $fillable = ['id', 'name', 'icon_src','created_by','updated_by'];
->>>>>>> eed9a9f (first)
-=======
-    protected $fillable = ['id', 'name', 'icon_src','created_by','updated_by'];
->>>>>>> 7936983 (up)
-=======
-    protected $fillable = ['id', 'name', 'icon_src'];
->>>>>>> 9225dd6 (up)
+    protected $fillable = ['id', 'name', 'icon_src', 'created_by', 'updated_by'];
 
     protected $rows = [
         [
             'id' => 'home',
             'name' => 'New York',
             'icon_src' => '',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            'created_by'=>'xot',
-            'updated_by'=>'xot',
-<<<<<<< HEAD
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
-            'created_by'=>'xot',
-            'updated_by'=>'xot',
->>>>>>> eed9a9f (first)
-=======
-            'created_by'=>'xot',
-            'updated_by'=>'xot',
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
+            'created_by' => 'xot',
+            'updated_by' => 'xot',
         ],
     ];
 
-    //--------- relationship ---------------
+    // --------- relationship ---------------
 
-    //---------- mututars -----------
-}//end model
+    // ---------- mututars -----------
+}// end model

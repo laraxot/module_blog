@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-//----- models -----
+// ----- models -----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -17,10 +16,10 @@ class CreatePrivaciesTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //----- create -----
+        // ----- create -----
         $this->tableCreate(
             function (Blueprint $table) {
-                $table->increments('id'); //->primary();
+                $table->increments('id'); // ->primary();
                 $table->string('related_type', 50)->index()->nullable();
                 $table->string('created_by')->nullable();
                 $table->string('updated_by')->nullable();
@@ -29,18 +28,15 @@ class CreatePrivaciesTable extends XotBaseMigration {
             }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-            if (! $this->hasColumn( 'obligatory')) { //4 required rule, another name
-                $table->boolean('obligatory')->nullable();
-            }
-            if ($this->hasColumn( 'post_id')) {
-                $table->renameColumn('post_id', 'id');
-            }
-        });
+                if (! $this->hasColumn('obligatory')) { // 4 required rule, another name
+                    $table->boolean('obligatory')->nullable();
+                }
+                if ($this->hasColumn('post_id')) {
+                    $table->renameColumn('post_id', 'id');
+                }
+            });
     }
-
-
 }

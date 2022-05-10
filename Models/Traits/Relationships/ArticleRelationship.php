@@ -35,7 +35,7 @@ trait ArticleRelationship {
         return $this->morphMany(Image::class, 'post');
     }
 
-    /*
+    /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
      */
     /* --- move to module Tag
@@ -61,18 +61,18 @@ trait ArticleRelationship {
     }
     */
 
-    /*
-    * Get the tags of the article
-    *
-    * @return \Illuminate\Database\Eloquent\Collection
+    /**
+     * Get the tags of the article
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
        move to module tag
     public function tags()
     {
        return $this->belongsToMany(Tag::class);
     }
-    */
+     */
 
-    /*
+    /**
      * Get the comments of the article.
      *
      * @return \Illuminate\Database\Eloquent\Collection
@@ -80,7 +80,7 @@ trait ArticleRelationship {
     public function comments() {
         return $this->hasMany(Comment::class);
     }
-    */
+     */
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany

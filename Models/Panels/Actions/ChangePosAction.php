@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
-//-------- services --------
+// -------- services --------
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
-//-------- bases -----------
+// -------- bases -----------
 
 /**
  * Class ChangePosAction.
  */
 class ChangePosAction extends XotBasePanelAction {
-    //public bool $onContainer = false;
+    // public bool $onContainer = false;
 
     public bool $onItem = true;
-    //onlyContainer
-    //mettere freccette su e giù
+    // onlyContainer
+    // mettere freccette su e giù
 
     public string $icon = '<i class="fa fa-arrow-up"></i><i class="fa fa-arrow-down"></i>';
 
@@ -27,7 +27,7 @@ class ChangePosAction extends XotBasePanelAction {
      * @return mixed
      */
     public function handle() {
-        //return '';
+        // return '';
         dddx($this->row);
     }
 }

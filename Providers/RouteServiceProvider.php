@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Providers;
 
-//-------models-----------
-//use Modules\Lang\Models\Post;
+// -------models-----------
+// use Modules\Lang\Models\Post;
 
-//--- bases ---
+// --- bases ---
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 /**
@@ -20,7 +20,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider {
 
     protected string $module_ns = __NAMESPACE__;
 
-    //public function bootCallback(){
+    // public function bootCallback(){
 
-    //}
+    // }
 }

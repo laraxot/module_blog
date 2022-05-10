@@ -4,54 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//--- Services --
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+// --- Services --
 use Illuminate\Contracts\Support\Renderable;
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
-use Illuminate\Contracts\Support\Renderable;
->>>>>>> eed9a9f (first)
-=======
-use Illuminate\Contracts\Support\Renderable;
->>>>>>> 7936983 (up)
-=======
-use Illuminate\Contracts\Support\Renderable;
->>>>>>> 9225dd6 (up)
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
-use Illuminate\Contracts\Support\Renderable;
->>>>>>> eed9a9f (first)
-=======
-use Illuminate\Contracts\Support\Renderable;
->>>>>>> 7936983 (up)
-=======
-use Illuminate\Contracts\Support\Renderable;
->>>>>>> 9225dd6 (up)
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
-//---- bases --
+// ---- bases --
 
 /**
  * Class PagePanel.
@@ -96,37 +54,13 @@ class PagePanel extends XotBasePanel {
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
      * index navigation.
      */
     public function indexNav(): ?Renderable {
         [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
         if (! inAdmin()) {
-            //siccome non so dove metterlo, per ora dentro pub_theme
+            // siccome non so dove metterlo, per ora dentro pub_theme
             $view = 'pub_theme::pages.'.$last_item.'.index.nav';
 
             return view()->make($view);
@@ -136,36 +70,6 @@ class PagePanel extends XotBasePanel {
     }
 
     /**
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
      * Get the fields displayed by the resource.
      */
     public function fields(): array {
@@ -178,8 +82,8 @@ class PagePanel extends XotBasePanel {
 
             (object) [
                 'type' => 'SelectParent',
-                //'sub_type' => 'Parent',
-                //'name' => 'post[subtitle]'
+                // 'sub_type' => 'Parent',
+                // 'name' => 'post[subtitle]'
                 'name' => 'parent_id',
                 'col_size' => 6,
             ],
@@ -188,67 +92,67 @@ class PagePanel extends XotBasePanel {
                 'type' => 'Integer',
                 'name' => 'pos',
                 'col_size' => 6,
-                //'rules'=>'unique'
+                // 'rules'=>'unique'
             ],
 
             (object) [
                 'type' => 'String',
                 'name' => 'icon',
                 'col_size' => 6,
-                //'rules'=>'unique'
+                // 'rules'=>'unique'
             ],
 
             (object) [
                 'type' => 'Text',
-                //'name' => 'post[title]',
+                // 'name' => 'post[title]',
                 'name' => 'post.title',
                 'col_size' => 12,
             ],
             (object) [
                 'type' => 'Image',
-                //'name' => 'post[title]',
+                // 'name' => 'post[title]',
                 'name' => 'post.image_src',
                 'col_size' => 12,
             ],
-            //*/
+            // */
             (object) [
                 'type' => 'Textarea',
-                //'name' => 'post[subtitle]'
+                // 'name' => 'post[subtitle]'
                 'name' => 'post.subtitle',
                 'except' => ['index'],
                 'col_size' => 12,
             ],
             (object) [
                 'type' => 'String',
-                //'name' => 'post[subtitle]'
+                // 'name' => 'post[subtitle]'
                 'name' => 'blade',
-                //'except' => ['index'],
+                // 'except' => ['index'],
                 'col_size' => 6,
             ],
             (object) [
                 'type' => 'Checkbox',
-                //'name' => 'post[subtitle]'
+                // 'name' => 'post[subtitle]'
                 'name' => 'is_modal',
-                //'except' => ['index'],
+                // 'except' => ['index'],
                 'col_size' => 6,
             ],
             (object) [
                 'type' => 'Integer',
-                //'name' => 'post[subtitle]'
+                // 'name' => 'post[subtitle]'
                 'name' => 'status',
-                //'except' => ['index'],
+                // 'except' => ['index'],
                 'col_size' => 6,
             ],
             (object) [
                 'type' => 'Wysiwyg',
-                //'type' => 'Textarea',
+                // 'type' => 'Textarea',
                 'name' => 'post.txt',
                 'except' => ['index'],
                 'col_size' => 12,
             ],
             (object) [
                 'type' => 'CellCollapse',
-                //'type' => 'Textarea',
+                // 'type' => 'Textarea',
                 'name' => 'Seo',
                 'fields' => $this->seoFields(),
                 'col_size' => 12,
@@ -258,54 +162,6 @@ class PagePanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 9f39ec2 (first)
-=======
-     *
-     * @return array
->>>>>>> ffb8c7b (first)
-=======
-     *
-     * @return array
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
-     *
-     * @return array
->>>>>>> 9f39ec2 (first)
-=======
-     *
-     * @return array
->>>>>>> ffb8c7b (first)
-=======
-     *
-     * @return array
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
      */
     public function actions(): array {
         return [

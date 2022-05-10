@@ -17,14 +17,14 @@ class WithPostScope implements Scope {
      * @return void
      */
     public function apply(Builder $builder, Model $model) {
-        //$builder->where('is_active', '=', 1);
+        // $builder->where('is_active', '=', 1);
         $post = TenantService::model('post');
-        //$post_table = with(new Post())->getTable();
+        // $post_table = with(new Post())->getTable();
         $post_table = optional($post)->getTable();
         $model_table = $model->getTable();
         $lang = 'it';
 
-        $post_type = (Str::snake(basename(get_class($model))));
+        $post_type = (Str::snake(basename(\get_class($model))));
 
         $builder->leftJoin($post_table.' as post', function ($join) use ($model_table, $lang, $post_type) {
             $join->on('post.post_id', '=', $model_table.'.id')

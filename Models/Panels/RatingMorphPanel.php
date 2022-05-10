@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-//--- Services --
+// --- Services --
 use Modules\Rating\Models\Panels\Actions\RateItAction;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
-//----- actions ---
+// ----- actions ---
 
 /**
  * Class RatingMorphPanel.
@@ -37,7 +37,7 @@ class RatingMorphPanel extends XotBasePanel {
      * @return object[]
      */
     public function fields(): array {
-        //$route_params = optional(\Route::current())->parameters();
+        // $route_params = optional(\Route::current())->parameters();
         [$containers, $items] = params2ContainerItem();
 
         return [
@@ -82,8 +82,8 @@ class RatingMorphPanel extends XotBasePanel {
              */
             (object) [
                 'type' => 'Rating',
-                //'sub_type' => 'JqStar',
-                //'sub_type'=>'VueStar',
+                // 'sub_type' => 'JqStar',
+                // 'sub_type'=>'VueStar',
                 'name' => 'myRatings',
                 'parent' => last($items),
             ],
@@ -98,10 +98,8 @@ class RatingMorphPanel extends XotBasePanel {
 
     /**
      * Get the tabs available.
-     *
-     * @return array
      */
-    public function tabs():array {
+    public function tabs(): array {
         $tabs_name = [];
 
         return [];
@@ -109,37 +107,29 @@ class RatingMorphPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @return array
      */
-    public function cards(Request $request):array {
+    public function cards(Request $request): array {
         return [];
     }
 
     /**
      * Get the filters available for the resource.
-     *
-     * @return array
      */
-    public function filters(Request $request = null):array {
+    public function filters(Request $request = null): array {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @return array
      */
-    public function lenses(Request $request):array {
+    public function lenses(Request $request): array {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
-    public function actions():array {
+    public function actions(): array {
         return [
             new RateItAction(),
         ];

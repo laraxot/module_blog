@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-//----- models -----
-//----- bases ----
+// ----- models -----
+// ----- bases ----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -18,18 +17,17 @@ class CreateHomesTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
-                    $table->increments('id'); //->primary();
-                    $table->string('created_by')->nullable();
-                    $table->string('updated_by')->nullable();
-                    $table->timestamps();
-                }
+                $table->increments('id'); // ->primary();
+                $table->string('created_by')->nullable();
+                $table->string('updated_by')->nullable();
+                $table->timestamps();
+            }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('icon_src')) {
@@ -41,6 +39,4 @@ class CreateHomesTable extends XotBaseMigration {
             }
         );
     }
-
-
 }

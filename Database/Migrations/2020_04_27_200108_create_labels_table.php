@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-//----- bases ----
+// ----- bases ----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -16,7 +16,7 @@ class CreateLabelsTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -25,18 +25,17 @@ class CreateLabelsTable extends XotBaseMigration {
                 $table->string('created_by')->nullable();
                 $table->string('updated_by')->nullable();
                 $table->timestamps();
-           }
+            }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-            if (! $this->hasColumn('class')) {
-                $table->string('class')->nullable();
-            }
-        });
+                if (! $this->hasColumn('class')) {
+                    $table->string('class')->nullable();
+                }
+            });
     }
 
-    //end up
-}//end class
+    // end up
+}// end class

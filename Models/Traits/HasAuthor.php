@@ -12,7 +12,7 @@ trait HasAuthor {
      * Undocumented function.
      */
     public function author(): BelongsTo {
-        //return $this->authorRelation;
+        // return $this->authorRelation;
         return $this->belongsTo(User::class, 'author_id');
     }
 

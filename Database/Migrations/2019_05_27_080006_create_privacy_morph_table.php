@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-//----- models -----
-use Modules\Blog\Models\PrivacyMorph as MyModel; //-- con MorphPivot non e' morphs ma morph
+// ----- models -----
+use Modules\Blog\Models\PrivacyMorph as MyModel; // -- con MorphPivot non e' morphs ma morph
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -22,14 +21,14 @@ class CreatePrivacyMorphTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-//-- CREATE --
-$this->tableCreate(
+        // -- CREATE --
+        $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
                 $table->nullableMorphs('post');
                 $table->nullableMorphs('related');
-                $table->text('title')->nullable(); //ricopio il title
-                $table->tinyInteger('value')->nullable(); //-- 0 o 1
+                $table->text('title')->nullable(); // ricopio il title
+                $table->tinyInteger('value')->nullable(); // -- 0 o 1
                 $table->integer('user_id')->nullable()->index();
                 $table->string('created_by')->nullable();
                 $table->string('updated_by')->nullable();
@@ -38,18 +37,15 @@ $this->tableCreate(
             }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-            if ($this->hasColumn( 'related_id')) {
-                $table->renameColumn('related_id', 'privacy_id');
-            }
-            if ($this->hasColumn( 'auth_user_id')) {
-                $table->renameColumn('auth_user_id', 'user_id');
-            }
-        });
+                if ($this->hasColumn('related_id')) {
+                    $table->renameColumn('related_id', 'privacy_id');
+                }
+                if ($this->hasColumn('auth_user_id')) {
+                    $table->renameColumn('auth_user_id', 'user_id');
+                }
+            });
     }
-
-
 }

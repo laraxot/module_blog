@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 use Modules\Blog\Models\Privacy;
 
 class PrivacyFactory extends Factory {
@@ -23,12 +21,10 @@ class PrivacyFactory extends Factory {
      * @return array
      */
     public function definition() {
-       
-
         return [
             'id' => $this->faker->randomNumber,
             'related_type' => $this->faker->word,
-            'obligatory' => $this->faker->boolean
+            'obligatory' => $this->faker->boolean,
         ];
     }
 }

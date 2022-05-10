@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-//--- Services --
+// --- Services --
 use Modules\Blog\Rules\PivotRequiredRule;
-//-------- rules ---
+// -------- rules ---
 use Modules\Blog\Rules\PrivacyCheckRule;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
-//----- bases ---------
+// ----- bases ---------
 
 /*
 Validator::extendImplicit()
@@ -55,9 +55,9 @@ class PrivacyMorphPanel extends XotBasePanel {
             (object) [
                 'type' => 'Hidden',
                 'name' => 'obligatory',
-                'rules' => ['boolean', 'nullable'], //,new PivotRequiredRule('privacy.obligatory','value')],
+                'rules' => ['boolean', 'nullable'], // ,new PivotRequiredRule('privacy.obligatory','value')],
 
-                //'rules' => 'required_if:payment_type,cc',
+                // 'rules' => 'required_if:payment_type,cc',
                 /*
                 accepted
 The field under validation must be yes, on, 1, or true. This is useful for validating "Terms of Service" acceptance.
@@ -67,9 +67,9 @@ The field under validation must be yes, on, 1, or true. This is useful for valid
                 'type' => 'BooleanAccept',
                 'name' => 'value',
                 'rules' => ['boolean', 'nullable', new PrivacyCheckRule('value', 'obligatory')],
-                //'attributes'=>['label' => 'label test'],
-                //'attributes'=>['label'=>'test label' ],
-                //'rules' => 'required_if:payment_type,cc',
+                // 'attributes'=>['label' => 'label test'],
+                // 'attributes'=>['label'=>'test label' ],
+                // 'rules' => 'required_if:payment_type,cc',
                 /*
                 accepted
 The field under validation must be yes, on, 1, or true. This is useful for validating "Terms of Service" acceptance.
@@ -80,8 +80,6 @@ The field under validation must be yes, on, 1, or true. This is useful for valid
 
     /**
      * Get the tabs available.
-     *
-     * @return array
      */
     public function tabs(): array {
         $tabs_name = [];
@@ -91,8 +89,6 @@ The field under validation must be yes, on, 1, or true. This is useful for valid
 
     /**
      * Get the cards available for the request.
-     *
-     * @return array
      */
     public function cards(Request $request): array {
         return [];
@@ -107,8 +103,6 @@ The field under validation must be yes, on, 1, or true. This is useful for valid
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @return array
      */
     public function lenses(Request $request): array {
         return [];
@@ -116,8 +110,6 @@ The field under validation must be yes, on, 1, or true. This is useful for valid
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
     public function actions(): array {
         return [];

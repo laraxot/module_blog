@@ -18,7 +18,7 @@ trait ArticleMutator {
             return $value;
         }
 
-        if (null == $this->getKey()) {
+        if (null === $this->getKey()) {
             return null;
         }
 

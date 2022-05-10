@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-//--------- models --------
+// --------- models --------
 
-//use Illuminate\Database\Eloquent\Factories\HasFactory;
+// use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
-//--- TRAITS ---
+// --- TRAITS ---
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
 use Modules\Xot\Models\Traits\WidgetTrait;
 
-//--- services
-//--- bases
-//use Modules\Xot\Models\XotBaseModel;
+// --- services
+// --- bases
+// use Modules\Xot\Models\XotBaseModel;
 
 /**
  * Modules\Blog\Models\Profile.
@@ -120,47 +120,6 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property User|null                                                                $user
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]    $widgets
  * @property int|null                                                                 $widgets_count
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
- *
->>>>>>> 9f39ec2 (first)
-=======
- *
->>>>>>> ffb8c7b (first)
-=======
- *
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
- *
->>>>>>> 9f39ec2 (first)
-=======
- *
->>>>>>> ffb8c7b (first)
-=======
- *
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
 >>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newQuery()
@@ -225,54 +184,7 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile withDistance($lat, $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @mixin \Eloquent
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
 >>>>>>> 9225dd6 (up)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
- * @property string|null $bio
- * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
- * @property \Modules\LU\Models\PermUser|null                                     $perm
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
- * @property int|null                                                             $posts_count
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
- *
  * @property string|null $bio
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
@@ -281,34 +193,14 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property \Modules\LU\Models\PermUser|null                                     $perm
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
+ * @property string|null                                                          $bio
  *
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
->>>>>>> 9225dd6 (up)
-=======
->>>>>>> 9f39ec2 (first)
-=======
->>>>>>> ffb8c7b (first)
-=======
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
+ *
+ * @property \Modules\LU\Models\PermUser|null                                     $perm
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
+ * @property int|null                                                             $posts_count
 >>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile ofInPolygon(string $polygon_field, float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUserId($value)
@@ -317,11 +209,11 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @mixin IdeHelperProfile
  */
 class Profile extends BaseModelLang {
-    use PrivacyTrait;
-    use HasProfileTrait;
     use GeoTrait;
+    use HasProfileTrait;
+    use PrivacyTrait;
     use WidgetTrait;
-    //use HasFactory;
+    // use HasFactory;
 
     /**
      * se non metto $connection  quando faccio la relazione con lu, prende la connection di lu.
@@ -339,17 +231,17 @@ class Profile extends BaseModelLang {
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    //protected static function newFactory() {
+    // protected static function newFactory() {
     //    return ProfileFactory::new();
-    //}
+    // }
 
-    //------- RELATIONSHIP ----------
+    // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany {
         return $this->hasMany(Article::class);
     }
 
-    //---- mutators ---
+    // ---- mutators ---
     /*  ------------------ utilizza quello di HasProfileTrait
     public function getFullNameAttribute($value) {
         return $value;
@@ -365,4 +257,4 @@ class Profile extends BaseModelLang {
         return $value;
     }
     */
-}//end model
+}// end model

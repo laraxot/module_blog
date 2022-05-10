@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-//--- Services --
+// --- Services --
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -90,8 +90,6 @@ class PostLinkPanel extends XotBasePanel {
 
     /**
      * Get the tabs available.
-     *
-     * @return array
      */
     public function tabs(): array {
         $tabs_name = [];
@@ -101,8 +99,6 @@ class PostLinkPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @return array
      */
     public function cards(Request $request): array {
         return [];
@@ -110,8 +106,6 @@ class PostLinkPanel extends XotBasePanel {
 
     /**
      * Get the filters available for the resource.
-     *
-     * @return array
      */
     public function filters(Request $request = null): array {
         return [];
@@ -119,8 +113,6 @@ class PostLinkPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @return array
      */
     public function lenses(Request $request): array {
         return [];
@@ -128,8 +120,6 @@ class PostLinkPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
     public function actions(): array {
         return [];

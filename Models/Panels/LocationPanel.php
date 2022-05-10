@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//--- Services --
+// --- Services --
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -144,8 +144,6 @@ class LocationPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
     public function actions(): array {
         return [];

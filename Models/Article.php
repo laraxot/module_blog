@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-//----- traits ----
+// ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasSlug;
 use Modules\Blog\Models\Traits\HasTags;
@@ -62,38 +62,6 @@ use Modules\Tag\Models\Traits\HasTagTrait;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[]       $tags
  * @property int|null                                                                 $tags_count
  * @property \Modules\LU\Models\User                                                  $user
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
->>>>>>> 9225dd6 (up)
-=======
- *
->>>>>>> 9f39ec2 (first)
-=======
- *
->>>>>>> ffb8c7b (first)
-=======
- *
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
 >>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Article approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article article($id)
@@ -125,56 +93,24 @@ use Modules\Tag\Models\Traits\HasTagTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withRating()
  * @mixin \Eloquent
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
- *
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
->>>>>>> 9225dd6 (up)
-=======
- *
->>>>>>> 9f39ec2 (first)
-=======
- *
->>>>>>> ffb8c7b (first)
-=======
- *
->>>>>>> 5bff340 (first)
-=======
->>>>>>> eed9a9f (first)
-=======
->>>>>>> 7936983 (up)
-=======
- *
 >>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\ArticleFactory factory(...$parameters)
  * @mixin IdeHelperArticle
  */
 class Article extends BaseModelLang {
-    use RatingTrait;
-    use HasProfileTrait;
-    use HasTagTrait;
+    use HasAuthor;
     use HasLikes;
+    use HasProfileTrait;
     use HasSlug;
+    use HasTagTrait;
     use HasTimestamps;
-    use HasAuthor; //non so se funziona, credo meglio HasProfileTrait
-    //use HasTags;
-    use PreparesSearch;
-    use Traits\Scopes\ArticleScope;
-    use Traits\Relationships\ArticleRelationship;
-    use Traits\Mutators\ArticleMutator;
+    use PreparesSearch; // non so se funziona, credo meglio HasProfileTrait
+    // use HasTags;
+    use RatingTrait;
     use Traits\Extras\ArticleExtra;
+    use Traits\Mutators\ArticleMutator;
+    use Traits\Relationships\ArticleRelationship;
+    use Traits\Scopes\ArticleScope;
 
     /**
      * @var string[]
@@ -193,7 +129,7 @@ class Article extends BaseModelLang {
      * @var array
      */
     protected $casts = [
-        //'published_at' => 'datetime:Y-m-d', // da verificare
+        // 'published_at' => 'datetime:Y-m-d', // da verificare
     ];
 
     /**
@@ -202,4 +138,4 @@ class Article extends BaseModelLang {
     protected $dates = ['published_at', 'created_at', 'updated_at', 'submitted_at'];
 
     /* https://itnext.io/7-things-you-need-to-know-to-get-the-most-out-of-your-laravel-model-4f915acbb47c */
-}//end model
+}// end model

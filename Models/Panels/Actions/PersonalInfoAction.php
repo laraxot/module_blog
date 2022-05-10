@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
-//-------- models -----------
+// -------- models -----------
 
-//-------- services --------
+// -------- services --------
 
 use Exception;
 use Illuminate\Contracts\Support\Renderable;
@@ -14,25 +14,25 @@ use Illuminate\Support\Facades\Session;
 use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
-//-------- bases -----------
+// -------- bases -----------
 
 /**
  * Class PersonalInfoAction.
  */
 class PersonalInfoAction extends XotBasePanelAction {
-    public bool $onContainer = false; //onlyContainer
+    public bool $onContainer = false; // onlyContainer
 
-    public bool $onItem = true; //onlyContainer
+    public bool $onItem = true; // onlyContainer
 
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
     public function handle(): Renderable {
-        /*$view = 'pub_theme::profile.'.$this->getName();*/
-        //dddx(get_defined_vars());
+        /* $view = 'pub_theme::profile.'.$this->getName(); */
+        // dddx(get_defined_vars());
 
         /*return ThemeService::view($view)
             ->with('row', $this->row);*/
-        if (null == $this->panel) {
+        if (null === $this->panel) {
             throw new Exception('this->panel is null');
         }
 
@@ -41,7 +41,7 @@ class PersonalInfoAction extends XotBasePanelAction {
 
     public function postHandle(): Renderable {
         $data = request()->all();
-        //dddx($data['handle']);
+        // dddx($data['handle']);
         /*
         \Validator::make($data, [
             //'name' => '',
@@ -52,7 +52,7 @@ class PersonalInfoAction extends XotBasePanelAction {
             ])->validate();
         */
 
-        //dddx($data);
+        // dddx($data);
         $profile = $this->row;
         $profile->update($data);
         /*
@@ -63,7 +63,7 @@ class PersonalInfoAction extends XotBasePanelAction {
             'first_name' => $data['firstname'],
             'last_name' => $data['surname'],
         ];
-        //$profile->user()->updateOrCreate($user_data);
+        // $profile->user()->updateOrCreate($user_data);
         if (! method_exists($profile, 'user')) {
             abort(500);
         }
@@ -79,5 +79,5 @@ class PersonalInfoAction extends XotBasePanelAction {
         return $this->handle();
     }
 
-    //end handle
+    // end handle
 }

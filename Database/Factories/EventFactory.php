@@ -29,13 +29,13 @@ class EventFactory extends Factory {
         $add_minutes = random_int(1, 3) * 30;
         $date_start = now()->addDays($add_day);
 
-        //$date_start = Carbon::now()->addDays(random_int(-10, 10));
+        // $date_start = Carbon::now()->addDays(random_int(-10, 10));
         $date_end = now()->addDays($add_day)->addMinutes($add_minutes);
 
         $data = [
-            //'title' => $this->faker->sentence,
-            //'description' => $this->faker->paragraph,
-            //'user_id' => factory(User::class)->create()->id,
+            // 'title' => $this->faker->sentence,
+            // 'description' => $this->faker->paragraph,
+            // 'user_id' => factory(User::class)->create()->id,
             /*
             'latitude' => $this->faker->latitude(),
             'longitude' => $this->faker->longitude(),

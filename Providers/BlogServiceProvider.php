@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Providers;
 
-//-------services -------
-//-------models----------
-//use Modules\Lang\Models\PostRelated;
-//use Modules\Xot\Models\ServiceProviderTrait;
+// -------services -------
+// -------models----------
+// use Modules\Lang\Models\PostRelated;
+// use Modules\Xot\Models\ServiceProviderTrait;
 
 use Modules\Xot\Providers\XotBaseServiceProvider;
 

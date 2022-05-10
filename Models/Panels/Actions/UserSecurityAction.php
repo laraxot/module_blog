@@ -4,29 +4,29 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
-//-------- models -----------
+// -------- models -----------
 
-//-------- services --------
+// -------- services --------
 use Exception;
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
-//-------- bases -----------
+// -------- bases -----------
 
 /**
  * Class UserSecurityAction.
  */
 class UserSecurityAction extends XotBasePanelAction {
-    public bool $onContainer = false; //onlyContainer
+    public bool $onContainer = false; // onlyContainer
 
-    public bool $onItem = true; //onlyContainer
+    public bool $onItem = true; // onlyContainer
 
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
     public function handle(): View {
-        if (null == $this->panel) {
+        if (null === $this->panel) {
             throw new Exception('panel is null');
         }
 
@@ -50,7 +50,7 @@ class UserSecurityAction extends XotBasePanelAction {
             'passwd' => 'required|confirmed|min:6',
         ])->validate();
 
-        //dddx($data['passwd']);
+        // dddx($data['passwd']);
         $profile = $this->row;
         if (! property_exists($profile, 'user')) {
             abort(500);
@@ -67,5 +67,5 @@ class UserSecurityAction extends XotBasePanelAction {
         return $this->handle();
     }
 
-    //end handle
+    // end handle
 }

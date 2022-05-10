@@ -1,18 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Blog\Models\Traits;
 
 use App\Models\Subscription;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
-trait ProvidesSubscriptions
-{
+trait ProvidesSubscriptions {
     /**
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function subscriptions()
-    {
+    public function subscriptions() {
         return $this->subscriptionsRelation;
     }
 
@@ -22,8 +22,7 @@ trait ProvidesSubscriptions
      *
      * @see https://github.com/laravelio/laravel.io/issues/350
      */
-    public function subscriptionsRelation(): MorphMany
-    {
+    public function subscriptionsRelation(): MorphMany {
         return $this->morphMany(
             Subscription::class,
             'subscriptionsRelation',
@@ -32,8 +31,7 @@ trait ProvidesSubscriptions
         );
     }
 
-    public function hasSubscriber(User $user): bool
-    {
+    public function hasSubscriber(User $user): bool {
         return $this->subscriptionsRelation()
             ->where('user_id', $user->id)
             ->exists();

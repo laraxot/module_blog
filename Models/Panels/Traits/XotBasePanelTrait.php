@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Traits;
 
-////use Laravel\Scout\Searchable;
+// //use Laravel\Scout\Searchable;
 
-//----- models------
+// ----- models------
 
-//---- services -----
+// ---- services -----
 
-//------ traits ---
+// ------ traits ---
 
 /**
  * Trait XotBasePanelTrait.
@@ -39,5 +39,5 @@ trait XotBasePanelTrait {
         ];
     }
 
-    //end seofields
-}//end trait
+    // end seofields
+}// end trait

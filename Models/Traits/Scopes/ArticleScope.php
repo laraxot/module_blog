@@ -14,6 +14,7 @@ trait ArticleScope {
      * Scope a query to only include articles different from current article.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param mixed                                 $current_article
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -25,6 +26,7 @@ trait ArticleScope {
      * Scope a query to only include articles.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param mixed                                 $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -51,7 +53,7 @@ trait ArticleScope {
      * @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopePublishedUntilToday($query) {
-        //return $query->whereDate('publish_date', '<=', Carbon::today()->toDateString());
+        // return $query->whereDate('publish_date', '<=', Carbon::today()->toDateString());
         // c'e' update_at created_at .. percio' published_at
         return $query->whereDate('published_at', '<=', Carbon::today()->toDateString());
     }
@@ -137,11 +139,11 @@ trait ArticleScope {
     /**
      * Scope a query to only include published articles.
      */
-    //public function scopePublished($query) {
-    //return $query->where('status', 'published');
-    //-- meglio intero
+    // public function scopePublished($query) {
+    // return $query->where('status', 'published');
+    // -- meglio intero
     //    return $query->where('status_id', 1);
-    //}
+    // }
 
     public function scopeNotPublished(Builder $query): Builder {
         return $query->where(function ($query) {

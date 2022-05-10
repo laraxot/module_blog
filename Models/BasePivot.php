@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
-////use Laravel\Scout\Searchable;
+// //use Laravel\Scout\Searchable;
 use Modules\Xot\Traits\Updater;
 
 /**
@@ -13,13 +13,13 @@ use Modules\Xot\Traits\Updater;
  */
 abstract class BasePivot extends Pivot {
     use Updater;
-    //use Searchable;
+    // use Searchable;
     protected $connection = 'blog';
 
     /**
      * @var string
      */
-    //protected $connection = 'liveuser_general'; // this will use the specified database conneciton
+    // protected $connection = 'liveuser_general'; // this will use the specified database conneciton
 
     /**
      * @var array
@@ -36,7 +36,7 @@ abstract class BasePivot extends Pivot {
      */
     protected $dates = ['created_at', 'updated_at'];
 
-    //protected $primaryKey = 'id';
+    // protected $primaryKey = 'id';
 
     /**
      * @var bool

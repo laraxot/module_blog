@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//--- Services --
+// --- Services --
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
 use Modules\LU\Models\User;
@@ -70,22 +70,22 @@ class HomePanel extends XotBasePanel {
             ],
             (object) [
                 'type' => 'Text',
-                //'name' => 'post[title]',
+                // 'name' => 'post[title]',
                 'name' => 'post.title',
                 'col_size' => 12,
                 'rules' => 'required',
             ],
-            //*/
+            // */
             (object) [
                 'type' => 'Textarea',
-                //'name' => 'post[subtitle]'
+                // 'name' => 'post[subtitle]'
                 'name' => 'post.subtitle',
                 'except' => ['index'],
                 'col_size' => 12,
             ],
             (object) [
                 'type' => 'Wysiwyg',
-                //'name' => 'post[subtitle]'
+                // 'name' => 'post[subtitle]'
                 'name' => 'post.txt',
                 'except' => ['index'],
                 'col_size' => 12,
@@ -106,7 +106,7 @@ class HomePanel extends XotBasePanel {
         return [
             new ArtisanAction($cmd),
             new Actions\TestAction(),
-            //new \Modules\Rating\Models\Panels\Actions\RateItAction(),
+            // new \Modules\Rating\Models\Panels\Actions\RateItAction(),
         ];
     }
 
@@ -118,7 +118,7 @@ class HomePanel extends XotBasePanel {
         $rows = Article::published()
             ->showHomepage()
             ->publishedUntilToday()
-            //->orderBy('publish_date', 'desc')
+            // ->orderBy('publish_date', 'desc')
             ->orderBy('published_at', 'desc')
             ->get();
 
@@ -128,7 +128,7 @@ class HomePanel extends XotBasePanel {
     public function latestArticles() {
         $latest_articles = Article::published()
             ->publishedUntilToday()
-            //->orderBy('publish_date', 'desc')
+            // ->orderBy('publish_date', 'desc')
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
@@ -137,7 +137,7 @@ class HomePanel extends XotBasePanel {
     }
 
     public function authors() {
-        //$authors = User::userIsAuthor()->take(4)->get();
+        // $authors = User::userIsAuthor()->take(4)->get();
         $authors = User::inRandomOrder()->limit(4)->get();
 
         return $authors;
@@ -160,7 +160,7 @@ class HomePanel extends XotBasePanel {
     }
 
     public function footerAuthors() {
-        //$footerAuthors = User::userIsAuthor()->take(8)->get();
+        // $footerAuthors = User::userIsAuthor()->take(8)->get();
         $footerAuthors = User::inRandomOrder()->limit(8)->get();
 
         return $footerAuthors;

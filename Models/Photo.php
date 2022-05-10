@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-//----- traits ----
+// ----- traits ----
 use Modules\Rating\Models\Traits\RatingTrait;
 
 /**
@@ -68,7 +68,7 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @mixin IdeHelperPhoto
  */
 class Photo extends BaseModelLang {
-    //use RatingTrait;
+    // use RatingTrait;
     /**
      * @var string[]
      */

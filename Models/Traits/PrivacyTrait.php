@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Traits;
 
 use Illuminate\Support\Facades\Auth;
-////use Laravel\Scout\Searchable;
+// //use Laravel\Scout\Searchable;
 
-//----- models------
-//use Modules\Lang\Models\Post;
-//use Modules\Lang\Models\PostRelatedPivot;
+// ----- models------
+// use Modules\Lang\Models\Post;
+// use Modules\Lang\Models\PostRelatedPivot;
 use Modules\Blog\Models\Privacy;
 
-//------ traits ---
+// ------ traits ---
 
 /**
  * Trait PrivacyTrait.

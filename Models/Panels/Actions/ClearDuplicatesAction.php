@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
-//-------- services --------
+// -------- services --------
 use Modules\Lang\Models\Post;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
-//-------- bases -----------
+// -------- bases -----------
 
 /**
  * Class ClearDuplicatesAction.
@@ -33,16 +33,16 @@ class ClearDuplicatesAction extends XotBasePanelAction {
         GROUP BY post_id,post_type
         HAVING q>1
         */
-        //$model = app(Post::class);
-        //dddx(get_class_methods($model));
+        // $model = app(Post::class);
+        // dddx(get_class_methods($model));
 
         $lang = app()->getLocale();
         $rows = Post::selectRaw('post_id,post_type,count(post_id) as q')
             ->where('lang', $lang)
             ->groupBy('post_id', 'post_type')
-            //->having('q', '>', 1)
+            // ->having('q', '>', 1)
             ->havingRaw('q > ?', [1])
-            //->limit(2)
+            // ->limit(2)
             ->get()
             ->toArray();
 
@@ -57,7 +57,7 @@ class ClearDuplicatesAction extends XotBasePanelAction {
                 ->orderByDesc('id')
                 ->limit($limit)
                 ->delete();
-            //dddx($duplicate);
+            // dddx($duplicate);
             $tot += $duplicate;
         }
 

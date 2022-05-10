@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Blog\Models\Location;
-//----- models-------
+// ----- models-------
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -20,21 +20,21 @@ class CreateProfilesTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
-                $table->increments('id'); //->primary();//->primary();
+                $table->increments('id'); // ->primary();//->primary();
                 $table->string('post_type', 191)->nullable()->index();
-                //$table->string('article_type',50)->nullable();
-                //$table->datetime('published_at')->nullable();
+                // $table->string('article_type',50)->nullable();
+                // $table->datetime('published_at')->nullable();
                 $table->text('bio')->nullable();
                 $table->timestamps();
             }
         );
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-                //------- add
+                // ------- add
                 if (! $this->hasColumn('created_by')) {
                     $table->string('created_by')->nullable();
                 }
@@ -65,7 +65,7 @@ class CreateProfilesTable extends XotBaseMigration {
                 if ($this->hasColumn('auth_user_id') && ! $this->hasColumn('user_id')) {
                     $table->renameColumn('auth_user_id', 'user_id');
                 }
-                if (!$this->hasColumn('auth_user_id') && ! $this->hasColumn('user_id')) {
+                if (! $this->hasColumn('auth_user_id') && ! $this->hasColumn('user_id')) {
                     $table->integer('user_id')->nullable()->index();
                 }
                 /*
@@ -86,9 +86,9 @@ class CreateProfilesTable extends XotBaseMigration {
                 }
                 */
                 if ($this->hasColumn('post_id')) {
-                    //$table->dropPrimary('post_id');
+                    // $table->dropPrimary('post_id');
                     $table->renameColumn('post_id', 'id');
-                    //$table->primary('id');
+                    // $table->primary('id');
                 }
             }
         );

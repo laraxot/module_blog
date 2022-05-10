@@ -25,9 +25,9 @@ class PageFactory extends Factory {
      */
     public function definition() {
         return [
-            //'title' => $faker->sentence,
-            //'description' => $faker->paragraph,
-            //'user_id' => factory(User::class)->create()->id,
+            // 'title' => $faker->sentence,
+            // 'description' => $faker->paragraph,
+            // 'user_id' => factory(User::class)->create()->id,
             /*
             'latitude' 			=> $faker->latitude,
             'longitude' 		=> $faker->longitude,

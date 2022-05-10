@@ -9,8 +9,8 @@ use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
 
-//use Illuminate\Http\Request;
-//use Illuminate\Http\Response;
+// use Illuminate\Http\Request;
+// use Illuminate\Http\Response;
 /*
 -- molti esempi sanitize
 https://www.codermen.com/blog/59/how-to-use-advance-validation-in-laravel-the-smart-way-
@@ -50,10 +50,10 @@ class PrivacyCheckRule implements Rule, ImplicitRule {
      * Create a new rule instance.
      */
     public function __construct(?string $field_name = null, ?string $field_name_required = null) {
-        //dddx($field_name);
+        // dddx($field_name);
         $this->field_name = $field_name;
         $this->field_name_required = $field_name_required;
-        //dddx(get_called_class());//Modules\Blog\Rules\PrivacyCheckRule
+        // dddx(get_called_class());//Modules\Blog\Rules\PrivacyCheckRule
     }
 
     /**
@@ -83,31 +83,31 @@ class PrivacyCheckRule implements Rule, ImplicitRule {
         }
         */
 
-        //$request->route()->parameter('id');
+        // $request->route()->parameter('id');
         //
-        //dddx($attribute);//privacies.111.pivot.value
-        //dddx($value);//5
-        //dddx($this->source());
-        //$fullnames = request()->get('fullname');
-        $key_required = substr($attribute, 0, -strlen((string) $this->field_name)).''.$this->field_name_required;
-        //dddx($key_required);
-        //$data = (\Request::all()); //phpstan
-        $data = (request()->all()); //phpstan
+        // dddx($attribute);//privacies.111.pivot.value
+        // dddx($value);//5
+        // dddx($this->source());
+        // $fullnames = request()->get('fullname');
+        $key_required = substr($attribute, 0, -\strlen((string) $this->field_name)).''.$this->field_name_required;
+        // dddx($key_required);
+        // $data = (\Request::all()); //phpstan
+        $data = (request()->all()); // phpstan
         $value_required = Arr::get($data, $key_required);
         $value = (int) $value;
-        //dddx($data);
-        //dddx($key_required.' '.$value_required);
-        //if($key_required!='privacies.111.pivot.privacy.obligatory'){
-        //dddx('<h3>['.$key_required.']['.$value_required.']['.$value.']</h3>');
-        //}
-        if ('privacies.111.pivot.privacy.obligatory' != $key_required) {
-            //dddx('<h3>['.$key_required.']['.$value_required.']['.$value.']</h3>');
+        // dddx($data);
+        // dddx($key_required.' '.$value_required);
+        // if($key_required!='privacies.111.pivot.privacy.obligatory'){
+        // dddx('<h3>['.$key_required.']['.$value_required.']['.$value.']</h3>');
+        // }
+        if ('privacies.111.pivot.privacy.obligatory' !== $key_required) {
+            // dddx('<h3>['.$key_required.']['.$value_required.']['.$value.']</h3>');
         }
-        if (1 == $value_required && 0 == $value) {
+        if (1 === $value_required && 0 === $value) {
             return false;
         }
-        //return false;
-        //dddx($data);
+        // return false;
+        // dddx($data);
         return true;
     }
 

@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 trait HasSlug {
     public function slug(): ?string {
-        //return $this->slug;
+        // return $this->slug;
         return $this->guid;
     }
 

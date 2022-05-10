@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-//----- models -----
+// ----- models -----
 use Modules\Blog\Models\EventMorph as MyModel;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
@@ -22,7 +21,7 @@ class CreateEventMorphTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //----- create -----
+        // ----- create -----
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -39,18 +38,15 @@ class CreateEventMorphTable extends XotBaseMigration {
             }
             );
 
-
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-            if ($this->hasColumn( 'related_id')) {
-                $table->renameColumn('related_id', 'event_id');
-            }
-            if ($this->hasColumn( 'auth_user_id')) {
-                $table->renameColumn('auth_user_id', 'user_id');
-            }
-        });
+                if ($this->hasColumn('related_id')) {
+                    $table->renameColumn('related_id', 'event_id');
+                }
+                if ($this->hasColumn('auth_user_id')) {
+                    $table->renameColumn('auth_user_id', 'user_id');
+                }
+            });
     }
-
-
 }
