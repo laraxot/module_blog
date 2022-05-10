@@ -12,6 +12,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'title' => [
         'placeholder' => 'Cerca',
     ],
@@ -24,4 +25,9 @@ return [
 >>>>>>> 7995957 (.)
 =======
 >>>>>>> eed9a9f (first)
+=======
+    'title' => [
+        'placeholder' => 'Cerca',
+    ],
+>>>>>>> 7995957 (.)
 ];
