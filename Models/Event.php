@@ -111,10 +111,14 @@ class Event extends BaseModelLang {
     /* spostato in HasPlaceTrait
      * @return \Illuminate\Database\Eloquent\Relations\MorphOne
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
      
 >>>>>>> 9f39ec2 (first)
+=======
+     
+>>>>>>> ffb8c7b (first)
     public function address() {// fare HasPlaceTrait
         $row = $this->morphOne(Place::class, 'post'); //->withDefault('aaaa')
 

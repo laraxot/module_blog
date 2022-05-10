@@ -6,9 +6,12 @@ namespace Modules\Blog\Models\Panels;
 
 //--- Services --
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
 =======
 >>>>>>> 9f39ec2 (first)
+=======
+>>>>>>> ffb8c7b (first)
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -58,6 +61,7 @@ class PagePanel extends XotBasePanel {
 
     /**
 <<<<<<< HEAD
+<<<<<<< HEAD
      * index navigation.
      */
     public function indexNav(): ?Renderable {
@@ -76,6 +80,8 @@ class PagePanel extends XotBasePanel {
     /**
 =======
 >>>>>>> 9f39ec2 (first)
+=======
+>>>>>>> ffb8c7b (first)
      * Get the fields displayed by the resource.
      */
     public function fields(): array {
@@ -169,10 +175,15 @@ class PagePanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
      *
      * @return array
 >>>>>>> 9f39ec2 (first)
+=======
+     *
+     * @return array
+>>>>>>> ffb8c7b (first)
      */
     public function actions(): array {
         return [

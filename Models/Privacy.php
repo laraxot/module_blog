@@ -43,9 +43,13 @@ namespace Modules\Blog\Models;
  * @property int|null                                                                 $my_favorites_count
  * @property \Modules\Lang\Models\Post|null                                           $post
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 >>>>>>> 9f39ec2 (first)
+=======
+ *
+>>>>>>> ffb8c7b (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -61,11 +65,14 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @mixin \Eloquent
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property int $post_id
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy wherePostId($value)
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
 =======
+=======
+>>>>>>> ffb8c7b (first)
  *
  * @property int $post_id
  *
@@ -74,7 +81,10 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  *
+<<<<<<< HEAD
 >>>>>>> 9f39ec2 (first)
+=======
+>>>>>>> ffb8c7b (first)
  * @method static \Modules\Blog\Database\Factories\PrivacyFactory factory(...$parameters)
  * @mixin IdeHelperPrivacy
  */
