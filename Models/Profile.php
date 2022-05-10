@@ -122,12 +122,16 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property int|null                                                                 $widgets_count
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 >>>>>>> 9f39ec2 (first)
 =======
  *
 >>>>>>> ffb8c7b (first)
+=======
+ *
+>>>>>>> 5bff340 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -193,6 +197,7 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @mixin \Eloquent
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @property string|null $bio
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
@@ -202,6 +207,8 @@ use Modules\Xot\Models\Traits\WidgetTrait;
 =======
 =======
 >>>>>>> ffb8c7b (first)
+=======
+>>>>>>> 5bff340 (first)
  *
  * @property string|null $bio
  *
@@ -213,9 +220,12 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property int|null                                                             $posts_count
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9f39ec2 (first)
 =======
 >>>>>>> ffb8c7b (first)
+=======
+>>>>>>> 5bff340 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile ofInPolygon(string $polygon_field, float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile withDistanceCustomField(string $lat_field, string $lng_field, float $lat, float $lng)
