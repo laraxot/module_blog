@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,10 +54,15 @@
 
 >>>>>>> eed9a9f (first)
 =======
+=======
+>>>>>>> 7936983 (up)
 /**
- * 
+ *
  */
+<<<<<<< HEAD
 >>>>>>> 9bcf56c (.)
+=======
+>>>>>>> 7936983 (up)
 declare(strict_types=1);
 
 namespace Modules\Blog\Http\Controllers;
@@ -67,6 +73,7 @@ use Illuminate\Routing\Controller;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Services\PanelService;
 <<<<<<< HEAD
 >>>>>>> eed9a9f (first)
@@ -83,6 +90,9 @@ use Modules\Xot\Services\PanelService;
 =======
 use Modules\Xot\Services\PanelService;
 >>>>>>> eed9a9f (first)
+=======
+use Modules\Xot\Services\PanelService;
+>>>>>>> 7936983 (up)
 
 /**
  * Undocumented class.
@@ -154,6 +164,7 @@ class PagesController extends Controller {
         [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
 <<<<<<< HEAD
+<<<<<<< HEAD
         $view = 'pub_theme::pages.'.$last_item;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,6 +180,8 @@ class PagesController extends Controller {
     public function show() {
         [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
+=======
+>>>>>>> 7936983 (up)
 =======
 >>>>>>> 7936983 (up)
         $_panel = PanelService::make()->getRequestPanel();
@@ -287,9 +300,12 @@ class PagesController extends Controller {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> e302e92 (.)
 =======
 }
 >>>>>>> 9bcf56c (.)
+=======
+>>>>>>> 7936983 (up)
