@@ -42,6 +42,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -50,6 +51,9 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
 =======
  *
 >>>>>>> 9225dd6 (up)
+=======
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Modules\Blog\Database\Factories\EventFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Event newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Event newQuery()
@@ -126,6 +130,7 @@ class Event extends BaseModelLang {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
      
@@ -145,6 +150,9 @@ class Event extends BaseModelLang {
 =======
 
 >>>>>>> 9225dd6 (up)
+=======
+     
+>>>>>>> 9f39ec2 (first)
     public function address() {// fare HasPlaceTrait
         $row = $this->morphOne(Place::class, 'post'); //->withDefault('aaaa')
 

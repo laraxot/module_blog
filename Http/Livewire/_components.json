@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [{"class_name":"Add\\Place","comp_name":"add.place","comp_ns":"Modules\\Blog\\Http\\Livewire\\Add\\Place"}]
 =======
 [{"class_name":"Add\\Place","comp_name":"blog::add.place","comp_ns":"Modules\\Blog\\Http\\Livewire\\Add\\Place"}]
@@ -27,3 +28,6 @@
 =======
 [{"class_name":"Add\\Place","comp_name":"add.place","comp_ns":"Modules\\Blog\\Http\\Livewire\\Add\\Place"}]
 >>>>>>> 9225dd6 (up)
+=======
+[{"class_name":"Add\\Place","comp_name":"blog::add.place","comp_ns":"Modules\\Blog\\Http\\Livewire\\Add\\Place"}]
+>>>>>>> 9f39ec2 (first)

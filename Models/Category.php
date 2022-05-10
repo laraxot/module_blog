@@ -44,6 +44,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -52,6 +53,9 @@ namespace Modules\Blog\Models;
 =======
  *
 >>>>>>> 9225dd6 (up)
+=======
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -68,6 +72,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -76,6 +81,9 @@ namespace Modules\Blog\Models;
 =======
  *
 >>>>>>> 9225dd6 (up)
+=======
+ *
+>>>>>>> 9f39ec2 (first)
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
  * @property int|null                                                                $articles_count
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[]    $posts
@@ -83,6 +91,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -91,6 +100,9 @@ namespace Modules\Blog\Models;
 =======
  *
 >>>>>>> 9225dd6 (up)
+=======
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Modules\Blog\Database\Factories\CategoryFactory factory(...$parameters)
  * @mixin IdeHelperCategory
  */

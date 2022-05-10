@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,11 +36,15 @@
 >>>>>>> 7936983 (up)
 =======
 >>>>>>> 9225dd6 (up)
+=======
+
+>>>>>>> 9f39ec2 (first)
 declare(strict_types=1);
 
 namespace Modules\Blog\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+<<<<<<< HEAD
 <<<<<<< HEAD
 use Modules\Xot\Services\PanelService;
 <<<<<<< HEAD
@@ -48,10 +53,13 @@ use Modules\Xot\Services\PanelService;
 >>>>>>> 7936983 (up)
 =======
 >>>>>>> 9225dd6 (up)
+=======
+>>>>>>> 9f39ec2 (first)
 
 /**
  * Undocumented class.
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,11 +83,15 @@ class PagesController extends Controller {
 class PagesController extends Controller
 {
 >>>>>>> 9225dd6 (up)
+=======
+class PagesController extends Controller {
+>>>>>>> 9f39ec2 (first)
     /**
      * Undocumented function.
      *
      * @return void
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,10 +153,17 @@ class PagesController extends Controller
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
         $view = 'pub_theme::pages.' . $last_item;
+=======
+    public function show() {
+        [$containers,$items] = params2ContainerItem();
+        $last_item = last($items);
+        $view = 'pub_theme::pages.'.$last_item;
+>>>>>>> 9f39ec2 (first)
         $view_params = [
             'view' => $view,
             'lang' => app()->getLocale(),
         ];
+<<<<<<< HEAD
 >>>>>>> 9225dd6 (up)
 
         return view()->make($view, $view_params);
@@ -165,3 +184,9 @@ class PagesController extends Controller
 >>>>>>> 9bcf56c (.)
 =======
 >>>>>>> 7936983 (up)
+=======
+
+        return view()->make($view, $view_params);
+    }
+}
+>>>>>>> 9f39ec2 (first)

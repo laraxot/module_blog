@@ -40,6 +40,7 @@ use Sushi\Sushi;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -48,6 +49,9 @@ use Sushi\Sushi;
 =======
  *
 >>>>>>> 9225dd6 (up)
+=======
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Home newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
@@ -62,6 +66,7 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 >>>>>>> 9225dd6 (up)
@@ -76,6 +81,11 @@ use Sushi\Sushi;
 >>>>>>> 7936983 (up)
 =======
 >>>>>>> 9225dd6 (up)
+=======
+ *
+ * @property string|null $name
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Home whereName($value)
  * @method static \Modules\Blog\Database\Factories\HomeFactory factory(...$parameters)
  * @mixin IdeHelperHome
@@ -89,6 +99,7 @@ class Home extends BaseModelLang {
      * @var string[]
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     protected $fillable = ['id', 'name', 'icon_src','created_by','updated_by'];
 <<<<<<< HEAD
 >>>>>>> eed9a9f (first)
@@ -97,12 +108,16 @@ class Home extends BaseModelLang {
 =======
     protected $fillable = ['id', 'name', 'icon_src'];
 >>>>>>> 9225dd6 (up)
+=======
+    protected $fillable = ['id', 'name', 'icon_src'];
+>>>>>>> 9f39ec2 (first)
 
     protected $rows = [
         [
             'id' => 'home',
             'name' => 'New York',
             'icon_src' => '',
+<<<<<<< HEAD
 <<<<<<< HEAD
             'created_by'=>'xot',
             'updated_by'=>'xot',
@@ -112,6 +127,8 @@ class Home extends BaseModelLang {
 >>>>>>> 7936983 (up)
 =======
 >>>>>>> 9225dd6 (up)
+=======
+>>>>>>> 9f39ec2 (first)
         ],
     ];
 
