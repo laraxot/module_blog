@@ -120,6 +120,10 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property User|null                                                                $user
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]    $widgets
  * @property int|null                                                                 $widgets_count
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -183,12 +187,25 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile withDistance($lat, $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @mixin \Eloquent
+<<<<<<< HEAD
  * @property string|null $bio
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
  * @property \Modules\LU\Models\PermUser|null                                     $perm
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
+=======
+ *
+ * @property string|null $bio
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
+ *
+ * @property \Modules\LU\Models\PermUser|null                                     $perm
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
+ * @property int|null                                                             $posts_count
+ *
+>>>>>>> 9f39ec2 (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile ofInPolygon(string $polygon_field, float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile withDistanceCustomField(string $lat_field, string $lng_field, float $lat, float $lng)

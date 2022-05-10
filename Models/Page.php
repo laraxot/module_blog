@@ -35,6 +35,7 @@ class Page extends BaseModel {
         'layout_position', 'blade', 'parent_id', 'icon',
         'is_modal', 'status',
     ];
+<<<<<<< HEAD
     /*
     "id" => "trallala"
         "parent_id" => 0
@@ -44,12 +45,20 @@ class Page extends BaseModel {
         */
 
     // --------- relationship ---------------
+=======
+
+    //--------- relationship ---------------
+>>>>>>> 9f39ec2 (first)
 
     public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
+<<<<<<< HEAD
     // ---------------------------------------------
+=======
+    //---------------------------------------------
+>>>>>>> 9f39ec2 (first)
 
     /**
      * Undocumented function.
@@ -57,6 +66,7 @@ class Page extends BaseModel {
      * @return void
      */
     public function getRows() {
+<<<<<<< HEAD
         $nss = [];
         $nss[] = 'pub_theme';
         $main_module = config('xra.main_module');
@@ -87,6 +97,22 @@ class Page extends BaseModel {
             )
             ->map(
                 function ($file) use ($ns) {
+=======
+        $pub_theme_path = FileService::getViewNameSpacePath('pub_theme');
+        $pages_path = $pub_theme_path.DIRECTORY_SEPARATOR.'pages';
+        /*
+        if (! File::exists(\dirname($pages_path))) {
+            try {
+                File::makeDirectory(\dirname($pages_path), 0755, true, true);
+            } catch (Exception $e) {
+                dd('Caught exception: ', $e->getMessage(), '\n['.__LINE__.']['.__FILE__.']');
+            }
+        }
+        */
+        $pages = collect(File::files($pages_path))
+            ->map(
+                function ($file) {
+>>>>>>> 9f39ec2 (first)
                     $title = $file->getFilenameWithoutExtension();
                     $title = Str::before($title, '.blade');
 
@@ -95,8 +121,11 @@ class Page extends BaseModel {
                         'parent_id' => 0,
                         'guid' => $title,
                         'title' => $title,
+<<<<<<< HEAD
                         'ns' => $ns,
                     //    'ext' => $file->getExtension(),
+=======
+>>>>>>> 9f39ec2 (first)
                     ];
                 }
             )->filter(
@@ -104,9 +133,16 @@ class Page extends BaseModel {
                     return ! in_array($item['guid'], ['index', 'show']);
                 }
             )->all();
+<<<<<<< HEAD
             $pages = $pages->merge($tmp);
         }
 
         return $pages->all();
     }
 }// end model
+=======
+
+        return $pages;
+    }
+}//end model
+>>>>>>> 9f39ec2 (first)
