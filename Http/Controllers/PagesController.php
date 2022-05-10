@@ -84,9 +84,12 @@ class PagesController extends Controller {
     public function show() {
         [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
+        $_panel = PanelService::make()->getRequestPanel();
 
-        $_panel = PanelService::make()->get(xotModel('page'));
-        $view = 'pub_theme::pages.'.$last_item;
+        //$_panel = PanelService::make()->get(xotModel('page'));
+        $row = $_panel->row;
+
+        $view = $row->ns.'::pages.'.$row->guid;
         $view_params = [
             'view' => $view,
             'lang' => app()->getLocale(),
@@ -97,7 +100,11 @@ class PagesController extends Controller {
         return view()->make($view, $view_params);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> eed9a9f (first)
+=======
+}
+>>>>>>> e302e92 (.)

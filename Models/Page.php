@@ -102,11 +102,14 @@ class Page extends BaseModel {
         $nss[] = 'pub_theme';
         $main_module = config('xra.main_module');
 
+<<<<<<< HEAD
 =======
         $nss = [];
         $nss[] = 'pub_theme';
         $main_module = config('xra.main_module');
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> e302e92 (.)
         if ('' != $main_module) {
             $nss[] = strtolower($main_module);
         }
@@ -225,9 +228,11 @@ class Page extends BaseModel {
 =======
             $pages = $pages->merge($tmp);
         }
-        // dddx($pages);
 
-        return $pages;
+        return $pages->all();
     }
 }// end model
+<<<<<<< HEAD
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> e302e92 (.)
