@@ -47,6 +47,7 @@ use Modules\Rating\Models\Traits\RatingTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
 =======
 >>>>>>> eed9a9f (first)
@@ -58,6 +59,9 @@ use Modules\Rating\Models\Traits\RatingTrait;
 =======
  *
 >>>>>>> 9f39ec2 (first)
+=======
+ *
+>>>>>>> ffb8c7b (first)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Comment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -79,6 +83,7 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @mixin \Eloquent
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  *
 >>>>>>> 9225dd6 (up)
@@ -96,11 +101,16 @@ use Modules\Rating\Models\Traits\RatingTrait;
 =======
 >>>>>>> 9225dd6 (up)
 =======
+=======
+>>>>>>> ffb8c7b (first)
  *
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  *
+<<<<<<< HEAD
 >>>>>>> 9f39ec2 (first)
+=======
+>>>>>>> ffb8c7b (first)
  * @method static \Modules\Blog\Database\Factories\CommentFactory factory(...$parameters)
  * @mixin IdeHelperComment
  */
