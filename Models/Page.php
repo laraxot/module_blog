@@ -206,6 +206,9 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9bcf56c (.)
 =======
 >>>>>>> 9bcf56c (.)
             ->filter(
@@ -292,6 +295,7 @@ class Page extends BaseModel {
                         'ns' => $ns,
                     //    'ext' => $file->getExtension(),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 9f39ec2 (first)
 =======
@@ -320,6 +324,8 @@ class Page extends BaseModel {
 =======
                         'ns' => $ns,
 >>>>>>> eed9a9f (first)
+=======
+>>>>>>> 9bcf56c (.)
                     ];
                 }
             )->filter(
@@ -370,9 +376,10 @@ class Page extends BaseModel {
 >>>>>>> 9225dd6 (up)
             $pages = $pages->merge($tmp);
         }
-
+        
         return $pages->all();
     }
+<<<<<<< HEAD
 }// end model
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -415,3 +422,6 @@ class Page extends BaseModel {
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> e302e92 (.)
+=======
+}// end model
+>>>>>>> 9bcf56c (.)

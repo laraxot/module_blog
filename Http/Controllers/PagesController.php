@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +52,11 @@
 =======
 
 >>>>>>> eed9a9f (first)
+=======
+/**
+ * 
+ */
+>>>>>>> 9bcf56c (.)
 declare(strict_types=1);
 
 namespace Modules\Blog\Http\Controllers;
@@ -268,11 +274,22 @@ class PagesController extends Controller {
 >>>>>>> 5bff340 (first)
 =======
         ];
+        if(!view()->exists($view)){
+            dddx([
+                'err'=>'view not exists',
+                'view'=>$view,
+                'row'=>$row,
+            ]);
+        }
 
         return view()->make($view, $view_params);
     }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> eed9a9f (first)
 =======
 >>>>>>> e302e92 (.)
+=======
+}
+>>>>>>> 9bcf56c (.)
