@@ -51,10 +51,8 @@ class Page extends BaseModel {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    /**
-     * Undocumented function.
-     */
-    public function getRows() {
+
+    public function getRows():array {
         $nss = [];
         $nss[] = 'pub_theme';
         $main_module = config('xra.main_module');
@@ -65,43 +63,33 @@ class Page extends BaseModel {
         foreach ($nss as $ns) {
             $pub_theme_path = FileService::getViewNameSpacePath($ns);
             $pages_path = $pub_theme_path.\DIRECTORY_SEPARATOR.'pages';
-            $tmp = collect(File::files($pages_path))
-            ->filter(
+            $tmp = collect(File::files($pages_path));
+            $tmp=$tmp->filter( 
                 function ($item) {
                     return Str::endsWith($item->getFilename(), '.blade.php');
                     // return true;
                 }
-            )
-            ->map(
-                function ($file) {
-                    $pub_theme_path = FileService::getViewNameSpacePath('pub_theme');
-                    $pages_path = $pub_theme_path.\DIRECTORY_SEPARATOR.'pages';
-
-                    $tmp = collect(File::files($pages_path))
-                        ->map(
-                            function ($file) {
-                                $title = $file->getFilenameWithoutExtension();
-                                $title = Str::before($title, '.blade');
-
-                                return [
-                                    'id' => $title,
-                                    'parent_id' => 0,
-                                    'guid' => $title,
-                                    'title' => $title,
-                                    'ns' => $ns,
-                                    //    'ext' => $file->getExtension(),
-                                ];
-                            }
-                     )->filter(
-                        function ($item) {
-                            return ! \in_array($item['guid'], ['index', 'show'], true);
-                        }
-                    )->all();
-                    $pages = $pages->merge($tmp);
-                }
             );
-        }
 
+            $tmp=$tmp->map(function($file) use($ns){
+                $title = $file->getFilenameWithoutExtension();
+                $title = Str::before($title, '.blade');
+                
+                return [
+                    'id' => $title,
+                    'parent_id' => 0,
+                    'guid' => $title,
+                    'title' => $title,
+                    'ns' => $ns,
+                    //    'ext' => $file->getExtension(),
+                ];
+
+            });
+            $pages = $pages->merge($tmp);
+
+        }
         return $pages->all();
     }
+
+
 }
