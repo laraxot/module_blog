@@ -22,7 +22,7 @@ class PagesController extends Controller {
         $view = 'pub_theme::pages.'.$last_item;
         $_panel = PanelService::make()->getRequestPanel();
         $row = $_panel->row;
-       
+
         $view = $row->ns.'::pages.'.$row->guid;
 
         $view_params = [

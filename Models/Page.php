@@ -51,8 +51,7 @@ class Page extends BaseModel {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-
-    public function getRows():array {
+    public function getRows(): array {
         $nss = [];
         $nss[] = 'pub_theme';
         $main_module = config('xra.main_module');
@@ -64,17 +63,17 @@ class Page extends BaseModel {
             $pub_theme_path = FileService::getViewNameSpacePath($ns);
             $pages_path = $pub_theme_path.\DIRECTORY_SEPARATOR.'pages';
             $tmp = collect(File::files($pages_path));
-            $tmp=$tmp->filter( 
+            $tmp = $tmp->filter(
                 function ($item) {
                     return Str::endsWith($item->getFilename(), '.blade.php');
                     // return true;
                 }
             );
 
-            $tmp=$tmp->map(function($file) use($ns){
+            $tmp = $tmp->map(function ($file) use ($ns) {
                 $title = $file->getFilenameWithoutExtension();
                 $title = Str::before($title, '.blade');
-                
+
                 return [
                     'id' => $title,
                     'parent_id' => 0,
@@ -83,13 +82,10 @@ class Page extends BaseModel {
                     'ns' => $ns,
                     //    'ext' => $file->getExtension(),
                 ];
-
             });
             $pages = $pages->merge($tmp);
-
         }
+
         return $pages->all();
     }
-
-
 }

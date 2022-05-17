@@ -62,7 +62,7 @@ trait ArticleRelationship {
     */
 
     /**
-     * Get the tags of the article
+     * Get the tags of the article.
      *
      * @return \Illuminate\Database\Eloquent\Collection
        move to module tag
