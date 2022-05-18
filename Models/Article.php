@@ -7,13 +7,14 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasSlug;
-use Modules\Blog\Models\Traits\HasTags;
+//use Modules\Blog\Models\Traits\HasTags;
 use Modules\Blog\Models\Traits\HasTimestamps;
 use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
-use Modules\Tag\Models\Traits\HasTagTrait;
+//use Modules\Tag\Models\Traits\HasTagTrait;
+use Spatie\Tags\HasTags; // spatie tags
 
 /**
  * Modules\Blog\Models\Article.
@@ -100,10 +101,10 @@ class Article extends BaseModelLang {
     use HasLikes;
     use HasProfileTrait;
     use HasSlug;
-    use HasTagTrait;
+    //use HasTagTrait;
     use HasTimestamps;
     use PreparesSearch; // non so se funziona, credo meglio HasProfileTrait
-    // use HasTags;
+    use HasTags;
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
