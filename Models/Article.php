@@ -7,7 +7,7 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasSlug;
-//use Modules\Blog\Models\Traits\HasTags;
+// use Modules\Blog\Models\Traits\HasTags;
 use Modules\Blog\Models\Traits\HasTimestamps;
 use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\LU\Models\Traits\HasProfileTrait;
@@ -96,7 +96,8 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Modules\Blog\Database\Factories\ArticleFactory factory(...$parameters)
  * @mixin IdeHelperArticle
  */
-class Article extends BaseModelLang {
+class Article extends BaseModelLang
+{
     use HasAuthor;
     use HasLikes;
     use HasProfileTrait;
