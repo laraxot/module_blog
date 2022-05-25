@@ -42,6 +42,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereRelatedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUserId($value)
  * @mixin IdeHelperPrivacyMorph
+ * @property int|null $auth_user_id
  */
 class PrivacyMorph extends BaseMorphPivot {
     /**

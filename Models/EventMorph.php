@@ -39,6 +39,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereRelatedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUserId($value)
  * @mixin IdeHelperEventMorph
+ * @property int|null $auth_user_id
  */
 class EventMorph extends BaseMorphPivot {
     /**

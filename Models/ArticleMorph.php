@@ -43,6 +43,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereRelatedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUserId($value)
  * @mixin IdeHelperArticleMorph
+ * @property int|null $auth_user_id
  */
 class ArticleMorph extends BaseMorphPivot {
     /**

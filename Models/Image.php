@@ -44,6 +44,7 @@ namespace Modules\Blog\Models;
  * @method static \Modules\Blog\Database\Factories\ImageFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereUserId($value)
  * @mixin IdeHelperImage
+ * @property int|null $auth_user_id
  */
 class Image extends BaseModel   // BaseModelLang?
 {
