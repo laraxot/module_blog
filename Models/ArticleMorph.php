@@ -21,7 +21,6 @@ namespace Modules\Blog\Models;
  * @property int                             $article_id
  * @property string                          $title
  * @property string                          $value
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph query()
@@ -40,9 +39,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereValue($value)
  * @mixin \Eloquent
- *
  * @property int|null $related_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereRelatedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUserId($value)
  * @mixin IdeHelperArticleMorph

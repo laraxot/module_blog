@@ -42,7 +42,7 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $myFavorites
  * @property int|null                                                                 $my_favorites_count
  * @property \Modules\Lang\Models\Post|null                                           $post
->>>>>>> 9225dd6 (up)
+ * >>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -57,20 +57,16 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @mixin \Eloquent
->>>>>>> 9225dd6 (up)
+ * >>>>>>> 9225dd6 (up)
  * @property int $post_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy wherePostId($value)
- *
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  * @property int                                                                  $post_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy wherePostId($value)
- *
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
->>>>>>> 9225dd6 (up)
+ * >>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\PrivacyFactory factory(...$parameters)
  * @mixin IdeHelperPrivacy
  */

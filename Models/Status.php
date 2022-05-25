@@ -8,6 +8,8 @@ use Spatie\ModelStatus\Status as BaseStatus;
 
 /**
  * Undocumented class.
+ *
+ * @mixin IdeHelperStatus
  */
 class Status extends BaseStatus {
     protected $fillable = ['id', 'name', 'reason', 'model_type', 'model_id', 'created_at', 'updated_at'];

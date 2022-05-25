@@ -41,7 +41,7 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Favorite[] $myFavorites
  * @property int|null                                                                 $my_favorites_count
  * @property \Modules\Lang\Models\Post|null                                           $post
->>>>>>> 9225dd6 (up)
+ * >>>>>>> 9225dd6 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -55,12 +55,12 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost($guid)
  * @mixin \Eloquent
->>>>>>> 9225dd6 (up)
+ * >>>>>>> 9225dd6 (up)
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
  * @property int|null                                                                $articles_count
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[]    $posts
  * @property int|null                                                                $posts_count
->>>>>>> 9225dd6 (up)
+ * >>>>>>> 9225dd6 (up)
  * @method static \Modules\Blog\Database\Factories\CategoryFactory factory(...$parameters)
  * @mixin IdeHelperCategory
  */

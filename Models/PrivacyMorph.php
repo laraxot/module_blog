@@ -21,7 +21,6 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Support\Carbon|null   $created_at
  * @property \Illuminate\Support\Carbon|null   $updated_at
  * @property \Modules\Blog\Models\Privacy|null $privacy
- *
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph query()
@@ -39,9 +38,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereValue($value)
  * @mixin \Eloquent
- *
  * @property int|null $related_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereRelatedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUserId($value)
  * @mixin IdeHelperPrivacyMorph
