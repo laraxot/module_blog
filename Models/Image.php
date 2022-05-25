@@ -43,8 +43,8 @@ namespace Modules\Blog\Models;
  * @mixin \Eloquent
  * @method static \Modules\Blog\Database\Factories\ImageFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Image whereUserId($value)
- * @mixin IdeHelperImage
  * @property int|null $auth_user_id
+ * @mixin IdeHelperImage
  */
 class Image extends BaseModel   // BaseModelLang?
 {

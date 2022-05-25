@@ -55,9 +55,9 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
- * @mixin IdeHelperEvent
  * @property int $post_id
  * @method static \Illuminate\Database\Eloquent\Builder|Event wherePostId($value)
+ * @mixin IdeHelperEvent
  */
 class Event extends BaseModelLang {
     use HasFactory;

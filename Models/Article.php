@@ -113,6 +113,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withRating()
  * @mixin \Eloquent
+ * @mixin IdeHelperArticle
  */
 class Article extends BaseModelLang {
     use HasAuthor;
