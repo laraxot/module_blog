@@ -28,8 +28,13 @@ abstract class XotBaseModel extends Model {
      *
      * @var bool
      */
-    // public static $snakeAttributes = true;
+    public static $snakeAttributes = true;
 
+    /**
+     * Undocumented variable
+     *
+     * @var integer
+     */
     protected $perPage = 30;
 
     // -------------

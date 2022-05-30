@@ -12,10 +12,5 @@ return [
     'title' => [
         'placeholder' => 'Cerca',
     ],
-    'title' => [
-        'placeholder' => 'Cerca',
-    ],
-    'title' => [
-        'placeholder' => 'Cerca',
-    ],
+    
 ];

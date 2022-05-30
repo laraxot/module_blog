@@ -9,28 +9,23 @@ use Illuminate\Support\Str;
 use Modules\Xot\Services\FileService;
 use Sushi\Sushi;
 
-/**
- * Undocumented class.
- *
- * @property int                                             $id
- * @property \Illuminate\Database\Eloquent\Collection|Page[] $sons
- * @property int|null                                        $sons_count
- * @method static \Illuminate\Database\Eloquent\Builder|Page newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Page newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Page query()
- * @method static \Illuminate\Database\Eloquent\Builder|Page whereId($value)
- * @mixin \Eloquent
- * @method static \Modules\Blog\Database\Factories\PageFactory factory(...$parameters)
- * @mixin IdeHelperPage
- */
 class Page extends BaseModel {
     use Sushi;
     /**
      * @var string[]
      */
-    protected $fillable = ['id', 'pos', 'article_type', 'published_at', 'category_id',
-        'layout_position', 'blade', 'parent_id', 'icon',
-        'is_modal', 'status',
+    protected $fillable = [
+        'id', 
+        'pos', 
+        'article_type', 
+        'published_at', 
+        'category_id',
+        'layout_position', 
+        'blade', 
+        'parent_id', 
+        'icon',
+        'is_modal', 
+        'status',
     ];
 
     /*

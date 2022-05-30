@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits\Extras;
 
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 /**

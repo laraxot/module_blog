@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits\Scopes;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
@@ -62,7 +63,7 @@ trait ArticleScope {
      * Scope a query to only include articles with a specified category.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param $id -> The id of the category
+     * @param integer $id 
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -76,7 +77,7 @@ trait ArticleScope {
      * Scope a query to only include articles that belongs to an author.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param $id -> The id of the author
+     * @param integer $id 
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -90,7 +91,7 @@ trait ArticleScope {
      * Scope a query to only include articles with a specified tag.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param $id -> The id of the tag
+     * @param integer $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -104,7 +105,7 @@ trait ArticleScope {
      * Scope a query to only include articles which contains searching words.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param $searching -> The searching words
+     * @param string $searching 
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -127,6 +128,7 @@ trait ArticleScope {
     }
 
     public function scopeAwaitingApproval(Builder $query): Builder {
+        //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted(). 
         return $query->submitted()
         ->notApproved();
     }

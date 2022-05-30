@@ -16,7 +16,7 @@ trait HasAuthor {
         return $this->belongsTo(User::class, 'author_id');
     }
 
-    public function authoredBy(User $author) {
+    public function authoredBy(User $author):void {
         $this->authorRelation()->associate($author);
 
         $this->unsetRelation('authorRelation');
@@ -40,6 +40,8 @@ trait HasAuthor {
     }
 
     public function isAuthoredBy(User $user): bool {
-        return $this->author()->is($user);
+        //43   Call to an undefined method Illuminate\Database\Eloquent\Builder<Modules\Blog\Models\Article>::is().  
+        //return $this->author()->is($user);
+        return $this->author->is($user);
     }
 }
