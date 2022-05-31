@@ -169,7 +169,7 @@ protected $perPage = 30;
     ];
 
     /**
-     * @var string[]
+     * @var array<string, string>
      */
     protected $casts = [
         'image_resize_src' => 'array',

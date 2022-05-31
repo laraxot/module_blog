@@ -139,6 +139,12 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
  * @mixin IdeHelperProfile
+ * @property string|null $first_name1
+ * @property string|null $last_name
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFullName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
  */
 class Profile extends BaseModelLang {
     use GeoTrait;
