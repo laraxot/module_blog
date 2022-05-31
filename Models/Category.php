@@ -42,7 +42,6 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
- * @mixin IdeHelperCategory
  */
 class Category extends BaseModelLang {
     /**

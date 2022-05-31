@@ -30,6 +30,7 @@ use Sushi\Sushi;
  * @property-read string|null $user_handle
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Image[] $images
  * @property-read int|null $images_count
+ * @property-read \Modules\Lang\Models\Post|null $post
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-write mixed $url

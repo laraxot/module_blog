@@ -5,26 +5,25 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 /**
- * Modules\Blog\Models\PrivacyMorph.
+ * Modules\Blog\Models\PrivacyMorph
  *
- * @property int                               $id
- * @property string|null                       $post_type
- * @property int|null                          $post_id
- * @property string|null                       $related_type
- * @property int|null                          $privacy_id
- * @property string|null                       $title
- * @property int|null                          $value
- * @property int|null                          $user_id
- * @property string|null                       $created_by
- * @property string|null                       $updated_by
- * @property string|null                       $deleted_by
- * @property \Illuminate\Support\Carbon|null   $created_at
- * @property \Illuminate\Support\Carbon|null   $updated_at
- * @property \Modules\Blog\Models\Privacy|null $privacy
+ * @property int $id
+ * @property string|null $post_type
+ * @property int|null $post_id
+ * @property string|null $related_type
+ * @property int|null $privacy_id
+ * @property string|null $title
+ * @property int|null $value
+ * @property int|null $user_id
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Modules\Blog\Models\Privacy|null $privacy
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph query()
- * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereAuthUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereDeletedBy($value)
@@ -36,13 +35,9 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereValue($value)
  * @mixin \Eloquent
- * @property int|null $related_id
- * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereRelatedId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUserId($value)
- * @property int|null $auth_user_id
- * @mixin IdeHelperPrivacyMorph
  */
 class PrivacyMorph extends BaseMorphPivot {
     /**
