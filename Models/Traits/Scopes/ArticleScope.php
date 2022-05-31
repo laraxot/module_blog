@@ -127,6 +127,12 @@ trait ArticleScope {
         return $query->whereNull('approved_at');
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param Builder $query
+     * @return Builder
+     */
     public function scopeAwaitingApproval(Builder $query): Builder {
         //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted(). 
         return $query->submitted()
@@ -134,6 +140,7 @@ trait ArticleScope {
     }
 
     public function scopePublished(Builder $query): Builder {
+        //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted().
         return $query->submitted()
         ->approved();
     }

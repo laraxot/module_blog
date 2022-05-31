@@ -22,7 +22,7 @@ class PrivacyFactory extends Factory {
      */
     public function definition() {
         return [
-            'id' => $this->faker->randomNumber,
+            //'id' => $this->faker->randomNumber,
             'related_type' => $this->faker->word,
             'obligatory' => $this->faker->boolean,
         ];
