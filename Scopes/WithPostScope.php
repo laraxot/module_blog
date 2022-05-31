@@ -20,7 +20,7 @@ class WithPostScope implements Scope {
         // $builder->where('is_active', '=', 1);
         $post = TenantService::model('post');
         // $post_table = with(new Post())->getTable();
-        $post_table = optional($post)->getTable();
+        $post_table = $post->getTable();
         $model_table = $model->getTable();
         $lang = 'it';
 

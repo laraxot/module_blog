@@ -144,7 +144,7 @@ class Article extends BaseModelLang {
     protected $appends = ['title'];
 
     /**
-     * @var array
+     * @var array<string, string>
      */
     protected $casts = [
         // 'published_at' => 'datetime:Y-m-d', // da verificare
