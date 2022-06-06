@@ -12,6 +12,9 @@ use Livewire\Component;
  */
 class Place extends Component {
     public function render(): Renderable {
+        /** 
+        * @phpstan-var view-string
+        */
         $view = 'blog::livewire.add.place';
 
         $view_params = [

@@ -65,7 +65,10 @@ class PagePanel extends XotBasePanel {
         $last_item = last($items);
         if (! inAdmin()) {
             // siccome non so dove metterlo, per ora dentro pub_theme
-            $view = 'pub_theme::pages.'.$last_item.'.index.nav';
+            /** 
+        * @phpstan-var view-string
+        */
+        $view = 'pub_theme::pages.'.$last_item.'.index.nav';
 
             return view()->make($view);
         }

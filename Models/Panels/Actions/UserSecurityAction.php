@@ -33,6 +33,9 @@ class UserSecurityAction extends XotBasePanelAction {
         return $this->panel->view();
 
         /*
+        /** 
+        * @phpstan-var view-string
+        */
         $view = 'pub_theme::profile.'.$this->getName();
 
         return ThemeService::view($view)

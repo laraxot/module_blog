@@ -22,6 +22,9 @@ class PagesController extends Controller {
     public function show():Renderable {
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
+        /** 
+        * @phpstan-var view-string
+        */
         $view = 'pub_theme::pages.'.$last_item;
         $_panel = PanelService::make()->getRequestPanel();
         if($_panel==null){
