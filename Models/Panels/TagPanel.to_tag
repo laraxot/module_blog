@@ -46,8 +46,9 @@ class TagPanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     * @param Tag $row
      */
-    public function optionLabel(object $row): string {
+    public function optionLabel($row): string {
         return $row->title;
     }
 

@@ -36,10 +36,6 @@ class RatingPanel extends XotBasePanel {
     }
 
     /**
-     * on select the option id.
-     */
-
-    /**
      * on select the option label.
      * 
      * @param Rating $row
