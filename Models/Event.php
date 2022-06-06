@@ -15,7 +15,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
 /**
  * Modules\Blog\Models\Event
  *
- * @property int $post_id
+ * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $date_start
@@ -48,7 +48,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereDateEnd($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereDateStart($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Event wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
@@ -79,15 +79,8 @@ class Event extends BaseModelLang {
     protected $dates = ['date_start', 'date_end', 'created_at', 'updated_at'];
 
     /**
-     * @var string[]
+     * @var array<string, string>
      */
-    /*
-    protected $casts = [
-        'date_start' => 'datetime:d/m/Y H:i',
-        'date_end' => 'datetime:d/m/Y H:i',
-    ];
-    */
-
     protected $casts = [
         'date_start' => 'datetime:Y-m-d\TH:i',
         'date_end' => 'datetime:Y-m-d\TH:i',

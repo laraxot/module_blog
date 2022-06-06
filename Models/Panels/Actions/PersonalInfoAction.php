@@ -32,7 +32,7 @@ class PersonalInfoAction extends XotBasePanelAction {
 
         /*return ThemeService::view($view)
             ->with('row', $this->row);*/
-        if (null === $this->panel) {
+        if (null == $this->panel) {
             throw new Exception('this->panel is null');
         }
 

@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits;
 
+use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
 trait PreparesSearch {
-    public function split($value) {
+    /**
+     * Undocumented function
+     *
+     * @param string $value
+     * @return array<string>
+     */
+    public function split(string $value): array {
         // Split the string on new paragraph.
         $chunks = $this->splitToCollection($value, "/\r\n\r\n/")
             ->flatMap(function ($chunk) {
@@ -24,10 +31,28 @@ trait PreparesSearch {
         return $this->batch($chunks, 5000);
     }
 
-    private function splitToCollection($string, $delimiter): Collection {
-        return collect(preg_split($delimiter, $string));
+    /**
+     * Undocumented function
+     *
+     * @param string $string
+     * @param string $delimiter
+     * @return Collection
+     */
+    private function splitToCollection(string $string,string $delimiter): Collection {
+        $array=preg_split($delimiter, $string);
+        if($array==false){
+            throw new Exception('['.__LINE__.']['.__FILE__.']');
+        }
+        return collect($array);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param Collection $chunks
+     * @param integer $limit
+     * @return array
+     */
     private function batch(Collection $chunks, int $limit): array {
         return $chunks->reduce(function ($carry, $item) use ($limit) {
             // First iteration, set the item as first array item.s

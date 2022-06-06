@@ -11,8 +11,8 @@ namespace Modules\Blog\Models;
  * @property string|null $post_type
  * @property int|null $post_id
  * @property string|null $related_type
- * @property int|null $related_id
- * @property int|null $auth_user_id
+ * @property int|null $event_id
+ * @property int|null $user_id
  * @property string|null $note
  * @property string|null $created_by
  * @property string|null $updated_by
@@ -22,18 +22,18 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph query()
- * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereAuthUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereEventId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereNote($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph wherePostId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereRelatedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereRelatedType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUserId($value)
  * @mixin \Eloquent
  */
 class EventMorph extends BaseMorphPivot {

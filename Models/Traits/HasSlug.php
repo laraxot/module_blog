@@ -12,6 +12,12 @@ trait HasSlug {
         return $this->guid;
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param string $slug
+     * @return void
+     */
     public function setSlugAttribute(string $slug) {
         $this->attributes['slug'] = $this->generateUniqueSlug($slug);
     }
@@ -24,7 +30,7 @@ trait HasSlug {
         $slug = $originalSlug = Str::slug($value) ?: Str::random(5);
         $counter = 0;
 
-        while ($this->slugExists($slug, $this->exists ? $this->id() : null)) {
+        while ($this->slugExists($slug, $this->exists ? $this->getKey() : null)) {
             ++$counter;
             $slug = $originalSlug.'-'.$counter;
         }

@@ -6,6 +6,7 @@ namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
 // --- Services --
+use Modules\Rating\Models\Rating;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
@@ -40,9 +41,11 @@ class RatingPanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     * 
+     * @param Rating $row
      */
-    public function optionLabel(object $row): string {
-        return $row->title;
+    public function optionLabel($row): string {
+        return (string)$row->title;
     }
 
     /**

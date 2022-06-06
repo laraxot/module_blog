@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 // --- Services --
+use Modules\Blog\Models\Profile;
 use Modules\Blog\Events\StoreProfileEvent;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -18,6 +19,8 @@ class ProfilePanel extends XotBasePanel {
      * The model the resource corresponds to.
      */
     protected static string $model = 'Modules\Blog\Models\Profile';
+    
+    public Profile $row;
 
     /**
      * @return object[]
@@ -91,14 +94,15 @@ class ProfilePanel extends XotBasePanel {
      * @param int $size
      */
     public function avatar($size = 100): ?string {
-        if (null === $this->row) {
-            throw new \Exception('row is null');
-        }
+        //if (null === $this->row) {
+        //    throw new \Exception('row is null');
+        //}
         /*
         if (! property_exists($this->row, 'user')) {
             throw new \Exception('in ['.get_class($this->row).'] property [user] not exists');
         }
         */
+        // 102    Access to an undefined property Illuminate\Database\Eloquent\Model::$user.  
         $user = $this->row->user;
 
         if (! \is_object($user) && \is_object($this->row)) {
@@ -108,7 +112,9 @@ class ProfilePanel extends XotBasePanel {
             // dddx($this->row);
             return null;
         }
-
+        if($user==null){
+            return null;
+        }
         $email = md5(mb_strtolower(trim((string) $user->email)));
         $default = urlencode('https://tracker.moodle.org/secure/attachment/30912/f3.png');
 
@@ -135,12 +141,19 @@ class ProfilePanel extends XotBasePanel {
             'lang' => app()->getLocale(),
         ];
 
+        $post=$row->post;
+        if($post==null){
+            $row->post()->create($post_data);
+        }else{
+            $row->post->update($post_data);
+        }
+        /*
         if (\is_object($row->post)) {
             $row->post->update($post_data);
         } else {
             $row->post()->create($post_data);
         }
-
+        */
         $res = event(new StoreProfileEvent($user));
         // $this->generateUUIDVerificationToken($user);
         \Auth::guard()->login($user, true);
@@ -164,9 +177,17 @@ class ProfilePanel extends XotBasePanel {
     public function isSuperAdmin(): bool {
         // 232 Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
         // $user = $this->row->user;
-        $user = $this->row->getRelationValue('user');
+        //$user = $this->row->getRelationValue('user');
+        $user = $this->row->user;
+        if($user==null){
+            return false;
+        }
+        $perm=$user->perm;
+        if($perm==null){
+            return false;
+        }
 
-        if (\is_object($user->perm) && $user->perm->perm_type >= 4) {  // superadmin
+        if ($perm->perm_type >= 4) {  // superadmin
             return true;
         }
 

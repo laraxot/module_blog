@@ -7,8 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendWeeklyPostsEmail extends Mailable
-{
+class SendWeeklyPostsEmail extends Mailable {
     use Queueable, SerializesModels;
 
     /**
@@ -16,8 +15,7 @@ class SendWeeklyPostsEmail extends Mailable
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         //
     }
 
@@ -26,8 +24,8 @@ class SendWeeklyPostsEmail extends Mailable
      *
      * @return $this
      */
-    public function build()
-    {
-        return $this->view('view.name');
+    public function build() {
+        $view='view.name';
+        return $this->view($view);
     }
 }

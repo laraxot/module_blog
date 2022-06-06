@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
+use Modules\Blog\Models\Category;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -18,8 +19,10 @@ class CategoryPanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     * 
+     * @param Category $row
      */
-    public function optionLabel(object $row): string {
+    public function optionLabel($row): string {
         return ''.$row->title;
     }
 

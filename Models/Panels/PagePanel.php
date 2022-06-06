@@ -5,9 +5,11 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
+use Modules\Blog\Models\Page;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Xot\Models\Panels\XotBasePanel;
 use Illuminate\Contracts\Support\Renderable;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
-use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
 
@@ -48,9 +50,11 @@ class PagePanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     * 
+     * @param Page $row
      */
-    public function optionLabel(object $row): string {
-        return $row->title;
+    public function optionLabel($row): string {
+        return (string)$row->title;
     }
 
     /**

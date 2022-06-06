@@ -28,26 +28,26 @@ class ArticlePanelPolicy extends XotBasePanelPolicy {
     }
 
     public function update(UserContract $user, PanelContract $panel): bool {
-        return $panel->row->isAuthoredBy($user) || $user->isModerator() || $user->isAdmin();
+        return $panel->isAuthoredBy($user) || $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function delete(UserContract $user, PanelContract $panel): bool {
-        return $panel->row->isAuthoredBy($user) || $user->isModerator() || $user->isAdmin();
+        return $panel->isAuthoredBy($user) || $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function approve(UserContract $user, PanelContract $panel): bool {
-        return $user->isModerator() || $user->isAdmin();
+        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function disapprove(UserContract $user, PanelContract $panel): bool {
-        return $user->isModerator() || $user->isAdmin();
+        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function decline(UserContract $user, PanelContract $panel): bool {
-        return $user->isModerator() || $user->isAdmin();
+        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function togglePinnedStatus(UserContract $user, PanelContract $panel): bool {
-        return $user->isModerator() || $user->isAdmin();
+        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 }

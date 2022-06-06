@@ -26,7 +26,7 @@ class UserSecurityAction extends XotBasePanelAction {
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
     public function handle(): View {
-        if (null === $this->panel) {
+        if (null == $this->panel) {
             throw new Exception('panel is null');
         }
 

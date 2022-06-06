@@ -11,10 +11,10 @@ namespace Modules\Blog\Models;
  * @property string|null $post_type
  * @property int|null $post_id
  * @property string|null $related_type
- * @property int|null $related_id
+ * @property int|null $privacy_id
  * @property string|null $title
  * @property int|null $value
- * @property int|null $auth_user_id
+ * @property int|null $user_id
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property string|null $deleted_by
@@ -24,18 +24,18 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph query()
- * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereAuthUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph wherePostId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereRelatedId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph wherePrivacyId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereRelatedType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PrivacyMorph whereValue($value)
  * @mixin \Eloquent
  */

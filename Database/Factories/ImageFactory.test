@@ -15,7 +15,7 @@ class ImageFactory extends Factory {
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
-    protected $model = Modules\Blog\Models\Image::class;
+    protected $model = \Modules\Blog\Models\Image::class;
 
     /**
      * Define the model's default state.
@@ -26,14 +26,14 @@ class ImageFactory extends Factory {
        
 
         return [
-            'id' => $this->faker->randomNumber,
+            'id' => $this->faker->randomNumber(5, false),
             'post_type' => $this->faker->word,
-            'post_id' => $this->faker->integer,
+            'post_id' => $this->faker->randomNumber(5, false),
             'src' => $this->faker->text,
             'src_out' => $this->faker->text,
-            'width' => $this->faker->randomNumber,
-            'height' => $this->faker->randomNumber,
-            'user_id' => $this->faker->integer,
+            'width' => $this->faker->randomNumber(5, false),
+            'height' => $this->faker->randomNumber(5, false),
+            'user_id' => $this->faker->randomNumber(5, false),
             'note' => $this->faker->text
         ];
     }

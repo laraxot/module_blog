@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Traits\Scopes;
 
 use Carbon\Carbon;
+use Modules\Blog\Models\Article;
 use Illuminate\Database\Eloquent\Builder;
 
 /**
@@ -130,8 +131,8 @@ trait ArticleScope {
     /**
      * Undocumented function
      *
-     * @param Builder $query
-     * @return Builder
+     * @param Builder<Article> $query
+     * @return Builder<Article>
      */
     public function scopeAwaitingApproval(Builder $query): Builder {
         //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted(). 
@@ -139,6 +140,12 @@ trait ArticleScope {
         ->notApproved();
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param Builder<Article> $query
+     * @return Builder<Article>
+     */
     public function scopePublished(Builder $query): Builder {
         //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted().
         return $query->submitted()

@@ -6,6 +6,8 @@ namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
 // --- Services --
+use Modules\Blog\Models\Privacy;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -22,31 +24,13 @@ class PrivacyPanel extends XotBasePanel {
      */
     protected static string $title = 'title';
 
-    /**
-     * The columns that should be searched.
-     */
-    protected static array $search = [];
-
-    /**
-     * The relationships that should be eager loaded on index queries.
-     */
-    public function with(): array {
-        return [];
-    }
-
-    /**
-     * on select the option id.
-     *
-     * @return mixed
-     */
-    public function optionId(object $row) {
-        return $row->post_id;
-    }
 
     /**
      * on select the option label.
+     * 
+     * @param Privacy $row
      */
-    public function optionLabel(object $row): string {
+    public function optionLabel($row): string {
         return $row->title.' ['.$row->related_type.']';
     }
 

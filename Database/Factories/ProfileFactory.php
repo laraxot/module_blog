@@ -15,7 +15,7 @@ class ProfileFactory extends Factory {
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
-    protected $model = Modules\Blog\Models\Profile::class;
+    protected $model = Profile::class;
 
     /**
      * Define the model's default state.
@@ -26,8 +26,8 @@ class ProfileFactory extends Factory {
        
 
         return [
-            'id' => $this->faker->randomNumber,
-            'user_id' => $this->faker->integer,
+            //'id' => $this->faker->randomNumber(5, false),
+            //'user_id' => $this->faker->int,
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->email,
             'bio' => $this->faker->text

@@ -24,11 +24,13 @@ trait ArticleExtra {
         return Str::limit(strip_tags(''.md_to_html($this->body())), $limit);
     }
 
-    public function heroImage($width = 400, $height = 300): string {
+    public function heroImage(int $width = 400, int $height = 300): string {
+        /*
         if ($this->hero_image) {
             return "https://source.unsplash.com/{$this->hero_image}/{$width}x{$height}";
         }
-
+        */
+        
         return asset('images/default-background.svg');
     }
 
@@ -50,7 +52,11 @@ trait ArticleExtra {
     }
 
     public function approvedAt(): ?Carbon {
-        return $this->approved_at;
+        $res=$this->approved_at;
+        if(is_string($res)){
+            $res=Carbon::parse($res);
+        }
+        return $res;
     }
 
     public function isSubmitted(): bool {
@@ -97,30 +103,35 @@ trait ArticleExtra {
         return ! $this->isAwaitingApproval();
     }
 
-    public function readTime() {
+    public function readTime():float {
         $minutes = round(str_word_count(''.$this->body()) / 200);
 
-        return 0 === $minutes ? 1 : $minutes;
+        return 0.0 == $minutes ? 1 : $minutes;
     }
 
-    public function shouldBeSearchable() {
+    public function shouldBeSearchable():bool {
         return $this->isPublished();
     }
 
     public function toSearchableArray(): array {
         return [
-            'id' => $this->id(),
+            'id' => $this->getKey(),
             'title' => $this->title(),
             'body' => $this->body(),
             'slug' => $this->slug(),
         ];
     }
 
-    public function splitBody($value) {
+    public function splitBody(string $value): array {
         return $this->split($value);
     }
 
-    public function markAsShared() {
+    /**
+     * Undocumented function
+     *
+     * @return void
+     */
+    public function markAsShared():void {
         $this->update([
             'shared_at' => now(),
         ]);
@@ -142,6 +153,9 @@ trait ArticleExtra {
     }
 
     public function isUpdated(): bool {
+        if($this->updated_at==null){
+            return false;
+        }
         return $this->updated_at->gt($this->created_at);
     }
 }

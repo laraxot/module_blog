@@ -15,7 +15,7 @@ class CommentFactory extends Factory {
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
-    protected $model = Modules\Blog\Models\Comment::class;
+    protected $model = Comment::class;
 
     /**
      * Define the model's default state.
@@ -26,7 +26,7 @@ class CommentFactory extends Factory {
        
 
         return [
-            'id' => $this->faker->randomNumber
+           // 'id' => $this->faker->randomNumber
         ];
     }
 }

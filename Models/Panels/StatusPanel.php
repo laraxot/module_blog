@@ -5,9 +5,10 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-use Modules\Xot\Contracts\RowsContract;
+use Modules\Blog\Models\Status;
 // --- Services --
 
+use Modules\Xot\Contracts\RowsContract;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 class StatusPanel extends XotBasePanel {
@@ -56,9 +57,11 @@ class StatusPanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     * 
+      * @param Status $row
      */
     public function optionLabel($row): string {
-        return (string) $row->title;
+        return (string) $row->name;
     }
 
     /**

@@ -60,6 +60,11 @@ class Home extends BaseModelLang {
      */
     protected $fillable = ['id', 'name', 'icon_src', 'created_by', 'updated_by'];
 
+    /**
+     * Undocumented variable
+     *
+     * @var array<int, array<string, string>>
+     */
     protected $rows = [
         [
             'id' => 'home',

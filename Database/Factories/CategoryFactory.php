@@ -15,7 +15,7 @@ class CategoryFactory extends Factory {
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
-    protected $model = Modules\Blog\Models\Category::class;
+    protected $model = Category::class;
 
     /**
      * Define the model's default state.
@@ -26,7 +26,7 @@ class CategoryFactory extends Factory {
        
 
         return [
-            'id' => $this->faker->randomNumber
+            //'id' => $this->faker->randomNumber
         ];
     }
 }

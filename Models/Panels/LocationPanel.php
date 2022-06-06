@@ -37,17 +37,6 @@ class LocationPanel extends XotBasePanel {
         return ['post', 'images'];
     }
 
-    public function search(): array {
-        return [];
-    }
-
-    /**
-     * on select the option label.
-     */
-    public function optionLabel(object $row): string {
-        return $row->area_define_name;
-    }
-
     /**
      * Get the fields displayed by the resource.
         'value'=>'..',
