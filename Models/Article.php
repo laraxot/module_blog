@@ -59,7 +59,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @property-read \Modules\Lang\Models\Post|null $post
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
- * @property-read \Modules\Xot\Models\Profile|null $profile
+ * @property-read \Modules\LU\Models\Profile|null $profile
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratingObjectives
  * @property-read int|null $rating_objectives_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
