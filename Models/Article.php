@@ -21,17 +21,11 @@ use Spatie\Tags\HasTags; // spatie tags
  *
  * @property int $post_id
  * @property string|null $article_type
- * @property string|null $original_url
  * @property \Illuminate\Support\Carbon|null $published_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property \Illuminate\Support\Carbon|null $submitted_at
- * @property \Illuminate\Support\Carbon|null $approved_at
- * @property \Illuminate\Support\Carbon|null $shared_at
- * @property \Illuminate\Support\Carbon|null $declined_at
- * @property bool|null $is_pinned
  * @property string|null $parent_type
  * @property int|null $parent_id
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
@@ -65,7 +59,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @property-read \Modules\Lang\Models\Post|null $post
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
- * @property-read \Modules\LU\Models\Profile|null $profile
+ * @property-read \Modules\Xot\Models\Profile|null $profile
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratingObjectives
  * @property-read int|null $rating_objectives_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings

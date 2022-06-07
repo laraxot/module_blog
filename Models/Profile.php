@@ -81,7 +81,7 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read int|null $privacies_count
- * @property-read \Modules\LU\Models\Profile|null $profile
+ * @property-read \Modules\Xot\Models\Profile|null $profile
  * @property-write mixed $url
  * @property-read User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets

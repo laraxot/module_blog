@@ -13,9 +13,6 @@ use Sushi\Sushi;
  * Modules\Blog\Models\Page
  *
  * @property int $id
- * @property string|null $title
- * @property string|null $guid
- * @property string|null $ns
  * @property-read \Illuminate\Database\Eloquent\Collection|Page[] $sons
  * @property-read int|null $sons_count
  * @method static \Modules\Blog\Database\Factories\PageFactory factory(...$parameters)
