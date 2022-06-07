@@ -15,7 +15,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
 /**
  * Modules\Blog\Models\Event
  *
- * @property int $id
+ * @property int $post_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $date_start
@@ -48,7 +48,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereDateEnd($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereDateStart($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Event whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event wherePostId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)

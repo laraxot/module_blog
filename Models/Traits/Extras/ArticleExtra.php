@@ -53,9 +53,10 @@ trait ArticleExtra {
 
     public function approvedAt(): ?Carbon {
         $res=$this->approved_at;
-        if(is_string($res)){
-            $res=Carbon::parse($res);
-        }
+        //Call to function is_string() with Illuminate\Support\Carbon|null will always evaluate to false
+        //if(is_string($res)){
+        //    $res=Carbon::parse($res);
+        //}
         return $res;
     }
 

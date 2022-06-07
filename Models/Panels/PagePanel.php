@@ -38,7 +38,6 @@ class PagePanel extends XotBasePanel {
      * The relationships that should be eager loaded on index queries.
      *
      * @return string[]
-     * @return string[]
      */
     public function with(): array {
         return ['post'];

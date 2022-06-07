@@ -10,7 +10,6 @@ namespace Modules\Blog\Models\Panels\Actions;
 use Exception;
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
-use Modules\Theme\Services\ThemeService;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
@@ -31,16 +30,6 @@ class UserSecurityAction extends XotBasePanelAction {
         }
 
         return $this->panel->view();
-
-        /*
-        /** 
-        * @phpstan-var view-string
-        */
-        $view = 'pub_theme::profile.'.$this->getName();
-
-        return ThemeService::view($view)
-        ->with('row', $this->row);
-        */
     }
 
     /**
