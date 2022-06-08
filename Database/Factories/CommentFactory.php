@@ -23,10 +23,10 @@ class CommentFactory extends Factory {
      * @return array
      */
     public function definition() {
-       
+
 
         return [
-           // 'id' => $this->faker->randomNumber
+           // 'id' => $this->faker->randomNumber()
         ];
     }
 }
