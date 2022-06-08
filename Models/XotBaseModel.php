@@ -16,6 +16,7 @@ use Modules\Xot\Traits\Updater;
  *
  * @property \Modules\LU\Models\User|null   $user
  * @property \Modules\Lang\Models\Post|null $post
+ * @property string|null                    $post_type
  */
 abstract class XotBaseModel extends Model {
     use LinkedTrait;
@@ -31,9 +32,9 @@ abstract class XotBaseModel extends Model {
     public static $snakeAttributes = true;
 
     /**
-     * Undocumented variable
+     * Undocumented variable.
      *
-     * @var integer
+     * @var int
      */
     protected $perPage = 30;
 
