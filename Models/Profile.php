@@ -31,16 +31,14 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property string|null $phone
  * @property string|null $address
  * @property int|null $user_id
- * @property string|null $guid
- * @property string|null $first_name1
- * @property string|null $last_name
- * @property string|null $full_name
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
  * @property-read int|null $articles_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $containerWidgets
  * @property-read int|null $container_widgets_count
  * @property-read string|null $first_name
  * @property-read string $full_address
+ * @property-read string|null $full_name
+ * @property string|null $guid
  * @property string|null $image_src
  * @property-read string|null $lang
  * @property-read float|null $latitude
@@ -55,7 +53,7 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read int|null $privacies_count
- * @property-read \Modules\Xot\Models\Profile|null $profile
+ * @property-read \Modules\Mediamonitor\Models\Profile|null $profile
  * @property-write mixed $url
  * @property-read User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
@@ -73,12 +71,8 @@ use Modules\Xot\Models\Traits\WidgetTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName1($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFullName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereSurname($value)
