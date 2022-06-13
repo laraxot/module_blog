@@ -33,7 +33,7 @@ class FiveCharactersRule implements Rule {
      * Determine if the validation rule passes.
      *
      * @param string $attribute
-     * @param mixed  $value
+     * @param string  $value
      *
      * @return bool
      */

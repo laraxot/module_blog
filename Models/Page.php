@@ -36,16 +36,16 @@ class Page extends BaseModel {
      * @var string[]
      */
     protected $fillable = [
-        'id', 
-        'pos', 
-        'article_type', 
-        'published_at', 
+        'id',
+        'pos',
+        'article_type',
+        'published_at',
         'category_id',
-        'layout_position', 
-        'blade', 
-        'parent_id', 
+        'layout_position',
+        'blade',
+        'parent_id',
         'icon',
-        'is_modal', 
+        'is_modal',
         'status',
     ];
 
@@ -68,6 +68,9 @@ class Page extends BaseModel {
     public function getRows(): array {
         $nss = [];
         $nss[] = 'pub_theme';
+        /**
+         * @var string
+         */
         $main_module = config('xra.main_module');
         if ('' !== $main_module && null !== $main_module) {
             $nss[] = strtolower($main_module);
