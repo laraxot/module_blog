@@ -25,7 +25,7 @@ trait HasTags {
         $this->unsetRelation('tagsRelation');
     }
 
-    public function removeTags() {
+    public function removeTags(): void {
         $this->tagsRelation()->detach();
 
         $this->unsetRelation('tagsRelation');
