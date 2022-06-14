@@ -99,9 +99,7 @@ class CreateArticlesTable extends XotBaseMigration {
                 if (! $this->hasColumn('declined_at')) {
                     $table->dateTime('declined_at')->nullable(); // ->default(new DateTime());
                 }
-                if (! $this->hasColumn('approved_at')) {
-                    $table->timestamp('approved_at')->nullable();
-                }
+
                 if (! $this->hasColumn('original_url')) {
                     $table->string('original_url')->nullable();
                 }
