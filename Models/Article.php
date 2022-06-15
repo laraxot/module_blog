@@ -20,15 +20,15 @@ use Spatie\Tags\HasTags; // spatie tags
  * Modules\Blog\Models\Article
  *
  * @property int $id
+ * @property string|null $parent_type
+ * @property int|null $parent_id
+ * @property int|null $pos
  * @property string|null $article_type
  * @property \Illuminate\Support\Carbon|null $published_at
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $parent_type
- * @property int|null $parent_id
- * @property int|null $pos
  * @property int|null $user_id
  * @property int|null $is_featured
  * @property float|null $ratings_avg
@@ -40,10 +40,10 @@ use Spatie\Tags\HasTags; // spatie tags
  * @property int $is_pinned
  * @property \Illuminate\Support\Carbon|null $submitted_at
  * @property \Illuminate\Support\Carbon|null $approved_at
- * @property \Illuminate\Support\Carbon|null $shared_at
- * @property \Illuminate\Support\Carbon|null $declined_at
  * @property string|null $original_url
  * @property int|null $series_id
+ * @property \Illuminate\Support\Carbon|null $shared_at
+ * @property \Illuminate\Support\Carbon|null $declined_at
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
  * @property-read int|null $articles_count
  * @property-read \Modules\LU\Models\User|null $author
