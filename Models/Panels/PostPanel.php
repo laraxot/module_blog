@@ -30,7 +30,6 @@ class PostPanel extends XotBasePanel {
             (object) [
                 'type' => 'Id',
                 'name' => 'id',
-                'rules' => 'required',
                 'comment' => null,
             ],
             (object) [
