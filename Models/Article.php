@@ -6,7 +6,7 @@ namespace Modules\Blog\Models;
 
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
-use Modules\Blog\Models\Traits\HasSlug;
+use Modules\Blog\Models\Traits\HasSlug; // spatie tags
 // use Modules\Blog\Models\Traits\HasTags;
 use Modules\Blog\Models\Traits\HasTimestamps;
 use Modules\Blog\Models\Traits\PreparesSearch;
@@ -14,71 +14,73 @@ use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
 // use Modules\Tag\Models\Traits\HasTagTrait;
-use Spatie\Tags\HasTags; // spatie tags
+use Modules\Theme\Contracts\HasLikeContract;
+use Spatie\Tags\HasTags;
 
 /**
- * Modules\Blog\Models\Article
+ * Modules\Blog\Models\Article.
  *
- * @property int $id
- * @property string|null $parent_type
- * @property int|null $parent_id
- * @property int|null $pos
- * @property string|null $article_type
- * @property \Illuminate\Support\Carbon|null $published_at
- * @property string|null $updated_by
- * @property string|null $created_by
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $user_id
- * @property int|null $is_featured
- * @property float|null $ratings_avg
- * @property-read int|null $ratings_count
- * @property int|null $status_id
- * @property int $show_on_homepage
- * @property int|null $read_time
- * @property int|null $author_id
- * @property int $is_pinned
- * @property \Illuminate\Support\Carbon|null $submitted_at
- * @property \Illuminate\Support\Carbon|null $approved_at
- * @property string|null $original_url
- * @property int|null $series_id
- * @property \Illuminate\Support\Carbon|null $shared_at
- * @property \Illuminate\Support\Carbon|null $declined_at
- * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
- * @property-read int|null $articles_count
- * @property-read \Modules\LU\Models\User|null $author
- * @property-read \Modules\LU\Models\User|null $authorRelation
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Category[] $categories
- * @property-read int|null $categories_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Comment[] $comments
- * @property-read int|null $comments_count
- * @property string|null $guid
- * @property string|null $image_src
- * @property-read string|null $lang
- * @property-read \Illuminate\Support\Collection $my_rating
- * @property-read string|null $post_type
- * @property string|null $subtitle
- * @property string|null $title
- * @property string|null $txt
- * @property-read string|null $user_handle
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Image[] $images
- * @property-read int|null $images_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Like[] $likesRelation
- * @property-read int|null $likes_relation_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $myRatings
- * @property-read int|null $my_ratings_count
- * @property-read \Modules\Lang\Models\Post|null $post
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
- * @property-read int|null $posts_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratingObjectives
- * @property-read int|null $rating_objectives_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
- * @property-write mixed $slug
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[] $tags
- * @property-write mixed $url
- * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $sons
- * @property-read int|null $sons_count
- * @property-read int|null $tags_count
+ * @property int                                                                      $id
+ * @property string|null                                                              $parent_type
+ * @property int|null                                                                 $parent_id
+ * @property int|null                                                                 $pos
+ * @property string|null                                                              $article_type
+ * @property \Illuminate\Support\Carbon|null                                          $published_at
+ * @property string|null                                                              $updated_by
+ * @property string|null                                                              $created_by
+ * @property \Illuminate\Support\Carbon|null                                          $created_at
+ * @property \Illuminate\Support\Carbon|null                                          $updated_at
+ * @property int|null                                                                 $user_id
+ * @property int|null                                                                 $is_featured
+ * @property float|null                                                               $ratings_avg
+ * @property int|null                                                                 $ratings_count
+ * @property int|null                                                                 $status_id
+ * @property int                                                                      $show_on_homepage
+ * @property int|null                                                                 $read_time
+ * @property int|null                                                                 $author_id
+ * @property int                                                                      $is_pinned
+ * @property \Illuminate\Support\Carbon|null                                          $submitted_at
+ * @property \Illuminate\Support\Carbon|null                                          $approved_at
+ * @property string|null                                                              $original_url
+ * @property int|null                                                                 $series_id
+ * @property \Illuminate\Support\Carbon|null                                          $shared_at
+ * @property \Illuminate\Support\Carbon|null                                          $declined_at
+ * @property \Illuminate\Database\Eloquent\Collection|Article[]                       $articles
+ * @property int|null                                                                 $articles_count
+ * @property \Modules\LU\Models\User|null                                             $author
+ * @property \Modules\LU\Models\User|null                                             $authorRelation
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Category[] $categories
+ * @property int|null                                                                 $categories_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Comment[]  $comments
+ * @property int|null                                                                 $comments_count
+ * @property string|null                                                              $guid
+ * @property string|null                                                              $image_src
+ * @property string|null                                                              $lang
+ * @property \Illuminate\Support\Collection                                           $my_rating
+ * @property string|null                                                              $post_type
+ * @property string|null                                                              $subtitle
+ * @property string|null                                                              $title
+ * @property string|null                                                              $txt
+ * @property string|null                                                              $user_handle
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Image[]     $images
+ * @property int|null                                                                 $images_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Like[]   $likesRelation
+ * @property int|null                                                                 $likes_relation_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $myRatings
+ * @property int|null                                                                 $my_ratings_count
+ * @property \Modules\Lang\Models\Post|null                                           $post
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[]     $posts
+ * @property int|null                                                                 $posts_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratingObjectives
+ * @property int|null                                                                 $rating_objectives_count
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
+ * @property mixed                                                                    $slug
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[]       $tags
+ * @property mixed                                                                    $url
+ * @property \Illuminate\Database\Eloquent\Collection|Article[]                       $sons
+ * @property int|null                                                                 $sons_count
+ * @property int|null                                                                 $tags_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Article approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article article($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article author($id)
@@ -139,7 +141,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article withRating()
  * @mixin \Eloquent
  */
-class Article extends BaseModelLang {
+class Article extends BaseModelLang implements HasLikeContract {
     use HasAuthor;
     use HasLikes;
     // use HasProfileTrait;
