@@ -13,7 +13,6 @@ use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
 use Modules\Xot\Models\Panels\Actions\ArtisanAction;
 use Modules\Xot\Models\Panels\XotBasePanel;
-use PhpParser\ErrorHandler\Collecting;
 
 /**
  * Class HomePanel.
@@ -73,7 +72,7 @@ class HomePanel extends XotBasePanel {
      */
     public function actions(): array {
         /**
-         * @var string|null
+         * @var string
          */
         $cmd = request()->input('cmd');
 
@@ -88,7 +87,7 @@ class HomePanel extends XotBasePanel {
         return true;
     }
 
-    public function featuredArticles():Collection {
+    public function featuredArticles(): Collection {
         $rows = Article::published()
             ->showHomepage()
             ->publishedUntilToday()
@@ -99,7 +98,7 @@ class HomePanel extends XotBasePanel {
         return $rows;
     }
 
-    public function latestArticles():Collection {
+    public function latestArticles(): Collection {
         $latest_articles = Article::published()
             ->publishedUntilToday()
             // ->orderBy('publish_date', 'desc')
@@ -110,14 +109,14 @@ class HomePanel extends XotBasePanel {
         return $latest_articles;
     }
 
-    public function authors():Collection {
+    public function authors(): Collection {
         // $authors = User::userIsAuthor()->take(4)->get();
         $authors = User::inRandomOrder()->limit(4)->get();
 
         return $authors;
     }
 
-    public function navCategories():Collection {
+    public function navCategories(): Collection {
         $navCategories = Category::has('articles', '>', 0)
         ->take(8)
         ->get();
@@ -125,13 +124,10 @@ class HomePanel extends XotBasePanel {
         return $navCategories;
     }
 
-
     /**
-     * Undocumented function
-     *
-     * @return Collection
+     * Undocumented function.
      */
-    public function footerCategories():Collection {
+    public function footerCategories(): Collection {
         $footerCategories = Category::has('articles', '>', 0)
             ->take(8)
             ->get();
@@ -139,7 +135,7 @@ class HomePanel extends XotBasePanel {
         return $footerCategories;
     }
 
-    public function footerAuthors():Collection {
+    public function footerAuthors(): Collection {
         // $footerAuthors = User::userIsAuthor()->take(8)->get();
         $footerAuthors = User::inRandomOrder()->limit(8)->get();
 
@@ -149,7 +145,7 @@ class HomePanel extends XotBasePanel {
     /**
      * Undocumented function.
      */
-    public function footerTags():Collection {
+    public function footerTags(): Collection {
         $footerTags = Tag::take(15)->get();
 
         return $footerTags;
