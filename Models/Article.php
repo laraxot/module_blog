@@ -167,7 +167,7 @@ class Article extends BaseModelLang implements HasLikeContract {
     /**
      * @var string[]
      */
-    protected $appends = ['title'];
+    protected $appends = ['title', 'txt'];
 
     /**
      * @var array<string, string>
