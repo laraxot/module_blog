@@ -98,11 +98,13 @@ class ArticlePanel extends XotBasePanel {
                 'name' => 'categories',
                 'col_size' => 6,
             ],
+            /*
             (object) [
                 'type' => 'SelectMultipleRelationship',
                 'name' => 'tags',
                 'col_size' => 6,
             ],
+            */
             (object) [
                 'type' => 'DateTime',
                 'name' => 'submitted_at',
