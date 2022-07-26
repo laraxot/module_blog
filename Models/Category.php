@@ -27,7 +27,7 @@ use Spatie\Translatable\HasTranslations;
  * Modules\Blog\Models\Category
  *
  * @property int $id
- * @property int $parent_id
+ * @property int|null $parent_id
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -36,6 +36,8 @@ use Spatie\Translatable\HasTranslations;
  * @property int $_rgt
  * @property string $slug
  * @property array $name
+ * @property int $_lft
+ * @property array|null $description
  * @property-read \Kalnoy\Nestedset\Collection|Category[] $children
  * @property-read int|null $children_count
  * @property-read Category|null $parent
@@ -78,12 +80,14 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedBy($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescription($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIconSrc($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereId($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsAfter($id, $boolean = 'and')
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsBefore($id, $boolean = 'and')
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsLeaf()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsRoot()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereLft($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereName($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNodeBetween($values, $boolean = 'and', $not = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNotDescendantOf($id)
