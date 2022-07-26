@@ -1,8 +1,27 @@
 <?php
 
+/**
+ * composer non lo installava..
+ *
+ * @see https://github.com/rinvex/laravel-categories/blob/master/src/Models/Category.php
+ */
+
 declare(strict_types=1);
 
 namespace Modules\Blog\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Kalnoy\Nestedset\NestedSet;
+use Kalnoy\Nestedset\NodeTrait;
+use Spatie\Sluggable\HasSlug;
+// use Rinvex\Support\Traits\HasSlug;
+// use Rinvex\Support\Traits\HasTranslations;
+use Spatie\Sluggable\SlugOptions;
+// use Rinvex\Support\Traits\ValidatingTrait;
+use Spatie\Translatable\HasTranslations;
 
 /**
  * Modules\Blog\Models\Category
@@ -13,46 +32,169 @@ namespace Modules\Blog\Models;
  * @property string|null $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
- * @property-read int|null $articles_count
- * @property string|null $guid
- * @property string|null $image_src
- * @property-read string|null $lang
- * @property-read string|null $post_type
- * @property string|null $subtitle
- * @property string|null $title
- * @property string|null $txt
- * @property-read string|null $user_handle
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Image[] $images
- * @property-read int|null $images_count
- * @property-read \Modules\Lang\Models\Post|null $post
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
- * @property-read int|null $posts_count
- * @property-write mixed $url
- * @method static \Modules\Blog\Database\Factories\CategoryFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Category query()
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereParentId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ * @property string|null $icon_src
+ * @property int $_rgt
+ * @property string $slug
+ * @property array $name
+ * @property-read \Kalnoy\Nestedset\Collection|Category[] $children
+ * @property-read int|null $children_count
+ * @property-read Category|null $parent
+ * @method static \Kalnoy\Nestedset\Collection|static[] all($columns = ['*'])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsAndSelf($id, array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsOf($id, array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category applyNestedSetScope(?string $table = null)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category countErrors()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category d()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category defaultOrder(string $dir = 'asc')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category descendantsAndSelf($id, array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category descendantsOf($id, array $columns = [], $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category fixSubtree($root)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category fixTree($root = null)
+ * @method static \Kalnoy\Nestedset\Collection|static[] get($columns = ['*'])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category getNodeData($id, $required = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category getPlainNodeData($id, $required = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category getTotalErrors()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category hasChildren()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category hasParent()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category isBroken()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category leaves(array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category makeGap(int $cut, int $height)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category moveNode($key, $position)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category newModelQuery()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category newQuery()
+ * @method static \Illuminate\Database\Query\Builder|Category onlyTrashed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereAncestorOf(bool $id, bool $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereNodeBetween($values)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category query()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category rebuildSubtree($root, array $data, $delete = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category rebuildTree(array $data, $delete = false, $root = null)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category reversed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category root(array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereAncestorOf($id, $andSelf = false, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereAncestorOrSelf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedAt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedBy($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIconSrc($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereId($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsAfter($id, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsBefore($id, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsLeaf()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsRoot()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereName($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNodeBetween($values, $boolean = 'and', $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereParentId($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereRgt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereSlug($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereUpdatedAt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereUpdatedBy($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category withDepth(string $as = 'depth')
+ * @method static \Illuminate\Database\Query\Builder|Category withTrashed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category withoutRoot()
+ * @method static \Illuminate\Database\Query\Builder|Category withoutTrashed()
  * @mixin \Eloquent
  */
-class Category extends BaseModelLang {
-    /**
-     * @var string[]
-     */
-    protected $fillable = ['id', 'related_type'];
+class Category extends Model {
+    use HasSlug;
+    use NodeTrait;
+    use HasFactory;
+    use SoftDeletes;
+    use HasTranslations;
+    // use ValidatingTrait;
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     * {@inheritdoc}
      */
-    public function articles() {
-        return $this->morphRelated(Article::class);
+    protected $fillable = [
+        'slug',
+        'name',
+        'description',
+        NestedSet::LFT,
+        NestedSet::RGT,
+        NestedSet::PARENT_ID,
+    ];
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $casts = [
+        'slug' => 'string',
+        NestedSet::LFT => 'integer',
+        NestedSet::RGT => 'integer',
+        NestedSet::PARENT_ID => 'integer',
+        'deleted_at' => 'datetime',
+    ];
+
+    /**
+     * {@inheritdoc}
+     */
+    protected $observables = [
+        'validating',
+        'validated',
+    ];
+
+    /**
+     * The attributes that are translatable.
+     *
+     * @var array
+     */
+    public $translatable = [
+        'name',
+        'description',
+    ];
+
+    /**
+     * The default rules that the model will validate against.
+     *
+     * @var array
+     */
+    protected $rules = [];
+
+    /**
+     * Whether the model should throw a
+     * ValidationException if it fails validation.
+     *
+     * @var bool
+     */
+    protected $throwValidationExceptions = true;
+
+    /*
+     * Create a new Eloquent model instance.
+
+    public function __construct(array $attributes = []) {
+        $this->setTable(config('rinvex.categories.tables.categories'));
+        $this->mergeRules([
+            'name' => 'required|string|strip_tags|max:150',
+            'description' => 'nullable|string|max:32768',
+            'slug' => 'required|alpha_dash|max:150|unique:'.config('rinvex.categories.tables.categories').',slug',
+            NestedSet::LFT => 'sometimes|required|integer',
+            NestedSet::RGT => 'sometimes|required|integer',
+            NestedSet::PARENT_ID => 'nullable|integer',
+        ]);
+
+        parent::__construct($attributes);
+    }
+    */
+
+    /**
+     * Get all attached models of the given class to the category.
+     */
+    public function entries(string $class): MorphToMany {
+        // return $this->morphedByMany($class, 'categorizable', config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
+        return $this->morphedByMany($class, 'categorizable'); // , config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
+    }
+
+    /**
+     * Get the options for generating the slug.
+     */
+    public function getSlugOptions(): SlugOptions {
+        return SlugOptions::create()
+                          // ->doNotGenerateSlugsOnUpdate() // ?
+                          ->generateSlugsFrom('name')
+                          ->saveSlugsTo('slug');
     }
 }

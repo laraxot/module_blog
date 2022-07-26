@@ -43,13 +43,11 @@ use Spatie\Tags\HasTags;
  * @property \Illuminate\Support\Carbon|null $approved_at
  * @property string|null $original_url
  * @property int|null $series_id
- * @property \Illuminate\Support\Carbon|null $shared_at
- * @property \Illuminate\Support\Carbon|null $declined_at
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
  * @property-read int|null $articles_count
  * @property-read \Modules\LU\Models\User|null $author
  * @property-read \Modules\LU\Models\User|null $authorRelation
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Category[] $categories
+ * @property-read \Kalnoy\Nestedset\Collection|\Modules\Blog\Models\Category[] $categories
  * @property-read int|null $categories_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Comment[] $comments
  * @property-read int|null $comments_count
@@ -112,7 +110,6 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereAuthorId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Article whereDeclinedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereIsFeatured($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereIsPinned($value)
@@ -125,7 +122,6 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereRatingsCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereReadTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereSeriesId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Article whereSharedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereShowOnHomepage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereStatusId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereSubmittedAt($value)

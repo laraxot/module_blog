@@ -7,14 +7,6 @@ namespace Modules\Blog\Models;
 /**
  * Modules\Blog\Models\Privacy
  *
- * @property int $id
- * @property string|null $related_type
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $obligatory
  * @property string|null $guid
  * @property string|null $image_src
  * @property-read string|null $lang
@@ -34,14 +26,6 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy query()
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereObligatory($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereRelatedType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Privacy whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
  */
