@@ -85,4 +85,13 @@ class ThemeComposer {
     public function getFooterTags(): Collection {
         return collect([]);
     }
+
+    /**
+     * ----.
+     *  
+     */
+    public function getMoreArticles(): Collection {
+        return collect([]);
+    }
+    
 }

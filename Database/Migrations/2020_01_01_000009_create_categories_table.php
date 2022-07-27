@@ -61,6 +61,9 @@ class CreateCategoriesTable extends XotBaseMigration {
                 if (! $this->hasColumn('description')) {
                     $table->json('description')->nullable();
                 }
+                if (! $this->hasColumn('deleted_at')) {
+                    $table->softDeletes();
+                }
                 // $table->integer('parent_id')->default(0)->nullable()->change();
             }
         );
