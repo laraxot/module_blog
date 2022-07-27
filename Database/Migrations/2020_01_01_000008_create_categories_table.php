@@ -52,6 +52,9 @@ class CreateCategoriesTable extends XotBaseMigration {
                 if (! $this->hasColumn('slug')) {
                     $table->string('slug')->index();
                 }
+                if (! $this->hasColumn('parent_id')) {
+                    $table->integer('parent_id')->default(0)->nullable()->index();
+                }
                 if (! $this->hasColumn('name')) {
                     $table->json('name');
                 }

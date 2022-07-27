@@ -15,6 +15,9 @@ class ThemeComposer {
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
      */
     public function getFeaturedArticles(): Collection {
+        return Article::limit(10)
+            ->orderBy('created_at','desc')
+            ->get();
         // return collect([]);
         // da publish_date a published_at
         $rows = Article::published()
@@ -53,8 +56,8 @@ class ThemeComposer {
      *  $navCategories = Category::has('articles', '>', '0')->take(8)->get();
      */
     public function getNavCategories(): Collection {
-        $cat = Category::create(['name' => 'category one']);
-        dddx($cat);
+        //$cat = Category::create(['name' => 'category one']);
+        //dddx($cat);
 
         return collect([]);
     }
