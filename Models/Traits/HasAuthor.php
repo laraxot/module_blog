@@ -12,8 +12,11 @@ trait HasAuthor {
      * Undocumented function.
      */
     public function author(): BelongsTo {
-        // return $this->authorRelation;
-        return $this->belongsTo(User::class, 'author_id');
+        //da valutare se linkare User o Profile
+        //return $this->belongsTo(User::class, 'author_id');  
+        $main_module=config('xra.main_module');
+        $profile='Modules\\'.$main_module.'\Models\Profile';
+        return $this->belongsTo($profile, 'author_id','user_id');  
     }
 
     public function authoredBy(User $author):void {

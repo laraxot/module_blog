@@ -10,18 +10,21 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\Sluggable\HasSlug;
 use Kalnoy\Nestedset\NestedSet;
 use Kalnoy\Nestedset\NodeTrait;
-use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
+use Modules\Xot\Services\RouteService;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 // use Rinvex\Support\Traits\HasSlug;
 // use Rinvex\Support\Traits\HasTranslations;
-use Spatie\Sluggable\SlugOptions;
+use Illuminate\Database\Eloquent\Builder;
 // use Rinvex\Support\Traits\ValidatingTrait;
-use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 /**
  * Modules\Blog\Models\Category
@@ -189,8 +192,10 @@ class Category extends Model {
      */
     public function entries(string $class): MorphToMany {
         // return $this->morphedByMany($class, 'categorizable', config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
-        return $this->morphedByMany($class, 'categorizable'); // , config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
+        return $this->morphedByMany($class, 'categorizable','categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
+
+   
 
     /**
      * Get the options for generating the slug.
@@ -200,5 +205,26 @@ class Category extends Model {
                           // ->doNotGenerateSlugsOnUpdate() // ?
                           ->generateSlugsFrom('name')
                           ->saveSlugsTo('slug');
+    }
+
+
+    public function scopeOfType(Builder $query,string $type){
+        return $query->whereRelation('categorizables', 'categorizable_type', $type);
+        /*
+        return $query->whereHas('categorizables',function($q) use($type){
+            $q->where('categorizable_type',$type);
+        });
+        */
+    }
+
+    public function categorizables():HasMany {
+        return $this->hasMany(Categorizable::class,'category_id');
+    }
+
+    /**
+     * @return string
+     */
+    public function getRouteKeyName() {
+        return RouteService::inAdmin() ? 'id' : 'slug';
     }
 }

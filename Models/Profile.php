@@ -7,12 +7,13 @@ namespace Modules\Blog\Models;
 // --------- models --------
 
 // use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Modules\Blog\Models\Traits\PrivacyTrait;
-use Modules\Geo\Models\Traits\GeoTrait;
-use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
+use Modules\LU\Casts\UserField;
+use Modules\Geo\Models\Traits\GeoTrait;
 use Modules\Xot\Models\Traits\WidgetTrait;
+use Modules\Blog\Models\Traits\PrivacyTrait;
+use Modules\LU\Models\Traits\HasProfileTrait;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Modules\Blog\Models\Profile
@@ -156,7 +157,27 @@ class Profile extends BaseModelLang {
     /**
      * @var string[]
      */
-    protected $fillable = ['id', 'user_id', 'phone', 'email', 'bio'];
+    protected $fillable = [
+        'id', 
+        'user_id', 
+        'phone', 
+        'email', 
+        'bio',
+        //,'handle' solo in appends perche' non deve essere modificato
+    ];
+     /**
+     * @var string[]
+     */
+    protected $appends = ['handle'];
+     /**
+     * @var array<string, string>
+     */
+    protected $casts = [
+        //'date_start' => 'datetime:Y-m-d\TH:i',
+        //'date_end' => 'datetime:Y-m-d\TH:i',
+        'handle'=> UserField::class,
+    ];
+
 
     /*
      * Create a new factory instance for the model.
@@ -170,7 +191,7 @@ class Profile extends BaseModelLang {
     // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany {
-        return $this->hasMany(Article::class);
+        return $this->hasMany(Article::class,'author_id','user_id');
     }
 
     // ---- mutators ---

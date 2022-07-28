@@ -5,17 +5,19 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 // ----- traits ----
-use Modules\Blog\Models\Traits\HasAuthor;
-use Modules\Blog\Models\Traits\HasSlug; // spatie tags
-// use Modules\Blog\Models\Traits\HasTags;
-use Modules\Blog\Models\Traits\HasTimestamps;
-use Modules\Blog\Models\Traits\PreparesSearch;
-use Modules\LU\Models\Traits\HasProfileTrait;
-use Modules\Rating\Models\Traits\HasLikes;
-use Modules\Rating\Models\Traits\RatingTrait;
-// use Modules\Tag\Models\Traits\HasTagTrait;
-use Modules\Theme\Contracts\HasLikeContract;
 use Spatie\Tags\HasTags;
+use Spatie\ModelStatus\HasStatuses;
+// use Modules\Blog\Models\Traits\HasTags;
+use Modules\Blog\Models\Traits\HasAuthor;
+use Modules\Rating\Models\Traits\HasLikes;
+use Modules\Blog\Models\Traits\HasCategory;
+use Modules\Theme\Contracts\HasLikeContract;
+use Modules\Blog\Models\Traits\HasTimestamps;
+// use Modules\Tag\Models\Traits\HasTagTrait;
+use Modules\LU\Models\Traits\HasProfileTrait;
+use Modules\Rating\Models\Traits\RatingTrait;
+use Modules\Blog\Models\Traits\PreparesSearch;
+use Modules\Blog\Models\Traits\HasSlug; // spatie tags
 
 /**
  * Modules\Blog\Models\Article
@@ -145,22 +147,24 @@ class Article extends BaseModelLang implements HasLikeContract {
     use HasTimestamps;
     use PreparesSearch; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
+    use HasStatuses;
     use RatingTrait;
+    use HasCategory;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
     use Traits\Relationships\ArticleRelationship;
     use Traits\Scopes\ArticleScope;
 
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $fillable = [
         'id', 'pos', 'article_type', 'published_at',
         'parent_id', 'parent_type', 'is_featured', 'user_id',
-        'status_id', 'is_pinned',
+        'status_id', 'is_pinned','author_id',
     ];
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected $appends = ['title', 'txt'];
 
@@ -168,7 +172,8 @@ class Article extends BaseModelLang implements HasLikeContract {
      * @var array<string, string>
      */
     protected $casts = [
-        // 'published_at' => 'datetime:Y-m-d', // da verificare
+        //'date_start' => 'datetime:Y-m-d\TH:i',
+        //'date_end' => 'datetime:Y-m-d\TH:i',
     ];
 
     /**
