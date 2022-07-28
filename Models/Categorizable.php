@@ -10,14 +10,13 @@ namespace Modules\Blog\Models;
 /**
  * Modules\Blog\Models\Categorizable.
  *
- * @property int                             $category_id
- * @property string                          $categorizable_type
- * @property int                             $categorizable_id
- * @property string|null                     $created_by
- * @property string|null                     $updated_by
+ * @property int $category_id
+ * @property string $categorizable_type
+ * @property int $categorizable_id
+ * @property string|null $created_by
+ * @property string|null $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable query()

@@ -45,11 +45,13 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @property \Illuminate\Support\Carbon|null $approved_at
  * @property string|null $original_url
  * @property int|null $series_id
+ * @property \Illuminate\Support\Carbon|null $shared_at
+ * @property \Illuminate\Support\Carbon|null $declined_at
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
  * @property-read int|null $articles_count
- * @property-read \Modules\LU\Models\User|null $author
+ * @property-read \Modules\Mediamonitor\Models\Profile|null $author
  * @property-read \Modules\LU\Models\User|null $authorRelation
- * @property-read \Kalnoy\Nestedset\Collection|\Modules\Blog\Models\Category[] $categories
+ * @property \Kalnoy\Nestedset\Collection|\Modules\Blog\Models\Category[] $categories
  * @property-read int|null $categories_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Comment[] $comments
  * @property-read int|null $comments_count
@@ -58,6 +60,7 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @property-read string|null $lang
  * @property-read \Illuminate\Support\Collection $my_rating
  * @property-read string|null $post_type
+ * @property-read string $status
  * @property string|null $subtitle
  * @property string|null $title
  * @property string|null $txt
@@ -79,12 +82,14 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @property-write mixed $url
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $sons
  * @property-read int|null $sons_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
+ * @property-read int|null $statuses_count
  * @property-read int|null $tags_count
  * @method static \Illuminate\Database\Eloquent\Builder|Article approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article article($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article author($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article awaitingApproval()
- * @method static \Illuminate\Database\Eloquent\Builder|Article category($id)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article currentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Article differentFromCurrentArticle($current_article)
  * @method static \Modules\Blog\Database\Factories\ArticleFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Article forTag(string $tag)
@@ -95,6 +100,7 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article notPublished()
  * @method static \Illuminate\Database\Eloquent\Builder|Article notShared()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article otherCurrentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Article pinned()
  * @method static \Illuminate\Database\Eloquent\Builder|Article popular()
  * @method static \Illuminate\Database\Eloquent\Builder|Article published()
@@ -112,6 +118,7 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereAuthorId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereDeclinedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereIsFeatured($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereIsPinned($value)
@@ -124,18 +131,24 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereRatingsCount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereReadTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereSeriesId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereSharedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereShowOnHomepage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereStatusId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereSubmittedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Article whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withAllCategories($categories)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withAnyCategories($categories)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withAnyTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withCategories($categories)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withRating()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withoutAnyCategories()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withoutCategories($categories)
  * @mixin \Eloquent
  */
 class Article extends BaseModelLang implements HasLikeContract {

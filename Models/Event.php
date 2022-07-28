@@ -15,6 +15,14 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
 /**
  * Modules\Blog\Models\Event
  *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $date_start
+ * @property \Illuminate\Support\Carbon|null $date_end
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
  * @property-read Place|null $address
  * @property string|null $guid
  * @property string|null $image_src
@@ -35,6 +43,14 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Event newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Event query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereDateEnd($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereDateStart($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Event whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
  */
