@@ -8,7 +8,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 /**
- * Modules\Blog\Models\Categorizable.
+ * Modules\Blog\Models\Categorizable
  *
  * @property int $category_id
  * @property string $categorizable_type
