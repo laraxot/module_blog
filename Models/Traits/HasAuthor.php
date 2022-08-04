@@ -14,8 +14,11 @@ trait HasAuthor {
     public function author(): BelongsTo {
         //da valutare se linkare User o Profile
         //return $this->belongsTo(User::class, 'author_id');  
-        $main_module=config('xra.main_module');
-        $profile='Modules\\'.$main_module.'\Models\Profile';
+        //dddx(xotModel('profile'));
+        //$main_module=config('xra.main_module');
+        //$profile='Modules\\'.$main_module.'\Models\Profile';
+
+        $profile = xotModel('profile');
         return $this->belongsTo($profile, 'author_id','user_id');  
     }
 
