@@ -129,6 +129,9 @@ class Profile extends BaseModelLang {
         'phone', 
         'email', 
         'bio',
+        'github_username',
+        'has_twitter_account',
+        'twitter'
         //,'handle' solo in appends perche' non deve essere modificato
     ];
      /**
@@ -176,4 +179,33 @@ class Profile extends BaseModelLang {
         return $value;
     }
     */
+
+    public function username():string {
+        return $this->user->handle;
+    }
+
+    public function name():string|null {
+        return $this->user->first_name;
+    }
+
+    public function bio():string|null {
+        return $this->bio;   
+    }
+
+    public function githubUsername():string|null{
+        return  $this->github_username;  
+    }
+
+    public function hasTwitterAccount():string|null{
+        return  $this->has_twitter_account;  
+    }
+
+    public function twitter():string|null{
+        return  $this->twitter;  
+    }
+
+    //'github_username',
+    //'has_twitter_account',
+    //'twitter'
+
 }// end model
