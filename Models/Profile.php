@@ -9,6 +9,7 @@ namespace Modules\Blog\Models;
 // use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Modules\LU\Models\User;
 use Modules\LU\Casts\UserField;
+use Illuminate\Support\Facades\Auth;
 use Modules\Geo\Models\Traits\GeoTrait;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Modules\Blog\Models\Traits\PrivacyTrait;
@@ -196,8 +197,8 @@ class Profile extends BaseModelLang {
         return  $this->github_username;  
     }
 
-    public function hasTwitterAccount():string|null{
-        return  $this->has_twitter_account;  
+    public function hasTwitterAccount():bool {
+        return  $this->twitter_account != null;  
     }
 
     public function twitter():string|null{
@@ -207,5 +208,13 @@ class Profile extends BaseModelLang {
     //'github_username',
     //'has_twitter_account',
     //'twitter'
+
+    public function isLoggedInUser():bool{
+        return Auth::id()==$this->getKey();
+    }
+
+    public function isBanned():bool{
+        return $this->status == 'ban';
+    }
 
 }// end model
