@@ -174,4 +174,18 @@ class ThemeComposer {
         return $rows;
 
     }
+
+
+    public function compose(... $args){
+        /*
+        dddx(
+            [
+            'args'=>$args,
+
+            ]
+        );
+        */
+        //error 404 
+        return 'aaa';
+    }
 }
