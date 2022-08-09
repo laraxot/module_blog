@@ -15,6 +15,7 @@ use Modules\Xot\Models\Traits\WidgetTrait;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 
 /**
  * Modules\Blog\Models\Profile
@@ -181,33 +182,50 @@ class Profile extends BaseModelLang {
     }
     */
 
-    public function username():string {
-        return $this->user->handle;
+    protected function username(): Attribute {
+        $user = $this->user;
+        if (null == $user) {
+            //$user1 = User::firstOrCreate(['id' => $this->user_id]);
+            //dddx($user1->username());
+        }
+        return Attribute::make(
+            get: fn ($value) =>  $user->handle,
+        );
     }
 
-    public function name():string|null {
-        return $this->user->first_name;
+
+    protected function name(): Attribute {
+        $user = $this->user;
+        return Attribute::make(
+            get: fn ($value) => $user->first_name,
+        );
     }
 
-    public function bio():string|null {
-        return $this->bio;   
+    protected function bio(): Attribute {
+        $user = $this->user;
+
+        return Attribute::make(
+            get: fn ($value) => $user->txt,
+        );
     }
 
-    public function githubUsername():string|null{
-        return  $this->github_username;  
+    protected function githubUsername(): Attribute {
+        return Attribute::make(
+            get: fn ($value) => $this->github_username ?? '',
+        );
+    }
+    
+    protected function hasTwitterAccount(): Attribute {
+        return Attribute::make(
+            get: fn ($value) => !empty($this->twitter()),
+        );
     }
 
-    public function hasTwitterAccount():bool {
-        return  $this->twitter_account != null;  
+    protected function twitter(): Attribute {
+        return Attribute::make(
+            get: fn ($value) => '',
+        );
     }
-
-    public function twitter():string|null{
-        return  $this->twitter;  
-    }
-
-    //'github_username',
-    //'has_twitter_account',
-    //'twitter'
 
     public function isLoggedInUser():bool{
         return Auth::id()==$this->getKey();
