@@ -27,7 +27,7 @@ class CreateProfilesTable extends XotBaseMigration {
                 $table->string('post_type', 191)->nullable()->index();
                 // $table->string('article_type',50)->nullable();
                 // $table->datetime('published_at')->nullable();
-                $table->text('bio')->nullable();
+                // $table->text('bio')->nullable();
                 $table->timestamps();
             }
         );
@@ -73,9 +73,8 @@ class CreateProfilesTable extends XotBaseMigration {
                     $table->text('bio')->nullable();
                 }
 
-                
                 if (! $this->hasColumn('github_username')) {
-                    $table->text('bio')->nullable();
+                    $table->text('github_username')->nullable();
                 }
 
                 if (! $this->hasColumn('has_twitter_account')) {
@@ -85,7 +84,6 @@ class CreateProfilesTable extends XotBaseMigration {
                 if (! $this->hasColumn('twitter')) {
                     $table->text('twitter')->nullable();
                 }
-
 
                 /*
                 if ($this->hasColumn('auth_user_id')) {
