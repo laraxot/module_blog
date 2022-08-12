@@ -34,17 +34,19 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
  * @property string|null $phone
  * @property string|null $address
  * @property int|null $user_id
- * @property string|null $guid
+ * @property string|null $github_username
+ * @property string|null $twitter
  * @property int|null $video_credits
  * @property int|null $clip_credits
  * @property int|null $clip_max_time
+ * @property int|null $max_clips
  * @property string|null $review_cost
  * @property int|null $review_unit_time
  * @property int|null $max_search_days
  * @property int|null $max_alerts
  * @property int|null $moderator_id
  * @property int $parent_id
- * @property int|null $max_clips
+ * @property string|null $guid
  * @property mixed $handle
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
  * @property-read int|null $articles_count
@@ -67,7 +69,6 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read int|null $privacies_count
- * @property-read \Modules\Mediamonitor\Models\Profile|null $profile
  * @property-write mixed $url
  * @property-read User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
@@ -88,6 +89,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGithubUsername($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereMaxAlerts($value)
@@ -100,6 +102,7 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereReviewCost($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereReviewUnitTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereSurname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereTwitter($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUserId($value)

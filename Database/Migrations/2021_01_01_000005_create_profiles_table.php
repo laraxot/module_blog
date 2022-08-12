@@ -77,9 +77,6 @@ class CreateProfilesTable extends XotBaseMigration {
                     $table->text('github_username')->nullable();
                 }
 
-                if (! $this->hasColumn('has_twitter_account')) {
-                    $table->boolean('has_twitter_account')->nullable();
-                }
 
                 if (! $this->hasColumn('twitter')) {
                     $table->text('twitter')->nullable();
