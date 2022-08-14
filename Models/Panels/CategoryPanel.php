@@ -26,6 +26,33 @@ class CategoryPanel extends XotBasePanel {
         return ''.$row->title;
     }
 
+        /**
+     * @return array
+     */
+    public function optionsSelect(){
+        $rows = $this->row->all();
+        $rows2 = $rows->map(function($item){
+            //dddx($item);
+            if($item->name != ''){
+                //dddx($item->name);
+                return [
+                    'label' => $item->name,
+                    'key' => $item->id,
+                ];
+            }
+        })->all();
+
+        //dddx($rows2);
+
+
+        return $rows2;
+        dddx([$rows, $rows2]);
+        return [
+          'aaa'  => 'aaa',
+          'bbb' => 'bbb',
+        ];
+    }
+
     /**
      * Get the fields displayed by the resource.
 
