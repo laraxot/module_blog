@@ -16,6 +16,7 @@ use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Modules\Ticket\Models\Traits\HasTicketTrait;
 
 /**
  * Modules\Blog\Models\Profile
@@ -117,6 +118,7 @@ class Profile extends BaseModelLang {
     use HasProfileTrait;
     use PrivacyTrait;
     use WidgetTrait;
+    //use HasTicketTrait;
     // use HasFactory;
 
     /**
