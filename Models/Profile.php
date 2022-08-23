@@ -48,6 +48,11 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @property int|null $moderator_id
  * @property int $parent_id
  * @property string|null $guid
+ * @property string|null $date_from
+ * @property string|null $date_to
+ * @property string|null $interval
+ * @property string|null $units_qty
+ * @property string|null $units
  * @property mixed $handle
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
  * @property-read int|null $articles_count
@@ -70,7 +75,7 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read int|null $privacies_count
- * @property-read \Modules\Xot\Models\Profile|null $profile
+ * @property-read \Modules\Mediamonitor\Models\Profile|null $profile
  * @property-write mixed $url
  * @property-read User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
@@ -88,12 +93,15 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereClipMaxTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereDateFrom($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereDateTo($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstname($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGithubUsername($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereInterval($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereMaxAlerts($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereMaxClips($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereMaxSearchDays($value)
@@ -105,6 +113,8 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereReviewUnitTime($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereSurname($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereTwitter($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUnits($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUnitsQty($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUserId($value)
