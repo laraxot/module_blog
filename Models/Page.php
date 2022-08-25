@@ -66,19 +66,33 @@ class Page extends BaseModel {
     }
 
     public function getRows(): array {
+        //creates nss array
         $nss = [];
+
+        //push pub_theme
         $nss[] = 'pub_theme';
         /**
          * @var string
          */
         $main_module = config('xra.main_module');
         if ('' !== $main_module && null !== $main_module) {
+            //push main module (ex: blog) in nss
             $nss[] = strtolower($main_module);
         }
+
+        //creates $pages collection
         $pages = collect([]);
+        
+        //for each nss
         foreach ($nss as $ns) {
+
+            //get theme path trough FileService
             $pub_theme_path = FileService::getViewNameSpacePath($ns);
+
+            //get page path starting from the pub_theme_path
             $pages_path = $pub_theme_path.\DIRECTORY_SEPARATOR.'pages';
+
+            //creates temporary collection for every page in theme (all blade.php files in pub_theme)
             $tmp = collect(File::files($pages_path));
             $tmp = $tmp->filter(
                 function ($item) {
@@ -87,10 +101,15 @@ class Page extends BaseModel {
                 }
             );
 
+            //creates the page paths with view format (separated by points)
+            //and without blade.php extension
             $tmp = $tmp->map(function ($file) use ($ns) {
+                //get title from the page name (SEO)
+                //for example if page name is scores.blade.php the title will be "Scores"
                 $title = $file->getFilenameWithoutExtension();
                 $title = Str::before($title, '.blade');
 
+                //returns the page into the model
                 return [
                     'id' => $title,
                     'parent_id' => 0,
@@ -103,6 +122,8 @@ class Page extends BaseModel {
             $pages = $pages->merge($tmp);
         }
 
+        //returns the page into the model
+        //then you can call /{?lang}/pages/{page_title}
         return $pages->all();
     }
 }
