@@ -86,6 +86,7 @@ class PagePanel extends XotBasePanel {
                 'col_size' => 6,
             ],
 
+            /*
             (object) [
                 'type' => 'SelectParent',
                 // 'sub_type' => 'Parent',
@@ -93,6 +94,7 @@ class PagePanel extends XotBasePanel {
                 'name' => 'parent_id',
                 'col_size' => 6,
             ],
+            */
 
             (object) [
                 'type' => 'Integer',
