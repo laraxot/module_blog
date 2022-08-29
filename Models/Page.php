@@ -30,7 +30,8 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle($value)
  * @mixin \Eloquent
  */
-class Page extends BaseModel {
+class Page extends BaseModel
+{
     use Sushi;
     /**
      * @var string[]
@@ -49,23 +50,17 @@ class Page extends BaseModel {
         'status',
     ];
 
-    /*
-    "id" => "trallala"
-        "parent_id" => 0
-        "guid" => "trallala"
-        "title" => "trallala"
-        "ns" => "mediamonitor"
-        */
-
     // --------- relationship ---------------
 
     // --------- relationship ---------------
 
-    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
+    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    public function getRows(): array {
+    public function getRows(): array
+    {
         //creates nss array
         $nss = [];
 
@@ -82,7 +77,7 @@ class Page extends BaseModel {
 
         //creates $pages collection
         $pages = collect([]);
-        
+
         //for each nss
         foreach ($nss as $ns) {
 
@@ -90,7 +85,7 @@ class Page extends BaseModel {
             $pub_theme_path = FileService::getViewNameSpacePath($ns);
 
             //get page path starting from the pub_theme_path
-            $pages_path = $pub_theme_path.\DIRECTORY_SEPARATOR.'pages';
+            $pages_path = $pub_theme_path . \DIRECTORY_SEPARATOR . 'pages';
 
             //creates temporary collection for every page in theme (all blade.php files in pub_theme)
             $tmp = collect(File::files($pages_path));

@@ -75,7 +75,6 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read int|null $privacies_count
- * @property-read \Modules\Mediamonitor\Models\Profile|null $profile
  * @property-write mixed $url
  * @property-read User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
@@ -124,7 +123,8 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
  */
-class Profile extends BaseModelLang {
+class Profile extends BaseModelLang
+{
     use GeoTrait;
     use HasProfileTrait;
     use PrivacyTrait;
@@ -142,27 +142,27 @@ class Profile extends BaseModelLang {
      * @var string[]
      */
     protected $fillable = [
-        'id', 
-        'user_id', 
-        'phone', 
-        'email', 
+        'id',
+        'user_id',
+        'phone',
+        'email',
         'bio',
         'github_username',
         'has_twitter_account',
         'twitter'
         //,'handle' solo in appends perche' non deve essere modificato
     ];
-     /**
+    /**
      * @var string[]
      */
     protected $appends = ['handle'];
-     /**
+    /**
      * @var array<string, string>
      */
     protected $casts = [
         //'date_start' => 'datetime:Y-m-d\TH:i',
         //'date_end' => 'datetime:Y-m-d\TH:i',
-        'handle'=> UserField::class,
+        'handle' => UserField::class,
     ];
 
 
@@ -177,8 +177,9 @@ class Profile extends BaseModelLang {
 
     // ------- RELATIONSHIP ----------
 
-    public function articles(): HasMany {
-        return $this->hasMany(Article::class,'author_id','user_id');
+    public function articles(): HasMany
+    {
+        return $this->hasMany(Article::class, 'author_id', 'user_id');
     }
 
     // ---- mutators ---
@@ -198,7 +199,8 @@ class Profile extends BaseModelLang {
     }
     */
 
-    protected function username(): Attribute {
+    protected function username(): Attribute
+    {
         $user = $this->user;
         if (null == $user) {
             //$user1 = User::firstOrCreate(['id' => $this->user_id]);
@@ -210,14 +212,16 @@ class Profile extends BaseModelLang {
     }
 
 
-    protected function name(): Attribute {
+    protected function name(): Attribute
+    {
         $user = $this->user;
         return Attribute::make(
             get: fn ($value) => $user->first_name,
         );
     }
 
-    protected function bio(): Attribute {
+    protected function bio(): Attribute
+    {
         $user = $this->user;
 
         return Attribute::make(
@@ -225,30 +229,34 @@ class Profile extends BaseModelLang {
         );
     }
 
-    protected function githubUsername(): Attribute {
+    protected function githubUsername(): Attribute
+    {
         return Attribute::make(
             get: fn ($value) => $this->github_username ?? '',
         );
     }
-    
-    protected function hasTwitterAccount(): Attribute {
+
+    protected function hasTwitterAccount(): Attribute
+    {
         return Attribute::make(
             get: fn ($value) => !empty($this->twitter()),
         );
     }
 
-    protected function twitter(): Attribute {
+    protected function twitter(): Attribute
+    {
         return Attribute::make(
             get: fn ($value) => '',
         );
     }
 
-    public function isLoggedInUser():bool{
-        return Auth::id()==$this->getKey();
+    public function isLoggedInUser(): bool
+    {
+        return Auth::id() == $this->getKey();
     }
 
-    public function isBanned():bool{
+    public function isBanned(): bool
+    {
         return $this->status == 'ban';
     }
-
 }// end model

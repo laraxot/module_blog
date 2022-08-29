@@ -49,7 +49,6 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @property \Illuminate\Support\Carbon|null $declined_at
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
  * @property-read int|null $articles_count
- * @property-read \Modules\Mediamonitor\Models\Profile|null $author
  * @property-read \Modules\LU\Models\User|null $authorRelation
  * @property \Kalnoy\Nestedset\Collection|\Modules\Blog\Models\Category[] $categories
  * @property-read int|null $categories_count
@@ -151,7 +150,8 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article withoutCategories($categories)
  * @mixin \Eloquent
  */
-class Article extends BaseModelLang implements HasLikeContract {
+class Article extends BaseModelLang implements HasLikeContract
+{
     use HasAuthor;
     use HasLikes;
     // use HasProfileTrait;
@@ -174,7 +174,7 @@ class Article extends BaseModelLang implements HasLikeContract {
     protected $fillable = [
         'id', 'pos', 'article_type', 'published_at',
         'parent_id', 'parent_type', 'is_featured', 'user_id',
-        'status_id', 'is_pinned','author_id',
+        'status_id', 'is_pinned', 'author_id',
     ];
     /**
      * @var array<string>
