@@ -75,6 +75,7 @@ use Modules\Ticket\Models\Traits\HasTicketTrait;
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read int|null $privacies_count
+ * @property-read \Modules\Mediamonitor\Models\Profile|null $profile
  * @property-write mixed $url
  * @property-read User|null $user
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
