@@ -49,7 +49,7 @@ use Modules\Blog\Models\Traits\HasSlug; // spatie tags
  * @property \Illuminate\Support\Carbon|null $declined_at
  * @property-read \Illuminate\Database\Eloquent\Collection|Article[] $articles
  * @property-read int|null $articles_count
- * @property-read \Modules\Mediamonitor\Models\Profile|null $author
+ * @property-read \Modules\Xot\Models\Profile|null $author
  * @property-read \Modules\LU\Models\User|null $authorRelation
  * @property \Kalnoy\Nestedset\Collection|\Modules\Blog\Models\Category[] $categories
  * @property-read int|null $categories_count
