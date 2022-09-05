@@ -8,24 +8,23 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 /**
- * Modules\Blog\Models\PhotoMorph.
+ * Modules\Blog\Models\PhotoMorph
  *
- * @property int                             $id
- * @property string|null                     $post_type
- * @property int|null                        $post_id
- * @property string|null                     $related_type
- * @property int|null                        $photo_id
- * @property int|null                        $user_id
- * @property string|null                     $note
- * @property string|null                     $created_by
- * @property string|null                     $updated_by
- * @property string|null                     $deleted_by
+ * @property int $id
+ * @property string|null $post_type
+ * @property int|null $post_id
+ * @property string|null $related_type
+ * @property int|null $photo_id
+ * @property int|null $user_id
+ * @property string|null $note
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph query()
- * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereAuthUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereDeletedBy($value)
@@ -37,10 +36,8 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereRelatedType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUserId($value)
  * @mixin \Eloquent
- * @property int|null $related_id
- * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereRelatedId($value)
- * @mixin IdeHelperPhotoMorph
  */
 class PhotoMorph extends BaseMorphPivot {
     /**
