@@ -30,16 +30,16 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
  * Modules\Blog\Models\Category
  *
  * @property int $id
- * @property int $parent_id
+ * @property int|null $parent_id
  * @property string|null $created_by
  * @property string|null $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $icon_src
  * @property int $_rgt
- * @property int $_lft
  * @property string $slug
  * @property array $name
+ * @property int $_lft
  * @property array|null $description
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Categorizable[] $categorizables

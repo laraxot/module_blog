@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Blog\View\Composers;
 
-use Modules\Tag\Models\Tag;
-use Modules\Blog\Models\Category;
 use Illuminate\Support\Collection;
+use Modules\Blog\Models\Category;
 use Modules\Blog\Models\{Article};
-use Modules\Blog\Models\Categorizable;
+use Modules\Tag\Models\Tag;
 use Modules\Xot\Services\ProfileService;
 
 class ThemeComposer {
@@ -19,7 +18,7 @@ class ThemeComposer {
      */
     public function getFeaturedArticles(): Collection {
         return Article::limit(10)
-            ->orderBy('created_at','desc')
+            ->orderBy('created_at', 'desc')
             ->get();
         // return collect([]);
         // da publish_date a published_at
@@ -59,7 +58,8 @@ class ThemeComposer {
      *  $navCategories = Category::has('articles', '>', '0')->take(8)->get();
      */
     public function getNavCategories(): Collection {
-        $res=Category::ofType('article')->get();
+        $res = Category::ofType('article')->get();
+
         return $res;
     }
 
@@ -68,11 +68,14 @@ class ThemeComposer {
      * $footerAuthors = User::userIsAuthor()->take(8)->get();.
      */
     public function getFooterAuthors(): Collection {
-        $profile_class=ProfileService::make()->getProfileClass();
-        $profile=app($profile_class);
+        $profile_class = ProfileService::make()->getProfileClass();
+        $profile = app($profile_class);
+        if (! method_exists($profile_class, 'articles')) {
+            return collect([]);
+        }
 
-        $res= $profile->has('articles')->take(8)->get();
-        
+        $res = $profile->has('articles')->take(8)->get();
+
         return $res;
     }
 
@@ -89,70 +92,68 @@ class ThemeComposer {
      *  $footerTags = Tag::take(15)->get();.
      */
     public function getFooterTags(): Collection {
-        //return collect([]);
+        // return collect([]);
         return Tag::take(15)->get();
     }
 
     /**
      * ----.
      *   $moreArticles = $article->published()
-    *            ->publishedUntilToday()
-    *        ->category($article->category_id)
-    *        ->differentFromCurrentArticle($article->id)
-    *        ->orderBy('publish_date', 'desc')
-    *        ->take(3)
-    *        ->get();
+     *            ->publishedUntilToday()
+     *        ->category($article->category_id)
+     *        ->differentFromCurrentArticle($article->id)
+     *        ->orderBy('publish_date', 'desc')
+     *        ->take(3)
+     *        ->get();.
      */
     public function getMoreArticles(Article $article): Collection {
-        $categories_ids=$article->categories->modelKeys();
-        $rows =  Article::published()
+        $categories_ids = $article->categories->modelKeys();
+        $rows = Article::published()
             ->publishedUntilToday()
             ->withAnyCategories($categories_ids)
             ->orderBy('published_at', 'desc')
             ->take(3)
             ->get();
+
         return $rows;
-        
-        
     }
-    
-     /**
+
+    /**
      * ----.
-     *   $articles = $model->with(['tags', 'category'])->orderBy('publish_date', 'desc')->paginate(10);
+     *   $articles = $model->with(['tags', 'category'])->orderBy('publish_date', 'desc')->paginate(10);.
      */
     public function getPaginatedArticles(int $per_page): \Illuminate\Pagination\LengthAwarePaginator {
-        //Too few arguments to function Modules\Blog\Models\Article::scopeCategory(), 1 passed in
-        $rows = Article::with(['tags' /*, 'category'*/])
+        // Too few arguments to function Modules\Blog\Models\Article::scopeCategory(), 1 passed in
+        $rows = Article::with(['tags' /* , 'category' */])
             ->orderBy('published_at', 'desc')
             ->paginate(10);
+
         return $rows;
     }
 
-
     public function getPaginatedArticlesByAuthor(int $user_id): \Illuminate\Pagination\LengthAwarePaginator {
-        $rows =  Article::published()
+        $rows = Article::published()
             ->publishedUntilToday()
             ->author($user_id)
             ->orderBy('published_at', 'desc')
             ->paginate(10);
+
         return $rows;
     }
 
     /**
      * Undocumented function
-     *  $articles = $article->published()->publishedUntilToday()->tag($tag->id)->orderBy('publish_date', 'desc')->paginate(10);
-
-     * @return \Illuminate\Pagination\LengthAwarePaginator
+     *  $articles = $article->published()->publishedUntilToday()->tag($tag->id)->orderBy('publish_date', 'desc')->paginate(10);.
      */
     public function getPaginatedArticlesByTag(string $tag): \Illuminate\Pagination\LengthAwarePaginator {
-        $rows =  Article::published()
+        $rows = Article::published()
             ->publishedUntilToday()
             ->withAnyTags([$tag])
             ->orderBy('published_at', 'desc')
             ->paginate(10);
+
         return $rows;
     }
-
 
     /**
      * Undocumented function
@@ -160,23 +161,19 @@ class ThemeComposer {
      *       ->publishedUntilToday()
      *       ->category($category->id)
      *       ->orderBy('publish_date', 'desc')
-     *       ->paginate(10);
-     * @param integer $id
-     * @return \Illuminate\Pagination\LengthAwarePaginator
+     *       ->paginate(10);.
      */
     public function getPaginatedArticlesByCategoryId(int $id): \Illuminate\Pagination\LengthAwarePaginator {
-        
-        $rows =  Article::published()
+        $rows = Article::published()
             ->publishedUntilToday()
             ->withCategories($id)
             ->orderBy('published_at', 'desc')
             ->paginate(10);
-        return $rows;
 
+        return $rows;
     }
 
-
-    public function compose(... $args){
+    public function compose(...$args) {
         /*
         dddx(
             [
@@ -185,7 +182,7 @@ class ThemeComposer {
             ]
         );
         */
-        //error 404 
+        // error 404
         return 'aaa';
     }
 }

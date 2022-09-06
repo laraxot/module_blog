@@ -7,16 +7,10 @@ namespace Modules\Blog\Models;
 /**
  * Modules\Blog\Models\Contact
  *
- * @property int $id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null $created_by
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $updated_by
- * @property string|null $post_type
- * @property int|null $post_id
  * @property string|null $guid
  * @property string|null $image_src
  * @property-read string|null $lang
+ * @property-read string|null $post_type
  * @property string|null $subtitle
  * @property string|null $title
  * @property string|null $txt
@@ -32,13 +26,6 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact query()
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact wherePostId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
  */

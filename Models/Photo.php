@@ -10,12 +10,11 @@ use Modules\Rating\Models\Traits\RatingTrait;
 /**
  * Modules\Blog\Models\Photo
  *
- * @property int $id
+ * @property int $post_id
  * @property string|null $updated_by
  * @property string|null $created_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $user_id
  * @property string|null $guid
  * @property string|null $image_src
  * @property-read string|null $lang
@@ -37,10 +36,9 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Photo query()
  * @method static \Illuminate\Database\Eloquent\Builder|Photo whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Photo whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Photo whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo wherePostId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Photo whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Photo whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Photo whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @mixin \Eloquent
  */

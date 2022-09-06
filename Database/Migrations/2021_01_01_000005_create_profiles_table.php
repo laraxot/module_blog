@@ -13,15 +13,13 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateProfilesTable.
  */
-class CreateProfilesTable extends XotBaseMigration
-{
+class CreateProfilesTable extends XotBaseMigration {
     /**
      * db up.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
@@ -75,14 +73,9 @@ class CreateProfilesTable extends XotBaseMigration
                     $table->text('bio')->nullable();
                 }
 
-<<<<<<< Updated upstream:Database/Migrations/2021_01_01_000005_create_profiles_table.php
-=======
-
->>>>>>> Stashed changes:Database/Migrations/2021_01_01_000004_create_profiles_table.php
                 if (! $this->hasColumn('github_username')) {
                     $table->text('github_username')->nullable();
                 }
-
 
                 if (! $this->hasColumn('twitter')) {
                     $table->text('twitter')->nullable();
