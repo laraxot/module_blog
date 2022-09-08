@@ -30,7 +30,7 @@ trait ArticleExtra {
             return "https://source.unsplash.com/{$this->hero_image}/{$width}x{$height}";
         }
         */
-        
+
         return asset('images/default-background.svg');
     }
 
@@ -52,11 +52,11 @@ trait ArticleExtra {
     }
 
     public function approvedAt(): ?Carbon {
-        $res=$this->approved_at;
-        //Call to function is_string() with Illuminate\Support\Carbon|null will always evaluate to false
-        //if(is_string($res)){
+        $res = $this->approved_at;
+        // Call to function is_string() with Illuminate\Support\Carbon|null will always evaluate to false
+        // if(is_string($res)){
         //    $res=Carbon::parse($res);
-        //}
+        // }
         return $res;
     }
 
@@ -104,13 +104,13 @@ trait ArticleExtra {
         return ! $this->isAwaitingApproval();
     }
 
-    public function readTime():float {
+    public function readTime(): float {
         $minutes = round(str_word_count(''.$this->body()) / 200);
 
         return 0.0 == $minutes ? 1 : $minutes;
     }
 
-    public function shouldBeSearchable():bool {
+    public function shouldBeSearchable(): bool {
         return $this->isPublished();
     }
 
@@ -128,11 +128,9 @@ trait ArticleExtra {
     }
 
     /**
-     * Undocumented function
-     *
-     * @return void
+     * Undocumented function.
      */
-    public function markAsShared():void {
+    public function markAsShared(): void {
         $this->update([
             'shared_at' => now(),
         ]);
@@ -154,9 +152,10 @@ trait ArticleExtra {
     }
 
     public function isUpdated(): bool {
-        if($this->updated_at==null){
+        if (null == $this->updated_at) {
             return false;
         }
+
         return $this->updated_at->gt($this->created_at);
     }
 }

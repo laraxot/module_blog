@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-//----- models -----
+// ----- models -----
 
-//----- bases ----
+// ----- bases ----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
  * Class CreateContactsTable.
  */
 class CreateContactsTable extends XotBaseMigration {
-    //use XotBaseMigrationTrait;
+    // use XotBaseMigrationTrait;
 
     /**
      * Run the migrations.
@@ -20,14 +20,14 @@ class CreateContactsTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
             }
-            );
+        );
 
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_at')) {
@@ -40,8 +40,9 @@ class CreateContactsTable extends XotBaseMigration {
                 if (! $this->hasColumn('post_id')) {
                     $table->nullableMorphs('post');
                 }
-            }); //end update
+            }
+        ); // end update
     }
 
-    //end function up
+    // end function up
 }

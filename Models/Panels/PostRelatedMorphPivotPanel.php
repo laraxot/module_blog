@@ -20,7 +20,7 @@ class PostRelatedMorphPivotPanel extends XotBasePanel {
     /**
      * The single value that should be used to represent the resource when being displayed.
      */
-    
+
     /*
         'col_size' => 6,
         'sortable' => 1,

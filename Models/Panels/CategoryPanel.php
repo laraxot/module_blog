@@ -19,22 +19,22 @@ class CategoryPanel extends XotBasePanel {
 
     /**
      * on select the option label.
-     * 
+     *
      * @param Category $row
      */
     public function optionLabel($row): string {
         return ''.$row->title;
     }
 
-        /**
+    /**
      * @return array
      */
-    public function optionsSelect(){
+    public function optionsSelect() {
         $rows = $this->row->all();
-        $rows2 = $rows->map(function($item){
-            //dddx($item);
-            if($item->name != ''){
-                //dddx($item->name);
+        $rows2 = $rows->map(function ($item) {
+            // dddx($item);
+            if ('' != $item->name) {
+                // dddx($item->name);
                 return [
                     'label' => $item->name,
                     'key' => $item->id,
@@ -42,14 +42,14 @@ class CategoryPanel extends XotBasePanel {
             }
         })->all();
 
-        //dddx($rows2);
-
+        // dddx($rows2);
 
         return $rows2;
         dddx([$rows, $rows2]);
+
         return [
-          'aaa'  => 'aaa',
-          'bbb' => 'bbb',
+            'aaa' => 'aaa',
+            'bbb' => 'bbb',
         ];
     }
 

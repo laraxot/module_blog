@@ -7,16 +7,17 @@ namespace Modules\Blog\Models;
 use Spatie\ModelStatus\Status as BaseStatus;
 
 /**
- * Modules\Blog\Models\Status
+ * Modules\Blog\Models\Status.
  *
- * @property int $id
- * @property string $name
- * @property string|null $reason
- * @property string $model_type
- * @property int $model_id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $model
+ * @property int                                           $id
+ * @property string                                        $name
+ * @property string|null                                   $reason
+ * @property string                                        $model_type
+ * @property int                                           $model_id
+ * @property \Illuminate\Support\Carbon|null               $created_at
+ * @property \Illuminate\Support\Carbon|null               $updated_at
+ * @property \Illuminate\Database\Eloquent\Model|\Eloquent $model
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Status newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Status newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Status query()
@@ -27,16 +28,14 @@ use Spatie\ModelStatus\Status as BaseStatus;
  * @method static \Illuminate\Database\Eloquent\Builder|Status whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Status whereReason($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Status whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Status extends BaseStatus {
     protected $fillable = [
-        'id', 
-        'name', 
-        'reason', 
+        'id',
+        'name',
+        'reason',
         'model_type', 'model_id',
     ];
-   
-
-    
 }

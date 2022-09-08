@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 // --- Services --
-use Modules\Blog\Models\Profile;
 use Modules\Blog\Events\StoreProfileEvent;
+use Modules\Blog\Models\Profile;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -19,7 +19,7 @@ class ProfilePanel extends XotBasePanel {
      * The model the resource corresponds to.
      */
     protected static string $model = 'Modules\Blog\Models\Profile';
-    
+
     public Profile $row;
 
     /**
@@ -94,15 +94,15 @@ class ProfilePanel extends XotBasePanel {
      * @param int $size
      */
     public function avatar($size = 100): ?string {
-        //if (null === $this->row) {
+        // if (null === $this->row) {
         //    throw new \Exception('row is null');
-        //}
+        // }
         /*
         if (! property_exists($this->row, 'user')) {
             throw new \Exception('in ['.get_class($this->row).'] property [user] not exists');
         }
         */
-        // 102    Access to an undefined property Illuminate\Database\Eloquent\Model::$user.  
+        // 102    Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
         $user = $this->row->user;
 
         if (! \is_object($user) && \is_object($this->row)) {
@@ -112,7 +112,7 @@ class ProfilePanel extends XotBasePanel {
             // dddx($this->row);
             return null;
         }
-        if($user==null){
+        if (null == $user) {
             return null;
         }
         $email = md5(mb_strtolower(trim((string) $user->email)));
@@ -141,10 +141,10 @@ class ProfilePanel extends XotBasePanel {
             'lang' => app()->getLocale(),
         ];
 
-        $post=$row->post;
-        if($post==null){
+        $post = $row->post;
+        if (null == $post) {
             $row->post()->create($post_data);
-        }else{
+        } else {
             $row->post->update($post_data);
         }
         /*
@@ -177,13 +177,13 @@ class ProfilePanel extends XotBasePanel {
     public function isSuperAdmin(): bool {
         // 232 Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
         // $user = $this->row->user;
-        //$user = $this->row->getRelationValue('user');
+        // $user = $this->row->getRelationValue('user');
         $user = $this->row->user;
-        if($user==null){
+        if (null == $user) {
             return false;
         }
-        $perm=$user->perm;
-        if($perm==null){
+        $perm = $user->perm;
+        if (null == $perm) {
             return false;
         }
 

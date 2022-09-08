@@ -25,7 +25,7 @@ class CreateHomesTable extends XotBaseMigration {
                 $table->string('updated_by')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(

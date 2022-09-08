@@ -1,25 +1,23 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
 use Modules\Xot\Contracts\RowsContract;
-//--- Services --
+// --- Services --
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 class CategorizablePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
-     *
-     * @var string
      */
     public static string $model = 'Modules\Blog\Models\Categorizable';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
-     *
-     * @var string
      */
     public static string $title = 'title';
 
@@ -28,24 +26,22 @@ class CategorizablePanel extends XotBasePanel {
      *
      * @var array
      */
-    public static $search = array (
-);
+    public static $search = [
+    ];
 
     /**
      * The relationships that should be eager loaded on index queries.
-     *
      */
-    public function with():array {
+    public function with(): array {
         return [];
     }
 
-    public function search() :array {
-
+    public function search(): array {
         return [];
     }
 
     /**
-     * on select the option id
+     * on select the option id.
      *
      * quando aggiungi un campo select, è il numero della chiave
      * che viene messo come valore su value="id"
@@ -61,8 +57,8 @@ class CategorizablePanel extends XotBasePanel {
     /**
      * on select the option label.
      */
-    public function optionLabel($row):string {
-        return (string)$row->title;
+    public function optionLabel($row): string {
+        return (string) $row->title;
     }
 
     /**
@@ -79,71 +75,54 @@ class CategorizablePanel extends XotBasePanel {
      *
      * @return RowsContract
      */
-    public static function indexQuery(array $data, $query)
-    {
-        //return $query->where('user_id', $request->user()->id);
+    public static function indexQuery(array $data, $query) {
+        // return $query->where('user_id', $request->user()->id);
         return $query;
     }
 
-
-
     /**
      * Get the fields displayed by the resource.
-     *
-     * @return array
-        'col_size' => 6,
-        'sortable' => 1,
-        'rules' => 'required',
-        'rules_messages' => ['it'=>['required'=>'Nome Obbligatorio']],
         'value'=>'..',
      */
     public function fields(): array {
-        return array (
-  0 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'id',
-     'comment' => 'not in Doctrine',
-  ),
-  1 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'post_id',
-     'comment' => 'not in Doctrine',
-  ),
-  2 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'post_type',
-     'comment' => 'not in Doctrine',
-  ),
-  3 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'photo_id',
-     'comment' => 'not in Doctrine',
-  ),
-  4 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'related_type',
-     'comment' => 'not in Doctrine',
-  ),
-  5 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'user_id',
-     'comment' => 'not in Doctrine',
-  ),
-);
+        return [
+            0 => (object) [
+                'type' => 'Text',
+                'name' => 'id',
+                'comment' => 'not in Doctrine',
+            ],
+            1 => (object) [
+                'type' => 'Text',
+                'name' => 'post_id',
+                'comment' => 'not in Doctrine',
+            ],
+            2 => (object) [
+                'type' => 'Text',
+                'name' => 'post_type',
+                'comment' => 'not in Doctrine',
+            ],
+            3 => (object) [
+                'type' => 'Text',
+                'name' => 'photo_id',
+                'comment' => 'not in Doctrine',
+            ],
+            4 => (object) [
+                'type' => 'Text',
+                'name' => 'related_type',
+                'comment' => 'not in Doctrine',
+            ],
+            5 => (object) [
+                'type' => 'Text',
+                'name' => 'user_id',
+                'comment' => 'not in Doctrine',
+            ],
+        ];
     }
 
     /**
      * Get the tabs available.
-     *
-     * @return array
      */
-    public function tabs():array {
+    public function tabs(): array {
         $tabs_name = [];
 
         return $tabs_name;
@@ -151,10 +130,8 @@ class CategorizablePanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @return array
      */
-    public function cards(Request $request):array {
+    public function cards(Request $request): array {
         return [];
     }
 
@@ -162,28 +139,22 @@ class CategorizablePanel extends XotBasePanel {
      * Get the filters available for the resource.
      *
      * @param \Illuminate\Http\Request $request
-     *
-     * @return array
      */
-    public function filters(Request $request = null):array {
+    public function filters(Request $request = null): array {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @return array
      */
-    public function lenses(Request $request):array {
+    public function lenses(Request $request): array {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
-    public function actions():array {
+    public function actions(): array {
         return [];
     }
 }

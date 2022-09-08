@@ -66,7 +66,7 @@ class PivotRequiredRule implements Rule {
     public function passes($attribute, $value) {
         $key_required = substr($attribute, 0, -\strlen((string) $this->field_name)).''.$this->field_name_required;
         // $data = (\Request::all());//phpstan
-        $data = (request()->all()); // phpstan
+        $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
         $value = (int) $value;
         if ($value && ! $value_required) {

@@ -35,7 +35,7 @@ class CreateCategoriesTable extends XotBaseMigration {
                 $table->timestamps();
                 // $table->softDeletes();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(

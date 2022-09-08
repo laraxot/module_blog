@@ -20,7 +20,7 @@ class CreatePagesTable extends XotBaseMigration {
                 $table->datetime('published_at')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(
@@ -55,6 +55,7 @@ class CreatePagesTable extends XotBaseMigration {
                 if ($this->hasColumn('post_id')) {
                     $table->renameColumn('post_id', 'id');
                 }
-            });
+            }
+        );
     }
 }

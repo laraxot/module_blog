@@ -59,8 +59,8 @@ class PrivacyCheckRule implements Rule, ImplicitRule {
     /**
      * Determine if the validation rule passes.
      *
-     * @param string $attribute
-     * @param string|int  $value
+     * @param string     $attribute
+     * @param string|int $value
      *
      * @return bool
      */
@@ -92,7 +92,7 @@ class PrivacyCheckRule implements Rule, ImplicitRule {
         $key_required = substr($attribute, 0, -\strlen((string) $this->field_name)).''.$this->field_name_required;
         // dddx($key_required);
         // $data = (\Request::all()); //phpstan
-        $data = (request()->all()); // phpstan
+        $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
         $value = (int) $value;
         // dddx($data);

@@ -23,11 +23,10 @@ class StatusPanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
-
     /**
      * on select the option label.
      *
-      * @param Status $row
+     * @param Status $row
      */
     public function optionLabel($row): string {
         return (string) $row->name;

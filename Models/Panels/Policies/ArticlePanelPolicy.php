@@ -36,18 +36,18 @@ class ArticlePanelPolicy extends XotBasePanelPolicy {
     }
 
     public function approve(UserContract $user, PanelContract $panel): bool {
-        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
+        return $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function disapprove(UserContract $user, PanelContract $panel): bool {
-        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
+        return $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function decline(UserContract $user, PanelContract $panel): bool {
-        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
+        return $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 
     public function togglePinnedStatus(UserContract $user, PanelContract $panel): bool {
-        return$panel->isModeratedBy($user) || $panel->isAdminedBy($user);
+        return $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
 }

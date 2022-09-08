@@ -35,7 +35,7 @@ class CreatePrivacyMorphTable extends XotBaseMigration {
                 $table->string('deleted_by')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(
@@ -46,6 +46,7 @@ class CreatePrivacyMorphTable extends XotBaseMigration {
                 if ($this->hasColumn('auth_user_id')) {
                     $table->renameColumn('auth_user_id', 'user_id');
                 }
-            });
+            }
+        );
     }
 }

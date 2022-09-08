@@ -22,7 +22,6 @@ class RelatedPanel extends XotBasePanel {
      */
     protected static string $title = 'title';
 
-
     /**
      * @return object[]
      */

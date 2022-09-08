@@ -7,13 +7,13 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits;
 
-use Illuminate\Support\Arr;
-use Modules\Blog\Models\Category;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Support\Collection as BaseCollection;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection as BaseCollection;
+use Modules\Blog\Models\Category;
 
 trait HasCategory {
     /**
@@ -191,11 +191,11 @@ trait HasCategory {
     public function syncCategories($categories, bool $detaching = true) {
         // Find categories
         $categories = $this->prepareCategoryIds($categories);
-        //dddx(is_array( $categories));
+        // dddx(is_array( $categories));
         // Sync model categories
-        if(is_array( $categories)){
+        if (is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
-        }else{
+        } else {
             dddx($categories);
         }
 
@@ -222,7 +222,7 @@ trait HasCategory {
      */
     public function detachCategories($categories = null) {
         $categories = ! is_null($categories) ? $this->prepareCategoryIds($categories) : null;
-        
+
         // Sync model categories
         $this->categories()->detach($categories);
 
@@ -247,40 +247,35 @@ trait HasCategory {
 
         // Find categories by their slugs
         if (is_string($categories) || (is_array($categories) && is_string(Arr::first($categories)))) {
-            
             $categories_ids = app(Category::class)
                 ->whereIn('slug', (array) $categories)
                 ->get()
                 ->pluck('id');
-            $categories_arr=Arr::wrap($categories);
-            
-            if($categories_ids->count() != count($categories_arr) ){
-                $categories_ids=collect([]);
-                foreach($categories_arr as $slug){
-                    $item=app(Category::class)->firstOrCreate(['slug'=>$slug],['name'=>$slug]);
+            $categories_arr = Arr::wrap($categories);
+
+            if ($categories_ids->count() != count($categories_arr)) {
+                $categories_ids = collect([]);
+                foreach ($categories_arr as $slug) {
+                    $item = app(Category::class)->firstOrCreate(['slug' => $slug], ['name' => $slug]);
                     $categories_ids->push($item);
                 }
-                
             }
-            
-            $categories=$categories_ids;
+
+            $categories = $categories_ids;
         }
 
         if ($categories instanceof Model) {
-            
             return [$categories->getKey()];
         }
 
         if ($categories instanceof Collection) {
-            
             return $categories->modelKeys();
         }
 
         if ($categories instanceof BaseCollection) {
-            
             return $categories->toArray();
         }
-        
+
         return (array) $categories;
     }
 }

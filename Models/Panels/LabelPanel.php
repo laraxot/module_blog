@@ -22,7 +22,6 @@ class LabelPanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
-
     /**
      * Get the fields displayed by the resource.
         'value'=>'..',

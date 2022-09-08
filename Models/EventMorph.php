@@ -5,20 +5,21 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 /**
- * Modules\Blog\Models\EventMorph
+ * Modules\Blog\Models\EventMorph.
  *
- * @property int $id
- * @property string|null $post_type
- * @property int|null $post_id
- * @property string|null $related_type
- * @property int|null $event_id
- * @property int|null $user_id
- * @property string|null $note
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
+ * @property int                             $id
+ * @property string|null                     $post_type
+ * @property int|null                        $post_id
+ * @property string|null                     $related_type
+ * @property int|null                        $event_id
+ * @property int|null                        $user_id
+ * @property string|null                     $note
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+ * @property string|null                     $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph query()
@@ -34,6 +35,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUserId($value)
+ *
  * @mixin \Eloquent
  */
 class EventMorph extends BaseMorphPivot {

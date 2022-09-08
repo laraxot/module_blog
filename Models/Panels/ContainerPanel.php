@@ -20,7 +20,6 @@ class ContainerPanel extends XotBasePanel {
     /**
      * The single value that should be used to represent the resource when being displayed.
      */
-   
 
     /**
      * Get the fields displayed by the resource.

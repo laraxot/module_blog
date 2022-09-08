@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
-use Modules\Blog\Models\Page;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Models\Panels\XotBasePanel;
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Blog\Models\Page;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
+use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
 
@@ -49,11 +49,11 @@ class PagePanel extends XotBasePanel {
 
     /**
      * on select the option label.
-     * 
+     *
      * @param Page $row
      */
     public function optionLabel($row): string {
-        return (string)$row->title;
+        return (string) $row->title;
     }
 
     /**
@@ -64,10 +64,10 @@ class PagePanel extends XotBasePanel {
         $last_item = last($items);
         if (! inAdmin()) {
             // siccome non so dove metterlo, per ora dentro pub_theme
-            /** 
-        * @phpstan-var view-string
-        */
-        $view = 'pub_theme::pages.'.$last_item.'.index.nav';
+            /**
+             * @phpstan-var view-string
+             */
+            $view = 'pub_theme::pages.'.$last_item.'.index.nav';
 
             return view()->make($view);
         }

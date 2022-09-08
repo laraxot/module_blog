@@ -6,8 +6,8 @@ namespace Modules\Blog\Models\Panels;
 
 // -------- Services -----
 use Modules\Blog\Models\Article;
-use Modules\Xot\Models\Panels\XotBasePanel;
 use Modules\Rating\Models\Panels\Actions\RateItAction;
+use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
 
@@ -22,10 +22,9 @@ class ArticlePanel extends XotBasePanel {
     protected static array $search = [];
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @param Article $row
-     * @return string
      */
     public function optionLabel($row): string {
         return (string) $row->title;

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Traits\Scopes;
 
 use Carbon\Carbon;
-use Modules\Blog\Models\Article;
 use Illuminate\Database\Eloquent\Builder;
+use Modules\Blog\Models\Article;
 
 /**
  * Undocumented trait.
@@ -64,10 +64,10 @@ trait ArticleScope {
      * Scope a query to only include articles with a specified category.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param integer $id 
+     * @param integer $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
-     
+
     public function scopeCategory($query, $id) {
         return $query->whereHas('category', function ($q) use ($id) {
             $q->where('id', $id);
@@ -79,7 +79,7 @@ trait ArticleScope {
      * Scope a query to only include articles that belongs to an author.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param integer $id 
+     * @param int                                   $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -93,7 +93,7 @@ trait ArticleScope {
      * Scope a query to only include articles with a specified tag.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param integer $id
+     * @param int                                   $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -107,7 +107,7 @@ trait ArticleScope {
      * Scope a query to only include articles which contains searching words.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string $searching 
+     * @param string                                $searching
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -130,25 +130,27 @@ trait ArticleScope {
     }
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @param Builder<Article> $query
+     *
      * @return Builder<Article>
      */
     public function scopeAwaitingApproval(Builder $query): Builder {
-        //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted(). 
+        // Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted().
         return $query->submitted()
         ->notApproved();
     }
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @param Builder<Article> $query
+     *
      * @return Builder<Article>
      */
     public function scopePublished(Builder $query): Builder {
-        //Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted().
+        // Call to an undefined method Illuminate\Database\Eloquent\Builder::submitted().
         return $query->submitted()
         ->approved();
     }

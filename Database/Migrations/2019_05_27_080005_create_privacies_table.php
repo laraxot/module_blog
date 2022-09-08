@@ -26,7 +26,7 @@ class CreatePrivaciesTable extends XotBaseMigration {
                 $table->string('deleted_by')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(
@@ -37,6 +37,7 @@ class CreatePrivaciesTable extends XotBaseMigration {
                 if ($this->hasColumn('post_id')) {
                     $table->renameColumn('post_id', 'id');
                 }
-            });
+            }
+        );
     }
 }

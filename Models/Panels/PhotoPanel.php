@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-//--- Services --
+// --- Services --
 use Modules\Rating\Models\Panels\Actions\RateItAction;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
-//---- bases --
+// ---- bases --
 
 /**
  * Class PhotoPanel.
@@ -52,29 +52,29 @@ class PhotoPanel extends XotBasePanel {
                 'type' => 'Text',
                 'name' => 'post.title',
                 'col_size' => 12,
-                //'except' => ['index'],
+                // 'except' => ['index'],
             ],
 
             (object) [
                 'type' => 'Text',
                 'name' => 'post.image_title',
                 'col_size' => 12,
-                //'except' => ['index'],
+                // 'except' => ['index'],
             ],
 
             (object) [
                 'type' => 'Text',
                 'name' => 'post.image_alt',
                 'col_size' => 12,
-                //'except' => ['index'],
+                // 'except' => ['index'],
             ],
 
             (object) [
-                //'type' => 'UnisharpImg', //'Html5UploadImg',
+                // 'type' => 'UnisharpImg', //'Html5UploadImg',
                 'type' => 'Image',
                 'name' => 'post.image_src',
                 'col_size' => 12,
-                //'except' => ['index'],
+                // 'except' => ['index'],
             ],
         ];
     }
@@ -85,7 +85,7 @@ class PhotoPanel extends XotBasePanel {
     public function actions(): array {
         return [
             new RateItAction(),
-            //new \Modules\Xot\Models\Panels\Actions\UploadImageTestAction(),
+            // new \Modules\Xot\Models\Panels\Actions\UploadImageTestAction(),
         ];
     }
 }

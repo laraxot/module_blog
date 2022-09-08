@@ -16,18 +16,16 @@ use Modules\Xot\Services\PanelService;
 class PagesController extends Controller {
     /**
      * Undocumented function.
-     *
-     *
      */
-    public function show():Renderable {
+    public function show(): Renderable {
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
-        /** 
-        * @phpstan-var view-string
-        */
+        /**
+         * @phpstan-var view-string
+         */
         $view = 'pub_theme::pages.'.$last_item;
         $_panel = PanelService::make()->getRequestPanel();
-        if($_panel==null){
+        if (null == $_panel) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
         /**

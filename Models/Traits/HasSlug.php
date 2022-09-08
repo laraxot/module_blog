@@ -13,9 +13,8 @@ trait HasSlug {
     }
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
-     * @param string $slug
      * @return void
      */
     public function setSlugAttribute(string $slug) {

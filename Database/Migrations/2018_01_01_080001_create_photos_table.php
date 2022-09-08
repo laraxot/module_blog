@@ -5,8 +5,8 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-//---models
-//use Modules\Blog\Models\Photo as MyModel;
+// ---models
+// use Modules\Blog\Models\Photo as MyModel;
 
 /**
  * Class CreatePhotosTable.
@@ -18,17 +18,17 @@ class CreatePhotosTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
-                $table->increments('id'); //->primary();
+                $table->increments('id'); // ->primary();
                 $table->string('updated_by')->nullable();
                 $table->string('created_by')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
                 if (! $this->hasColumn('updated_by')) {
@@ -43,6 +43,7 @@ class CreatePhotosTable extends XotBaseMigration {
                 if (! $this->hasColumn('user_id')) {
                     $table->integer('user_id')->nullable();
                 }
-            });
+            }
+        );
     }
 }

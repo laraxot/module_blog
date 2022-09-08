@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Http\Request;
-// --- Services --
-use Modules\Blog\Models\Privacy;
 use Illuminate\Database\Eloquent\Model;
+// --- Services --
+use Illuminate\Http\Request;
+use Modules\Blog\Models\Privacy;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -24,10 +24,9 @@ class PrivacyPanel extends XotBasePanel {
      */
     protected static string $title = 'title';
 
-
     /**
      * on select the option label.
-     * 
+     *
      * @param Privacy $row
      */
     public function optionLabel($row): string {

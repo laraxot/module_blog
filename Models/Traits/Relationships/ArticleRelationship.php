@@ -4,30 +4,27 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits\Relationships;
 
-use Modules\LU\Models\User;
-use Modules\Xot\Models\Image;
-use Modules\Blog\Models\Article;
-use Modules\Blog\Models\Comment;
-use Modules\Blog\Models\Category;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
+use Modules\Blog\Models\Article;
+use Modules\Blog\Models\Category;
+use Modules\Blog\Models\Comment;
+use Modules\LU\Models\User;
+use Modules\Xot\Models\Image;
 
 /**
  * Undocumented trait.
  */
 trait ArticleRelationship {
-
     /**
      * Undocumented function
      * phpstan-return Collection
-     * 26     Method Modules\Blog\Models\Article::sons() has invalid return type Modules\Blog\Models\Traits\Relationships\Collection
-     * @return HasMany
-     * 
+     * 26     Method Modules\Blog\Models\Article::sons() has invalid return type Modules\Blog\Models\Traits\Relationships\Collection.
      */
     public function sons(): HasMany {
         return $this->hasMany(Article::class, 'parent_id', 'id');
-        //->with(['post'])->orderBy('pos');
+        // ->with(['post'])->orderBy('pos');
     }
 
     public function articles(): HasMany {
@@ -36,7 +33,7 @@ trait ArticleRelationship {
 
     /* -- trait a parte
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
-    
+
     public function categories() {   // https://github.com/rinvex/laravel-categories
         return $this->morphRelated(Category::class, true);
     }

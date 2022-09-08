@@ -10,9 +10,8 @@ use Illuminate\Support\Collection;
 
 trait PreparesSearch {
     /**
-     * Undocumented function
+     * Undocumented function.
      *
-     * @param string $value
      * @return array<string>
      */
     public function split(string $value): array {
@@ -32,26 +31,19 @@ trait PreparesSearch {
     }
 
     /**
-     * Undocumented function
-     *
-     * @param string $string
-     * @param string $delimiter
-     * @return Collection
+     * Undocumented function.
      */
-    private function splitToCollection(string $string,string $delimiter): Collection {
-        $array=preg_split($delimiter, $string);
-        if($array==false){
+    private function splitToCollection(string $string, string $delimiter): Collection {
+        $array = preg_split($delimiter, $string);
+        if (false == $array) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
+
         return collect($array);
     }
 
     /**
-     * Undocumented function
-     *
-     * @param Collection $chunks
-     * @param integer $limit
-     * @return array
+     * Undocumented function.
      */
     private function batch(Collection $chunks, int $limit): array {
         return $chunks->reduce(function ($carry, $item) use ($limit) {

@@ -21,7 +21,6 @@ class FeedPanel extends XotBasePanel {
      */
     protected static string $title = 'title';
 
-
     /**
      * Get the fields displayed by the resource.
         'value'=>'..',

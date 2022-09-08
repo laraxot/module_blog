@@ -32,7 +32,7 @@ class CreateEventsTable extends XotBaseMigration {
                 // $table->text('bio')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(
@@ -50,6 +50,7 @@ class CreateEventsTable extends XotBaseMigration {
                 if ($this->hasColumn('post_id')) {
                     $table->renameColumn('post_id', 'id');
                 }
-            });
+            }
+        );
     }
 }

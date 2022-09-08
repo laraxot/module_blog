@@ -27,7 +27,7 @@ class CreateArticlesTable extends XotBaseMigration {
                 $table->string('created_by', 155)->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
         // -- UPDATE --
         $this->tableUpdate(

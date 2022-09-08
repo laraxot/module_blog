@@ -19,7 +19,6 @@ class RatingMorphPanel extends XotBasePanel {
 
     protected static string $title = 'title';
 
-
     /**
      * @return object[]
      */

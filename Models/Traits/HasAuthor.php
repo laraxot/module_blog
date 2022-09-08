@@ -12,17 +12,18 @@ trait HasAuthor {
      * Undocumented function.
      */
     public function author(): BelongsTo {
-        //da valutare se linkare User o Profile
-        //return $this->belongsTo(User::class, 'author_id');  
-        //dddx(xotModel('profile'));
-        //$main_module=config('xra.main_module');
-        //$profile='Modules\\'.$main_module.'\Models\Profile';
+        // da valutare se linkare User o Profile
+        // return $this->belongsTo(User::class, 'author_id');
+        // dddx(xotModel('profile'));
+        // $main_module=config('xra.main_module');
+        // $profile='Modules\\'.$main_module.'\Models\Profile';
 
         $profile = xotModel('profile');
-        return $this->belongsTo($profile, 'author_id','user_id');  
+
+        return $this->belongsTo($profile, 'author_id', 'user_id');
     }
 
-    public function authoredBy(User $author):void {
+    public function authoredBy(User $author): void {
         $this->authorRelation()->associate($author);
 
         $this->unsetRelation('authorRelation');
@@ -46,11 +47,12 @@ trait HasAuthor {
     }
 
     public function isAuthoredBy(User $user): bool {
-        //43   Call to an undefined method Illuminate\Database\Eloquent\Builder<Modules\Blog\Models\Article>::is().  
-        //return $this->author()->is($user);
-        if($this->author==null){
+        // 43   Call to an undefined method Illuminate\Database\Eloquent\Builder<Modules\Blog\Models\Article>::is().
+        // return $this->author()->is($user);
+        if (null == $this->author) {
             return false;
         }
+
         return $this->author->is($user);
     }
 }
