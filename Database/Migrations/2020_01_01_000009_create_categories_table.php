@@ -23,7 +23,9 @@ class CreateCategoriesTable extends XotBaseMigration {
             function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('slug')->index();
-                $table->json('name')->index();
+                // SQLSTATE[42000]: Syntax error or access violation: 3152 JSON column 'name' supports indexing only via generated columns on a specified JSON path. (SQL: alter table `categories` add index `categories_name_index`(`name`))
+                // $table->json('name')->index();
+                $table->json('name')->nullable();
                 $table->json('description')->nullable();
                 NestedSet::columns($table);
 
