@@ -5,22 +5,18 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-// --- Services --
-=======
 //--- Services --
->>>>>>> 968db6d (up)
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
- * Class SettingsPanel.
+ * Class SitemapPanel.
  */
-class SettingsPanel extends XotBasePanel {
+class SitemapPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
-    public static string $model = 'Modules\Blog\Models\Settings';
+    public static string $model = 'Modules\Blog\Models\Sitemap';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -28,58 +24,42 @@ class SettingsPanel extends XotBasePanel {
     public static string $title = 'title';
 
     /**
-     * The columns that should be searched.
-     */
-    public static array $search = [
-    ];
-
-    /**
-     * The relationships that should be eager loaded on index queries.
-     */
-    public function with(): array {
-        return [];
-    }
-
-    public function search(): array {
-        return [];
-    }
-
-    /**
-     * on select the option id.
-     *
-     * @return mixed
-     */
-    public function optionId(object $row) {
-        return $row->area_id;
-    }
-
-    /**
-     * on select the option label.
-     */
-    public function optionLabel(object $row): string {
-        return $row->area_define_name;
-    }
-
-    /**
      * @return object[]
      */
     public function fields(): array {
         return [
-            (object) [
+            (object) ([
                 'type' => 'Id',
                 'name' => 'id',
                 'comment' => null,
-            ],
+            ]),
+            (object) ([
+                'type' => 'String',
+                'name' => 'created_by',
+                'comment' => null,
+            ]),
+            (object) ([
+                'type' => 'String',
+                'name' => 'updated_by',
+                'comment' => null,
+            ]),
+            (object) ([
+                'type' => 'DateTime',
+                'name' => 'created_at',
+                'comment' => null,
+            ]),
+            (object) ([
+                'type' => 'DateTime',
+                'name' => 'updated_at',
+                'comment' => null,
+            ]),
         ];
     }
 
     /**
      * Get the tabs available.
-<<<<<<< HEAD
-=======
      *
      * @return array
->>>>>>> 968db6d (up)
      */
     public function tabs(): array {
         $tabs_name = [];
@@ -89,11 +69,8 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-<<<<<<< HEAD
-=======
      *
      * @return array
->>>>>>> 968db6d (up)
      */
     public function cards(Request $request): array {
         return [];
@@ -101,11 +78,6 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the filters available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function filters(Request $request = null): array {
         return [];
@@ -113,11 +85,8 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-<<<<<<< HEAD
-=======
      *
      * @return array
->>>>>>> 968db6d (up)
      */
     public function lenses(Request $request): array {
         return [];
@@ -125,13 +94,10 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-<<<<<<< HEAD
-=======
      *
      * @return array
->>>>>>> 968db6d (up)
      */
-    public function actions(): array {
+    public function actions(Request $request = null): array {
         return [];
     }
 }

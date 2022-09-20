@@ -4,7 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
+<<<<<<< HEAD
 // --- Services --
+=======
+//--- Services --
+>>>>>>> 968db6d (up)
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 /**
@@ -95,6 +99,11 @@ class PhotoMorphPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
+<<<<<<< HEAD
+=======
+     *
+     * @return array
+>>>>>>> 968db6d (up)
      */
     public function actions(): array {
         return [];
