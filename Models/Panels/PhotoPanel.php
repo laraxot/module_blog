@@ -4,19 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-<<<<<<< HEAD
 // --- Services --
 use Modules\Rating\Models\Panels\Actions\RateItAction;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
-=======
-//--- Services --
-use Modules\Rating\Models\Panels\Actions\RateItAction;
-use Modules\Xot\Models\Panels\XotBasePanel;
-
-//---- bases --
->>>>>>> 968db6d (up)
 
 /**
  * Class PhotoPanel.
@@ -60,29 +52,20 @@ class PhotoPanel extends XotBasePanel {
                 'type' => 'Text',
                 'name' => 'post.title',
                 'col_size' => 12,
-<<<<<<< HEAD
                 // 'except' => ['index'],
-=======
-                //'except' => ['index'],
->>>>>>> 968db6d (up)
             ],
 
             (object) [
                 'type' => 'Text',
                 'name' => 'post.image_title',
                 'col_size' => 12,
-<<<<<<< HEAD
                 // 'except' => ['index'],
-=======
-                //'except' => ['index'],
->>>>>>> 968db6d (up)
             ],
 
             (object) [
                 'type' => 'Text',
                 'name' => 'post.image_alt',
                 'col_size' => 12,
-<<<<<<< HEAD
                 // 'except' => ['index'],
             ],
 
@@ -92,17 +75,6 @@ class PhotoPanel extends XotBasePanel {
                 'name' => 'post.image_src',
                 'col_size' => 12,
                 // 'except' => ['index'],
-=======
-                //'except' => ['index'],
-            ],
-
-            (object) [
-                //'type' => 'UnisharpImg', //'Html5UploadImg',
-                'type' => 'Image',
-                'name' => 'post.image_src',
-                'col_size' => 12,
-                //'except' => ['index'],
->>>>>>> 968db6d (up)
             ],
         ];
     }
@@ -113,11 +85,7 @@ class PhotoPanel extends XotBasePanel {
     public function actions(): array {
         return [
             new RateItAction(),
-<<<<<<< HEAD
             // new \Modules\Xot\Models\Panels\Actions\UploadImageTestAction(),
-=======
-            //new \Modules\Xot\Models\Panels\Actions\UploadImageTestAction(),
->>>>>>> 968db6d (up)
         ];
     }
 }

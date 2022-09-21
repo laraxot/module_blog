@@ -5,17 +5,10 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 // --- Services --
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
-=======
-//--- Services --
-use Modules\Xot\Models\Panels\XotBasePanel;
-
-//---- bases --
->>>>>>> 968db6d (up)
 
 /**
  * Class RatingPanel.
@@ -57,11 +50,7 @@ class RatingPanel extends XotBasePanel {
      */
     public function fields(): array {
         return [
-<<<<<<< HEAD
             // *
-=======
-            //*
->>>>>>> 968db6d (up)
             (object) [
                 'type' => 'Id',
                 'name' => 'id',
@@ -104,11 +93,6 @@ class RatingPanel extends XotBasePanel {
 
     /**
      * Get the tabs available.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function tabs(): array {
         $tabs_name = [];
@@ -118,11 +102,6 @@ class RatingPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function cards(Request $request): array {
         return [];
@@ -130,11 +109,6 @@ class RatingPanel extends XotBasePanel {
 
     /**
      * Get the filters available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function filters(Request $request = null): array {
         return [];
@@ -142,11 +116,6 @@ class RatingPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function lenses(Request $request): array {
         return [];
@@ -154,11 +123,6 @@ class RatingPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function actions(): array {
         return [];

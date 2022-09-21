@@ -3,12 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-<<<<<<< HEAD
 // ----- models -----
-=======
-use Illuminate\Support\Facades\Schema;
-//----- models -----
->>>>>>> 968db6d (up)
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -21,7 +16,6 @@ class CreatePhotoMorphTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-<<<<<<< HEAD
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
@@ -43,29 +37,6 @@ class CreatePhotoMorphTable extends XotBaseMigration {
         $this->tableUpdate(
             function (Blueprint $table) {
                 if ($this->hasColumn('related_id')) {
-=======
-        //-- CREATE --
-        $this->tableCreate(
-        function (Blueprint $table) {
-            $table->increments('id');
-            $table->nullableMorphs('post');
-            $table->nullableMorphs('related');
-            $table->integer('user_id')->nullable()->index();
-
-            $table->string('note')->nullable();
-
-            $table->string('created_by')->nullable();
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
-            $table->timestamps();
-        }
-        );
-
-        //-- UPDATE --
-        $this->tableUpdate(
-            function (Blueprint $table) {
-                if ($this->hasColumn( 'related_id')) {
->>>>>>> 968db6d (up)
                     $table->renameColumn('related_id', 'photo_id');
                 }
                 if ($this->hasColumn('auth_user_id')) {

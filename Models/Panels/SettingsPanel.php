@@ -5,11 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
 // --- Services --
-=======
-//--- Services --
->>>>>>> 968db6d (up)
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -75,11 +71,6 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the tabs available.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function tabs(): array {
         $tabs_name = [];
@@ -89,11 +80,6 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function cards(Request $request): array {
         return [];
@@ -101,11 +87,6 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the filters available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function filters(Request $request = null): array {
         return [];
@@ -113,11 +94,6 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function lenses(Request $request): array {
         return [];
@@ -125,11 +101,6 @@ class SettingsPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-<<<<<<< HEAD
-=======
-     *
-     * @return array
->>>>>>> 968db6d (up)
      */
     public function actions(): array {
         return [];

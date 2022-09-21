@@ -7,14 +7,6 @@ namespace Modules\Blog\Models;
 /**
  * Modules\Blog\Models\Label.
  *
-<<<<<<< HEAD
- * @method static \Modules\Blog\Database\Factories\LabelFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|Label   newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Label   newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Label   query()
- *
- * @mixin \Eloquent
-=======
  * @property int                             $id
  * @property string|null                     $label_type
  * @property int|null                        $label_id
@@ -24,6 +16,7 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null                     $class
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Label newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Label newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Label query()
@@ -36,9 +29,9 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  * @mixin IdeHelperLabel
->>>>>>> 968db6d (up)
  */
 class Label extends BaseModel {
     /**
