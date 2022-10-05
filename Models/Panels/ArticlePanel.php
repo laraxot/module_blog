@@ -174,6 +174,7 @@ class ArticlePanel extends XotBasePanel {
         return [
             new RateItAction(),
             // new Actions\ChangePosAction(),
+            new Actions\CreateArticleAction(),
         ];
     }
 }

@@ -27,6 +27,10 @@ class ArticlePanelPolicy extends XotBasePanelPolicy {
         return true;
     }
 
+    public function createArticle(UserContract $user, PanelContract $panel): bool {
+        return true;
+    }
+
     public function update(UserContract $user, PanelContract $panel): bool {
         return $panel->isAuthoredBy($user) || $panel->isModeratedBy($user) || $panel->isAdminedBy($user);
     }
