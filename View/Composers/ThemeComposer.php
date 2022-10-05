@@ -63,6 +63,12 @@ class ThemeComposer {
         return $res;
     }
 
+     public function getArticleCategories(): Collection {
+         $res = Category::ofType('article')->get();
+
+         return $res;
+     }
+
     /**
      * ----.
      * $footerAuthors = User::userIsAuthor()->take(8)->get();.
@@ -93,6 +99,13 @@ class ThemeComposer {
      */
     public function getFooterTags(): Collection {
         // return collect([]);
+        return Tag::take(15)->get();
+    }
+
+    /**
+     * Undocumented function
+     */
+    public function getArticleTags(): Collection {
         return Tag::take(15)->get();
     }
 

@@ -73,13 +73,12 @@
                                             <select class="selectpicker col-sm-12 pl-0 pr-0" name="category_id"
                                                 data-style="select-with-transition" title="" data-size="100">
                                                 <option value="">-</option>
-                                                {{--  
-                                                @foreach ($categories as $category)
+                                                @foreach ($_theme->getArticleCategories() as $category)
                                                 <option value="{{ $category->id }}"
                                                     {{ $category->id == old('category_id') ? 'selected' : '' }}>
                                                     {{ $category->name }}</option>
                                                 @endforeach
-                                                --}}
+                                                
                                             </select>
                                             @include('theme::components.alert.feedback', ['field' => 'category_id'])
                                         </div>
@@ -113,13 +112,13 @@
                                         <div class="form-group{{ $errors->has('tags') ? ' has-danger' : '' }}">
                                             <select class="selectpicker col-sm-12 pl-0 pr-0" name="tags[]"
                                                 data-style="select-with-transition" multiple title="-" data-size="7">
-                                                {{--  
-                                                @foreach ($tags as $tag)
+                                                  
+                                                @foreach ($_theme->getArticleTags() as $tag)
                                                 <option value="{{ $tag->id }}"
                                                     {{ in_array($tag->id, old('tags') ?? []) ? 'selected' : '' }}>
                                                     {{ $tag->name }}</option>
                                                 @endforeach
-                                                --}}
+                                                
                                             </select>
                                             @include('theme::components.alert.feedback', ['field' => 'tags'])
                                         </div>
