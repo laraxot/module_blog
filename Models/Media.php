@@ -45,7 +45,8 @@ class Media extends BaseMedia {
 
     protected $appends = [
         'original_url', 'preview_url',
-        'title', 'subtitle',
+        // 'title',
+        // 'subtitle',
     ];
 
     // protected $with = ['tags:id,name'];
