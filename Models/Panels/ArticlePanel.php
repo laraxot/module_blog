@@ -80,7 +80,7 @@ class ArticlePanel extends XotBasePanel {
                 'col_size' => 6,
             ],
             (object) [
-                'type' => 'Image',
+                'type' => 'UploadImage',
                 'name' => 'post.image_src',
                 // 'except' => ['index'],
                 'col_size' => 12,
@@ -105,17 +105,17 @@ class ArticlePanel extends XotBasePanel {
             ],
             */
             (object) [
-                'type' => 'DateTime',
+                'type' => 'DateDateTime',
                 'name' => 'submitted_at',
                 'col_size' => 4,
             ],
             (object) [
-                'type' => 'DateTime',
+                'type' => 'DateDateTime',
                 'name' => 'approved_at',
                 'col_size' => 4,
             ],
             (object) [
-                'type' => 'Boolean',
+                'type' => 'CheckboxBoolean',
                 'name' => 'is_pinned',
                 'col_size' => 4,
             ],
@@ -142,7 +142,7 @@ class ArticlePanel extends XotBasePanel {
             'col_size' => 6,
             ],
             (object) [
-            'type' => 'DateTime',
+            'type' => 'DateDateTime',
             'name' => 'published_at',
             //'rules' => new \Modules\Xot\Rules\DateTimeRule(),
             //'rules' => 'nullable|date_format:d/m/Y H:i', // https://laravel.com/docs/5.8/validation

@@ -227,13 +227,13 @@ class MediaPanel extends XotBasePanel {
   ),
   19 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDatetime',
      'name' => 'created_at',
      'comment' => NULL,
   ),
   20 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDatetime',
      'name' => 'updated_at',
      'comment' => NULL,
   ),

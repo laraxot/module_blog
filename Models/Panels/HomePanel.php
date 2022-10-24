@@ -61,7 +61,7 @@ class HomePanel extends XotBasePanel {
                 'col_size' => 12,
             ],
             (object) [
-                'type' => 'Image',
+                'type' => 'UploadImage',
                 'name' => 'icon_src',
             ],
         ];

@@ -117,7 +117,7 @@ class PagePanel extends XotBasePanel {
                 'col_size' => 12,
             ],
             (object) [
-                'type' => 'Image',
+                'type' => 'UploadImage',
                 // 'name' => 'post[title]',
                 'name' => 'post.image_src',
                 'col_size' => 12,

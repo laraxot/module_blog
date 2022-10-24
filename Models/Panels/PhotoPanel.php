@@ -71,7 +71,7 @@ class PhotoPanel extends XotBasePanel {
 
             (object) [
                 // 'type' => 'UnisharpImg', //'Html5UploadImg',
-                'type' => 'Image',
+                'type' => 'UploadImage',
                 'name' => 'post.image_src',
                 'col_size' => 12,
                 // 'except' => ['index'],

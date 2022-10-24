@@ -30,12 +30,12 @@ class EventPanel extends XotBasePanel {
             ],
             (object) [
                 // 'type' => 'DateTime2Fields',
-                'type' => 'DateTime',
+                'type' => 'DateDateTime',
                 'name' => 'date_start',
                 'col_size' => 5,
             ],
             (object) [
-                'type' => 'DateTime',
+                'type' => 'DateDateTime',
                 'name' => 'date_end',
                 'col_size' => 5,
             ],

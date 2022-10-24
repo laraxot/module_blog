@@ -86,12 +86,12 @@ class StatusPanel extends XotBasePanel {
                 'comment' => null,
             ],
             5 => (object) [
-                'type' => 'Datetime',
+                'type' => 'DateDatetime',
                 'name' => 'created_at',
                 'comment' => null,
             ],
             6 => (object) [
-                'type' => 'Datetime',
+                'type' => 'DateDatetime',
                 'name' => 'updated_at',
                 'comment' => null,
             ],

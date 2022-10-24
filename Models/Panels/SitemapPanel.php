@@ -44,12 +44,12 @@ class SitemapPanel extends XotBasePanel {
                 'comment' => null,
             ]),
             (object) ([
-                'type' => 'DateTime',
+                'type' => 'DateDateTime',
                 'name' => 'created_at',
                 'comment' => null,
             ]),
             (object) ([
-                'type' => 'DateTime',
+                'type' => 'DateDateTime',
                 'name' => 'updated_at',
                 'comment' => null,
             ]),
