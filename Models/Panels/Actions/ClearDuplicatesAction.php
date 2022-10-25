@@ -21,9 +21,9 @@ class ClearDuplicatesAction extends XotBasePanelAction {
     public string $icon = '<i class="fas fa-heart-broken"></i>';
 
     /**
-     * @return string
-     *
      * @throws \Exception
+     *
+     * @return string
      */
     public function handle() {
         /*

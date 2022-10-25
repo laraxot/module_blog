@@ -45,6 +45,8 @@ class PagePanel extends XotBasePanel {
 
     /**
      * on select the option id.
+     *
+     * @param mixed $row
      */
 
     /**

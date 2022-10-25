@@ -56,6 +56,8 @@ class MediaPanel extends XotBasePanel {
 
     /**
      * on select the option label.
+     *
+     * @param mixed $row
      */
     public function optionLabel($row): string {
         return (string) $row->title;
