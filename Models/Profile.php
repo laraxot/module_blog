@@ -192,7 +192,7 @@ class Profile extends BaseModelLang {
         'handle' => UserField::class,
     ];
 
-    /*
+    /**
      * Create a new factory instance for the model.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
@@ -226,7 +226,7 @@ class Profile extends BaseModelLang {
 
     protected function username(): Attribute {
         $user = $this->user;
-        if (null == $user) {
+        if (null === $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
             // dddx($user1->username());
         }
@@ -271,10 +271,10 @@ class Profile extends BaseModelLang {
     }
 
     public function isLoggedInUser(): bool {
-        return Auth::id() == $this->getKey();
+        return Auth::id() === $this->getKey();
     }
 
     public function isBanned(): bool {
-        return 'ban' == $this->status;
+        return 'ban' === $this->status;
     }
 }// end model

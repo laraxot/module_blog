@@ -31,14 +31,12 @@ trait ArticleRelationship {
         return $this->hasMany(Article::class, 'parent_id', 'id');
     }
 
-    /* -- trait a parte
+    /** -- trait a parte.
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
-
     public function categories() {   // https://github.com/rinvex/laravel-categories
         return $this->morphRelated(Category::class, true);
     }
-    */
-
+     */
     public function images(): MorphMany { // da rimettere spatie
         return $this->morphMany(Image::class, 'post');
     }
@@ -69,7 +67,7 @@ trait ArticleRelationship {
     }
     */
 
-    /*
+    /**
      * Get the tags of the article.
      *
      * @return \Illuminate\Database\Eloquent\Collection
@@ -80,7 +78,7 @@ trait ArticleRelationship {
     }
      */
 
-    /*
+    /**
      * Get the comments of the article.
      *
      * @return \Illuminate\Database\Eloquent\Collection

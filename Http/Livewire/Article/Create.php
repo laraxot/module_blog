@@ -11,7 +11,6 @@ use Livewire\Component;
  * Undocumented Place.
  */
 class Create extends Component {
-
     public function render(): Renderable {
         /**
          * @phpstan-var view-string

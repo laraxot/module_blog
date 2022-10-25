@@ -107,7 +107,7 @@ trait ArticleExtra {
     public function readTime(): float {
         $minutes = round(str_word_count(''.$this->body()) / 200);
 
-        return 0.0 == $minutes ? 1 : $minutes;
+        return 0.0 === $minutes ? 1 : $minutes;
     }
 
     public function shouldBeSearchable(): bool {
@@ -152,7 +152,7 @@ trait ArticleExtra {
     }
 
     public function isUpdated(): bool {
-        if (null == $this->updated_at) {
+        if (null === $this->updated_at) {
             return false;
         }
 

@@ -155,16 +155,16 @@ use Spatie\Tags\HasTags; // spatie tags
  */
 class Article extends BaseModelLang implements HasLikeContract {
     use HasAuthor;
+    use HasCategory;
     use HasLikes;
     // use HasProfileTrait;
     use HasSlug;
+    use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
+    use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
-    use PreparesSearch; // non so se funziona, credo meglio HasProfileTrait
-    use HasTags;
-    use HasStatuses;
+    use PreparesSearch;
     use RatingTrait;
-    use HasCategory;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
     use Traits\Relationships\ArticleRelationship;

@@ -25,7 +25,7 @@ class PagesController extends Controller {
          */
         $view = 'pub_theme::pages.'.$last_item;
         $_panel = PanelService::make()->getRequestPanel();
-        if (null == $_panel) {
+        if (null === $_panel) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
         /**

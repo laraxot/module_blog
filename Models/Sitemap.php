@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-//----- traits ----
+// ----- traits ----
 
-//------services---------
+// ------services---------
 
-//--- models ---
+// --- models ---
 
 /**
  * Modules\Blog\Models\Sitemap.
@@ -18,6 +18,7 @@ namespace Modules\Blog\Models;
  * @property string|null                     $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap query()
@@ -26,8 +27,11 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
+ *
  * @method static \Modules\Blog\Database\Factories\SitemapFactory factory(...$parameters)
+ *
  * @mixin IdeHelperSitemap
  */
 class Sitemap extends BaseModel {

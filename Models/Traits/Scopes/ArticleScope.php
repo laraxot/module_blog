@@ -60,20 +60,19 @@ trait ArticleScope {
         return $query->whereDate('published_at', '<=', Carbon::today()->toDateString());
     }
 
-    /* -- rinvex hasCategory Trait
+    /** -- rinvex hasCategory Trait
      * Scope a query to only include articles with a specified category.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param integer $id
+     * @param int                                   $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
-
     public function scopeCategory($query, $id) {
         return $query->whereHas('category', function ($q) use ($id) {
             $q->where('id', $id);
         });
     }
-    */
+     */
 
     /**
      * Scope a query to only include articles that belongs to an author.

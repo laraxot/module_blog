@@ -112,7 +112,7 @@ class ProfilePanel extends XotBasePanel {
             // dddx($this->row);
             return null;
         }
-        if (null == $user) {
+        if (null === $user) {
             return null;
         }
         $email = md5(mb_strtolower(trim((string) $user->email)));
@@ -142,7 +142,7 @@ class ProfilePanel extends XotBasePanel {
         ];
 
         $post = $row->post;
-        if (null == $post) {
+        if (null === $post) {
             $row->post()->create($post_data);
         } else {
             $row->post->update($post_data);
@@ -179,11 +179,11 @@ class ProfilePanel extends XotBasePanel {
         // $user = $this->row->user;
         // $user = $this->row->getRelationValue('user');
         $user = $this->row->user;
-        if (null == $user) {
+        if (null === $user) {
             return false;
         }
         $perm = $user->perm;
-        if (null == $perm) {
+        if (null === $perm) {
             return false;
         }
 

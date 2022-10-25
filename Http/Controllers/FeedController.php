@@ -6,7 +6,7 @@ namespace Modules\Blog\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 
-//---- services ---
+// ---- services ---
 
 /**
  * Class FeedController.
@@ -29,14 +29,14 @@ class FeedController extends Controller {
      * @return FeedController|null
      */
     public function index() {
-        return self::getInstance(); /// per il fluent, o chaining
+        return self::getInstance(); // / per il fluent, o chaining
     }
 
     /**
      * @return FeedController|null
      */
     public function show() {
-        return self::getInstance(); /// per il fluent, o chaining
+        return self::getInstance(); // / per il fluent, o chaining
     }
 
     /**

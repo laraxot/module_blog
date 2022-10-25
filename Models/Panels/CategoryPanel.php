@@ -33,7 +33,7 @@ class CategoryPanel extends XotBasePanel {
         $rows = $this->row->all();
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
-            if ('' != $item->name) {
+            if ('' !== $item->name) {
                 // dddx($item->name);
                 return [
                     'label' => $item->name,

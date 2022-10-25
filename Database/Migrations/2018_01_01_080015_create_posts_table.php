@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-//--- models --
+// --- models --
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
@@ -17,7 +17,7 @@ class CreatePostsTable extends XotBaseMigration {
      * @return void
      */
     public function up() {
-        //-- CREATE --
+        // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
@@ -35,15 +35,15 @@ class CreatePostsTable extends XotBaseMigration {
                 $table->integer('author_id')->nullable();
                 $table->timestamps();
             }
-            );
+        );
 
-        //-- UPDATE --
+        // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
                 // if (!$this->hasColumn( 'post_type')) {
                 //     $table->string('post_type', 40)->after('type')->index()->nullable();
                 // }
-                //Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
+                // Class 'Doctrine\DBAL\Driver\PDOMySql\Driver' not found
                 /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
@@ -119,16 +119,16 @@ class CreatePostsTable extends XotBaseMigration {
                 }
 
                 if (! $this->hasColumn('views_count')) {
-                    $table->integer('views_count')->nullable(); //contatore di visualizzazioni
+                    $table->integer('views_count')->nullable(); // contatore di visualizzazioni
                 }
 
                 if (! $this->hasColumn('user_id')) {
                     $table->integer('user_id')->nullable()->after('id');
                 }
 
-                //------- CHANGE INDEX-------
+                // ------- CHANGE INDEX-------
 
-                //Doctrine\DBAL\Driver\PDOMySql\Driver
+                // Doctrine\DBAL\Driver\PDOMySql\Driver
                 /*
                 $schema_builder = Schema::getConnection()
                     ->getDoctrineSchemaManager()
@@ -144,13 +144,13 @@ class CreatePostsTable extends XotBaseMigration {
                     $table->string('lang', 3)->nullable()->index()->change();
                 }
                 */
-                //-------- CHANGE FIELD -------------
+                // -------- CHANGE FIELD -------------
                 $table->text('subtitle')->nullable()->change();
             }
         );
     }
 
-    //end up
+    // end up
 
-    //end down
-}//end class
+    // end down
+}// end class

@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-//--- Services --
+// --- Services --
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -49,10 +48,8 @@ class FavoritePanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
-    public function actions():array {
+    public function actions(): array {
         return [
             new Actions\Favorite\NoMoreFavoriteAction(Auth::id()),
         ];

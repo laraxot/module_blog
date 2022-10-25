@@ -113,11 +113,11 @@ use Spatie\Translatable\HasTranslations;
  * @mixin \Eloquent
  */
 class Category extends Model {
-    use HasSlug;
-    use NodeTrait;
     use HasFactory;
-    use SoftDeletes;
+    use HasSlug;
     use HasTranslations;
+    use NodeTrait;
+    use SoftDeletes;
     // use ValidatingTrait;
 
     /**

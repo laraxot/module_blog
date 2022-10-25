@@ -36,7 +36,7 @@ trait ContainerTrait {
             // $row = Post::where('lang', app()->getLocale())->where('guid', $post_type)->first();
             // $model = config('xra.model.'.$row->post_type);
             // if ('' == $model) {
-            exit('<hr/>settare modello['.$post_type.'] in config/xra<hr/>'.'['.__LINE__.']['.__FILE__.']');
+            exit('<hr/>settare modello['.$post_type.'] in config/xra<hr/>['.__LINE__.']['.__FILE__.']');
             // }
         }
 

@@ -49,7 +49,7 @@ trait HasAuthor {
     public function isAuthoredBy(User $user): bool {
         // 43   Call to an undefined method Illuminate\Database\Eloquent\Builder<Modules\Blog\Models\Article>::is().
         // return $this->author()->is($user);
-        if (null == $this->author) {
+        if (null === $this->author) {
             return false;
         }
 

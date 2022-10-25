@@ -14,12 +14,12 @@ use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags;
 
 class Media extends BaseMedia {
-    use Updater;
     // use Searchable;
     // use Cachable;
     use HasFactory;
-    use HasTags; // spatie tags
-    use HasStatuses; // spatie status
+    // spatie tags
+    use HasStatuses;
+    use HasTags; use Updater; // spatie status
     // use LinkedTrait;
     /**
      * Indicates whether attributes are snake cased on arrays.

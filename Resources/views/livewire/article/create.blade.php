@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                   
+
                         <div class="card ">
                             <div class="card-header card-header-rose card-header-icon">
                                 <div class="card-icon">
@@ -36,9 +36,9 @@
                                                     data-dismiss="fileinput"><i class="fa fa-times"></i>
                                                     {{ __('Remove') }}</a>
                                             </div>
-                                            
+
                                             @include('theme::components.alert.feedback', ['field' => 'photo'])
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -49,9 +49,9 @@
                                             <input class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}"
                                                 name="title" id="input-title" type="text" placeholder="{{ __('Title') }}"
                                                 value="{{ old('title') }}" required="true" aria-required="true" />
-                                            
+
                                             @include('theme::components.alert.feedback', ['field' => 'title'])
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@
                                                     {{ $category->id == old('category_id') ? 'selected' : '' }}>
                                                     {{ $category->name }}</option>
                                                 @endforeach
-                                                
+
                                             </select>
                                             @include('theme::components.alert.feedback', ['field' => 'category_id'])
                                         </div>
@@ -112,13 +112,13 @@
                                         <div class="form-group{{ $errors->has('tags') ? ' has-danger' : '' }}">
                                             <select class="selectpicker col-sm-12 pl-0 pr-0" name="tags[]"
                                                 data-style="select-with-transition" multiple title="-" data-size="7">
-                                                  
+
                                                 @foreach ($_theme->getArticleTags() as $tag)
                                                 <option value="{{ $tag->id }}"
                                                     {{ in_array($tag->id, old('tags') ?? []) ? 'selected' : '' }}>
                                                     {{ $tag->name }}</option>
                                                 @endforeach
-                                                
+
                                             </select>
                                             @include('theme::components.alert.feedback', ['field' => 'tags'])
                                         </div>
@@ -179,14 +179,14 @@
                                 <button type="submit" class="btn btn-rose">{{ __('Add article') }}</button>
                             </div>
                         </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 @push('scripts')
-{{-- 
+{{--
 <script src="{{ asset('material') }}/js/article.js"></script>
 --}}
     <script>
@@ -218,8 +218,8 @@
                     setSlug($('input#input-title'), $('input#input-slug'));
                 }
             })
-            
+
         });
-        
+
     </script>
 @endpush

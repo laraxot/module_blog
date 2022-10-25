@@ -27,16 +27,16 @@ class PersonalInfoAction extends XotBasePanelAction {
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
     public function handle(): Renderable {
-        /*
+        /**
          @phpstan-var view-string
 
         $view = 'pub_theme::profile.'.$this->getName();
-        */
+         */
         // dddx(get_defined_vars());
 
         /*return ThemeService::view($view)
             ->with('row', $this->row);*/
-        if (null == $this->panel) {
+        if (null === $this->panel) {
             throw new Exception('this->panel is null');
         }
 

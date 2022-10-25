@@ -35,7 +35,7 @@ trait PreparesSearch {
      */
     private function splitToCollection(string $string, string $delimiter): Collection {
         $array = preg_split($delimiter, $string);
-        if (false == $array) {
+        if (false === $array) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 

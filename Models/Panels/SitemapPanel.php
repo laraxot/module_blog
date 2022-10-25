@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-//--- Services --
+// --- Services --
 
 use Modules\Xot\Models\Panels\XotBasePanel;
 
@@ -28,38 +28,36 @@ class SitemapPanel extends XotBasePanel {
      */
     public function fields(): array {
         return [
-            (object) ([
+            (object) [
                 'type' => 'Id',
                 'name' => 'id',
                 'comment' => null,
-            ]),
-            (object) ([
+            ],
+            (object) [
                 'type' => 'String',
                 'name' => 'created_by',
                 'comment' => null,
-            ]),
-            (object) ([
+            ],
+            (object) [
                 'type' => 'String',
                 'name' => 'updated_by',
                 'comment' => null,
-            ]),
-            (object) ([
+            ],
+            (object) [
                 'type' => 'DateDateTime',
                 'name' => 'created_at',
                 'comment' => null,
-            ]),
-            (object) ([
+            ],
+            (object) [
                 'type' => 'DateDateTime',
                 'name' => 'updated_at',
                 'comment' => null,
-            ]),
+            ],
         ];
     }
 
     /**
      * Get the tabs available.
-     *
-     * @return array
      */
     public function tabs(): array {
         $tabs_name = [];
@@ -69,8 +67,6 @@ class SitemapPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @return array
      */
     public function cards(Request $request): array {
         return [];
@@ -85,8 +81,6 @@ class SitemapPanel extends XotBasePanel {
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @return array
      */
     public function lenses(Request $request): array {
         return [];
@@ -94,8 +88,6 @@ class SitemapPanel extends XotBasePanel {
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
     public function actions(Request $request = null): array {
         return [];
