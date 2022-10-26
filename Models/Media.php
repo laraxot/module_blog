@@ -14,7 +14,7 @@ use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags;
 
 /**
- * Modules\Blog\Models\Media
+ * Modules\Blog\Models\Media.
  *
  * @property int                                                                   $id
  * @property string                                                                $model_type
