@@ -20,11 +20,14 @@ class PagesController extends Controller {
     public function show(): Renderable {
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
+
+        // dddx([$containers, $items, $last_item]);
         /**
          * @phpstan-var view-string
          */
         $view = 'pub_theme::pages.'.$last_item;
         $_panel = PanelService::make()->getRequestPanel();
+
         if (null === $_panel) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
@@ -32,6 +35,12 @@ class PagesController extends Controller {
          * @var Page
          */
         $row = $_panel->row;
+
+        if (null === $row) {
+            throw new Exception('Page "'.$last_item.'" is not existing in this public theme');
+        }
+
+        // dddx($row);
 
         $view = $row->ns.'::pages.'.$row->guid;
 
