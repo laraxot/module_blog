@@ -107,6 +107,8 @@ class Page extends BaseModel {
             $pages = $pages->merge($tmp);
         }
 
+        // dddx($pages->all());
+
         // returns the page into the model
         // then you can call /{?lang}/pages/{page_title}
         return $pages->all();

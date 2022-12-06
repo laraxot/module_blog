@@ -7,6 +7,7 @@ namespace Modules\Blog\Models\Panels;
 // --- Services --
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 use Modules\Xot\Models\Panels\XotBasePanel;
@@ -177,5 +178,25 @@ class PagePanel extends XotBasePanel {
         return [
             new Actions\SendMsgAction(),
         ];
+    }
+
+    // temporaneo perchè altrimenti mi da /it/pages/0
+    public function url(string $act = 'show', ?array $params = []): string {
+        $url = $this->route->{__FUNCTION__}($act);
+
+        if ([] !== $params) {
+            $url_components = parse_url($url);
+            $url = $url_components['path'];
+
+            $merged = $params;
+            if (isset($url_components['query'])) {
+                parse_str($url_components['query'], $originalParams);
+                $merged = array_replace_recursive($originalParams, $params);
+            }
+
+            $url .= '?'.Arr::query($merged);
+        }
+
+        return $url;
     }
 }
