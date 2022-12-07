@@ -49,7 +49,7 @@ class PersonalInfoAction extends XotBasePanelAction {
         /*
         \Validator::make($data, [
             //'name' => '',
-            //'surname' => '',
+            //'last_name' => '',
             //'email' => 'required|email|unique:users',
             //'phone' => 'integer',
             //'bio' => 'max:200',
@@ -64,8 +64,8 @@ class PersonalInfoAction extends XotBasePanelAction {
         */
         $user_data = [
             'handle' => $data['handle'],
-            'first_name' => $data['firstname'],
-            'last_name' => $data['surname'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
         ];
         // $profile->user()->updateOrCreate($user_data);
         if (! method_exists($profile, 'user')) {

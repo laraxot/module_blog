@@ -92,7 +92,7 @@ trait PrivacyTrait {
     */
     /*
     public function getFormValue($key){
-        dddx($key);//firstname
+        dddx($key);//first_name
     }
     */
 
