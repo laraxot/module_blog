@@ -1,3 +1,12 @@
+---
+title: About Blog
+description: About Blog
+extends: _layouts.documentation
+section: content
+---
+
+# About Blog {#about-blog}
+
 Il modulo "module_blog" è un pacchetto per Laravel che fornisce funzionalità per la gestione di un blog all'interno di un'applicazione Laravel. Il modulo include metodi per gestire i post del blog, le categorie e i tag, nonché per generare la struttura del blog e le pagine del blog.
 
 Per utilizzare il modulo, è necessario installarlo tramite Composer con il comando composer require laraxot/module_blog. Una volta installato, il modulo può essere utilizzato nell'applicazione Laravel tramite il seguente codice:
