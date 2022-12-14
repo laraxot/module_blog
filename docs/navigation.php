@@ -33,10 +33,10 @@ return [
         'url' => '#',
         'children' => [
             'Funzionalità 1' => [
-                'url' => '#',
+                'url' => 'docs/methods/',
             ],
             'Funzionalità 2' => [
-                'url' => '#',
+                'url' => 'docs/methods/',
             ],
         ],
     ],
@@ -44,10 +44,10 @@ return [
         'url' => '#',
         'children' => [
             'Componenti 1' => [
-                'url' => '#',
+                'url' => 'docs/components/',
             ],
             'Componenti 2' => [
-                'url' => '#',
+                'url' => 'docs/components/',
             ],
         ],
     ],
@@ -55,10 +55,10 @@ return [
         'url' => '#',
         'children' => [
             'Caratteristiche Avanzate 1' => [
-                'url' => 'docs/#',
+                'url' => 'docs/advanced/',
             ],
             'Caratteristiche Avanzate 2' => [
-                'url' => 'docs/#',
+                'url' => 'docs/advanced/',
             ],
         ],
     ],
