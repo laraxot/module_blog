@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 return [
-    'baseUrl' => 'https://jigsaw-docs-template.tighten.co',
+    'baseUrl' => 'http://laraxot.github.io/module_blog',
     'production' => true,
 
     // DocSearch credentials
