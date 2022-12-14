@@ -12,24 +12,21 @@ return [
             /*'Crediti' => [
                 'url' => 'docs/crediti',
             ],*/
-            'Installazione Automatizzata' => [
-                'url' => 'docs/installazione-automatizzata',
+            'Installazione' => [
+                'url' => 'docs/installazione',
             ],
-            'Installazione Manuale' => [
-                'url' => 'docs/installazione-manuale',
-            ],
-            $moduleName.'Starter Kit' => [
+            /*$moduleName.' Starter Kit' => [
                 'url' => 'docs/starter-kit',
-            ],
+            ],*/
             'Aggiornamenti' => [
                 'url' => 'docs/aggiornamenti',
             ],
-            'Tabella di Marcia' => [
+            /*'Tabella di Marcia' => [
                 'url' => 'docs/tabella-di-marcia',
             ],
             'Comparazioni' => [
                 'url' => 'docs/comparazioni',
-            ],
+            ],*/
         ],
     ],
     'Metodi Principali' => [
