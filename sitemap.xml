@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-  <loc>https://jigsaw-docs-template.tighten.co/it/docs/installazione</loc>
-  <lastmod>2022-12-14T10:27:34+00:00</lastmod>
+  <loc>http://laraxot.github.io/module_blog/it/docs/installazione</loc>
+  <lastmod>2022-12-14T11:11:09+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://jigsaw-docs-template.tighten.co/it/docs/introduzione</loc>
-  <lastmod>2022-12-14T10:27:34+00:00</lastmod>
+  <loc>http://laraxot.github.io/module_blog/it/docs/introduzione</loc>
+  <lastmod>2022-12-14T11:11:09+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://jigsaw-docs-template.tighten.co/it/docs/aggiornamenti</loc>
-  <lastmod>2022-12-14T10:27:34+00:00</lastmod>
+  <loc>http://laraxot.github.io/module_blog/it/docs/aggiornamenti</loc>
+  <lastmod>2022-12-14T11:11:09+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://jigsaw-docs-template.tighten.co</loc>
-  <lastmod>2022-12-14T10:27:34+00:00</lastmod>
+  <loc>http://laraxot.github.io/module_blog</loc>
+  <lastmod>2022-12-14T11:11:09+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
 </urlset>
