@@ -8,7 +8,6 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 // -------- services --------
 
-use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Session;
 use Modules\Theme\Services\ThemeService;
@@ -37,7 +36,7 @@ class PersonalInfoAction extends XotBasePanelAction {
         /*return ThemeService::view($view)
             ->with('row', $this->row);*/
         if (null === $this->panel) {
-            throw new Exception('this->panel is null');
+            throw new \Exception('this->panel is null');
         }
 
         return $this->panel->view();

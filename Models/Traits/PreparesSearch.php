@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits;
 
-use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
@@ -36,7 +35,7 @@ trait PreparesSearch {
     private function splitToCollection(string $string, string $delimiter): Collection {
         $array = preg_split($delimiter, $string);
         if (false === $array) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return collect($array);

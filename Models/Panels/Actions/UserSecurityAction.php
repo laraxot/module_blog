@@ -7,7 +7,6 @@ namespace Modules\Blog\Models\Panels\Actions;
 // -------- models -----------
 
 // -------- services --------
-use Exception;
 use Illuminate\Support\Facades\Session;
 use Illuminate\View\View;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
@@ -26,7 +25,7 @@ class UserSecurityAction extends XotBasePanelAction {
 
     public function handle(): View {
         if (null === $this->panel) {
-            throw new Exception('panel is null');
+            throw new \Exception('panel is null');
         }
 
         return $this->panel->view();

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Http\Controllers;
 
-use Exception;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Routing\Controller;
 use Modules\Blog\Models\Page;
@@ -29,7 +28,7 @@ class PagesController extends Controller {
         $_panel = PanelService::make()->getRequestPanel();
 
         if (null === $_panel) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
         /**
          * @var Page
@@ -37,7 +36,7 @@ class PagesController extends Controller {
         $row = $_panel->row;
 
         if (null === $row) {
-            throw new Exception('Page "'.$last_item.'" is not existing in this public theme');
+            throw new \Exception('Page "'.$last_item.'" is not existing in this public theme');
         }
 
         // dddx($row);
