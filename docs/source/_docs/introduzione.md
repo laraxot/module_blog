@@ -1,11 +1,11 @@
 ---
-title: Getting Started
-description: Getting started with Jigsaw's docs starter template is as easy as 1, 2, 3.
+title: Introducendo Blog
+description: Introduzione a Module Blog
 extends: _layouts.documentation
 section: content
 ---
 
-# Getting Started {#getting-started}
+# Introducendo Blog {#introducendo-blog}
 
 
 Il modulo "module_blog" è un pacchetto per Laravel che fornisce funzionalità per la gestione di un blog all'interno di un'applicazione Laravel. Il modulo include metodi per gestire i post del blog, le categorie e i tag, nonché per generare la struttura del blog e le pagine del blog.
