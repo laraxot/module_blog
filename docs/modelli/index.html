@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Configure Algolia DocSearch with the Jigsaw docs starter template">
+        <meta name="description" content="About Blog models">
 
         <meta property="og:site_name" content="Modulo Blog"/>
-        <meta property="og:title" content="Algolia DocSearch | Modulo Blog"/>
-        <meta property="og:description" content="Configure Algolia DocSearch with the Jigsaw docs starter template"/>
-        <meta property="og:url" content="https://jigsaw-docs-template.tighten.co/docs/algolia-docsearch"/>
+        <meta property="og:title" content="Models | Modulo Blog"/>
+        <meta property="og:description" content="About Blog models"/>
+        <meta property="og:url" content="https://jigsaw-docs-template.tighten.co/docs/modelli"/>
         <meta property="og:image" content="/assets/img/logo.png"/>
         <meta property="og:type" content="website"/>
 
@@ -17,7 +17,7 @@
         <meta name="twitter:card" content="summary_large_image">
 
         
-        <title>Modulo Blog | Algolia DocSearch</title>
+        <title>Modulo Blog | Models</title>
 
         <link rel="home" href="https://jigsaw-docs-template.tighten.co">
         <link rel="icon" href="/favicon.ico">
@@ -81,7 +81,7 @@
             <li class="pl-4">
             
         <a href="/docs/modelli"
-            class="lvl1   nav-menu__item hover:text-blue-500"
+            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
         >
             Modelli
         </a>
@@ -99,7 +99,7 @@
             <li class="pl-4">
             
         <a href="/docs/algolia-docsearch"
-            class="lvl1  active font-semibold text-blue-500 nav-menu__item hover:text-blue-500"
+            class="lvl1   nav-menu__item hover:text-blue-500"
         >
             Algolia DocSearch
         </a>
@@ -138,68 +138,93 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1 id="algolia-docsearch">Algolia DocSearch</h1>
+            <h1 id="modelli">Modelli</h1>
 
-<p>This starter template includes support for <a href="https://community.algolia.com/docsearch/">DocSearch</a>, a documentation indexing and search tool provided by Algolia for free. To configure this tool, you’ll need to sign up with Algolia and set your API Key and index name in <code>config.php</code>. Algolia will then crawl your documentation regularly, and index all your content.</p>
+<h3>Article / ArticleMorph</h3>
 
-<p><a href="https://community.algolia.com/docsearch/#join-docsearch-program">Get your DocSearch credentials here.</a></p>
+<p>Article using id, parent_type and parent_id, with BaseModelLang.</p>
 
-<pre><code class="language-php">// config.php
-return [
-    'docsearchApiKey' =&gt; '',
-    'docsearchIndexName' =&gt; '',
-];
-</code></pre>
+<h3>Categorizable</h3>
 
-<p>Once the <code>docsearchApiKey</code> and <code>docsearchIndexName</code> values are set in <code>config.php</code>, the search field at the top of the page is ready to use.</p>
+<p>Polymorphic model to associate a <em>category_id</em> with a <em>categorizable_type</em> and <em>categorizable_id</em>.</p>
 
-<p><img class="block m-auto" src="/assets/img/docsearch.png" alt="Screenshot of search results" /></p>
+<h3>Category</h3>
 
-<p>To help Algolia index your pages correctly, it's good practice to add a unique <code>id</code> or <code>name</code> attribute to each heading tag (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.). By doing so, a user will be taken directly to the appropriate section of the page when they click a search result.</p>
+<p>Category (using NestedSet, then ancestors, parent, children, siblin, descendants, too).</p>
 
-<hr />
+<h3>Comment</h3>
 
-<h2 id="algolia-adding-custom-styles">Adding Custom Styles</h2>
+<p>Post Comment, using polymorphic relation to Post (id,post_type,post_id) and BaseModelLang</p>
 
-<p>If you'd like to customize the styling of the search results, Algolia exposes custom CSS classes that you can modify:</p>
+<h3>Contact</h3>
 
-<pre><code class="language-css">/* Main dropdown wrapper */
-.algolia-autocomplete .ds-dropdown-menu {
-  width: 500px;
-}
+<p>Blog Contact. Only Polymorphic relation to Post (BaseModelLang)</p>
 
-/* Main category (eg. Getting Started) */
-.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-  color: darkgray;
-  border: 1px solid gray;
-}
+<h3>Event / EventMorph</h3>
 
-/* Category (eg. Downloads) */
-.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-  color: gray;
-}
+<p>Event with address, place, etc (BaseModelLang).
+Polymorphic relation between translations (Post) and event_id</p>
 
-/* Title (eg. Bootstrap CDN) */
-.algolia-autocomplete .algolia-docsearch-suggestion--title {
-  font-weight: bold;
-  color: black;
-}
+<h3>Feed</h3>
 
-/* Description description (eg. Bootstrap currently works...) */
-.algolia-autocomplete .algolia-docsearch-suggestion--text {
-  font-size: 0.8rem;
-  color: gray;
-}
+<p>A feed is a source of information that is constantly updated, such as a blog or news website. Typically, a feed is delivered in the form of a feed reader (example RSS Feed), which is a software program that allows users to access and view the latest updates from multiple feeds in one place. Feeds can be used to keep up with the latest news, follow blogs or other websites, and stay up-to-date on any topic that interests you.</p>
 
-/* Highlighted text */
-.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-  color: blue;
-}
-</code></pre>
+<h3>Home</h3>
 
-<hr />
+<p>Home model uses Sushi. Sushi is a package for the Laravel PHP framework. It provides a set of tools and helpers for working with the Eloquent ORM, which is a way of interacting with a database from within Laravel. The package is designed to make it easier to work with Eloquent and to help developers write cleaner, more maintainable code. Some of the features of Sushi include support for nested relationships, custom casting, and an improved API for working with Eloquent models.</p>
 
-<p>For more details, visit the <a href="https://community.algolia.com/docsearch/what-is-docsearch.html">official Algolia DocSearch documentation.</a></p>
+<p>Home models and Home panels manage the rows to sent to public theme (pub_theme)</p>
+
+<h3>Image</h3>
+
+<p>Handles the images.</p>
+
+<h3>Label</h3>
+
+<p>For example, in a cooking blog, labels might include 'vegetarian recipes', 'dessert recipes', and so on.</p>
+
+<h3>Like</h3>
+
+<p>Handles the likes.</p>
+
+<h3>Media</h3>
+
+<p>Uses Spatie Media Library to handle media.</p>
+
+<p>Spatie Media Library is a package for the Laravel PHP framework that allows developers to easily associate files with Eloquent models. This means that you can attach files, such as images or documents, to your model records and then retrieve and manage those files. The package provides a simple and flexible way to handle file uploads and attachments, making it easier to manage the files associated with your application's data.</p>
+
+<h3>Page</h3>
+
+<p>Reads the blade files from main_module or pub_theme (see xra.php). Then it uses these blades like Page Models.
+Then you can use the url http://domain.xx/en/pages/blade_name. The route will be auto generated.</p>
+
+<h3>Photo / PhotoMorph</h3>
+
+<p>Handles photos and has polymorphic relation to Post translations (BaseModelLang).</p>
+
+<h3>Post</h3>
+
+<p>Handles translations. In Laravel, a polymorphic relationship allows a model to belong to more than one other model on a single association. This is useful when you have multiple models that can have the same type of relationship to another model.</p>
+
+<p>For example, imagine that you have a Post model and a Comment model, and you want to be able to translate both of these models into different languages. You could create a Translation model that has a polymorphic relationship with both the Post and the Comment models. This would allow you to store all of the translations for both the posts and the comments in a single table, using the polymorphic relationship to distinguish between the different types of translated models.</p>
+
+<p>To create a polymorphic relationship in Laravel, you would define the relationship on both the parent and the child models. On the Translation model, you would define a belongsTo relationship that specifies the Post and Comment models as the possible parent models. Then, on the Post and Comment models, you would define a morphMany relationship that specifies the Translation model as the child model.</p>
+
+<p>Once the relationship is set up, you can use the Eloquent ORM to easily retrieve and manage the translations for your posts and comments. For example, you could use the $post->translations property to retrieve all of the translations for a given post, or you could use the $comment->translations property to retrieve all of the translations for a comment.</p>
+
+<h3>Privacy / PrivacyMorph</h3>
+
+<h3>Profile</h3>
+
+<p>Uses HasProfileTrait too, then BelongsTo one LU/User. It's the bloggers and users Profile model.</p>
+
+<h3>Sitemap</h3>
+
+<h3>Status</h3>
+
+<h3>XotBaseModel</h3>
+
+<p>Extends XotBaseModel and uses LinkedTrait.</p>
         </div>
     </div>
 </section>
