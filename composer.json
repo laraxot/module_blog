@@ -19,6 +19,14 @@
         "psr-4": {
             "Modules\\Blog\\": ""
         }
-    }
+    },
+    "require": {
+        "laraxot/module_xot": "dev-master",
+        "livewire/livewire": "^2.10"
 
+    },
+    "require-dev": {
+        "nunomaduro/larastan": "^2.2",
+        "orchestra/testbench": "^7.15"
+    }
 }
