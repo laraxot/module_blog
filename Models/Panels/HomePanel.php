@@ -142,12 +142,12 @@ class HomePanel extends XotBasePanel {
         return $footerAuthors;
     }
 
-    /**
+    /*
      * Undocumented function.
      */
-    public function footerTags(): Collection {
-        $footerTags = Tag::take(15)->get();
+    // public function footerTags(): Collection {
+    //     $footerTags = Tag::take(15)->get();
 
-        return $footerTags;
-    }
+    //     return $footerTags;
+    // }
 }
