@@ -97,18 +97,17 @@ class ThemeComposer {
      * ----.
      *  $footerTags = Tag::take(15)->get();.
      */
-    public function getFooterTags(): Collection {
-        // return collect([]);
-        // return Tag::take(15)->get();
-        return Tag::all()->take(15);
-    }
+    // public function getFooterTags(): Collection {
+    //     // return collect([]);
+    //     return Tag::take(15)->get();
+    // }
 
-    /**
-     * Undocumented function.
-     */
-    public function getArticleTags(): Collection {
-        return Tag::take(15)->get();
-    }
+    // /**
+    //  * Undocumented function.
+    //  */
+    // public function getArticleTags(): Collection {
+    //     return Tag::take(15)->get();
+    // }
 
     /**
      * ----.
