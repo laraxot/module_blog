@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Modules\Blog\View\Composers;
 
 use Illuminate\Support\Collection;
+use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
-use Modules\Blog\Models\{Article};
 use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
@@ -99,7 +99,8 @@ class ThemeComposer {
      */
     public function getFooterTags(): Collection {
         // return collect([]);
-        return Tag::take(15)->get();
+        // return Tag::take(15)->get();
+        return Tag::all()->take(15);
     }
 
     /**

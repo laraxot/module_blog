@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
-use Modules\Rating\Models\Panels\Actions\RateItAction;
 use Modules\Xot\Models\Panels\XotBasePanel;
 
 // ---- bases --
@@ -84,7 +83,7 @@ class PhotoPanel extends XotBasePanel {
      */
     public function actions(): array {
         return [
-            new RateItAction(),
+            new \Modules\Rating\Models\Panels\Actions\RateItAction(),
             // new \Modules\Xot\Models\Panels\Actions\UploadImageTestAction(),
         ];
     }
