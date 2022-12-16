@@ -16,11 +16,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Kalnoy\Nestedset\NestedSet;
 // use Rinvex\Support\Traits\HasSlug;
 // use Rinvex\Support\Traits\HasTranslations;
-use Kalnoy\Nestedset\NodeTrait;
+use Kalnoy\Nestedset\NestedSet;
 // use Rinvex\Support\Traits\ValidatingTrait;
+use Kalnoy\Nestedset\NodeTrait;
 use Modules\Xot\Services\RouteService;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
@@ -223,6 +223,10 @@ class Category extends Model {
 
     public function categorizables(): HasMany {
         return $this->hasMany(Categorizable::class, 'category_id');
+    }
+
+    public function articles(): MorphToMany {
+        return $this->morphedByMany(self::class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
 
     /**
