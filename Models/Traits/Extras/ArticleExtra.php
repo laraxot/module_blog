@@ -6,6 +6,7 @@ namespace Modules\Blog\Models\Traits\Extras;
 
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Spatie\Sluggable\SlugOptions;
 
 /**
  * Undocumented trait.
@@ -158,4 +159,16 @@ trait ArticleExtra {
 
         return $this->updated_at->gt($this->created_at);
     }
+
+    /*
+     * Get the options for generating the slug.
+     */
+    /*
+    public function getSlugOptions() : SlugOptions
+    {
+        return SlugOptions::create()
+            ->generateSlugsFrom('name')
+            ->saveSlugsTo('slug');
+    }
+    */
 }
