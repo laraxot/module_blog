@@ -42,30 +42,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Title') }}</label>
-                                    <div class="col-sm-7">
-                                        <div class="form-group{{ $errors->has('title') ? ' has-danger' : '' }}">
-                                            <input class="form-control{{ $errors->has('title') ? ' is-invalid' : '' }}"
-                                                name="title" id="input-title" type="text" placeholder="{{ __('Title') }}"
-                                                value="{{ old('title') }}" required="true" aria-required="true" />
-
-                                            @include('theme::components.alert.feedback', ['field' => 'title'])
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Slug') }}</label>
-                                    <div class="col-sm-7">
-                                        <div class="form-group{{ $errors->has('slug') ? ' has-danger' : '' }}">
-                                            <input class="form-control{{ $errors->has('slug') ? ' is-invalid' : '' }}"
-                                                name="slug" id="input-slug" type="text" placeholder="{{ __('Slug') }}"
-                                                value="{{ old('slug') }}" required="true" aria-required="true" />
-                                            @include('theme::components.alert.feedback', ['field' => 'slug'])
-                                        </div>
-                                    </div>
-                                </div>
+                                <x-input.group type="text" name="title" tpl="v2" />
+                                <x-input.group type="text" name="slug" tpl="v2" />
+                                <x-input.group type="select" name="category_id" tpl="v2" :options="$_theme->getArticleCategoriesOptions()->all()" 
+                                 
+                                />
+                                {{--
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label">{{ __('Category') }}</label>
                                     <div class="col-sm-7">
@@ -84,6 +66,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                --}}
+                                <x-input.group type="wysiwyg" name="txt" tpl="v2" />
+                                {{--
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label">{{ __('Content') }}</label>
                                     <div class="col-sm-7">
@@ -95,6 +80,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                --}}
+                                <x-input.group type="textarea" name="excerpt" tpl="v2" />
+                                {{--
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label">{{ __('Excerpt') }}</label>
                                     <div class="col-sm-7">
@@ -106,12 +94,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                --}}
+
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label">{{ __('Tags') }}</label>
                                     <div class="col-sm-7">
                                         <div class="form-group{{ $errors->has('tags') ? ' has-danger' : '' }}">
                                             <select class="selectpicker col-sm-12 pl-0 pr-0" name="tags[]"
-                                                data-style="select-with-transition" multiple title="-" data-size="7">
+                                                data-style="select-with-transition" multiple title="-" data-size="7" wire:model="form_data.tags">
 
                                                 @foreach ($_theme->getArticleTags() as $tag)
                                                 <option value="{{ $tag->id }}"
@@ -124,19 +114,23 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label label-checkbox">{{ __('Status') }}</label>
                                     <div class="col-sm-10 checkbox-radios">
                                         <div class="togglebutton">
                                             <label>{{ __('Draft')}}
                                                 <input type="checkbox" name="status" value="draft"
-                                                    {{ old('status') == 'draft' ? ' checked' : 'published' }}>
+                                                    {{ old('status') == 'draft' ? ' checked' : 'published' }} wire:model="form_data.status">
                                                 <span class="toggle"></span>
                                                 {{ __('Published')}}
                                             </label>
                                         </div>
                                     </div>
                                 </div>
+                                {{--
+                                <x-input.group type="checkbox" name="show_on_homepage" />
+                                --}}
                                 <div class="row">
                                     <label
                                         class="col-sm-2 col-form-label label-checkbox">{{ __('Show on homepage') }}</label>
@@ -144,7 +138,7 @@
                                         <div class="form-check" style="margin-top:-6px;">
                                             <label class="form-check-label">
                                                 <input class="form-check-input" type="checkbox" name="show_on_homepage" value="1"
-                                                        {{ old('show_on_homepage') == 1 ? ' checked' : '' }}>
+                                                        {{ old('show_on_homepage') == 1 ? ' checked' : '' }} wire:model="form_data.show_on_homepage">
                                                 <span class="form-check-sign">
                                                     <span class="check"></span>
                                                 </span>
@@ -152,17 +146,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <label class="col-sm-2 col-form-label">{{ __('Read time') }}</label>
-                                    <div class="col-sm-7">
-                                        <div class="form-group{{ $errors->has('read_time') ? ' has-danger' : '' }}">
-                                            <input type="number" name="read_time" id="read_time"
-                                                placeholder="{{ __('Select read time') }}" class="form-control"
-                                                value="{{ old('read_time')}}" />
-                                            @include('theme::components.alert.feedback', ['field' => 'read_time'])
-                                        </div>
-                                    </div>
-                                </div>
+                                <x-input.group type="number" name="read_time" tpl="v2" />
+                                <x-input.group type="date" name="publish_date" tpl="v2" />
+                                {{--
                                 <div class="row">
                                     <label class="col-sm-2 col-form-label">{{ __('Publish date') }}</label>
                                     <div class="col-sm-7">
@@ -174,9 +160,10 @@
                                         </div>
                                     </div>
                                 </div>
+                                --}}
                             </div>
                             <div class="card-footer ml-auto mr-auto">
-                                <button type="submit" class="btn btn-rose">{{ __('Add article') }}</button>
+                                <button type="submit" class="btn btn-rose" wire:click="store()">{{ __('Add article') }}</button>
                             </div>
                         </div>
 
@@ -188,8 +175,9 @@
 @push('scripts')
 {{--
 <script src="{{ asset('material') }}/js/article.js"></script>
---}}
+
     <script>
+        
         $(document).ready(function () {
             ClassicEditor
                 .create( document.querySelector( '#editor' ) )
@@ -220,6 +208,7 @@
             })
 
         });
-
+        
     </script>
+    --}}
 @endpush

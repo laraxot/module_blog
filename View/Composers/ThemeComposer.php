@@ -69,6 +69,12 @@ class ThemeComposer {
          return $res;
      }
 
+	 public function getArticleCategoriesOptions(): Collection {
+		$options=$this->getArticleCategories()->pluck('name','id');
+		
+		return $options;
+	}
+
     /**
      * ----.
      * $footerAuthors = User::userIsAuthor()->take(8)->get();.
