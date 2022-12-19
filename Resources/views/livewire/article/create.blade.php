@@ -23,7 +23,7 @@
                                     <div class="col-sm-7">
                                         <div class="fileinput fileinput-new text-center" data-provides="fileinput">
                                             <div class="fileinput-new thumbnail">
-                                                <img src="{{ asset('material') }}/img/image_placeholder.jpg" alt="...">
+                                                <img src="{{ asset('/img/image_placeholder.jpg') }}" alt="...">
                                             </div>
                                             <div class="fileinput-preview fileinput-exists thumbnail"></div>
                                             <div>
@@ -164,6 +164,7 @@
                             </div>
                             <div class="card-footer ml-auto mr-auto">
                                 <button type="submit" class="btn btn-rose" wire:click="store()">{{ __('Add article') }}</button>
+                                <x-flash-message />
                             </div>
                         </div>
 
