@@ -69,11 +69,11 @@ class ThemeComposer {
          return $res;
      }
 
-	 public function getArticleCategoriesOptions(): Collection {
-		$options=$this->getArticleCategories()->pluck('name','id');
-		
-		return $options;
-	}
+     public function getArticleCategoriesOptions(): Collection {
+         $options = $this->getArticleCategories()->pluck('name', 'id');
+
+         return $options;
+     }
 
     /**
      * ----.
