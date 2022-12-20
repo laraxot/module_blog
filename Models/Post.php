@@ -50,7 +50,6 @@ use Modules\Xot\Traits\Updater;
  * @property string|null                     $linkable_type
  * @property int|null                        $views_count
  * @property Model|\Eloquent                 $linkable
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Post query()
@@ -85,7 +84,6 @@ use Modules\Xot\Traits\Updater;
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUrlLang($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Post whereViewsCount($value)
- *
  * @mixin \Eloquent
  */
 class Post extends Model {

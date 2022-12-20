@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 // --- Services --
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 use Modules\Blog\Events\StoreProfileEvent;
 use Modules\Blog\Models\Profile;
 use Modules\Xot\Models\Panels\XotBasePanel;
@@ -156,9 +158,9 @@ class ProfilePanel extends XotBasePanel {
         */
         $res = event(new StoreProfileEvent($user));
         // $this->generateUUIDVerificationToken($user);
-        \Auth::guard()->login($user, true);
+        Auth::guard()->login($user, true);
         // $this->guard()->login($user); ???
-        \Session::flash('swal', [
+        Session::flash('swal', [
             'type' => 'success',
             'title' => trans('food::profile.store_success.title'),
             'text' => trans('food::profile.store_success.text'),

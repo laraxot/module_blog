@@ -8,6 +8,7 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 // -------- services --------
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\View\View;
 use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
 
@@ -37,7 +38,7 @@ class UserSecurityAction extends XotBasePanelAction {
     public function postHandle(): View {
         $data = request()->all();
 
-        \Validator::make($data, [
+        Validator::make($data, [
             'passwd' => 'required|confirmed|min:6',
         ])->validate();
 
