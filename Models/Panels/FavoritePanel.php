@@ -7,7 +7,7 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Support\Facades\Auth;
 // --- Services --
 
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 /**
  * Class FavoritePanel.

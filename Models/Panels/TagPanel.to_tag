@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\App;
 
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 /**
  * Class TagPanel.

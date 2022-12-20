@@ -7,7 +7,7 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Http\Request;
 // --- Services --
 use Modules\Rating\Models\Panels\Actions\RateItAction;
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 // ----- actions ---
 

@@ -6,7 +6,7 @@ namespace Modules\Blog\Models\Panels;
 
 // --- Services --
 use Modules\Blog\Models\Category;
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 /**
  * Class CategoryPanel.

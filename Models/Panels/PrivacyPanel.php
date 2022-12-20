@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 // --- Services --
 use Illuminate\Http\Request;
 use Modules\Blog\Models\Privacy;
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 /**
  * Class PrivacyPanel.
