@@ -11,10 +11,11 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
  * Class CreateEventMorphTable.
  */
 class CreateEventMorphTable extends XotBaseMigration {
+    /*
     public function getTable(): string {
         return with(new MyModel())->getTable();
     }
-
+    */
     /**
      * db up.
      *
