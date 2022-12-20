@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use Modules\Blog\Models\Status;
 // --- Services --
 
-use Modules\Xot\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Xot\Contracts\RowsContract;
 
 class StatusPanel extends XotBasePanel {
     /**
