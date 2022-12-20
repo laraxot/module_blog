@@ -7,7 +7,7 @@ namespace Modules\Blog\Http\Livewire;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
 use Modules\Blog\Models\Favorite as FavoriteModel;
-use Modules\Xot\Services\PanelService;
+use Modules\Cms\Services\PanelService;
 
 /**
  * Class RateIt.

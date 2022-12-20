@@ -12,7 +12,7 @@ use Modules\Blog\Models\Category;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
 use Modules\Xot\Models\Panels\Actions\ArtisanAction;
-use Modules\Xot\Models\Panels\XotBasePanel;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 /**
  * Class HomePanel.
