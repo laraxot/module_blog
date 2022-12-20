@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 use Modules\Blog\Models\Photo;
 
 class PhotoFactory extends Factory {
@@ -23,10 +21,8 @@ class PhotoFactory extends Factory {
      * @return array
      */
     public function definition() {
-
-
         return [
-            'id' => $this->faker->randomNumber
+            'id' => $this->faker->randomNumber,
         ];
     }
 }
