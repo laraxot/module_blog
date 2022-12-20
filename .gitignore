@@ -16,3 +16,4 @@ error_log
 /.idea
 
 *.cache
+/build
