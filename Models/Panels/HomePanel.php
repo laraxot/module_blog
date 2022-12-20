@@ -111,15 +111,17 @@ class HomePanel extends XotBasePanel {
 
     public function authors(): Collection {
         // $authors = User::userIsAuthor()->take(4)->get();
-        $authors = User::inRandomOrder()->limit(4)->get();
+        $authors = User::query()
+            ->inRandomOrder()->limit(4)->get();
 
         return $authors;
     }
 
     public function navCategories(): Collection {
-        $navCategories = Category::has('articles', '>', 0)
-        ->take(8)
-        ->get();
+        $navCategories = Category::query()
+            ->has('articles', '>', 0)
+            ->take(8)
+            ->get();
 
         return $navCategories;
     }
@@ -128,7 +130,8 @@ class HomePanel extends XotBasePanel {
      * Undocumented function.
      */
     public function footerCategories(): Collection {
-        $footerCategories = Category::has('articles', '>', 0)
+        $footerCategories = Category::query()
+            ->has('articles', '>', 0)
             ->take(8)
             ->get();
 
@@ -137,7 +140,8 @@ class HomePanel extends XotBasePanel {
 
     public function footerAuthors(): Collection {
         // $footerAuthors = User::userIsAuthor()->take(8)->get();
-        $footerAuthors = User::inRandomOrder()->limit(8)->get();
+        $footerAuthors = User::query()
+            ->inRandomOrder()->limit(8)->get();
 
         return $footerAuthors;
     }

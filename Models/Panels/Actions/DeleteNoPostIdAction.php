@@ -23,7 +23,8 @@ class DeleteNoPostIdAction extends XotBasePanelAction {
      * @return mixed
      */
     public function handle() {
-        $rows = Post::whereNull('post_id')->delete();
+        $rows = Post::query()
+            ->whereNull('post_id')->delete();
 
         return '<h3>+Fatto</h3>';
     }
