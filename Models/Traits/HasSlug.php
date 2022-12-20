@@ -22,7 +22,8 @@ trait HasSlug {
     }
 
     public static function findBySlug(string $slug): self {
-        return static::where('slug', $slug)->firstOrFail();
+        return static::query()
+            ->where('slug', $slug)->firstOrFail();
     }
 
     private function generateUniqueSlug(string $value): string {
@@ -38,7 +39,7 @@ trait HasSlug {
     }
 
     private function slugExists(string $slug, int $ignoreId = null): bool {
-        $query = $this->where('slug', $slug);
+        $query = $this->query()->where('slug', $slug);
 
         if ($ignoreId) {
             $query->where('id', '!=', $ignoreId);

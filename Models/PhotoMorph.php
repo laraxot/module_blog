@@ -22,7 +22,6 @@ namespace Modules\Blog\Models;
  * @property string|null                     $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph query()
@@ -38,8 +37,11 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereRelatedType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUpdatedBy($value)
- *
  * @mixin \Eloquent
+ * @property int|null $photo_id
+ * @property int|null $user_id
+ * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph wherePhotoId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUserId($value)
  */
 class PhotoMorph extends BaseMorphPivot {
     /**

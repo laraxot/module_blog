@@ -37,7 +37,8 @@ class ClearDuplicatesAction extends XotBasePanelAction {
         // dddx(get_class_methods($model));
 
         $lang = app()->getLocale();
-        $rows = Post::selectRaw('post_id,post_type,count(post_id) as q')
+        $rows = Post::query()
+            ->selectRaw('post_id,post_type,count(post_id) as q')
             ->where('lang', $lang)
             ->groupBy('post_id', 'post_type')
             // ->having('q', '>', 1)
