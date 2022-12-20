@@ -11,8 +11,8 @@ use App\User;
 // use Modules\Food\Models\Post;
 
 use Modules\Cms\Contracts\PanelContract;
-use Modules\Xot\Contracts\UserContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+use Modules\Xot\Contracts\UserContract;
 
 /**
  * Class PagePanelPolicy.
