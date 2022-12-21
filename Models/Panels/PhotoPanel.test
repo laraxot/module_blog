@@ -85,7 +85,7 @@ class PhotoPanel extends XotBasePanel {
     public function actions(): array {
         return [
             new RateItAction(),
-            // new \Modules\Xot\Models\Panels\Actions\UploadImageTestAction(),
+            // new \Modules\Cms\Models\Panels\Actions\UploadImageTestAction(),
         ];
     }
 }
