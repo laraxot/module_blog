@@ -9,10 +9,10 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
+use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
-use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 
 /**
  * Class HomePanel.
