@@ -7,17 +7,17 @@ namespace Modules\Blog\Models;
 // --------- models --------
 
 // use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\LU\Models\User;
-use Modules\LU\Casts\UserField;
-use Spatie\ModelStatus\HasStatuses;
-use Illuminate\Support\Facades\Auth;
-use Modules\Geo\Models\Traits\GeoTrait;
-use Modules\Xot\Models\Traits\WidgetTrait;
-use Modules\Blog\Models\Traits\PrivacyTrait;
-use Modules\LU\Models\Traits\HasProfileTrait;
-use Modules\Ticket\Models\Traits\HasTicketTrait;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Auth;
+use Modules\Blog\Models\Traits\PrivacyTrait;
+use Modules\Geo\Models\Traits\GeoTrait;
+use Modules\LU\Casts\UserField;
+use Modules\LU\Models\Traits\HasProfileTrait;
+use Modules\LU\Models\User;
+use Modules\Ticket\Models\Traits\HasTicketTrait;
+use Modules\Xot\Models\Traits\WidgetTrait;
+use Spatie\ModelStatus\HasStatuses;
 
 /**
  * Modules\Blog\Models\Profile.
@@ -94,6 +94,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property User|null                                                               $user
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]   $widgets
  * @property int|null                                                                $widgets_count
+ *
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -148,21 +149,25 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       withDistance(float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       withDistanceCustomField(string $lat_field, string $lng_field, float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
- * @property-read string $status
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
- * @property-read int|null $statuses_count
+ *
+ * @property string                                                                $status
+ * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
+ * @property int|null                                                              $statuses_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile currentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
  */
 class Profile extends BaseModelLang {
     use GeoTrait;
     use HasProfileTrait;
-    //use PrivacyTrait;
+    // use PrivacyTrait;
     use WidgetTrait;
-     use HasStatuses;
+    use HasStatuses;
     // use HasTicketTrait;
     // use HasFactory;
 
