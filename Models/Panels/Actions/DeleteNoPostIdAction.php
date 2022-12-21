@@ -4,19 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
-<<<<<<< HEAD
-// -------- models -----------
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
-
-// -------- services --------
-// use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-
-// -------- bases -----------
-=======
-use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Lang\Models\Post;
->>>>>>> 9972855 (up)
 
 /**
  * Class DeleteNoPostIdAction.
