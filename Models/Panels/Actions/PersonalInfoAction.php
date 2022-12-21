@@ -30,6 +30,7 @@ use Modules\Theme\Services\ThemeService;
 =======
 >>>>>>> 8513cb9 (rebase)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Theme\Services\ThemeService;
 
 // -------- bases -----------
 
