@@ -6,7 +6,7 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 // -------- services --------
 use Modules\Lang\Models\Post;
-use Modules\Xot\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
 
