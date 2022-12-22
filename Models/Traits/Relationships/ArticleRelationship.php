@@ -29,15 +29,13 @@ trait ArticleRelationship {
     public function articles(): HasMany {
         return $this->hasMany(Article::class, 'parent_id', 'id');
     }
-
+    /* -- usiamo spatie
     public function images(): MorphMany { // da rimettere spatie
         return $this->morphMany(Image::class, 'post');
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
-     */
-    /* --- move to module Tag
+    */
+    /*
+      --- move to module Tag
     public function tags() {
         return $this->morphRelated(Tag::class, true);
     }
