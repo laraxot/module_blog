@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use Modules\Blog\Models\Media;
 // --- Services --
 
-use Modules\Xot\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Xot\Contracts\RowsContract;
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -21,7 +21,6 @@ class MediaPanel extends XotBasePanel {
      * The single value that should be used to represent the resource when being displayed.
      */
     public static string $title = 'title';
-
 
     /**
      * on select the option label.
