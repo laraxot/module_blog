@@ -23,15 +23,15 @@ class CategoryPanel extends XotBasePanel {
      * @param Category $row
      */
     public function optionLabel($row): string {
-        return (string)$row->name;
+        return (string) $row->name;
     }
 
     /**
      * @return array
      */
     public function optionsSelect() {
-        //$rows = $this->row->all();
-        $rows=Category::all();
+        // $rows = $this->row->all();
+        $rows = Category::all();
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {

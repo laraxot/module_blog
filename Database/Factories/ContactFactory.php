@@ -22,9 +22,9 @@ class ContactFactory extends Factory {
      */
     public function definition() {
         return [
-            //'id' => $this->faker->randomNumber,
-           // 'post_id' => $this->faker->integer,
-           // 'post_type' => $this->faker->word,
+            // 'id' => $this->faker->randomNumber,
+            // 'post_id' => $this->faker->integer,
+            // 'post_type' => $this->faker->word,
         ];
     }
 }

@@ -11,7 +11,6 @@ namespace Modules\Blog\Models\Panels\Actions;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Session;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Theme\Services\ThemeService;
 
 // -------- bases -----------
 
@@ -26,7 +25,6 @@ class PersonalInfoAction extends XotBasePanelAction {
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
     public function handle(): Renderable {
-       
         if (null === $this->panel) {
             throw new \Exception('this->panel is null');
         }
