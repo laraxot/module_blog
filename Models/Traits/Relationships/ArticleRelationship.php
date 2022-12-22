@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Modules\Blog\Models\Article;
-use Modules\Blog\Models\Category;
 use Modules\Blog\Models\Comment;
 use Modules\LU\Models\User;
 use Modules\Xot\Models\Image;
@@ -31,7 +30,6 @@ trait ArticleRelationship {
         return $this->hasMany(Article::class, 'parent_id', 'id');
     }
 
-    
     public function images(): MorphMany { // da rimettere spatie
         return $this->morphMany(Image::class, 'post');
     }
