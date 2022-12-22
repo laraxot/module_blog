@@ -71,7 +71,7 @@ trait HasCategory {
     /**
      * Attach the given category(ies) to the model.
      *
-     * @param int|string|array|\ArrayAccess|\Rinvex\Categories\Models\Category $categories
+     * @param int|string|array|\ArrayAccess|\Modules\Blog\Models\Category $categories
      */
     public function setCategoriesAttribute($categories): void {
         static::saved(function (self $model) use ($categories) {
