@@ -204,14 +204,7 @@ class Profile extends BaseModelLang {
         'handle' => UserField::class,
     ];
 
-    /**
-     * Create a new factory instance for the model.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
-     */
-    // protected static function newFactory() {
-    //    return ProfileFactory::new();
-    // }
+    
 
     // ------- RELATIONSHIP ----------
 
@@ -256,6 +249,8 @@ class Profile extends BaseModelLang {
         );
     }
 
+    /*
+    Access to an undefined property Modules\LU\Models\User::$txt.
     protected function bio(): Attribute {
         $user = $this->user;
 
@@ -263,6 +258,7 @@ class Profile extends BaseModelLang {
             get: fn ($value) => $user->txt,
         );
     }
+    */
 
     protected function githubUsername(): Attribute {
         return Attribute::make(
