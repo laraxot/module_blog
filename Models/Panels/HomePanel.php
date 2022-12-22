@@ -120,7 +120,7 @@ class HomePanel extends XotBasePanel {
     public function navCategories(): Collection {
         $navCategories = Category::query()
             ->has('articles', '>', 0)
-            ->take(8)
+            ->limit(8)
             ->get();
 
         return $navCategories;
