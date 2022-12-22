@@ -23,7 +23,7 @@ class CategoryPanel extends XotBasePanel {
      * @param Category $row
      */
     public function optionLabel($row): string {
-        return ''.$row->title;
+        return ''.$row->name;
     }
 
     /**
