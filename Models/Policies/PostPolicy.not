@@ -10,7 +10,7 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class PostPolicy.
  */
-class PostPolicy extends XotBasePolicy {
+class PostPolicy extends XotBasePanelPolicy {
     public function deleteNoPostId(UserContract $user, \Illuminate\Database\Eloquent\Model $post): bool {
         return true;
     }

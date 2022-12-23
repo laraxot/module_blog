@@ -10,7 +10,7 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class PhotoPolicy.
  */
-class PhotoPolicy extends XotBasePolicy {
+class PhotoPolicy extends XotBasePanelPolicy {
     public function rate(UserContract $user, \Illuminate\Database\Eloquent\Model $post): bool {
         return true;
     }
