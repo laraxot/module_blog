@@ -195,9 +195,9 @@ trait HasCategory {
         // Sync model categories
         if (\is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
-        } //else {
-            //dddx($categories);
-        //}
+        } // else {
+        // dddx($categories);
+        // }
 
         return $this;
     }
