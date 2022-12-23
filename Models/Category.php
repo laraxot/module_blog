@@ -215,7 +215,7 @@ class Category extends Model {
                           ->saveSlugsTo('slug');
     }
 
-    public function scopeOfType(Builder $query, string $type) {
+    public function scopeOfType(Builder $query, string $type):Builder {
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){
