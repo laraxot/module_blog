@@ -9,7 +9,7 @@ use App\User;
 use App\Post;
 */
 // use Modules\Food\Models\Post;
-use Modules\Xot\Models\Policies\XotBasePolicy;
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 
 /**
  * Class PostCatPolicy.
