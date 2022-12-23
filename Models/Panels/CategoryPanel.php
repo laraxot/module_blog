@@ -34,9 +34,13 @@ class CategoryPanel extends XotBasePanel {
         return $name;
     }
 
-    public function optionsSelect(): array {
-        // $rows = $this->row->all();
-        $rows = Category::get();
+    /**
+     * @return array
+     */
+    public function optionsSelect() {
+        //$rows = $this->row->all();
+       
+        $rows=Category::get();
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
