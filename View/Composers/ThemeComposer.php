@@ -194,7 +194,7 @@ class ThemeComposer {
         return $rows;
     }
 
-    //public function compose(array ...$args):string {
+    // public function compose(array ...$args):string {
         /*
         dddx(
             [
@@ -204,8 +204,8 @@ class ThemeComposer {
         );
         */
         // error 404
-        //return 'aaa';
-    //}
+        // return 'aaa';
+    // }
 
     public function getCardEvents() {
         $str = '[
