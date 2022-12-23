@@ -9,5 +9,5 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class TagPolicy.
  */
-class TagPolicy extends XotBasePolicy {
+class TagPolicy extends XotBasePanelPolicy {
 }

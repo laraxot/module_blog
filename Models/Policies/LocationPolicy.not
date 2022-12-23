@@ -9,5 +9,5 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class LocationPolicy.
  */
-class LocationPolicy extends XotBasePolicy {
+class LocationPolicy extends XotBasePanelPolicy {
 }

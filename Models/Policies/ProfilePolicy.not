@@ -10,7 +10,7 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class ProfilePolicy.
  */
-class ProfilePolicy extends XotBasePolicy {
+class ProfilePolicy extends XotBasePanelPolicy {
     /**
      * caso particalare.
      */

@@ -10,7 +10,7 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class ArticlePolicy.
  */
-class ArticlePolicy extends XotBasePolicy {
+class ArticlePolicy extends XotBasePanelPolicy {
     public function rate(UserContract $user, \Illuminate\Database\Eloquent\Model $post): bool {
         return true;
     }

@@ -16,7 +16,7 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class PagePolicy.
  */
-class PagePolicy extends XotBasePolicy {
+class PagePolicy extends XotBasePanelPolicy {
     public function sendMsg(UserContract $user, \Illuminate\Database\Eloquent\Model $post): bool {
         return true;
     }
