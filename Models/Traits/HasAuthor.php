@@ -20,7 +20,7 @@ trait HasAuthor {
 
         $profile = xotModel('profile');
 
-        return $this->belongsTo($profile, 'author_id', 'user_id');
+        return $this->belongsTo(get_class($profile), 'author_id', 'user_id');
     }
 
     public function authoredBy(User $author): void {

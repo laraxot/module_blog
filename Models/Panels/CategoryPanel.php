@@ -24,25 +24,22 @@ class CategoryPanel extends XotBasePanel {
      */
     public function optionLabel($row): string {
         $name = $row->name;
-        if (is_string($name)) {
-            return $name;
-        }
+        //if (is_string($name)) {
+        //    return $name;
+       //}
         if (is_array($name)) {
-            return implode('-', $name);
+            $name= implode('-', $name);
         }
 
-        return '--';
+        return $name;
     }
 
     /**
      * @return array
      */
-    public function optionsSelect() {
+    public function optionsSelect():array {
         // $rows = $this->row->all();
-        /**
-         * @var Category[]
-         */
-        $rows = Category::all();
+        $rows = Category::get();
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
@@ -57,12 +54,7 @@ class CategoryPanel extends XotBasePanel {
         // dddx($rows2);
 
         return $rows2;
-        dddx([$rows, $rows2]);
-
-        return [
-            'aaa' => 'aaa',
-            'bbb' => 'bbb',
-        ];
+        
     }
 
     /**
