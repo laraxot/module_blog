@@ -9,6 +9,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 class CreateMediasTable extends XotBaseMigration {
+    /**
+     * @return void
+     */
     public function up() {
         // -- CREATE --
         $this->tableCreate(
