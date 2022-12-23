@@ -22,6 +22,7 @@ class ThemeComposer {
             ->get();
         // return collect([]);
         // da publish_date a published_at
+        /*
         $rows = Article::published()
             ->showHomepage()
             ->publishedUntilToday()
@@ -29,6 +30,7 @@ class ThemeComposer {
             ->get();
 
         return $rows;
+        */
     }
 
     /*
