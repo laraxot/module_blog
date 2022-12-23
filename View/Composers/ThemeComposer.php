@@ -207,7 +207,7 @@ class ThemeComposer {
         // return 'aaa';
     // }
 
-    public function getCardEvents() {
+    public function getCardEvents():Collection {
         $str = '[
             {
               "date": "26",
@@ -281,7 +281,7 @@ class ThemeComposer {
         return collect(json_decode($str));
     }
 
-    public function getCardPlaces() {
+    public function getCardPlaces():Collection {
         $str = '[
             {
               "category": "Categoria",
