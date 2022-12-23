@@ -266,7 +266,7 @@ class Profile extends BaseModelLang {
 
     protected function hasTwitterAccount(): Attribute {
         return Attribute::make(
-            get: fn ($value) => ! empty($this->twitter()),
+            get: fn ($value) => false, //! empty($this->twitter()),
         );
     }
 

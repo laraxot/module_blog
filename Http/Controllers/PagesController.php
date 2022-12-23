@@ -35,7 +35,7 @@ class PagesController extends Controller {
          */
         $row = $_panel->row;
 
-        if (null === $row) {
+        if (null == $row) {
             throw new \Exception('Page "'.$last_item.'" is not existing in this public theme');
         }
 
