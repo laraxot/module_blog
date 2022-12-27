@@ -229,9 +229,12 @@ class Profile extends BaseModelLang {
 
     protected function username(): Attribute {
         $user = $this->user;
-        if (null === $user) {
+        if (null == $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
             // dddx($user1->username());
+            $user=(object)[
+                'handle'=>'no-set',
+            ];
         }
 
         return Attribute::make(
@@ -241,6 +244,11 @@ class Profile extends BaseModelLang {
 
     protected function name(): Attribute {
         $user = $this->user;
+        if($user==null){
+            $user=(object)[
+                'first_name'=>'no-set',
+            ];
+        }
 
         return Attribute::make(
             get: fn ($value) => $user->first_name,

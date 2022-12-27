@@ -9,11 +9,9 @@ namespace Modules\Blog\Models\Traits\Mutators;
  */
 trait ArticleMutator {
     /**
-     * @param mixed $value
-     *
-     * @return int|null
+     
      */
-    public function getParentIdAttribute($value) {
+    public function getParentIdAttribute(?int $value):?int {
         if (null !== $value) {
             return $value;
         }
