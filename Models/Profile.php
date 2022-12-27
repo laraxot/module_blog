@@ -232,8 +232,8 @@ class Profile extends BaseModelLang {
         if (null == $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
             // dddx($user1->username());
-            $user=(object)[
-                'handle'=>'no-set',
+            $user = (object) [
+                'handle' => 'no-set',
             ];
         }
 
@@ -244,9 +244,9 @@ class Profile extends BaseModelLang {
 
     protected function name(): Attribute {
         $user = $this->user;
-        if($user==null){
-            $user=(object)[
-                'first_name'=>'no-set',
+        if (null == $user) {
+            $user = (object) [
+                'first_name' => 'no-set',
             ];
         }
 
