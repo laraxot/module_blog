@@ -115,6 +115,7 @@ trait ArticleExtra {
         return $this->isPublished();
     }
 
+    /*
     public function toSearchableArray(): array {
         return [
             'id' => $this->getKey(),
@@ -123,11 +124,12 @@ trait ArticleExtra {
             'slug' => $this->slug(),
         ];
     }
+    
 
     public function splitBody(string $value): array {
         return $this->split($value);
     }
-
+    */
     /**
      * Undocumented function.
      */

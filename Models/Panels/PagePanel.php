@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Database\Eloquent\Model;
+use Exception;
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
-use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Illuminate\Contracts\Support\Renderable;
+use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 
 // ---- bases --
 
@@ -181,11 +182,14 @@ class PagePanel extends XotBasePanel {
     }
 
     // temporaneo perchè altrimenti mi da /it/pages/0
-    public function url(string $act = 'show', ?array $params = []): string {
+    public function url(string $act = 'show', array $params = []): string {
         $url = $this->route->{__FUNCTION__}($act);
 
         if ([] !== $params) {
             $url_components = parse_url($url);
+            if(!isset($url_components['path'])){
+                throw new Exception('['.__LINE__.']['.__FILE__.']');
+            }
             $url = $url_components['path'];
 
             $merged = $params;

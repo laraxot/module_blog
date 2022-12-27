@@ -9,7 +9,7 @@ use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 use Modules\Blog\Models\Traits\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
-use Modules\Blog\Models\Traits\PreparesSearch;
+//use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 // use Modules\Tag\Models\Traits\HasTagTrait;
@@ -160,12 +160,12 @@ class Article extends BaseModelLang implements HasLikeContract
     use HasCategory;
     use HasLikes;
     // use HasProfileTrait;
-    use HasSlug;
+    //use HasSlug;
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
-    use PreparesSearch;
+    //use PreparesSearch;
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
