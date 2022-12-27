@@ -16,8 +16,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class PagePanel.
  */
-class PagePanel extends XotBasePanel
-{
+class PagePanel extends XotBasePanel {
     use XotBasePanelTrait;
     /**
      * The model the resource corresponds to.
@@ -39,8 +38,7 @@ class PagePanel extends XotBasePanel
      *
      * @return string[]
      */
-    public function with(): array
-    {
+    public function with(): array {
         return ['post'];
     }
 
@@ -55,25 +53,23 @@ class PagePanel extends XotBasePanel
      *
      * @param Page $row
      */
-    public function optionLabel($row): string
-    {
+    public function optionLabel($row): string {
         return (string) $row->title;
     }
 
     /**
      * index navigation.
      */
-    public function indexNav(): ?Renderable
-    {
+    public function indexNav(): ?Renderable {
         dddx('qui');
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
-        if (!inAdmin()) {
+        if (! inAdmin()) {
             // siccome non so dove metterlo, per ora dentro pub_theme
             /**
              * @phpstan-var view-string
              */
-            $view = 'pub_theme::pages.' . $last_item . '.index.nav';
+            $view = 'pub_theme::pages.'.$last_item.'.index.nav';
 
             return view()->make($view);
         }
@@ -84,9 +80,7 @@ class PagePanel extends XotBasePanel
     /**
      * Get the fields displayed by the resource.
      */
-    public function fields(): array
-    {
-
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -179,22 +173,20 @@ class PagePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [
             new Actions\SendMsgAction(),
         ];
     }
 
     // temporaneo perchè altrimenti mi da /it/pages/0
-    public function url(string $act = 'show', array $params = []): string
-    {
+    public function url(string $act = 'show', array $params = []): string {
         $url = $this->route->{__FUNCTION__}($act);
 
         if ([] !== $params) {
             $url_components = parse_url($url);
-            if (!isset($url_components['path'])) {
-                throw new \Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
             }
             $url = $url_components['path'];
 
@@ -204,7 +196,7 @@ class PagePanel extends XotBasePanel
                 $merged = array_replace_recursive($originalParams, $params);
             }
 
-            $url .= '?' . Arr::query($merged);
+            $url .= '?'.Arr::query($merged);
         }
 
         return $url;
