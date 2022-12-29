@@ -26,7 +26,7 @@ use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 // use Modules\Tag\Models\Traits\HasTagTrait;
 use Modules\Rating\Models\Traits\RatingTrait;
-use Modules\UI\Contracts\HasLikeContract;
+use Modules\Rating\Contracts\HasLikeContract;
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
