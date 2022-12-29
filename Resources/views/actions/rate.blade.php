@@ -12,7 +12,7 @@
 @section('content')
     <div class="page-wrapper">
         <section class="create-page inner-page">
-            @include('theme::includes.flash')
+            <x-flash-message />
 
             <a href="{{ Panel::make()->get($row)->url('show') }}" class="btn btn-info">
                 <i class="fas fa-step-backward"></i> Back to {{ $row->title }}
