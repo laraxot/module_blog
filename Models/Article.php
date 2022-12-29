@@ -23,10 +23,10 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 >>>>>>> 1daf8a3 (Lint)
 use Modules\LU\Models\Traits\HasProfileTrait;
-use Modules\Rating\Models\Traits\HasLikes;
-// use Modules\Tag\Models\Traits\HasTagTrait;
-use Modules\Rating\Models\Traits\RatingTrait;
 use Modules\Rating\Contracts\HasLikeContract;
+// use Modules\Tag\Models\Traits\HasTagTrait;
+use Modules\Rating\Models\Traits\HasLikes;
+use Modules\Rating\Models\Traits\RatingTrait;
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
