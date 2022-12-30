@@ -13,7 +13,7 @@ use Modules\Cms\Services\PanelService;
  * Class Event.
  */
 class Event extends Component {
-    public array $attrs=[];
+    public array $attrs = [];
     public Model $row;
 
     /**
