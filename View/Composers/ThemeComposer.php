@@ -17,7 +17,7 @@ class ThemeComposer {
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
      */
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @return Collection<Article>
      */
