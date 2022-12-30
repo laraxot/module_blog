@@ -4,7 +4,11 @@
         <meta itemprop="ratingCount" content="{{ $rating_count }}">
         <meta itemprop="bestRating" content="5">
         <meta itemprop="worstRating" content="1">
-        @include('theme::layouts.partials.rating.item',['label'=>'','rating_avg'=>$rating_avg,'rating_count'=>$rating_count])
+        @include('ui::layouts.partials.rating.item', [
+            'label' => '',
+            'rating_avg' => $rating_avg,
+            'rating_count' => $rating_count,
+        ])
         {{-- item_type_schema_org  e microdate_schema_org son mutators non campi --}}
         {{--
             <div itemprop="itemReviewed" itemscope itemtype="{{ $row->item_type_schema_org }}" >
@@ -18,9 +22,9 @@
     </div>
     <div class="col-sm-4 col-md-4">
         <a href="{{ $rating_url }}">
-            <button class="btn btn-danger btn-red"  data-title="vota {{ $title }}" >
+            <button class="btn btn-danger btn-red" data-title="vota {{ $title }}">
                 <span class="font-white"><i class="fa fa-star"></i> Vota !</span>
             </button>
         </a>
     </div>
-    </div>
+</div>
