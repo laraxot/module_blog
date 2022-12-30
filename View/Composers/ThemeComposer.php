@@ -17,7 +17,7 @@ class ThemeComposer {
      * @return Collection<Article>
      */
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @return Collection<Article>
      */
