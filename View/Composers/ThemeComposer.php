@@ -16,6 +16,11 @@ class ThemeComposer {
 
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
      */
+    /**
+     * Undocumented function
+     *
+     * @return Collection<Article>
+     */
     public function getFeaturedArticles(): Collection {
         return Article::query()->limit(10)
             ->orderBy('created_at', 'desc')
