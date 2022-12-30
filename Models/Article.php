@@ -27,7 +27,11 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 >>>>>>> a822353 (.)
 =======
 // use Modules\Blog\Models\Traits\HasTags;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
+=======
+use Modules\Blog\Models\Traits\HasSlug;
+>>>>>>> 88b0171 (Lint)
 // use Spatie\Sluggable\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
 <<<<<<< HEAD
