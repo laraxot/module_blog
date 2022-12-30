@@ -14,7 +14,7 @@ class ThemeComposer {
     /*
      * ---.
 
-        $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
+        
      */
     /**
      * Undocumented function.
@@ -35,6 +35,7 @@ class ThemeComposer {
             ->get();
 
         return $rows;
+        $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
         */
     }
 
