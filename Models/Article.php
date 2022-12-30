@@ -8,7 +8,11 @@ namespace Modules\Blog\Models;
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 // use Modules\Blog\Models\Traits\HasTags;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
+=======
+use Modules\Blog\Models\Traits\HasSlug;
+>>>>>>> 88b0171 (Lint)
 // use Spatie\Sluggable\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
