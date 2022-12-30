@@ -21,6 +21,11 @@ class ThemeComposer {
      *
      * @return Collection<Article>
      */
+    /**
+     * Undocumented function
+     *
+     * @return Collection<Article>
+     */
     public function getFeaturedArticles(): Collection {
         return Article::query()->limit(10)
             ->orderBy('created_at', 'desc')
