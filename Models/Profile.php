@@ -163,7 +163,7 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
  */
 class Profile extends BaseModelLang {
-    use GeoTrait;
+    // use GeoTrait; -- to profile in geo
     use HasProfileTrait;
     // use PrivacyTrait;
     use WidgetTrait;

@@ -3,13 +3,9 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Schema\Blueprint;
-// ----- models -----
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-/**
- * Class CreatePhotoMorphTable.
- */
-class CreatePhotoMorphTable extends XotBaseMigration {
+class CreateExtraFieldMorphTable extends XotBaseMigration {
     /**
      * db up.
      *
@@ -20,15 +16,11 @@ class CreatePhotoMorphTable extends XotBaseMigration {
         $this->tableCreate(
             function (Blueprint $table) {
                 $table->increments('id');
-                $table->nullableMorphs('post');
-                $table->nullableMorphs('related');
+                $table->nullableMorphs('model');
                 $table->integer('user_id')->nullable()->index();
-
-                $table->string('note')->nullable();
 
                 $table->string('created_by')->nullable();
                 $table->string('updated_by')->nullable();
-                $table->string('deleted_by')->nullable();
                 $table->timestamps();
             }
         );
@@ -36,11 +28,14 @@ class CreatePhotoMorphTable extends XotBaseMigration {
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-                if ($this->hasColumn('related_id')) {
-                    $table->renameColumn('related_id', 'photo_id');
+                if (! $this->hasColumn('extra_field_id')) {
+                    $table->integer('extra_field_id')->nullable()->index();
                 }
-                if ($this->hasColumn('auth_user_id')) {
-                    $table->renameColumn('auth_user_id', 'user_id');
+                if (! $this->hasColumn('value')) {
+                    $table->text('value')->nullable();
+                }
+                if (! $this->hasColumn('value_class')) {
+                    $table->string('value_class')->nullable();
                 }
             }
         );
