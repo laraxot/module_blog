@@ -6,6 +6,7 @@ namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
+use Modules\Blog\Models\Category;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 
@@ -93,12 +94,6 @@ class ExtraFieldPanel extends XotBasePanel {
     public function fields(): array {
         return [
             (object) [
-                'type' => 'Id',
-                'name' => 'id',
-                'comment' => null,
-            ],
-
-            (object) [
                 'type' => 'String',
                 'name' => 'name',
                 'rules' => 'required',
@@ -106,12 +101,28 @@ class ExtraFieldPanel extends XotBasePanel {
                 'col_size' => 6,
             ],
             (object) [
-                'type' => 'String',
+                'type' => 'Select',
                 'name' => 'type',
                 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 6,
+                'options' => ['string' => 'string', 'checkbox.options' => 'checkbox.options'],
             ],
+            (object) [
+                'type' => 'String',
+                'name' => 'collection_name',
+                'rules' => 'required',
+                'comment' => null,
+                'col_size' => 6,
+            ],
+            // (object) [
+            //     'type' => 'Select',
+            //     'name' => 'categories',
+            //     'rules' => 'required',
+            //     'comment' => null,
+            //     'col_size' => 6,
+            //     'options' => $this->optionsModelClass(Category::class),
+            // ],
         ];
     }
 
