@@ -7,20 +7,21 @@ namespace Modules\Blog\Models;
 /**
  * Modules\Blog\Models\ArticleMorph.
  *
- * @property int $id
- * @property string|null $post_type
- * @property int|null $post_id
- * @property string|null $related_type
- * @property int|null $user_id
- * @property string|null $note
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property string|null $deleted_by
+ * @property int                             $id
+ * @property string|null                     $post_type
+ * @property int|null                        $post_id
+ * @property string|null                     $related_type
+ * @property int|null                        $user_id
+ * @property string|null                     $note
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
+ * @property string|null                     $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int $article_id
- * @property string $title
- * @property string $value
+ * @property int                             $article_id
+ * @property string                          $title
+ * @property string                          $value
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph query()
@@ -38,6 +39,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereValue($value)
+ *
  * @mixin \Eloquent
  */
 class ArticleMorph extends BaseMorphPivot {

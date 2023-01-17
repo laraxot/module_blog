@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 use Modules\Blog\Models\Label;
 
 class LabelFactory extends Factory {
@@ -23,10 +21,7 @@ class LabelFactory extends Factory {
      * @return array
      */
     public function definition() {
-
-
         return [
-            
         ];
     }
 }
