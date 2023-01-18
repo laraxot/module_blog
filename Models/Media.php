@@ -78,7 +78,8 @@ use Spatie\Tags\HasTags;
  *
  * @mixin \Eloquent
  */
-class Media extends BaseMedia {
+class Media extends BaseMedia
+{
     // use Searchable;
     // use Cachable;
     use HasFactory;
