@@ -11,7 +11,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class EventMorphPanel.
  */
-class EventMorphPanel extends XotBasePanel {
+class EventMorphPanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -20,7 +21,8 @@ class EventMorphPanel extends XotBasePanel {
     /**
      * @return object[]
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Id',
@@ -58,7 +60,8 @@ class EventMorphPanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [];
     }
 }
