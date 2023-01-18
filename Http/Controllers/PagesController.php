@@ -12,13 +12,11 @@ use Modules\Cms\Services\PanelService;
 /**
  * Undocumented class.
  */
-class PagesController extends Controller
-{
+class PagesController extends Controller {
     /**
      * Undocumented function.
      */
-    public function show(): Renderable
-    {
+    public function show(): Renderable {
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
 
