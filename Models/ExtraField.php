@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\Blog\Models\Traits\HasCategory;
 
 /**
@@ -44,9 +45,12 @@ class ExtraField extends BaseModel {
     use HasCategory;
 
     protected $fillable = ['id', 'name', 'type',
-        'rules', 'options', 'attributes', 'collection_name'];
+        'rules', 'options', 'attributes',
+        // 'collection_name',
+        'group_id',
+    ];
 
-    public function group() {
+    public function group(): BelongsTo {
         return $this->belongsTo(ExtraFieldGroup::class);
     }
 }
