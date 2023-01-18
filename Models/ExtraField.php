@@ -43,6 +43,6 @@ class ExtraField extends BaseModel {
         'rules', 'options', 'attributes', 'collection_name'];
 
     public function extraFieldGroups() {
-        return $this->hasMany(ExtraFieldsGroup::class);
+        return $this->belongsTo(ExtraFieldsGroup::class);
     }
 }
