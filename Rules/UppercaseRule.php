@@ -9,11 +9,13 @@ use Illuminate\Contracts\Validation\Rule;
 /**
  * Class UppercaseRule.
  */
-class UppercaseRule implements Rule {
+class UppercaseRule implements Rule
+{
     /**
      * Create a new rule instance.
      */
-    public function __construct() {
+    public function __construct()
+    {
     }
 
     /**
@@ -24,7 +26,8 @@ class UppercaseRule implements Rule {
      *
      * @return bool
      */
-    public function passes($attribute, $value) {
+    public function passes($attribute, $value)
+    {
         return strtoupper($value) === $value;
     }
 
@@ -33,7 +36,8 @@ class UppercaseRule implements Rule {
      *
      * @return string
      */
-    public function message() {
+    public function message()
+    {
         return 'The :attribute must be Uppercase.';
     }
 }
