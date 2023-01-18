@@ -21,50 +21,12 @@ class ExtraFieldGroupPanel extends XotBasePanel {
     public static string $title = 'title';
 
     /**
-     * The columns that should be searched.
-     *
-     * @var array
-     */
-    public static $search = [
-    ];
-
-    /**
-     * The relationships that should be eager loaded on index queries.
-     */
-    public function with(): array {
-        return [];
-    }
-
-    public function search(): array {
-        return [];
-    }
-
-    /**
-     * on select the option id.
-     *
-     * quando aggiungi un campo select, è il numero della chiave
-     * che viene messo come valore su value="id"
-     *
-     * @param ExtraFieldGroup $row
-     *
-     * @return int|string|null
-     */
-    public function optionId($row) {
-        $key = $row->getKey();
-        if (null === $key || (! is_string($key) && ! is_int($key))) {
-            throw new \Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
-        }
-
-        return $key;
-    }
-
-    /**
      * on select the option label.
      *
      * @param ExtraFieldGroup $row
      */
     public function optionLabel($row): string {
-        return 'To Set';
+        return (string) $row->name;
     }
 
     /**
