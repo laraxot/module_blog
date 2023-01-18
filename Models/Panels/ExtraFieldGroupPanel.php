@@ -1,26 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Modules\Blog\Models\Panels;
 
-use Illuminate\Http\Request;
-use Modules\Xot\Contracts\RowsContract;
 use Illuminate\Contracts\Support\Renderable;
-
-
+use Illuminate\Http\Request;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Xot\Contracts\RowsContract;
 
 class ExtraFieldGroupPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
-     *
-     * @var string
      */
     public static string $model = 'ExtraFieldGroup';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
-     *
-     * @var string
      */
     public static string $title = 'title';
 
@@ -29,24 +25,22 @@ class ExtraFieldGroupPanel extends XotBasePanel {
      *
      * @var array
      */
-    public static $search = array (
-);
+    public static $search = [
+    ];
 
     /**
      * The relationships that should be eager loaded on index queries.
-     *
      */
-    public function with():array {
+    public function with(): array {
         return [];
     }
 
-    public function search() :array {
-
+    public function search(): array {
         return [];
     }
 
     /**
-     * on select the option id
+     * on select the option id.
      *
      * quando aggiungi un campo select, è il numero della chiave
      * che viene messo come valore su value="id"
@@ -57,9 +51,10 @@ class ExtraFieldGroupPanel extends XotBasePanel {
      */
     public function optionId($row) {
         $key = $row->getKey();
-        if(null===$key||(!is_string($key)&&!is_int($key))){
+        if (null === $key || (! is_string($key) && ! is_int($key))) {
             throw new \Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
         }
+
         return $key;
     }
 
@@ -68,7 +63,7 @@ class ExtraFieldGroupPanel extends XotBasePanel {
      *
      * @param ExtraFieldGroup $row
      */
-    public function optionLabel($row):string {
+    public function optionLabel($row): string {
         return 'To Set';
     }
 
@@ -86,54 +81,40 @@ class ExtraFieldGroupPanel extends XotBasePanel {
      *
      * @return RowsContract
      */
-    public static function indexQuery(array $data, $query)
-    {
-        //return $query->where('user_id', $request->user()->id);
+    public static function indexQuery(array $data, $query) {
+        // return $query->where('user_id', $request->user()->id);
         return $query;
     }
 
-
-
     /**
      * Get the fields displayed by the resource.
-     *
-     * @return array
-        'col_size' => 6,
-        'sortable' => 1,
-        'rules' => 'required',
-        'rules_messages' => ['it'=>['required'=>'Nome Obbligatorio']],
         'value'=>'..',
      */
     public function fields(): array {
-        return array (
-  0 => 
-  (object) array(
-     'type' => 'Id',
-     'name' => 'id',
-     'comment' => NULL,
-  ),
-  1 => 
-  (object) array(
-     'type' => 'String',
-     'name' => 'name',
-     'rules' => 'required',
-     'comment' => NULL,
-  ),
-  2 => 
-  (object) array(
-     'type' => 'Text',
-     'name' => 'cardinality',
-     'comment' => 'not in Doctrine',
-  ),
-);
+        return [
+            0 => (object) [
+                'type' => 'Id',
+                'name' => 'id',
+                'comment' => null,
+            ],
+            1 => (object) [
+                'type' => 'String',
+                'name' => 'name',
+                'rules' => 'required',
+                'comment' => null,
+            ],
+            2 => (object) [
+                'type' => 'Text',
+                'name' => 'cardinality',
+                'comment' => 'not in Doctrine',
+            ],
+        ];
     }
 
     /**
      * Get the tabs available.
-     *
-     * @return array
      */
-    public function tabs():array {
+    public function tabs(): array {
         $tabs_name = [];
 
         return $tabs_name;
@@ -141,10 +122,8 @@ class ExtraFieldGroupPanel extends XotBasePanel {
 
     /**
      * Get the cards available for the request.
-     *
-     * @return array
      */
-    public function cards(Request $request):array {
+    public function cards(Request $request): array {
         return [];
     }
 
@@ -152,28 +131,22 @@ class ExtraFieldGroupPanel extends XotBasePanel {
      * Get the filters available for the resource.
      *
      * @param \Illuminate\Http\Request $request
-     *
-     * @return array
      */
-    public function filters(Request $request = null):array {
+    public function filters(Request $request = null): array {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
-     *
-     * @return array
      */
-    public function lenses(Request $request):array {
+    public function lenses(Request $request): array {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
-     *
-     * @return array
      */
-    public function actions():array {
+    public function actions(): array {
         return [];
     }
 }
