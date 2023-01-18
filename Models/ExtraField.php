@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-use Modules\Blog\Models\Traits\HasCategory;
-
 /**
  * Modules\Blog\Models\ExtraField.
  *
@@ -41,8 +39,10 @@ use Modules\Blog\Models\Traits\HasCategory;
  * @mixin \Eloquent
  */
 class ExtraField extends BaseModel {
-    use HasCategory;
-
     protected $fillable = ['id', 'name', 'type',
         'rules', 'options', 'attributes', 'collection_name'];
+
+    public function extraFieldGroups() {
+        return $this->hasMany(ExtraFieldsGroup::class);
+    }
 }
