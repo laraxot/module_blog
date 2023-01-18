@@ -7,5 +7,6 @@ return [
     'tab' => [
         'index' => 'Lista',
         'create' => 'Nuovo',
+        'edit' => 'Modifica',
     ],
 ];
