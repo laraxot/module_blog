@@ -7,7 +7,7 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Modules\Blog\Models\Category;
-use Modules\Blog\Models\ExtraFieldsGroup;
+use Modules\Blog\Models\ExtraFieldGroup;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 
@@ -123,7 +123,7 @@ class ExtraFieldPanel extends XotBasePanel {
                 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 6,
-                'options' => $this->optionsModelClass(ExtraFieldsGroup::class),
+                'options' => $this->optionsModelClass(ExtraFieldGroup::class),
             ],
             // (object) [
             //     'type' => 'Select',
