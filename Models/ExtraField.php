@@ -50,6 +50,10 @@ class ExtraField extends BaseModel {
         'group_id',
     ];
 
+    protected $casts = [
+        'options' => 'array',
+    ];
+
     public function group(): BelongsTo {
         return $this->belongsTo(ExtraFieldGroup::class);
     }
