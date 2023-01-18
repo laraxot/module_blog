@@ -47,6 +47,6 @@ class ExtraField extends BaseModel {
         'rules', 'options', 'attributes', 'collection_name'];
 
     public function extraFieldGroups() {
-        return $this->belongsTo(ExtraFieldsGroup::class);
+        return $this->belongsTo(ExtraFieldGroup::class);
     }
 }
