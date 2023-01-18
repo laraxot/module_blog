@@ -11,15 +11,13 @@ use Illuminate\Notifications\Notification;
 /**
  * Class NotifyAdminOfNewComment.
  */
-class NotifyAdminOfNewComment extends Notification
-{
+class NotifyAdminOfNewComment extends Notification {
     use Queueable;
 
     /**
      * Create a new notification instance.
      */
-    public function __construct()
-    {
+    public function __construct() {
     }
 
     /**
@@ -29,8 +27,7 @@ class NotifyAdminOfNewComment extends Notification
      *
      * @return array
      */
-    public function via($notifiable)
-    {
+    public function via($notifiable) {
         return ['mail'];
     }
 
@@ -41,8 +38,7 @@ class NotifyAdminOfNewComment extends Notification
      *
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function toMail($notifiable)
-    {
+    public function toMail($notifiable) {
         return (new MailMessage())
                     ->line('The introduction to the notification.')
                     ->action('Notification Action', 'https://laravel.com')
@@ -56,8 +52,7 @@ class NotifyAdminOfNewComment extends Notification
      *
      * @return array
      */
-    public function toArray($notifiable)
-    {
+    public function toArray($notifiable) {
         return [
         ];
     }

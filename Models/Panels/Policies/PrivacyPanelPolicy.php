@@ -9,6 +9,5 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class PrivacyPanelPolicy.
  */
-class PrivacyPanelPolicy extends XotBasePanelPolicy
-{
+class PrivacyPanelPolicy extends XotBasePanelPolicy {
 }

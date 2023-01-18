@@ -13,8 +13,7 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class NoMoreFavoriteAction.
  */
-class NoMoreFavoriteAction extends XotBasePanelAction
-{
+class NoMoreFavoriteAction extends XotBasePanelAction {
     public bool $onContainer = true;
 
     // public bool $onItem = true; //onlyContainer
@@ -32,8 +31,7 @@ class NoMoreFavoriteAction extends XotBasePanelAction
      *
      * @param int|string|null $user_id
      */
-    public function __construct($user_id)
-    {
+    public function __construct($user_id) {
         $this->user_id = $user_id;
     }
 
@@ -42,8 +40,7 @@ class NoMoreFavoriteAction extends XotBasePanelAction
      */
 
     // -- Perform the action on the given models.
-    public function handle()
-    {
+    public function handle() {
         // dddx($this);
         // return '';
         // dddx($this->row);
@@ -53,8 +50,7 @@ class NoMoreFavoriteAction extends XotBasePanelAction
     /**
      * @return string
      */
-    public function postHandle()
-    {
+    public function postHandle() {
         // $this->rows->where('user_id', $this->user_id);
         // $route_params = Route::current()->parameters();
         [$containers,$items] = params2ContainerItem();

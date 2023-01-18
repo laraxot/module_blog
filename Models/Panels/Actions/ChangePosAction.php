@@ -12,8 +12,7 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class ChangePosAction.
  */
-class ChangePosAction extends XotBasePanelAction
-{
+class ChangePosAction extends XotBasePanelAction {
     // public bool $onContainer = false;
 
     public bool $onItem = true;
@@ -27,8 +26,7 @@ class ChangePosAction extends XotBasePanelAction
      *
      * @return mixed
      */
-    public function handle()
-    {
+    public function handle() {
         // return '';
         dddx($this->row);
     }

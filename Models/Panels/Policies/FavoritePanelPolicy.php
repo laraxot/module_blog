@@ -11,10 +11,8 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Class FavoritePanelPolicy.
  */
-class FavoritePanelPolicy extends XotBasePanelPolicy
-{
-    public function noMoreFavorite(UserContract $user, PanelContract $panel): bool
-    {
+class FavoritePanelPolicy extends XotBasePanelPolicy {
+    public function noMoreFavorite(UserContract $user, PanelContract $panel): bool {
         return true;
     }
 }
