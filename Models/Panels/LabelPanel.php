@@ -11,8 +11,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class LabelPanel.
  */
-class LabelPanel extends XotBasePanel
-{
+class LabelPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -27,8 +26,7 @@ class LabelPanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -61,8 +59,7 @@ class LabelPanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }

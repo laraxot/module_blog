@@ -45,8 +45,7 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class Image extends BaseModel
-{   // BaseModelLang?
+class Image extends BaseModel {   // BaseModelLang?
     /**
      * @var string[]
      */

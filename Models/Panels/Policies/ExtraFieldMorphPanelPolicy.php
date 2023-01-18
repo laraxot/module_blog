@@ -6,6 +6,5 @@ namespace Modules\Blog\Models\Panels\Policies;
 
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 
-class ExtraFieldMorphPanelPolicy extends XotBasePanelPolicy
-{
+class ExtraFieldMorphPanelPolicy extends XotBasePanelPolicy {
 }
