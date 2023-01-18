@@ -8,7 +8,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Undocumented class.
  */
-class CreateExtraFieldsGroupTable extends XotBaseMigration {
+class CreateExtraFieldGroupTable extends XotBaseMigration {
     /**
      * db up.
      *
