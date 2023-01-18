@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models;
 
-class ExtraFieldsGroup extends BaseModel {
+class ExtraFieldGroup extends BaseModel {
     protected $fillable = ['id', 'name', 'cardinality'];
 }
