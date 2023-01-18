@@ -119,14 +119,14 @@ class ExtraFieldPanel extends XotBasePanel {
                 'col_size' => 6,
                 'options' => $this->optionsModelClass(ExtraFieldGroup::class),
             ],
-            // (object) [
-            //     'type' => 'Select',
-            //     'name' => 'categories',
-            //     'rules' => 'required',
-            //     'comment' => null,
-            //     'col_size' => 6,
-            //     'options' => $this->optionsModelClass(Category::class),
-            // ],
+            (object) [
+                'type' => 'Select',
+                'name' => 'categories',
+                'rules' => 'required',
+                'comment' => null,
+                'col_size' => 6,
+                'options' => $this->optionsModelClass(Category::class),
+            ],
         ];
     }
 
