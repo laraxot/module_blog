@@ -7,6 +7,7 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Modules\Blog\Models\Category;
+use Modules\Blog\Models\ExtraFieldsGroup;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 
@@ -51,6 +52,7 @@ class ExtraFieldPanel extends XotBasePanel {
      * @return int|string|null
      */
     public function optionId($row) {
+        dddx('aa');
         $key = $row->getKey();
         if (null === $key || (! is_string($key) && ! is_int($key))) {
             throw new \Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
@@ -114,6 +116,14 @@ class ExtraFieldPanel extends XotBasePanel {
                 'rules' => 'required',
                 'comment' => null,
                 'col_size' => 6,
+            ],
+            (object) [
+                'type' => 'Select',
+                'name' => 'extraFieldGroups',
+                'rules' => 'required',
+                'comment' => null,
+                'col_size' => 6,
+                'options' => $this->optionsModelClass(ExtraFieldsGroup::class),
             ],
             // (object) [
             //     'type' => 'Select',
