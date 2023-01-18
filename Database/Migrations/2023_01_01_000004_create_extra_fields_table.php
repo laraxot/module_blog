@@ -48,6 +48,9 @@ class CreateExtraFieldsTable extends XotBaseMigration {
                     $table->json('options')->nullable();
                     $table->json('attributes')->nullable();
                 }
+                if (! $this->hasColumn('group_id')) {
+                    $table->integer('group_id')->nullable();
+                }
             }
         );
     }
