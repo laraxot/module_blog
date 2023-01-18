@@ -110,7 +110,13 @@ class ExtraFieldPanel extends XotBasePanel {
                 'col_size' => 6,
                 'options' => ['string' => 'string', 'checkbox.options' => 'checkbox.options'],
             ],
-
+            (object) [
+                'type' => 'Array',
+                'name' => 'options',
+                // 'rules' => 'required',
+                'comment' => null,
+                'col_size' => 6,
+            ],
             (object) [
                 'type' => 'Select',
                 'name' => 'group',
