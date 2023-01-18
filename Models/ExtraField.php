@@ -46,7 +46,7 @@ class ExtraField extends BaseModel {
     protected $fillable = ['id', 'name', 'type',
         'rules', 'options', 'attributes', 'collection_name'];
 
-    public function extraFieldGroups() {
+    public function group() {
         return $this->belongsTo(ExtraFieldGroup::class);
     }
 }
