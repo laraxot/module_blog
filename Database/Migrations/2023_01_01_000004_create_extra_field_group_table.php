@@ -28,9 +28,9 @@ class CreateExtraFieldGroupTable extends XotBaseMigration {
         // -- UPDATE --
         $this->tableUpdate(
             function (Blueprint $table) {
-                // if (! $this->hasColumn('name')) {
-                //     $table->string('name');
-                // }
+                if (! $this->hasColumn('cardinality')) {
+                    $table->integer('cardinality')->nullable();
+                }
             }
         );
     }
