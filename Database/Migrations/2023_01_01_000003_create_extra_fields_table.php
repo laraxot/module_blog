@@ -47,7 +47,6 @@ class CreateExtraFieldsTable extends XotBaseMigration {
                 if (! $this->hasColumn('options')) {
                     $table->json('options')->nullable();
                     $table->json('attributes')->nullable();
-                    $table->string('collection_name')->nullable();
                 }
             }
         );
