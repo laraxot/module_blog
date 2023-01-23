@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'write_comment' => 'Deixe um comentário',
     'write_reply' => 'Deixe uma resposta',
@@ -19,5 +21,5 @@ return [
     'approve_comment' => 'Aprovar',
     'awaits_approval' => 'Aguardando aprovação',
     'guest' => 'convidado',
-    'copied' => 'Link copiado'
+    'copied' => 'Link copiado',
 ];

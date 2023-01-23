@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'write_comment' => 'Deja un comentario',
     'write_reply' => 'Deja una respuesta',
