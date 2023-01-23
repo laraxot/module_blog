@@ -1,16 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Module\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Module\Blog\Tests\TestSupport\Models\User;
 
-class UserFactory extends Factory
-{
+class UserFactory extends Factory {
     protected $model = User::class;
 
-    public function definition()
-    {
+    public function definition() {
         return [
             'name' => $this->faker->name,
             'first_name' => $this->faker->firstName,
