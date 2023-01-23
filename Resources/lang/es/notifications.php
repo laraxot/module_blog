@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'approve_comment' => 'Aprobar comentario',
     'reject_comment' => 'Rechazar comentario',
@@ -12,7 +14,7 @@ return [
     'approved_comment_mail_title' => 'Nuevo comentario en ":commentable_name"',
     'approved_comment_mail_body' => 'Enviado por :commentator_name',
 
-    'enum_description_participating'=> 'Cuando participe',
+    'enum_description_participating' => 'Cuando participe',
     'enum_description_all' => 'En todos los comentarios',
     'enum_description_none' => 'Nunca',
     'enum_longdescription_participating' => 'Notificarme cuando participe',

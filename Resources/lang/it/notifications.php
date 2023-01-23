@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'approve_comment' => 'Approva commento',
     'reject_comment' => 'Rifiuta commento',
