@@ -70,7 +70,7 @@ trait ArticleRelationship {
     }
     */
 
-    /**
+    /*
      * Get the tags of the article.
      *
      * @return \Illuminate\Database\Eloquent\Collection
@@ -81,7 +81,7 @@ trait ArticleRelationship {
     }
      */
 
-    /**
+    /*
      * Get the comments of the article.
      *
      * @return \Illuminate\Database\Eloquent\Collection
