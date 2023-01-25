@@ -12,8 +12,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class PhotoPanel.
  */
-class PhotoPanel extends XotBasePanel
-{
+class PhotoPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -33,16 +32,14 @@ class PhotoPanel extends XotBasePanel
     /**
      * The relationships that should be eager loaded on index queries.
      */
-    public function with(): array
-    {
+    public function with(): array {
         return [];
     }
 
     /**
      * Get the fields displayed by the resource.
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -84,8 +81,7 @@ class PhotoPanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [
             new \Modules\Rating\Models\Panels\Actions\RateItAction(),
             // new \Modules\Cms\Models\Panels\Actions\UploadImageTestAction(),

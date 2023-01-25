@@ -10,10 +10,8 @@ use Livewire\Component;
 /**
  * Undocumented Place.
  */
-class Place extends Component
-{
-    public function render(): Renderable
-    {
+class Place extends Component {
+    public function render(): Renderable {
         /**
          * @phpstan-var view-string
          */
