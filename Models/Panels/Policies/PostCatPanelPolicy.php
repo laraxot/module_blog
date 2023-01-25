@@ -14,5 +14,6 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class PostCatPanelPolicy.
  */
-class PostCatPanelPolicy extends XotBasePanelPolicy {
+class PostCatPanelPolicy extends XotBasePanelPolicy
+{
 }

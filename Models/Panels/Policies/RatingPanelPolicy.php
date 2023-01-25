@@ -9,8 +9,10 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class RatingPanelPolicy.
  */
-class RatingPanelPolicy extends XotBasePanelPolicy {
-    public function create(\Modules\Xot\Contracts\UserContract $user, \Modules\Cms\Contracts\PanelContract $panel): bool {
+class RatingPanelPolicy extends XotBasePanelPolicy
+{
+    public function create(\Modules\Xot\Contracts\UserContract $user, \Modules\Cms\Contracts\PanelContract $panel): bool
+    {
         return false;
     }
 }
