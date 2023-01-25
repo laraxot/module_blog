@@ -9,6 +9,5 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class RatingMorphPanelPolicy.
  */
-class RatingMorphPanelPolicy extends XotBasePanelPolicy
-{
+class RatingMorphPanelPolicy extends XotBasePanelPolicy {
 }

@@ -9,6 +9,5 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class PhotoMorphPanelPolicy.
  */
-class PhotoMorphPanelPolicy extends XotBasePanelPolicy
-{
+class PhotoMorphPanelPolicy extends XotBasePanelPolicy {
 }

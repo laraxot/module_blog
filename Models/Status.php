@@ -31,8 +31,7 @@ use Spatie\ModelStatus\Status as BaseStatus;
  *
  * @mixin \Eloquent
  */
-class Status extends BaseStatus
-{
+class Status extends BaseStatus {
     protected $fillable = [
         'id',
         'name',
