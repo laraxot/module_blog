@@ -9,5 +9,6 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class SitemapPanelPolicy.
  */
-class SitemapPanelPolicy extends XotBasePanelPolicy {
+class SitemapPanelPolicy extends XotBasePanelPolicy
+{
 }

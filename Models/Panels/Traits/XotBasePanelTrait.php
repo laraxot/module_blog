@@ -15,11 +15,13 @@ namespace Modules\Blog\Models\Panels\Traits;
 /**
  * Trait XotBasePanelTrait.
  */
-trait XotBasePanelTrait {
+trait XotBasePanelTrait
+{
     /**
      * @return object[]
      */
-    public function seoFields(): array {
+    public function seoFields(): array
+    {
         return [
             (object) [
                 'type' => 'String',
