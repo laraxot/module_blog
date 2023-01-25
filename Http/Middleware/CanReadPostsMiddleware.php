@@ -9,11 +9,13 @@ use Illuminate\Http\Request;
 /**
  * Class CanReadPostsMiddleware.
  */
-class CanReadPostsMiddleware {
+class CanReadPostsMiddleware
+{
     /**
      * @return mixed
      */
-    public function handle(Request $request, \Closure $next) {
+    public function handle(Request $request, \Closure $next)
+    {
         return $next($request);
     }
 }
