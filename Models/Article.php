@@ -9,7 +9,11 @@ use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 // use Modules\Blog\Models\Traits\HasTags;
 use Modules\Blog\Models\Traits\HasSlug;
+<<<<<<< HEAD
 // use Spatie\Sluggable\HasSlug;
+=======
+//use Spatie\Sluggable\HasSlug;
+>>>>>>> 3757d50 (up)
 use Modules\Blog\Models\Traits\HasTimestamps;
 use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\LU\Models\Traits\HasProfileTrait;
