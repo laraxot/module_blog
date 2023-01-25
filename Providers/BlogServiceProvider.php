@@ -14,8 +14,7 @@ use Modules\Xot\Providers\XotBaseServiceProvider;
 /**
  * Class BlogServiceProvider.
  */
-class BlogServiceProvider extends XotBaseServiceProvider
-{
+class BlogServiceProvider extends XotBaseServiceProvider {
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
