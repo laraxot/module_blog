@@ -149,8 +149,7 @@ use Spatie\ModelStatus\HasStatuses;
  *
  * @mixin \Eloquent
  */
-class Profile extends BaseModelLang
-{
+class Profile extends BaseModelLang {
     use GeoTrait;
     use HasProfileTrait;
     // use PrivacyTrait;
@@ -194,8 +193,7 @@ class Profile extends BaseModelLang
 
     // ------- RELATIONSHIP ----------
 
-    public function articles(): HasMany
-    {
+    public function articles(): HasMany {
         return $this->hasMany(Article::class, 'author_id', 'user_id');
     }
 
@@ -216,8 +214,7 @@ class Profile extends BaseModelLang
     }
     */
 
-    protected function username(): Attribute
-    {
+    protected function username(): Attribute {
         $user = $this->user;
         if (null == $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
@@ -232,8 +229,7 @@ class Profile extends BaseModelLang
         );
     }
 
-    protected function name(): Attribute
-    {
+    protected function name(): Attribute {
         $user = $this->user;
         if (null == $user) {
             $user = (object) [
@@ -257,34 +253,29 @@ class Profile extends BaseModelLang
     }
     */
 
-    protected function githubUsername(): Attribute
-    {
+    protected function githubUsername(): Attribute {
         return Attribute::make(
             get: fn ($value) => $this->github_username ?? '',
         );
     }
 
-    protected function hasTwitterAccount(): Attribute
-    {
+    protected function hasTwitterAccount(): Attribute {
         return Attribute::make(
             get: fn ($value) => false, // ! empty($this->twitter()),
         );
     }
 
-    protected function twitter(): Attribute
-    {
+    protected function twitter(): Attribute {
         return Attribute::make(
             get: fn ($value) => '',
         );
     }
 
-    public function isLoggedInUser(): bool
-    {
+    public function isLoggedInUser(): bool {
         return Auth::id() === $this->getKey();
     }
 
-    public function isBanned(): bool
-    {
+    public function isBanned(): bool {
         return 'ban' === $this->status;
     }
 }// end model
