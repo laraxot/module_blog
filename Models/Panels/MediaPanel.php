@@ -8,9 +8,13 @@ use Illuminate\Http\Request;
 use Modules\Blog\Models\Media;
 // --- Services --
 
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
+=======
+>>>>>>> bc82fdc (Lint)
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Xot\Contracts\RowsContract;
 
 class MediaPanel extends XotBasePanel
 {
@@ -25,9 +29,12 @@ class MediaPanel extends XotBasePanel
     public static string $title = 'title';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> a780d70 (up)
+=======
+>>>>>>> bc82fdc (Lint)
     /**
      * on select the option label.
      *

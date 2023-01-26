@@ -206,10 +206,13 @@ class Profile extends BaseModelLang
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> a780d70 (up)
+=======
+>>>>>>> bc82fdc (Lint)
     // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany
