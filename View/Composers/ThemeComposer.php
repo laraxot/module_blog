@@ -198,7 +198,24 @@ class ThemeComposer {
         return $rows;
     }
 
+<<<<<<< HEAD
     public function getCardEvents(): Collection {
+=======
+    //public function compose(array ...$args):string {
+        /*
+        dddx(
+            [
+            'args'=>$args,
+
+            ]
+        );
+        */
+        // error 404
+        //return 'aaa';
+    //}
+
+    public function getCardEvents() {
+>>>>>>> 7fdf4e1 (up)
         $str = '[
             {
               "date": "26",
