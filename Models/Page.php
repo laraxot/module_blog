@@ -118,7 +118,12 @@ class Page extends BaseModel
                 ];
             });
             $pages = $pages->merge($tmp);
+<<<<<<< HEAD
             // dddx($pages);
+=======
+            //dddx($pages);
+        
+>>>>>>> 160756d (.)
         }
 
         // dddx($pages->all());
