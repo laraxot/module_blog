@@ -27,7 +27,6 @@ class WithPostScope implements Scope {
         $lang = 'it';
 
         $post_type = Str::snake($model_name);
-        // $post_type = (string) str($model_name)->snake();
 
         $builder->leftJoin($post_table.' as post', function ($join) use ($model_table, $lang, $post_type) {
             $join->on('post.post_id', '=', $model_table.'.id')

@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
-use Modules\Geo\Models\Traits\GeoTrait;
 use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
@@ -151,7 +150,6 @@ use Spatie\ModelStatus\HasStatuses;
  * @mixin \Eloquent
  */
 class Profile extends BaseModelLang {
-    // use GeoTrait; -- to profile in geo
     use HasProfileTrait;
     // use PrivacyTrait;
     use WidgetTrait;

@@ -125,7 +125,6 @@ trait ArticleExtra {
         ];
     }
 
-
     public function splitBody(string $value): array {
         return $this->split($value);
     }

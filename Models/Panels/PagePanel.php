@@ -6,6 +6,7 @@ namespace Modules\Blog\Models\Panels;
 
 // --- Services --
 use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
@@ -31,7 +32,8 @@ class PagePanel extends XotBasePanel {
     /**
      * The columns that should be searched.
      */
-    protected static array $search = [];
+    protected static array $search = [
+    ];
 
     /**
      * The relationships that should be eager loaded on index queries.
@@ -61,8 +63,7 @@ class PagePanel extends XotBasePanel {
      * index navigation.
      */
     public function indexNav(): ?Renderable {
-        dddx('qui');
-        [$containers, $items] = params2ContainerItem();
+        [$containers,$items] = params2ContainerItem();
         $last_item = last($items);
         if (! inAdmin()) {
             // siccome non so dove metterlo, per ora dentro pub_theme
@@ -180,14 +181,11 @@ class PagePanel extends XotBasePanel {
     }
 
     // temporaneo perchè altrimenti mi da /it/pages/0
-    public function url(string $act = 'show', array $params = []): string {
+    public function url(string $act = 'show', ?array $params = []): string {
         $url = $this->route->{__FUNCTION__}($act);
 
         if ([] !== $params) {
             $url_components = parse_url($url);
-            if (! isset($url_components['path'])) {
-                throw new \Exception('['.__LINE__.']['.__FILE__.']');
-            }
             $url = $url_components['path'];
 
             $merged = $params;
