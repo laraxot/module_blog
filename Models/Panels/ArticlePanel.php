@@ -21,7 +21,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class ArticlePanel.
  */
-class ArticlePanel extends XotBasePanel {
+class ArticlePanel extends XotBasePanel
+{
     protected static string $model = 'Modules\Blog\Models\Article';
 
     protected static string $title = 'title';
@@ -33,21 +34,24 @@ class ArticlePanel extends XotBasePanel {
      *
      * @param Article $row
      */
-    public function optionLabel($row): string {
+    public function optionLabel($row): string
+    {
         return (string) $row->title;
     }
 
     /**
      * @return string[]
      */
-    public function with(): array {
+    public function with(): array
+    {
         return ['post'];
     }
 
     /**
      * @return string[]
      */
-    public function search(): array {
+    public function search(): array
+    {
         return [
             'post.title', 'post.subtitle', 'post.txt',
         ];
@@ -56,7 +60,8 @@ class ArticlePanel extends XotBasePanel {
     /**
      * @return object[]
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Id',
@@ -177,7 +182,8 @@ class ArticlePanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [
             new RateItAction(),
             // new Actions\ChangePosAction(),
