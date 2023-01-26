@@ -10,7 +10,11 @@ use Illuminate\Support\Str;
 
 use Modules\Blog\Models\Photo;
 =======
+<<<<<<< HEAD
 >>>>>>> 802efe7 (up)
+=======
+>>>>>>> fa90f5a (up)
+>>>>>>> b02ae09 (.)
 
 class PhotoFactory extends Factory {
     /**
@@ -22,7 +26,11 @@ class PhotoFactory extends Factory {
     protected $model = Photo::class;
 =======
     protected $model = Modules\Blog\Models\Photo::class;
+<<<<<<< HEAD
 >>>>>>> 802efe7 (up)
+=======
+>>>>>>> fa90f5a (up)
+>>>>>>> b02ae09 (.)
 
     /**
      * Define the model's default state.
@@ -38,7 +46,11 @@ class PhotoFactory extends Factory {
 =======
         return [
             'id' => $this->faker->randomNumber,
+<<<<<<< HEAD
 >>>>>>> 802efe7 (up)
+=======
+>>>>>>> fa90f5a (up)
+>>>>>>> b02ae09 (.)
         ];
     }
 }
