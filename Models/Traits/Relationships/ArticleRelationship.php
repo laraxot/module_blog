@@ -31,10 +31,13 @@ trait ArticleRelationship {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     /* -- usiamo spatie
 =======
     
 >>>>>>> 47ddca0 (up)
+=======
+>>>>>>> d6d0466 (Lint)
     public function images(): MorphMany { // da rimettere spatie
         return $this->morphMany(Image::class, 'post');
     }
