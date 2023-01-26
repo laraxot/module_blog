@@ -8,7 +8,14 @@ namespace Modules\Blog\Models\Traits\Mutators;
  * Undocumented trait.
  */
 trait ArticleMutator {
+<<<<<<< HEAD
     public function getParentIdAttribute(?int $value): ?int {
+=======
+    /**
+     
+     */
+    public function getParentIdAttribute(?int $value):?int {
+>>>>>>> b96306f (up)
         if (null !== $value) {
             return $value;
         }

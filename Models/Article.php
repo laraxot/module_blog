@@ -7,9 +7,17 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
+<<<<<<< HEAD
 use Modules\Blog\Models\Traits\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
+=======
+// use Modules\Blog\Models\Traits\HasTags;
+//use Modules\Blog\Models\Traits\HasSlug;
+// use Spatie\Sluggable\HasSlug;
+use Modules\Blog\Models\Traits\HasTimestamps;
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> b96306f (up)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 // use Modules\Tag\Models\Traits\HasTagTrait;
@@ -160,12 +168,20 @@ class Article extends BaseModelLang implements HasLikeContract
     use HasCategory;
     use HasLikes;
     // use HasProfileTrait;
+<<<<<<< HEAD
     // use HasSlug;
+=======
+    //use HasSlug;
+>>>>>>> b96306f (up)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
+<<<<<<< HEAD
     // use PreparesSearch;
+=======
+    //use PreparesSearch;
+>>>>>>> b96306f (up)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;

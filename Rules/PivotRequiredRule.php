@@ -59,7 +59,11 @@ class PivotRequiredRule implements Rule {
      * Determine if the validation rule passes.
      *
      * @param string $attribute
+<<<<<<< HEAD
      * @param int    $value
+=======
+     * @param int  $value
+>>>>>>> b96306f (up)
      *
      * @return bool
      */
@@ -68,7 +72,11 @@ class PivotRequiredRule implements Rule {
         // $data = (\Request::all());//phpstan
         $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
+<<<<<<< HEAD
         // $value = (int) $value;
+=======
+        //$value = (int) $value;
+>>>>>>> b96306f (up)
         if ($value && ! $value_required) {
             return false;
         }
