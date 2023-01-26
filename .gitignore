@@ -17,3 +17,6 @@ error_log
 
 *.cache
 /build
+*.old
+*.to_*
+*.old*
