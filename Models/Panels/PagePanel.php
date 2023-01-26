@@ -28,8 +28,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class PagePanel.
  */
-class PagePanel extends XotBasePanel
-{
+class PagePanel extends XotBasePanel {
     use XotBasePanelTrait;
     /**
      * The model the resource corresponds to.
@@ -51,8 +50,7 @@ class PagePanel extends XotBasePanel
      *
      * @return string[]
      */
-    public function with(): array
-    {
+    public function with(): array {
         return ['post'];
     }
 
@@ -67,14 +65,14 @@ class PagePanel extends XotBasePanel
      *
      * @param Page $row
      */
-    public function optionLabel($row): string
-    {
+    public function optionLabel($row): string {
         return (string) $row->title;
     }
 
     /**
      * index navigation.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +88,9 @@ class PagePanel extends XotBasePanel
     public function indexNav(): ?Renderable
     {
 >>>>>>> 42ca46e (up)
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> afa2edf (Lint)
         dddx('qui');
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
@@ -109,8 +110,7 @@ class PagePanel extends XotBasePanel
     /**
      * Get the fields displayed by the resource.
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -203,16 +203,14 @@ class PagePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [
             new Actions\SendMsgAction(),
         ];
     }
 
     // temporaneo perchè altrimenti mi da /it/pages/0
-    public function url(string $act = 'show', array $params = []): string
-    {
+    public function url(string $act = 'show', array $params = []): string {
         $url = $this->route->{__FUNCTION__}($act);
 
         if ([] !== $params) {

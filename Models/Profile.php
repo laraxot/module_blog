@@ -152,6 +152,7 @@ use Spatie\ModelStatus\HasStatuses;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Profile extends BaseModelLang
 {
     use GeoTrait;
@@ -161,6 +162,9 @@ class Profile extends BaseModelLang {
 class Profile extends BaseModelLang
 {
 >>>>>>> 42ca46e (up)
+=======
+class Profile extends BaseModelLang {
+>>>>>>> afa2edf (Lint)
     // use GeoTrait; -- to profile in geo
 >>>>>>> 0cf44f8 (up)
     use HasProfileTrait;
@@ -213,8 +217,7 @@ class Profile extends BaseModelLang
 >>>>>>> bc82fdc (Lint)
     // ------- RELATIONSHIP ----------
 
-    public function articles(): HasMany
-    {
+    public function articles(): HasMany {
         return $this->hasMany(Article::class, 'author_id', 'user_id');
     }
 
@@ -235,8 +238,7 @@ class Profile extends BaseModelLang
     }
     */
 
-    protected function username(): Attribute
-    {
+    protected function username(): Attribute {
         $user = $this->user;
         if (null == $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
@@ -261,8 +263,7 @@ class Profile extends BaseModelLang
         );
     }
 
-    protected function name(): Attribute
-    {
+    protected function name(): Attribute {
         $user = $this->user;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,15 +299,13 @@ class Profile extends BaseModelLang
     }
     */
 
-    protected function githubUsername(): Attribute
-    {
+    protected function githubUsername(): Attribute {
         return Attribute::make(
             get: fn ($value) => $this->github_username ?? '',
         );
     }
 
-    protected function hasTwitterAccount(): Attribute
-    {
+    protected function hasTwitterAccount(): Attribute {
         return Attribute::make(
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -320,20 +319,17 @@ class Profile extends BaseModelLang
         );
     }
 
-    protected function twitter(): Attribute
-    {
+    protected function twitter(): Attribute {
         return Attribute::make(
             get: fn ($value) => '',
         );
     }
 
-    public function isLoggedInUser(): bool
-    {
+    public function isLoggedInUser(): bool {
         return Auth::id() === $this->getKey();
     }
 
-    public function isBanned(): bool
-    {
+    public function isBanned(): bool {
         return 'ban' === $this->status;
     }
 }// end model

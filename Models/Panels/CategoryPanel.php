@@ -11,8 +11,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class CategoryPanel.
  */
-class CategoryPanel extends XotBasePanel
-{
+class CategoryPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -24,6 +23,7 @@ class CategoryPanel extends XotBasePanel
      * @param Category $row
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function optionLabel($row): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +34,9 @@ class CategoryPanel extends XotBasePanel
     public function optionLabel($row): string
     {
 >>>>>>> 42ca46e (up)
+=======
+    public function optionLabel($row): string {
+>>>>>>> afa2edf (Lint)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -133,6 +136,7 @@ class CategoryPanel extends XotBasePanel
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function optionsSelect() {
 <<<<<<< HEAD
         //$rows = $this->row->all();
@@ -144,6 +148,9 @@ class CategoryPanel extends XotBasePanel
     public function optionsSelect()
     {
 >>>>>>> 42ca46e (up)
+=======
+    public function optionsSelect() {
+>>>>>>> afa2edf (Lint)
         // $rows = $this->row->all();
 
         $rows = Category::get();
@@ -176,8 +183,7 @@ class CategoryPanel extends XotBasePanel
 
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Text',
@@ -195,8 +201,7 @@ class CategoryPanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }

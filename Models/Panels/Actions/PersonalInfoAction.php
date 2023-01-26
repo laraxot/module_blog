@@ -17,8 +17,7 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class PersonalInfoAction.
  */
-class PersonalInfoAction extends XotBasePanelAction
-{
+class PersonalInfoAction extends XotBasePanelAction {
     public bool $onContainer = false; // onlyContainer
 
     public bool $onItem = true; // onlyContainer
@@ -27,8 +26,12 @@ class PersonalInfoAction extends XotBasePanelAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function handle(): Renderable
     {
+=======
+    public function handle(): Renderable {
+>>>>>>> afa2edf (Lint)
         if (null == $this->panel) {
 =======
     public function handle(): Renderable {
@@ -48,8 +51,7 @@ class PersonalInfoAction extends XotBasePanelAction
         return $this->panel->view();
     }
 
-    public function postHandle(): Renderable
-    {
+    public function postHandle(): Renderable {
         $data = request()->all();
         // dddx($data['handle']);
         /*

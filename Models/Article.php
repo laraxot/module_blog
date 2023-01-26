@@ -161,8 +161,7 @@ use Spatie\Tags\HasTags; // spatie tags
  *
  * @mixin \Eloquent
  */
-class Article extends BaseModelLang implements HasLikeContract
-{
+class Article extends BaseModelLang implements HasLikeContract {
     use HasAuthor;
     use HasCategory;
     use HasLikes;

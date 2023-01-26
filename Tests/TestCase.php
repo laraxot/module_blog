@@ -4,6 +4,5 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Tests;
 
-class TestCase extends \Orchestra\Testbench\TestCase
-{
+class TestCase extends \Orchestra\Testbench\TestCase {
 }
