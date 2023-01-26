@@ -200,12 +200,19 @@ class ThemeComposer {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCardEvents(): Collection {
 =======
     //public function compose(array ...$args):string {
 =======
     // public function compose(array ...$args):string {
 >>>>>>> 134e178 (Lint)
+=======
+    // public function compose(array ...$args):string {
+=======
+    //public function compose(array ...$args):string {
+>>>>>>> d4223a3 (up)
+>>>>>>> 776498c (rebase)
         /*
         dddx(
             [
@@ -215,8 +222,13 @@ class ThemeComposer {
         );
         */
         // error 404
+<<<<<<< HEAD
         // return 'aaa';
     // }
+=======
+        //return 'aaa';
+    //}
+>>>>>>> d4223a3 (up)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
