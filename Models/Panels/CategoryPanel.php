@@ -27,6 +27,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $name = $row->name;
         // if (is_string($name)) {
         //    return $name;
@@ -48,11 +49,16 @@ class CategoryPanel extends XotBasePanel {
 =======
         $name=$row->name;
         if(is_string($name)){
+=======
+        $name = $row->name;
+        if (is_string($name)) {
+>>>>>>> 92e5287 (Lint)
             return $name;
         }
-        if(is_array($name)){
-            return implode('-',$name); 
+        if (is_array($name)) {
+            return implode('-', $name);
         }
+
         return '--';
 >>>>>>> dde14f6 (up)
     }
@@ -61,6 +67,7 @@ class CategoryPanel extends XotBasePanel {
      * @return array
      */
     public function optionsSelect() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +89,13 @@ class CategoryPanel extends XotBasePanel {
          */
         $rows=Category::all();
 >>>>>>> dde14f6 (up)
+=======
+        // $rows = $this->row->all();
+        /**
+         * @var Category[]
+         */
+        $rows = Category::all();
+>>>>>>> 92e5287 (Lint)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
