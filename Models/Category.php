@@ -218,8 +218,12 @@ class Category extends Model
                           ->saveSlugsTo('slug');
     }
 
+<<<<<<< HEAD
     public function scopeOfType(Builder $query, string $type): Builder
     {
+=======
+    public function scopeOfType(Builder $query, string $type):Builder {
+>>>>>>> d4223a3 (up)
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){
