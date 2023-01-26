@@ -14,7 +14,6 @@ namespace Modules\Blog\Models;
  * @property int                             $post_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @method static \Modules\Blog\Database\Factories\FeedFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Feed   newQuery()
@@ -22,8 +21,8 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Feed   whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed   wherePostId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed   whereUpdatedAt($value)
- *
  * @mixin \Eloquent
+<<<<<<< HEAD:Models/Feed.to_seo1
 <<<<<<< HEAD:Models/Feed.to_seo1
 <<<<<<< HEAD:Models/Feed.to_seo1
 <<<<<<< HEAD:Models/Feed.to_seo1
@@ -55,6 +54,11 @@ namespace Modules\Blog\Models;
 >>>>>>> c744a19 (up):Models/Feed.php
 =======
 >>>>>>> 25f8a08 (Lint):Models/Feed.php
+=======
+ * @property int         $id
+ * @property string|null $created_by
+ * @property string|null $updated_by
+>>>>>>> 6b1fa56 (.):Models/Feed.php
  * @method static \Illuminate\Database\Eloquent\Builder|Feed whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed whereUpdatedBy($value)
