@@ -354,11 +354,16 @@ use Spatie\ModelStatus\HasStatuses;
  * @mixin \Eloquent
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Profile extends BaseModelLang
 {
     use GeoTrait;
 =======
 class Profile extends BaseModelLang {
+=======
+class Profile extends BaseModelLang
+{
+>>>>>>> 42ca46e (up)
     // use GeoTrait; -- to profile in geo
 >>>>>>> 0cf44f8 (up)
     use HasProfileTrait;

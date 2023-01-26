@@ -41,7 +41,8 @@ http://www.coding4developers.com/laravel/customize-validation-error-response-in-
 /**
  * Class PivotRequiredRule.
  */
-class PivotRequiredRule implements Rule {
+class PivotRequiredRule implements Rule
+{
     public ?string $field_name; // il mio nome
 
     public ?string $field_name_required; // il campo che deve essere obbligatorio
@@ -49,7 +50,8 @@ class PivotRequiredRule implements Rule {
     /**
      * Create a new rule instance.
      */
-    public function __construct(string $field_name, ?string $field_name_required = null) {
+    public function __construct(string $field_name, ?string $field_name_required = null)
+    {
         // dddx($field_name);
         $this->field_name = $field_name;
         $this->field_name_required = $field_name_required;
@@ -87,7 +89,8 @@ class PivotRequiredRule implements Rule {
      *
      * @return bool
      */
-    public function passes($attribute, $value) {
+    public function passes($attribute, $value)
+    {
         $key_required = substr($attribute, 0, -\strlen((string) $this->field_name)).''.$this->field_name_required;
         // $data = (\Request::all());//phpstan
         $data = request()->all(); // phpstan
@@ -129,7 +132,8 @@ class PivotRequiredRule implements Rule {
      *
      * @return string
      */
-    public function message() {
+    public function message()
+    {
         return ':attribute must be checked.';
     }
 }

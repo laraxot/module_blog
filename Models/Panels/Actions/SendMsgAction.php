@@ -14,7 +14,8 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class SendMsgAction.
  */
-class SendMsgAction extends XotBasePanelAction {
+class SendMsgAction extends XotBasePanelAction
+{
     // public bool $onContainer = false;
 
     public bool $onItem = true; // onlyContainer
@@ -27,7 +28,8 @@ class SendMsgAction extends XotBasePanelAction {
      *
      * @return mixed
      */
-    public function handle() {
+    public function handle()
+    {
         return 'invio messaggio';
         // dddx($this->row);
     }

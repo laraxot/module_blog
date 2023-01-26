@@ -14,7 +14,8 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class TestAction.
  */
-class TestAction extends XotBasePanelAction {
+class TestAction extends XotBasePanelAction
+{
     public bool $onItem = true;
 
     public bool $onContainer = true;
@@ -22,7 +23,8 @@ class TestAction extends XotBasePanelAction {
     /**
      * @return mixed
      */
-    public function handle() {
+    public function handle()
+    {
         return $this->panel->view();
     }
 }

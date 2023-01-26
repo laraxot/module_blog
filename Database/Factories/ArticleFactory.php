@@ -10,7 +10,8 @@ use Modules\Blog\Models\Article as Model;
 /**
  * Class ArticleFactory.
  */
-class ArticleFactory extends Factory {
+class ArticleFactory extends Factory
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -23,7 +24,8 @@ class ArticleFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition()
+    {
         return [
             // 'title' => $faker->sentence,
             // 'description' => $faker->paragraph,
