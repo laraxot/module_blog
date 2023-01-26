@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 6c99a65 (.)
 return [
     'approve_comment' => 'Aprovar comentário',
     'reject_comment' => 'Rejeitar comentário',
@@ -14,7 +17,11 @@ return [
     'approved_comment_mail_title' => 'Um novo comentário em ":commentable_name"',
     'approved_comment_mail_body' => 'Postado por :commentator_name',
 
+<<<<<<< HEAD
     'enum_description_participating' => 'Ao participar',
+=======
+    'enum_description_participating'=> 'Ao participar',
+>>>>>>> 6c99a65 (.)
     'enum_description_all' => 'Em todos os comentários',
     'enum_description_none' => 'Nunca',
     'enum_longdescription_participating' => 'Seja notificado ao participar',
