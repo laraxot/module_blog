@@ -147,8 +147,11 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c5a3a82 (rebase)
+=======
+>>>>>>> 494362e (rebase)
     /**
      * @return array
      */
@@ -262,7 +265,19 @@ class CategoryPanel extends XotBasePanel {
         // $rows = $this->row->all();
         $rows = Category::get();
 >>>>>>> 1172c16 (up)
+<<<<<<< HEAD
 >>>>>>> 37f274f (rebase)
+=======
+=======
+    /**
+     * @return array
+     */
+    public function optionsSelect() {
+        //$rows = $this->row->all();
+       
+        $rows=Category::get();
+>>>>>>> 3e9d516 (.)
+>>>>>>> 494362e (rebase)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
