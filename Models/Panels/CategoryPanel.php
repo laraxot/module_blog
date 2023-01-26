@@ -127,10 +127,16 @@ class CategoryPanel extends XotBasePanel {
      * @return array
      */
     public function optionsSelect() {
+<<<<<<< HEAD
         //$rows = $this->row->all();
        
         $rows=Category::get();
 >>>>>>> 3e9d516 (.)
+=======
+        // $rows = $this->row->all();
+
+        $rows = Category::get();
+>>>>>>> b92546f (Lint)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
