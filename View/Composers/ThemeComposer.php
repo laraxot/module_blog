@@ -11,10 +11,17 @@ use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
 class ThemeComposer {
+<<<<<<< HEAD
     /**
      * Undocumented function.
      *
      * @return Collection<Article>
+=======
+    /*
+     * ---.
+
+        
+>>>>>>> 48af1a0 (up)
      */
     /**
      * Undocumented function.
@@ -36,9 +43,13 @@ class ThemeComposer {
 
         return $rows;
 <<<<<<< HEAD
+<<<<<<< HEAD
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
 =======
 >>>>>>> ea58237 (up)
+=======
+        $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
+>>>>>>> 48af1a0 (up)
         */
     }
 
