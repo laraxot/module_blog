@@ -34,8 +34,12 @@ class CategorizablePanel extends XotBasePanel
      *
      * @param \Modules\Blog\Models\Categorizable $row
      */
+<<<<<<< HEAD
     public function optionLabel($row): string
     {
+=======
+    public function optionLabel($row): string {
+>>>>>>> 27d1a3f (up)
         return (string) $row->id;
     }
 
