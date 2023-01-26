@@ -60,10 +60,14 @@ class PivotRequiredRule implements Rule {
      *
      * @param string $attribute
 <<<<<<< HEAD
+<<<<<<< HEAD
      * @param int    $value
 =======
      * @param int  $value
 >>>>>>> f4041d1 (up)
+=======
+     * @param int    $value
+>>>>>>> a822353 (.)
      *
      * @return bool
      */
@@ -73,9 +77,13 @@ class PivotRequiredRule implements Rule {
         $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         //$value = (int) $value;
 >>>>>>> f4041d1 (up)
+=======
+        // $value = (int) $value;
+>>>>>>> a822353 (.)
         if ($value && ! $value_required) {
             return false;
         }

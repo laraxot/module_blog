@@ -9,6 +9,7 @@ namespace Modules\Blog\Models\Traits\Mutators;
  */
 trait ArticleMutator {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getParentIdAttribute(?int $value): ?int {
 =======
     /**
@@ -16,6 +17,9 @@ trait ArticleMutator {
      */
     public function getParentIdAttribute(?int $value):?int {
 >>>>>>> f4041d1 (up)
+=======
+    public function getParentIdAttribute(?int $value): ?int {
+>>>>>>> a822353 (.)
         if (null !== $value) {
             return $value;
         }
