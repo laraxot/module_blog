@@ -1,15 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> 6c99a65 (.)
-=======
-declare(strict_types=1);
-
->>>>>>> 5c25f35 (Lint)
 return [
     'approve_comment' => 'Approva commento',
     'reject_comment' => 'Rifiuta commento',

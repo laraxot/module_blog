@@ -7,53 +7,8 @@ namespace Modules\Blog\Models\Traits\Mutators;
 /**
  * Undocumented trait.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-trait ArticleMutator {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f930b9f (rebase)
-=======
->>>>>>> af0dac7 (rebase)
-    public function getParentIdAttribute(?int $value): ?int {
-=======
-    /**
-     
-     */
-    public function getParentIdAttribute(?int $value):?int {
-<<<<<<< HEAD
->>>>>>> f4041d1 (up)
-=======
-    public function getParentIdAttribute(?int $value): ?int {
->>>>>>> a822353 (.)
-=======
->>>>>>> b96306f (up)
-<<<<<<< HEAD
->>>>>>> f930b9f (rebase)
-=======
-=======
-    public function getParentIdAttribute(?int $value): ?int {
->>>>>>> 1daf8a3 (Lint)
-<<<<<<< HEAD
->>>>>>> af0dac7 (rebase)
-=======
-=======
-trait ArticleMutator
-{
-    public function getParentIdAttribute(?int $value): ?int
-    {
->>>>>>> 42ca46e (up)
-<<<<<<< HEAD
->>>>>>> aff4d2d (rebase)
-=======
-=======
 trait ArticleMutator {
     public function getParentIdAttribute(?int $value): ?int {
->>>>>>> afa2edf (Lint)
->>>>>>> f0ffa9e (rebase)
         if (null !== $value) {
             return $value;
         }

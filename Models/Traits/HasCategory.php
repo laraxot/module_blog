@@ -191,50 +191,13 @@ trait HasCategory {
     public function syncCategories($categories, bool $detaching = true) {
         // Find categories
         $categories = $this->prepareCategoryIds($categories);
-
         // dddx(is_array( $categories));
         // Sync model categories
-<<<<<<< HEAD
         if (\is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37f274f (rebase)
-=======
->>>>>>> c5a3a82 (rebase)
-        } // else {
-=======
-        // if (\is_array($categories)) {
-        $this->categories()->sync($categories, $detaching);
-        // } // else {
->>>>>>> 6703626 (.)
-        // dddx($categories);
-        // }
-=======
-        } //else {
-            //dddx($categories);
-        //}
-<<<<<<< HEAD
->>>>>>> ea58237 (up)
-=======
         } // else {
         // dddx($categories);
         // }
->>>>>>> 209739c (Lint)
-=======
->>>>>>> 1172c16 (up)
-<<<<<<< HEAD
->>>>>>> 37f274f (rebase)
-=======
-=======
-        } // else {
-        // dddx($categories);
-        // }
->>>>>>> 7333c06 (Lint)
->>>>>>> c5a3a82 (rebase)
 
         return $this;
     }

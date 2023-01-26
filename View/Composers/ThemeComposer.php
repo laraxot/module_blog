@@ -10,32 +10,7 @@ use Modules\Blog\Models\Category;
 use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ThemeComposer {
-<<<<<<< HEAD
-    /**
-     * Undocumented function.
-     *
-     * @return Collection<Article>
-=======
-=======
-class ThemeComposer
-{
->>>>>>> aff4d2d (rebase)
-=======
-class ThemeComposer {
->>>>>>> f0ffa9e (rebase)
-    /*
-     * ---.
-
-<<<<<<< HEAD
-        
->>>>>>> 48af1a0 (up)
-=======
-
->>>>>>> 104688c (Lint)
-     */
     /**
      * Undocumented function.
      *
@@ -55,14 +30,7 @@ class ThemeComposer {
             ->get();
 
         return $rows;
-<<<<<<< HEAD
-<<<<<<< HEAD
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
-=======
->>>>>>> ea58237 (up)
-=======
-        $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
->>>>>>> 48af1a0 (up)
         */
     }
 
@@ -227,96 +195,7 @@ class ThemeComposer {
         return $rows;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getCardEvents(): Collection {
-=======
-    //public function compose(array ...$args):string {
-=======
-    // public function compose(array ...$args):string {
->>>>>>> 134e178 (Lint)
-=======
-=======
->>>>>>> 39485d1 (rebase)
-    // public function compose(array ...$args):string {
-=======
-    //public function compose(array ...$args):string {
->>>>>>> d4223a3 (up)
-<<<<<<< HEAD
->>>>>>> 776498c (rebase)
-=======
-=======
-    // public function compose(array ...$args):string {
->>>>>>> 764eb6d (Lint)
->>>>>>> 39485d1 (rebase)
-        /*
-        dddx(
-            [
-            'args'=>$args,
-
-            ]
-        );
-        */
-        // error 404
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // return 'aaa';
-    // }
-<<<<<<< HEAD
-=======
-        //return 'aaa';
-    //}
->>>>>>> d4223a3 (up)
-=======
-        // return 'aaa';
-    // }
->>>>>>> 764eb6d (Lint)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function getCardEvents() {
->>>>>>> 7fdf4e1 (up)
-=======
-    public function getCardEvents():Collection {
->>>>>>> 61ca642 (up)
-=======
-    public function getCardEvents(): Collection {
->>>>>>> 37feb52 (Lint)
-=======
-=======
->>>>>>> e9dc7f3 (rebase)
-=======
->>>>>>> aff4d2d (rebase)
-    public function getCardEvents(): Collection {
-=======
-    public function getCardEvents():Collection {
->>>>>>> 725228b (up)
-<<<<<<< HEAD
->>>>>>> 063c423 (rebase)
-=======
-=======
-    public function getCardEvents(): Collection {
->>>>>>> 8133ecc (Lint)
-<<<<<<< HEAD
->>>>>>> e9dc7f3 (rebase)
-=======
-=======
-    public function getCardEvents(): Collection
-    {
->>>>>>> 42ca46e (up)
-<<<<<<< HEAD
->>>>>>> aff4d2d (rebase)
-=======
-=======
-
-    public function getCardEvents(): Collection {
->>>>>>> afa2edf (Lint)
->>>>>>> f0ffa9e (rebase)
         $str = '[
             {
               "date": "26",
@@ -390,50 +269,7 @@ class ThemeComposer {
         return collect(json_decode($str));
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function getCardPlaces(): Collection {
-=======
-    public function getCardPlaces():Collection {
->>>>>>> 61ca642 (up)
-=======
-    public function getCardPlaces(): Collection {
->>>>>>> 37feb52 (Lint)
-=======
-=======
->>>>>>> e9dc7f3 (rebase)
-=======
->>>>>>> aff4d2d (rebase)
-=======
->>>>>>> f0ffa9e (rebase)
-    public function getCardPlaces(): Collection {
-=======
-    public function getCardPlaces():Collection {
->>>>>>> 725228b (up)
-<<<<<<< HEAD
->>>>>>> 063c423 (rebase)
-=======
-=======
-    public function getCardPlaces(): Collection {
->>>>>>> 8133ecc (Lint)
-<<<<<<< HEAD
->>>>>>> e9dc7f3 (rebase)
-=======
-=======
-    public function getCardPlaces(): Collection
-    {
->>>>>>> 42ca46e (up)
-<<<<<<< HEAD
->>>>>>> aff4d2d (rebase)
-=======
-=======
-    public function getCardPlaces(): Collection {
->>>>>>> afa2edf (Lint)
->>>>>>> f0ffa9e (rebase)
         $str = '[
             {
               "category": "Categoria",

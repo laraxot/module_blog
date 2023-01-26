@@ -1,15 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> 6c99a65 (.)
-=======
-declare(strict_types=1);
-
->>>>>>> 5c25f35 (Lint)
 return [
     'write_comment' => 'Leave a comment',
     'write_reply' => 'Leave a reply',
@@ -29,13 +21,5 @@ return [
     'approve_comment' => 'Approve',
     'awaits_approval' => 'Awaiting approval',
     'guest' => 'guest',
-<<<<<<< HEAD
-<<<<<<< HEAD
     'copied' => 'Link copied',
-=======
-    'copied' => 'Link copied'
->>>>>>> 6c99a65 (.)
-=======
-    'copied' => 'Link copied',
->>>>>>> 5c25f35 (Lint)
 ];

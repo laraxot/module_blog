@@ -22,45 +22,9 @@ class CategoryPanel extends XotBasePanel {
      *
      * @param Category $row
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function optionLabel($row): string {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a3494d5 (rebase)
-=======
->>>>>>> 0088a11 (rebase)
-=======
->>>>>>> 962cd73 (rebase)
-=======
->>>>>>> 89d9d7e (rebase)
-=======
->>>>>>> 20e02a4 (rebase)
-=======
-=======
-    public function optionLabel($row): string
-    {
->>>>>>> 42ca46e (up)
-<<<<<<< HEAD
->>>>>>> aff4d2d (rebase)
-=======
-=======
-    public function optionLabel($row): string {
->>>>>>> afa2edf (Lint)
->>>>>>> f0ffa9e (rebase)
         $name = $row->name;
         // if (is_string($name)) {
-<<<<<<< HEAD
         //    return $name;
         // }
         if (is_array($name)) {
@@ -68,249 +32,15 @@ class CategoryPanel extends XotBasePanel {
         }
 
         return $name;
-=======
-        return ''.$row->name;
-<<<<<<< HEAD
->>>>>>> b022d6c (up)
-=======
-        return (string)$row->name;
->>>>>>> 883dd21 (up)
-=======
-        return (string) $row->name;
->>>>>>> 056bec8 (Lint)
-=======
-        $name=$row->name;
-        if(is_string($name)){
-=======
-        $name = $row->name;
-<<<<<<< HEAD
-        if (is_string($name)) {
->>>>>>> 92e5287 (Lint)
-            return $name;
-        }
-=======
-        //if (is_string($name)) {
-        //    return $name;
-       //}
->>>>>>> ea58237 (up)
-=======
-        //    return $name;
-        // }
->>>>>>> 209739c (Lint)
-        if (is_array($name)) {
-            $name = implode('-', $name);
-        }
-
-<<<<<<< HEAD
-        return '--';
->>>>>>> dde14f6 (up)
-=======
-        return $name;
->>>>>>> ea58237 (up)
-=======
->>>>>>> a780d70 (up)
-<<<<<<< HEAD
->>>>>>> a3494d5 (rebase)
-=======
-=======
-        return (string)$row->name;
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
-        return (string) $row->name;
->>>>>>> 5a12252 (Lint)
-<<<<<<< HEAD
->>>>>>> 962cd73 (rebase)
-=======
-=======
-        $name=$row->name;
-        if(is_string($name)){
-=======
-        $name = $row->name;
-<<<<<<< HEAD
-        if (is_string($name)) {
->>>>>>> eab47b7 (Lint)
-            return $name;
-        }
-=======
-        //if (is_string($name)) {
-        //    return $name;
-       //}
->>>>>>> 1172c16 (up)
-=======
-        //    return $name;
-        // }
->>>>>>> 7333c06 (Lint)
-        if (is_array($name)) {
-            $name = implode('-', $name);
-        }
-
-<<<<<<< HEAD
-        return '--';
->>>>>>> a0663a2 (up)
-<<<<<<< HEAD
->>>>>>> 89d9d7e (rebase)
-=======
-=======
-        return $name;
->>>>>>> 1172c16 (up)
->>>>>>> 37f274f (rebase)
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c5a3a82 (rebase)
-=======
->>>>>>> 494362e (rebase)
-    /**
-     * @return array
-     */
-<<<<<<< HEAD
-    public function optionsSelect() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // $rows = $this->row->all();
-
-        $rows = Category::get();
-=======
-        //$rows = $this->row->all();
-        $rows=Category::all();
->>>>>>> 883dd21 (up)
-=======
-        // $rows = $this->row->all();
-        $rows = Category::all();
->>>>>>> 056bec8 (Lint)
-=======
-        //$rows = $this->row->all();
-        /**
-         * @var Category[]
-         */
-        $rows=Category::all();
->>>>>>> dde14f6 (up)
-=======
-        // $rows = $this->row->all();
-        /**
-         * @var Category[]
-         */
-        $rows = Category::all();
->>>>>>> 92e5287 (Lint)
-=======
-    public function optionsSelect():array {
-=======
-    public function optionsSelect(): array {
->>>>>>> 209739c (Lint)
-        // $rows = $this->row->all();
-        $rows = Category::get();
->>>>>>> ea58237 (up)
-=======
     /**
      * @return array
      */
     public function optionsSelect() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        //$rows = $this->row->all();
-       
-        $rows=Category::get();
->>>>>>> 5c60665 (.)
-=======
         // $rows = $this->row->all();
 
         $rows = Category::get();
->>>>>>> 26439f4 (Lint)
-=======
-=======
->>>>>>> 962cd73 (rebase)
-=======
->>>>>>> 89d9d7e (rebase)
-=======
->>>>>>> 20e02a4 (rebase)
-        // $rows = $this->row->all();
-
-        $rows = Category::get();
-=======
-        //$rows = $this->row->all();
-        $rows=Category::all();
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
-        // $rows = $this->row->all();
-        $rows = Category::all();
->>>>>>> 5a12252 (Lint)
-<<<<<<< HEAD
->>>>>>> 962cd73 (rebase)
-=======
-=======
-        //$rows = $this->row->all();
-        /**
-         * @var Category[]
-         */
-        $rows=Category::all();
->>>>>>> a0663a2 (up)
-<<<<<<< HEAD
->>>>>>> 89d9d7e (rebase)
-=======
-=======
-        // $rows = $this->row->all();
-        /**
-         * @var Category[]
-         */
-        $rows = Category::all();
->>>>>>> eab47b7 (Lint)
-<<<<<<< HEAD
->>>>>>> 20e02a4 (rebase)
-=======
-=======
-    public function optionsSelect():array {
-=======
-    public function optionsSelect(): array {
->>>>>>> 7333c06 (Lint)
-        // $rows = $this->row->all();
-        $rows = Category::get();
->>>>>>> 1172c16 (up)
-<<<<<<< HEAD
->>>>>>> 37f274f (rebase)
-=======
-=======
-    /**
-     * @return array
-     */
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function optionsSelect() {
-<<<<<<< HEAD
-        //$rows = $this->row->all();
-       
-        $rows=Category::get();
->>>>>>> 3e9d516 (.)
-<<<<<<< HEAD
->>>>>>> 494362e (rebase)
-=======
-=======
-=======
-    public function optionsSelect()
-    {
->>>>>>> 42ca46e (up)
-=======
-    public function optionsSelect() {
->>>>>>> afa2edf (Lint)
-        // $rows = $this->row->all();
-
-        $rows = Category::get();
->>>>>>> b92546f (Lint)
->>>>>>> 3c5dfb1 (rebase)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
@@ -325,27 +55,6 @@ class CategoryPanel extends XotBasePanel {
         // dddx($rows2);
 
         return $rows2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> ea58237 (up)
-=======
->>>>>>> 209739c (Lint)
-=======
-=======
-        
->>>>>>> 1172c16 (up)
->>>>>>> 37f274f (rebase)
-=======
-=======
-        
->>>>>>> 1172c16 (up)
-=======
->>>>>>> 7333c06 (Lint)
->>>>>>> c5a3a82 (rebase)
     }
 
     /**

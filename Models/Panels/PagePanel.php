@@ -5,19 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
-=======
-use Exception;
->>>>>>> b96306f (up)
-=======
-use Illuminate\Contracts\Support\Renderable;
-<<<<<<< HEAD
-use Illuminate\Database\Eloquent\Model;
->>>>>>> 1daf8a3 (Lint)
-=======
->>>>>>> c029664 (.)
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
@@ -72,25 +60,7 @@ class PagePanel extends XotBasePanel {
     /**
      * index navigation.
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function indexNav(): ?Renderable {
-=======
-    public function indexNav(): ?Renderable
-    {
->>>>>>> c029664 (.)
-=======
-    public function indexNav(): ?Renderable {
->>>>>>> 9a30267 (Lint)
-=======
-    public function indexNav(): ?Renderable
-    {
->>>>>>> 42ca46e (up)
-=======
-    public function indexNav(): ?Renderable {
->>>>>>> afa2edf (Lint)
         dddx('qui');
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
@@ -215,28 +185,8 @@ class PagePanel extends XotBasePanel {
 
         if ([] !== $params) {
             $url_components = parse_url($url);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
-=======
-            if(!isset($url_components['path'])){
-                throw new Exception('['.__LINE__.']['.__FILE__.']');
->>>>>>> b96306f (up)
-=======
-            if (! isset($url_components['path'])) {
-                throw new \Exception('['.__LINE__.']['.__FILE__.']');
->>>>>>> 1daf8a3 (Lint)
-=======
-            if (!isset($url_components['path'])) {
-                throw new \Exception('[' . __LINE__ . '][' . __FILE__ . ']');
->>>>>>> c029664 (.)
-=======
-            if (! isset($url_components['path'])) {
-                throw new \Exception('['.__LINE__.']['.__FILE__.']');
->>>>>>> 9a30267 (Lint)
             }
             $url = $url_components['path'];
 

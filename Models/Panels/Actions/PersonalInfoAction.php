@@ -10,13 +10,6 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Session;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Modules\Theme\Services\ThemeService;
->>>>>>> 5a5000f (up)
-=======
->>>>>>> a91a603 (Lint)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
@@ -31,56 +24,8 @@ class PersonalInfoAction extends XotBasePanelAction {
 
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function handle(): Renderable {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0088a11 (rebase)
-=======
->>>>>>> aff4d2d (rebase)
-    public function handle(): Renderable
-    {
->>>>>>> 00a7996 (.)
-=======
-    public function handle(): Renderable
-    {
-=======
-    public function handle(): Renderable {
->>>>>>> afa2edf (Lint)
->>>>>>> f0ffa9e (rebase)
         if (null == $this->panel) {
-=======
-<<<<<<< HEAD
-       
-=======
->>>>>>> 056bec8 (Lint)
-        if (null === $this->panel) {
->>>>>>> 883dd21 (up)
-=======
-        if (null == $this->panel) {
->>>>>>> ea58237 (up)
-=======
-    public function handle(): Renderable {
-<<<<<<< HEAD
-        if (null === $this->panel) {
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
-=======
-    public function handle(): Renderable
-    {
->>>>>>> 42ca46e (up)
-        if (null == $this->panel) {
->>>>>>> 1172c16 (up)
->>>>>>> 37f274f (rebase)
             throw new \Exception('this->panel is null');
         }
 

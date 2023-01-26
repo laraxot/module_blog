@@ -1,15 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> 6c99a65 (.)
-=======
-declare(strict_types=1);
-
->>>>>>> 5c25f35 (Lint)
 return [
     'write_comment' => 'Lascia un commento',
     'write_reply' => 'Rispondi al commento',
@@ -25,13 +17,5 @@ return [
     'create_comment' => 'Commenta',
     'just_now' => 'Adesso',
     'send_notifications' => 'Notifica se qualcuno risponde',
-<<<<<<< HEAD
-<<<<<<< HEAD
     'copied' => 'Link copiato',
-=======
-    'copied' => 'Link copiato'
->>>>>>> 6c99a65 (.)
-=======
-    'copied' => 'Link copiato',
->>>>>>> 5c25f35 (Lint)
 ];

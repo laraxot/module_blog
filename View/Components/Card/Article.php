@@ -12,25 +12,8 @@ use Modules\Cms\Services\PanelService;
 /**
  * Class Article.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 class Article extends Component {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-class Article extends Component
-{
->>>>>>> aff4d2d (rebase)
-=======
-class Article extends Component {
->>>>>>> f0ffa9e (rebase)
     public array $attrs = [];
-=======
-    public array $attrs=[];
->>>>>>> 071b412 (up)
-=======
-    public array $attrs = [];
->>>>>>> 7ae4511 (Lint)
     public Model $row;
 
     /**

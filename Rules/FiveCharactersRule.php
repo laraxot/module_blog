@@ -48,54 +48,16 @@ class FiveCharactersRule implements Rule {
      */
     public function message() {
         // return 'The :attribute must be 5 characters';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f930b9f (rebase)
-=======
->>>>>>> af0dac7 (rebase)
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-<<<<<<< HEAD
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-=======
->>>>>>> f930b9f (rebase)
-=======
-        $res= trans('validation.only_uppercase');
-        if(!is_string($res)){
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
-        }
-<<<<<<< HEAD
->>>>>>> f4041d1 (up)
-=======
-        $res = trans('validation.only_uppercase');
-        if (! is_string($res)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
-        }
-
->>>>>>> a822353 (.)
-=======
->>>>>>> b96306f (up)
-<<<<<<< HEAD
->>>>>>> f930b9f (rebase)
-=======
-=======
-        $res = trans('validation.only_uppercase');
-        if (! is_string($res)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
-        }
-
->>>>>>> 1daf8a3 (Lint)
->>>>>>> af0dac7 (rebase)
         return $res;
     }
 }

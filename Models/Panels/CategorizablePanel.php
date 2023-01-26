@@ -8,15 +8,8 @@ use Illuminate\Http\Request;
 use Modules\Cms\Models\Panels\XotBasePanel;
 // --- Services --
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Xot\Contracts\RowsContract;
-=======
 use Modules\Cms\Models\Panels\XotBasePanel;
->>>>>>> 315e874 (up)
-=======
 use Modules\Xot\Contracts\RowsContract;
->>>>>>> c4fb14d (Lint)
 
 class CategorizablePanel extends XotBasePanel {
     /**
@@ -29,47 +22,12 @@ class CategorizablePanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> b022d6c (up)
-=======
->>>>>>> 5376387 (Lint)
-=======
-=======
-
->>>>>>> a780d70 (up)
->>>>>>> a3494d5 (rebase)
-=======
-=======
-
->>>>>>> a780d70 (up)
-=======
->>>>>>> bc82fdc (Lint)
->>>>>>> 7424c65 (rebase)
     /**
      * on select the option label.
      *
      * @param \Modules\Blog\Models\Categorizable $row
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function optionLabel($row): string
-    {
-=======
     public function optionLabel($row): string {
->>>>>>> 27d1a3f (up)
-=======
-    public function optionLabel($row): string
-    {
->>>>>>> 42ca46e (up)
-=======
-    public function optionLabel($row): string {
->>>>>>> afa2edf (Lint)
         return (string) $row->id;
     }
 

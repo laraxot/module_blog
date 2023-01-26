@@ -22,39 +22,9 @@ class ContactFactory extends Factory {
      */
     public function definition() {
         return [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0088a11 (rebase)
-=======
->>>>>>> 962cd73 (rebase)
             // 'id' => $this->faker->randomNumber,
             // 'post_id' => $this->faker->integer,
             // 'post_type' => $this->faker->word,
-=======
-            //'id' => $this->faker->randomNumber,
-           // 'post_id' => $this->faker->integer,
-           // 'post_type' => $this->faker->word,
-<<<<<<< HEAD
->>>>>>> 883dd21 (up)
-=======
-            // 'id' => $this->faker->randomNumber,
-            // 'post_id' => $this->faker->integer,
-            // 'post_type' => $this->faker->word,
->>>>>>> 056bec8 (Lint)
-=======
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
-            // 'id' => $this->faker->randomNumber,
-            // 'post_id' => $this->faker->integer,
-            // 'post_type' => $this->faker->word,
->>>>>>> 5a12252 (Lint)
->>>>>>> 962cd73 (rebase)
         ];
     }
 }

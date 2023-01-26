@@ -9,32 +9,10 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Cms\Models\Panels\Actions\ArtisanAction;
-=======
->>>>>>> c4fb14d (Lint)
-use Modules\Cms\Models\Panels\XotBasePanel;
-use Modules\LU\Models\User;
-use Modules\Tag\Models\Tag;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-use Modules\Xot\Models\Panels\Actions\ArtisanAction;
-<<<<<<< HEAD
-use Modules\Cms\Models\Panels\XotBasePanel;
->>>>>>> 315e874 (up)
-=======
->>>>>>> c4fb14d (Lint)
-=======
-use Modules\Cms\Models\Panels\Actions\ArtisanAction;
->>>>>>> 5a5000f (up)
-=======
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
->>>>>>> a91a603 (Lint)
 
 /**
  * Class HomePanel.
@@ -142,65 +120,10 @@ class HomePanel extends XotBasePanel {
     public function navCategories(): Collection {
         $navCategories = Category::query()
             ->has('articles', '>', 0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             // ->limit(8)
             ->get()
             // ->take(8)
         ;
-=======
-            ->take(8)
-=======
-            ->limit(8)
->>>>>>> b022d6c (up)
-=======
-=======
->>>>>>> 0088a11 (rebase)
-=======
->>>>>>> 962cd73 (rebase)
-=======
-            ->limit(8)
->>>>>>> a780d70 (up)
->>>>>>> a3494d5 (rebase)
-            ->get();
-<<<<<<< HEAD
->>>>>>> 802efe7 (up)
-=======
->>>>>>> 0088a11 (rebase)
-=======
-            //->limit(8)
-            ->get()
-            //->take(8)
-            ;
-<<<<<<< HEAD
->>>>>>> 883dd21 (up)
-=======
-            // ->limit(8)
-            ->get()
-            // ->take(8)
-        ;
->>>>>>> 056bec8 (Lint)
-=======
-            ->get();
->>>>>>> b02ae09 (.)
-=======
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
-            // ->limit(8)
-            ->get()
-            // ->take(8)
-        ;
->>>>>>> 5a12252 (Lint)
->>>>>>> 962cd73 (rebase)
 
         return $navCategories;
     }
@@ -210,53 +133,11 @@ class HomePanel extends XotBasePanel {
      */
     public function footerCategories(): Collection {
         $footerCategories = Category::query()
-<<<<<<< HEAD
-<<<<<<< HEAD
-            ->has('articles', '>', 0)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // ->limit(8)
-            ->get()
-            // ->take(8)
-        ;
-=======
-            ->take(8)
-            ->get();
->>>>>>> 802efe7 (up)
-=======
-            //->limit(8)
-            ->get()
-            //->take(8)
-            ;
->>>>>>> 883dd21 (up)
-=======
-            // ->limit(8)
-            ->get()
-            // ->take(8)
-        ;
->>>>>>> 056bec8 (Lint)
-=======
-            ->has('articles', '>', 0)->get();
->>>>>>> b02ae09 (.)
-=======
-            ->has('articles', '>', 0)->get();
-=======
             ->has('articles', '>', 0)
             // ->limit(8)
             ->get()
-<<<<<<< HEAD
-            //->take(8)
-            ;
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
             // ->take(8)
         ;
->>>>>>> 5a12252 (Lint)
->>>>>>> 962cd73 (rebase)
 
         return $footerCategories;
     }

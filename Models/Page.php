@@ -23,6 +23,16 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Page   whereId($value)
  *
  * @mixin \Eloquent
+ *
+ * @property int|null    $parent_id
+ * @property string|null $guid
+ * @property string|null $title
+ * @property string|null $ns
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereGuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereNs($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereParentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle($value)
  */
 class Page extends BaseModel {
     use Sushi;
@@ -105,16 +115,7 @@ class Page extends BaseModel {
                 ];
             });
             $pages = $pages->merge($tmp);
-<<<<<<< HEAD
-<<<<<<< HEAD
             // dddx($pages);
-=======
-            //dddx($pages);
-        
->>>>>>> 160756d (.)
-=======
-            // dddx($pages);
->>>>>>> b8c59fa (Lint)
         }
 
         // dddx($pages->all());

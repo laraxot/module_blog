@@ -5,44 +5,11 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-<<<<<<< HEAD
-use Modules\Blog\Models\Media;
-// --- Services --
-
-<<<<<<< HEAD
-use Modules\Cms\Models\Panels\XotBasePanel;
-<<<<<<< HEAD
-use Modules\Xot\Contracts\RowsContract;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 315e874 (up)
-=======
-use Modules\Cms\Models\Panels\XotBasePanel;
-// --- Services --
-
-use Modules\Xot\Contracts\RowsContract;
->>>>>>> c4fb14d (Lint)
-=======
 use Modules\Blog\Models\Media;
 // --- Services --
 
 use Modules\Cms\Models\Panels\XotBasePanel;
-<<<<<<< HEAD
->>>>>>> b022d6c (up)
-=======
 use Modules\Xot\Contracts\RowsContract;
->>>>>>> 5376387 (Lint)
-=======
-use Modules\Cms\Models\Panels\XotBasePanel;
->>>>>>> a3494d5 (rebase)
-=======
-=======
->>>>>>> bc82fdc (Lint)
-use Modules\Cms\Models\Panels\XotBasePanel;
-use Modules\Xot\Contracts\RowsContract;
->>>>>>> 7424c65 (rebase)
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -55,47 +22,12 @@ class MediaPanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> b022d6c (up)
-=======
->>>>>>> 5376387 (Lint)
-=======
-=======
-
->>>>>>> a780d70 (up)
->>>>>>> a3494d5 (rebase)
-=======
-=======
-
->>>>>>> a780d70 (up)
-=======
->>>>>>> bc82fdc (Lint)
->>>>>>> 7424c65 (rebase)
     /**
      * on select the option label.
      *
      * @param Media $row
      */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public function optionLabel($row): string
-    {
-=======
     public function optionLabel($row): string {
->>>>>>> a780d70 (up)
-=======
-    public function optionLabel($row): string
-    {
->>>>>>> 42ca46e (up)
-=======
-    public function optionLabel($row): string {
->>>>>>> afa2edf (Lint)
         return (string) $row->name;
     }
 
