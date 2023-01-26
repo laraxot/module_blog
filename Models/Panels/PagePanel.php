@@ -5,11 +5,17 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
+=======
+use Exception;
+>>>>>>> b96306f (up)
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
-use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Illuminate\Contracts\Support\Renderable;
+use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 
 // ---- bases --
 
@@ -185,8 +191,13 @@ class PagePanel extends XotBasePanel {
 
         if ([] !== $params) {
             $url_components = parse_url($url);
+<<<<<<< HEAD
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
+=======
+            if(!isset($url_components['path'])){
+                throw new Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> b96306f (up)
             }
             $url = $url_components['path'];
 

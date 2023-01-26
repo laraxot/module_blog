@@ -325,16 +325,23 @@ class Profile extends BaseModelLang
             // dddx($user1->username());
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f930b9f (rebase)
             $user = (object) [
                 'handle' => 'no-set',
 =======
             $user=(object)[
                 'handle'=>'no-set',
+<<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
             $user = (object) [
                 'handle' => 'no-set',
 >>>>>>> a822353 (.)
+=======
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
             ];
         }
 
@@ -348,6 +355,9 @@ class Profile extends BaseModelLang
         $user = $this->user;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f930b9f (rebase)
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
@@ -355,12 +365,16 @@ class Profile extends BaseModelLang
         if($user==null){
             $user=(object)[
                 'first_name'=>'no-set',
+<<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
 >>>>>>> a822353 (.)
+=======
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
             ];
         }
 
