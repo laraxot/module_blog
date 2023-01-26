@@ -22,6 +22,10 @@ class CategorizablePanel extends XotBasePanel
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a780d70 (up)
     /**
      * on select the option label.
      *

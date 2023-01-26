@@ -10,6 +10,7 @@ use Modules\Blog\Models\Media;
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 class MediaPanel extends XotBasePanel
 {
@@ -23,13 +24,21 @@ class MediaPanel extends XotBasePanel
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a780d70 (up)
     /**
      * on select the option label.
      *
      * @param Media $row
      */
+<<<<<<< HEAD
     public function optionLabel($row): string
     {
+=======
+    public function optionLabel($row): string {
+>>>>>>> a780d70 (up)
         return (string) $row->name;
     }
 
