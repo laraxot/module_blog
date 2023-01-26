@@ -5,6 +5,12 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+<<<<<<< HEAD
+use Illuminate\Support\Str;
+
+use Modules\Blog\Models\Photo;
+=======
+>>>>>>> fa90f5a (up)
 
 class PhotoFactory extends Factory {
     /**
@@ -12,7 +18,11 @@ class PhotoFactory extends Factory {
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
+<<<<<<< HEAD
+    protected $model = Photo::class;
+=======
     protected $model = Modules\Blog\Models\Photo::class;
+>>>>>>> fa90f5a (up)
 
     /**
      * Define the model's default state.
@@ -20,8 +30,15 @@ class PhotoFactory extends Factory {
      * @return array
      */
     public function definition() {
+<<<<<<< HEAD
+
+
+        return [
+            'id' => $this->faker->randomNumber
+=======
         return [
             'id' => $this->faker->randomNumber,
+>>>>>>> fa90f5a (up)
         ];
     }
 }

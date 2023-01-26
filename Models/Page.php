@@ -15,13 +15,11 @@ use Sushi\Sushi;
  * @property int                                             $id
  * @property \Illuminate\Database\Eloquent\Collection|Page[] $sons
  * @property int|null                                        $sons_count
- *
  * @method static \Modules\Blog\Database\Factories\PageFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   query()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   whereId($value)
- *
  * @mixin \Eloquent
  *
  * @property int|null    $parent_id
@@ -34,7 +32,8 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereParentId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle($value)
  */
-class Page extends BaseModel {
+class Page extends BaseModel
+{
     use Sushi;
     /**
      * @var string[]
@@ -57,11 +56,13 @@ class Page extends BaseModel {
 
     // --------- relationship ---------------
 
-    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
+    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    public function getRows(): array {
+    public function getRows(): array
+    {
         // creates nss array
         $nss = [];
 
