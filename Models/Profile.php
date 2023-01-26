@@ -94,6 +94,7 @@ use Spatie\ModelStatus\HasStatuses;
  * @property User|null                                                               $user
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]   $widgets
  * @property int|null                                                                $widgets_count
+ *
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -148,6 +149,7 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       withDistance(float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       withDistanceCustomField(string $lat_field, string $lng_field, float $lat, float $lng)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
