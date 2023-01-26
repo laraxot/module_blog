@@ -162,9 +162,14 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile currentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
  */
+<<<<<<< HEAD
 class Profile extends BaseModelLang
 {
     use GeoTrait;
+=======
+class Profile extends BaseModelLang {
+    // use GeoTrait; -- to profile in geo
+>>>>>>> 0cf44f8 (up)
     use HasProfileTrait;
     // use PrivacyTrait;
     use WidgetTrait;
