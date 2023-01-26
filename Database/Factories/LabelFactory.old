@@ -5,24 +5,14 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-<<<<<<< HEAD
-use Illuminate\Support\Str;
 
-use Modules\Blog\Models\Photo;
-=======
->>>>>>> 802efe7 (up)
-
-class PhotoFactory extends Factory {
+class LabelFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
-<<<<<<< HEAD
-    protected $model = Photo::class;
-=======
-    protected $model = Modules\Blog\Models\Photo::class;
->>>>>>> 802efe7 (up)
+    protected $model = Modules\Blog\Models\Label::class;
 
     /**
      * Define the model's default state.
@@ -30,15 +20,11 @@ class PhotoFactory extends Factory {
      * @return array
      */
     public function definition() {
-<<<<<<< HEAD
-
-
-        return [
-            'id' => $this->faker->randomNumber
-=======
         return [
             'id' => $this->faker->randomNumber,
->>>>>>> 802efe7 (up)
+            'title' => $this->faker->sentence,
+            'label_id' => $this->faker->integer,
+            'label_type' => $this->faker->word,
         ];
     }
 }
