@@ -225,7 +225,11 @@ class ThemeComposer {
     // }
 >>>>>>> 764eb6d (Lint)
 
+<<<<<<< HEAD
     public function getCardEvents(): Collection {
+=======
+    public function getCardEvents():Collection {
+>>>>>>> 725228b (up)
         $str = '[
             {
               "date": "26",
@@ -299,7 +303,11 @@ class ThemeComposer {
         return collect(json_decode($str));
     }
 
+<<<<<<< HEAD
     public function getCardPlaces(): Collection {
+=======
+    public function getCardPlaces():Collection {
+>>>>>>> 725228b (up)
         $str = '[
             {
               "category": "Categoria",
