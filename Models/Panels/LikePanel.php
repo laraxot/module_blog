@@ -5,22 +5,15 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
-use Modules\Blog\Models\Status;
 // --- Services --
 
 use Modules\Cms\Models\Panels\XotBasePanel;
-use Modules\Xot\Contracts\RowsContract;
-<<<<<<< HEAD
-=======
-use Modules\Cms\Models\Panels\XotBasePanel;
->>>>>>> 315e874 (up)
 
-class StatusPanel extends XotBasePanel {
+class LikePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
-    public static string $model = Status::class;
-    public Status $row;
+    public static string $model = 'Modules\Blog\Models\Panels\LikePanel';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -28,12 +21,41 @@ class StatusPanel extends XotBasePanel {
     public static string $title = 'title';
 
     /**
-     * on select the option label.
+     * The columns that should be searched.
      *
-     * @param Status $row
+     * @var array
      */
-    public function optionLabel($row): string {
-        return (string) $row->name;
+    public static $search = [
+    ];
+
+    /**
+     * The relationships that should be eager loaded on index queries.
+     *
+     * @var array
+     */
+    public function with(): array {
+        return [];
+    }
+
+    public function search(): array {
+        return [];
+    }
+
+    /**
+     * on select the option id.
+     *
+     * quando aggiungi un campo select, è il numero della chiave
+     * che viene messo come valore su value="id"
+     */
+    public function optionId(object $row) {
+        return $row->getKey();
+    }
+
+    /**
+     * on select the option label.
+     */
+    public function optionLabel(object $row): string {
+        return $row->area_define_name;
     }
 
     /**
@@ -62,41 +84,8 @@ class StatusPanel extends XotBasePanel {
     public function fields(): array {
         return [
             0 => (object) [
-                'type' => 'Id',
-                'name' => 'id',
-                'comment' => null,
-            ],
-            1 => (object) [
-                'type' => 'String',
-                'name' => 'name',
-                'rules' => 'required',
-                'comment' => null,
-            ],
-            2 => (object) [
-                'type' => 'Text',
-                'name' => 'reason',
-                'comment' => null,
-            ],
-            3 => (object) [
-                'type' => 'String',
-                'name' => 'model_type',
-                'rules' => 'required',
-                'comment' => null,
-            ],
-            4 => (object) [
-                'type' => 'Bigint',
-                'name' => 'model_id',
-                'rules' => 'required',
-                'comment' => null,
-            ],
-            5 => (object) [
-                'type' => 'DateDatetime',
-                'name' => 'created_at',
-                'comment' => null,
-            ],
-            6 => (object) [
-                'type' => 'DateDatetime',
-                'name' => 'updated_at',
+                'type' => 'Integer',
+                'name' => 'user_id',
                 'comment' => null,
             ],
         ];
