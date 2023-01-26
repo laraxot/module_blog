@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Panels\Actions;
 
+// -------- models -----------
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 
