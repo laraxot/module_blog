@@ -130,6 +130,7 @@ class HomePanel extends XotBasePanel
             ->has('articles', '>', 0)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             ->limit(8)
 >>>>>>> a780d70 (up)
@@ -140,6 +141,12 @@ class HomePanel extends XotBasePanel
             //->take(8)
             ;
 >>>>>>> 27d1a3f (up)
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 5a12252 (Lint)
 
         return $navCategories;
     }
@@ -154,11 +161,16 @@ class HomePanel extends XotBasePanel
             ->has('articles', '>', 0)->get();
 =======
             ->has('articles', '>', 0)
-            //->limit(8)
+            // ->limit(8)
             ->get()
+<<<<<<< HEAD
             //->take(8)
             ;
 >>>>>>> 27d1a3f (up)
+=======
+            // ->take(8)
+        ;
+>>>>>>> 5a12252 (Lint)
 
         return $footerCategories;
     }

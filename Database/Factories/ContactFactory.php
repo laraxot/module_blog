@@ -23,6 +23,7 @@ class ContactFactory extends Factory {
     public function definition() {
         return [
 <<<<<<< HEAD
+<<<<<<< HEAD
             // 'id' => $this->faker->randomNumber,
             // 'post_id' => $this->faker->integer,
             // 'post_type' => $this->faker->word,
@@ -31,6 +32,11 @@ class ContactFactory extends Factory {
            // 'post_id' => $this->faker->integer,
            // 'post_type' => $this->faker->word,
 >>>>>>> 27d1a3f (up)
+=======
+            // 'id' => $this->faker->randomNumber,
+            // 'post_id' => $this->faker->integer,
+            // 'post_type' => $this->faker->word,
+>>>>>>> 5a12252 (Lint)
         ];
     }
 }

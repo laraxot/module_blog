@@ -11,7 +11,6 @@ namespace Modules\Blog\Models\Panels\Actions;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Session;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Theme\Services\ThemeService;
 
 // -------- bases -----------
 
@@ -32,7 +31,6 @@ class PersonalInfoAction extends XotBasePanelAction
         if (null == $this->panel) {
 =======
     public function handle(): Renderable {
-       
         if (null === $this->panel) {
 >>>>>>> 27d1a3f (up)
             throw new \Exception('this->panel is null');
