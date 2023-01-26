@@ -18,7 +18,6 @@ use Modules\Theme\Services\ThemeService;
 =======
 >>>>>>> a91a603 (Lint)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Theme\Services\ThemeService;
 
 // -------- bases -----------
 
@@ -58,7 +57,6 @@ class PersonalInfoAction extends XotBasePanelAction
 >>>>>>> ea58237 (up)
 =======
     public function handle(): Renderable {
-       
         if (null === $this->panel) {
 >>>>>>> 27d1a3f (up)
 >>>>>>> 0088a11 (rebase)
