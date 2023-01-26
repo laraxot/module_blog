@@ -244,12 +244,17 @@ class Profile extends BaseModelLang
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
             // dddx($user1->username());
 <<<<<<< HEAD
+<<<<<<< HEAD
             $user = (object) [
                 'handle' => 'no-set',
 =======
             $user=(object)[
                 'handle'=>'no-set',
 >>>>>>> b96306f (up)
+=======
+            $user = (object) [
+                'handle' => 'no-set',
+>>>>>>> 1daf8a3 (Lint)
             ];
         }
 
@@ -262,6 +267,7 @@ class Profile extends BaseModelLang
     {
         $user = $this->user;
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
@@ -270,6 +276,11 @@ class Profile extends BaseModelLang
             $user=(object)[
                 'first_name'=>'no-set',
 >>>>>>> b96306f (up)
+=======
+        if (null == $user) {
+            $user = (object) [
+                'first_name' => 'no-set',
+>>>>>>> 1daf8a3 (Lint)
             ];
         }
 

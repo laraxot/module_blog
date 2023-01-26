@@ -13,11 +13,15 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 =======
 // use Modules\Blog\Models\Traits\HasTags;
-//use Modules\Blog\Models\Traits\HasSlug;
+// use Modules\Blog\Models\Traits\HasSlug;
 // use Spatie\Sluggable\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
+<<<<<<< HEAD
 //use Modules\Blog\Models\Traits\PreparesSearch;
 >>>>>>> b96306f (up)
+=======
+// use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> 1daf8a3 (Lint)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 // use Modules\Tag\Models\Traits\HasTagTrait;
@@ -169,19 +173,27 @@ class Article extends BaseModelLang implements HasLikeContract
     use HasLikes;
     // use HasProfileTrait;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // use HasSlug;
 =======
     //use HasSlug;
 >>>>>>> b96306f (up)
+=======
+    // use HasSlug;
+>>>>>>> 1daf8a3 (Lint)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // use PreparesSearch;
 =======
     //use PreparesSearch;
 >>>>>>> b96306f (up)
+=======
+    // use PreparesSearch;
+>>>>>>> 1daf8a3 (Lint)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;

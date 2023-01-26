@@ -25,19 +25,27 @@ class WithPostScope implements Scope
         $post_table = $post->getTable();
         $model_table = $model->getTable();
 <<<<<<< HEAD
+<<<<<<< HEAD
         $model_class = get_class($model);
 =======
         $model_class =get_class($model);
 >>>>>>> b96306f (up)
+=======
+        $model_class = get_class($model);
+>>>>>>> 1daf8a3 (Lint)
         $model_name = basename($model_class);
         $lang = 'it';
 
         $post_type = Str::snake($model_name);
 <<<<<<< HEAD
+<<<<<<< HEAD
         // $post_type = (string) str($model_name)->snake();
 =======
         //$post_type = (string) str($model_name)->snake();
 >>>>>>> b96306f (up)
+=======
+        // $post_type = (string) str($model_name)->snake();
+>>>>>>> 1daf8a3 (Lint)
 
         $builder->leftJoin($post_table.' as post', function ($join) use ($model_table, $lang, $post_type) {
             $join->on('post.post_id', '=', $model_table.'.id')
