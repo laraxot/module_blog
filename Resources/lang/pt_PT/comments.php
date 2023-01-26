@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 5c25f35 (Lint)
 return [
     'write_comment' => 'Deixe um comentário',
     'write_reply' => 'Deixe uma resposta',
@@ -25,8 +30,12 @@ return [
     'awaits_approval' => 'Aguardando aprovação',
     'guest' => 'convidado',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link copiado',
 =======
     'copied' => 'Link copiado'
 >>>>>>> 6c99a65 (.)
+=======
+    'copied' => 'Link copiado',
+>>>>>>> 5c25f35 (Lint)
 ];
