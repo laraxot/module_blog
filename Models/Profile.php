@@ -393,6 +393,7 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             get: fn ($value) => false, // ! empty($this->twitter()),
 =======
             get: fn ($value) => false, //! empty($this->twitter()),
@@ -401,11 +402,19 @@ class Profile extends BaseModelLang
             get: fn ($value) => false, // ! empty($this->twitter()),
 >>>>>>> 209739c (Lint)
 =======
+=======
+>>>>>>> c5a3a82 (rebase)
             get: fn ($value) => false, // ! empty($this->twitter()),
 =======
             get: fn ($value) => false, //! empty($this->twitter()),
 >>>>>>> 1172c16 (up)
+<<<<<<< HEAD
 >>>>>>> 37f274f (rebase)
+=======
+=======
+            get: fn ($value) => false, // ! empty($this->twitter()),
+>>>>>>> 7333c06 (Lint)
+>>>>>>> c5a3a82 (rebase)
         );
     }
 
