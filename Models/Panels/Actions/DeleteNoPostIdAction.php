@@ -5,11 +5,14 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels\Actions;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> c744a19 (up)
 // -------- models -----------
 >>>>>>> a91a603 (Lint)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
@@ -19,7 +22,14 @@ use Modules\Lang\Models\Post;
 // use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
+<<<<<<< HEAD
 >>>>>>> 5a5000f (up)
+=======
+=======
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Lang\Models\Post;
+>>>>>>> 9972855 (up)
+>>>>>>> c744a19 (up)
 
 /**
  * Class DeleteNoPostIdAction.
