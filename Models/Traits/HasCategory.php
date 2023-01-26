@@ -195,9 +195,15 @@ trait HasCategory {
         // Sync model categories
         if (\is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
+<<<<<<< HEAD
         } // else {
         // dddx($categories);
         // }
+=======
+        } //else {
+            //dddx($categories);
+        //}
+>>>>>>> 1172c16 (up)
 
         return $this;
     }
