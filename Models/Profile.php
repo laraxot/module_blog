@@ -7,28 +7,28 @@ namespace Modules\Blog\Models;
 // --------- models --------
 
 // use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Modules\LU\Models\User;
-use Modules\LU\Casts\UserField;
-use Spatie\ModelStatus\HasStatuses;
-use Illuminate\Support\Facades\Auth;
-use Modules\Geo\Models\Traits\GeoTrait;
-use Modules\Xot\Models\Traits\WidgetTrait;
-use Modules\Blog\Models\Traits\PrivacyTrait;
-use Modules\LU\Models\Traits\HasProfileTrait;
-use Modules\Ticket\Models\Traits\HasTicketTrait;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
+=======
+use Illuminate\Support\Facades\Auth;
+use Modules\Blog\Models\Traits\PrivacyTrait;
+use Modules\Geo\Models\Traits\GeoTrait;
+>>>>>>> 25f8a08 (Lint)
 use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
+<<<<<<< HEAD
 =======
 >>>>>>> c744a19 (up)
+=======
+>>>>>>> 25f8a08 (Lint)
 
 /**
  * Modules\Blog\Models\Profile.
@@ -106,6 +106,7 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
 =======
@@ -115,6 +116,9 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> 6e3c302 (Lint)
 =======
 >>>>>>> c744a19 (up)
+=======
+ *
+>>>>>>> 25f8a08 (Lint)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -168,18 +172,23 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
- * @property-read string $status
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
- * @property-read int|null $statuses_count
+ *
+ * @property string                                                                $status
+ * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
+ * @property int|null                                                              $statuses_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile currentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
  */
 class Profile extends BaseModelLang {
     use GeoTrait;
     use HasProfileTrait;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // use PrivacyTrait;
     use WidgetTrait;
@@ -189,6 +198,11 @@ class Profile extends BaseModelLang {
     use WidgetTrait;
      use HasStatuses;
 >>>>>>> c744a19 (up)
+=======
+    // use PrivacyTrait;
+    use WidgetTrait;
+    use HasStatuses;
+>>>>>>> 25f8a08 (Lint)
     // use HasTicketTrait;
     // use HasFactory;
 
