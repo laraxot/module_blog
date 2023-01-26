@@ -36,7 +36,8 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class ExtraFieldMorph extends BaseMorphPivot {
+class ExtraFieldMorph extends BaseMorphPivot
+{
     /**
      * @var string[]
      */

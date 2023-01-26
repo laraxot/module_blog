@@ -26,6 +26,7 @@ class PersonalInfoAction extends XotBasePanelAction
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function handle(): Renderable
     {
         if (null == $this->panel) {
@@ -35,6 +36,10 @@ class PersonalInfoAction extends XotBasePanelAction
         if (null === $this->panel) {
 >>>>>>> 27d1a3f (up)
 =======
+=======
+    public function handle(): Renderable
+    {
+>>>>>>> 42ca46e (up)
         if (null == $this->panel) {
 >>>>>>> 1172c16 (up)
             throw new \Exception('this->panel is null');

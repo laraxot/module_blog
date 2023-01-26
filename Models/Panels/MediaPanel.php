@@ -41,11 +41,16 @@ class MediaPanel extends XotBasePanel
      * @param Media $row
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function optionLabel($row): string
     {
 =======
     public function optionLabel($row): string {
 >>>>>>> a780d70 (up)
+=======
+    public function optionLabel($row): string
+    {
+>>>>>>> 42ca46e (up)
         return (string) $row->name;
     }
 

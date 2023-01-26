@@ -9,16 +9,19 @@ use Illuminate\Queue\SerializesModels;
 /**
  * Class BlogPostWasUpdated.
  */
-class BlogPostWasUpdated {
+class BlogPostWasUpdated
+{
     use SerializesModels;
 
-    public function __construct() {
+    public function __construct()
+    {
     }
 
     /**
      * @return array
      */
-    public function broadcastOn() {
+    public function broadcastOn()
+    {
         return [];
     }
 }

@@ -22,11 +22,13 @@ use Illuminate\Contracts\Validation\Rule;
 /**
  * Class FiveCharactersRule.
  */
-class FiveCharactersRule implements Rule {
+class FiveCharactersRule implements Rule
+{
     /**
      * Create a new rule instance.
      */
-    public function __construct() {
+    public function __construct()
+    {
     }
 
     /**
@@ -37,7 +39,8 @@ class FiveCharactersRule implements Rule {
      *
      * @return bool
      */
-    public function passes($attribute, $value) {
+    public function passes($attribute, $value)
+    {
         return 5 === \strlen($value);
     }
 
@@ -46,7 +49,8 @@ class FiveCharactersRule implements Rule {
      *
      * @return string
      */
-    public function message() {
+    public function message()
+    {
         // return 'The :attribute must be 5 characters';
 <<<<<<< HEAD
 <<<<<<< HEAD
