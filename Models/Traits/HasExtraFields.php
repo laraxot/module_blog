@@ -9,10 +9,8 @@ namespace Modules\Blog\Models\Traits;
 
 use Modules\Blog\Models\ExtraField;
 
-trait HasExtraFields
-{
-    public function extraFields()
-    {
+trait HasExtraFields {
+    public function extraFields() {
         return $this->morphToMany(ExtraField::class, 'model', 'extra_field_morph');
     }
 }

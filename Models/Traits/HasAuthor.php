@@ -7,13 +7,11 @@ namespace Modules\Blog\Models\Traits;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Modules\LU\Models\User;
 
-trait HasAuthor
-{
+trait HasAuthor {
     /**
      * Undocumented function.
      */
-    public function author(): BelongsTo
-    {
+    public function author(): BelongsTo {
         // da valutare se linkare User o Profile
         // return $this->belongsTo(User::class, 'author_id');
         // dddx(xotModel('profile'));
@@ -25,8 +23,7 @@ trait HasAuthor
         return $this->belongsTo(get_class($profile), 'author_id', 'user_id');
     }
 
-    public function authoredBy(User $author): void
-    {
+    public function authoredBy(User $author): void {
         $this->authorRelation()->associate($author);
 
         $this->unsetRelation('authorRelation');
@@ -35,8 +32,7 @@ trait HasAuthor
     /**
      * Undocumented function.
      */
-    public function authorRelation(): BelongsTo
-    {
+    public function authorRelation(): BelongsTo {
         return $this->belongsTo(User::class, 'author_id')
         /*
         ->withDefault(
@@ -50,8 +46,7 @@ trait HasAuthor
         ;
     }
 
-    public function isAuthoredBy(User $user): bool
-    {
+    public function isAuthoredBy(User $user): bool {
         // 43   Call to an undefined method Illuminate\Database\Eloquent\Builder<Modules\Blog\Models\Article>::is().
         // return $this->author()->is($user);
         if (null === $this->author) {

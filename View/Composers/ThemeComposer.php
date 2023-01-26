@@ -11,6 +11,7 @@ use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ThemeComposer {
 <<<<<<< HEAD
     /**
@@ -22,6 +23,9 @@ class ThemeComposer {
 class ThemeComposer
 {
 >>>>>>> aff4d2d (rebase)
+=======
+class ThemeComposer {
+>>>>>>> f0ffa9e (rebase)
     /*
      * ---.
 
@@ -37,8 +41,7 @@ class ThemeComposer
      *
      * @return Collection<Article>
      */
-    public function getFeaturedArticles(): Collection
-    {
+    public function getFeaturedArticles(): Collection {
         return Article::query()->limit(10)
             ->orderBy('created_at', 'desc')
             ->get();
@@ -67,8 +70,7 @@ class ThemeComposer
      * ---.
      *  $latest_articles = $article->published()->publishedUntilToday()->orderBy('publish_date', 'desc')->take(3)->get();
      */
-    public function getLatestArticles(): Collection
-    {
+    public function getLatestArticles(): Collection {
         $rows = Article::published()
             ->publishedUntilToday()
             ->orderBy('published_at', 'desc')
@@ -82,8 +84,7 @@ class ThemeComposer
      * ---.
      *  $authors = $user->userIsAuthor()->take(4)->get();
      */
-    public function getAuthors(): Collection
-    {
+    public function getAuthors(): Collection {
         return collect([]);
     }
 
@@ -91,22 +92,19 @@ class ThemeComposer
      * ---.
      *  $navCategories = Category::has('articles', '>', '0')->take(8)->get();
      */
-    public function getNavCategories(): Collection
-    {
+    public function getNavCategories(): Collection {
         $res = Category::ofType('article')->get();
 
         return $res;
     }
 
-     public function getArticleCategories(): Collection
-     {
+     public function getArticleCategories(): Collection {
          $res = Category::ofType('article')->get();
 
          return $res;
      }
 
-     public function getArticleCategoriesOptions(): Collection
-     {
+     public function getArticleCategoriesOptions(): Collection {
          $options = $this->getArticleCategories()->pluck('name', 'id');
 
          return $options;
@@ -116,8 +114,7 @@ class ThemeComposer
      * ----.
      * $footerAuthors = User::userIsAuthor()->take(8)->get();.
      */
-    public function getFooterAuthors(): Collection
-    {
+    public function getFooterAuthors(): Collection {
         $profile_class = ProfileService::make()->getProfileClass();
         $profile = app($profile_class);
         if (! method_exists($profile_class, 'articles')) {
@@ -133,8 +130,7 @@ class ThemeComposer
      * ----.
      *  $footerCategories = Category::has('articles', '>', '0')->take(8)->get();.
      */
-    public function getFooterCategories(): Collection
-    {
+    public function getFooterCategories(): Collection {
         return Category::ofType('article')->take(8)->get();
     }
 
@@ -164,8 +160,7 @@ class ThemeComposer
      *        ->take(3)
      *        ->get();.
      */
-    public function getMoreArticles(Article $article): Collection
-    {
+    public function getMoreArticles(Article $article): Collection {
         $categories_ids = $article->categories->modelKeys();
         $rows = Article::published()
             ->publishedUntilToday()
@@ -181,8 +176,7 @@ class ThemeComposer
      * ----.
      *   $articles = $model->with(['tags', 'category'])->orderBy('publish_date', 'desc')->paginate(10);.
      */
-    public function getPaginatedArticles(int $per_page): \Illuminate\Pagination\LengthAwarePaginator
-    {
+    public function getPaginatedArticles(int $per_page): \Illuminate\Pagination\LengthAwarePaginator {
         // Too few arguments to function Modules\Blog\Models\Article::scopeCategory(), 1 passed in
         $rows = Article::with(['tags' /* , 'category' */])
             ->orderBy('published_at', 'desc')
@@ -191,8 +185,7 @@ class ThemeComposer
         return $rows;
     }
 
-    public function getPaginatedArticlesByAuthor(int $user_id): \Illuminate\Pagination\LengthAwarePaginator
-    {
+    public function getPaginatedArticlesByAuthor(int $user_id): \Illuminate\Pagination\LengthAwarePaginator {
         $rows = Article::published()
             ->publishedUntilToday()
             ->author($user_id)
@@ -206,8 +199,7 @@ class ThemeComposer
      * Undocumented function
      *  $articles = $article->published()->publishedUntilToday()->tag($tag->id)->orderBy('publish_date', 'desc')->paginate(10);.
      */
-    public function getPaginatedArticlesByTag(string $tag): \Illuminate\Pagination\LengthAwarePaginator
-    {
+    public function getPaginatedArticlesByTag(string $tag): \Illuminate\Pagination\LengthAwarePaginator {
         $rows = Article::published()
             ->publishedUntilToday()
             ->withAnyTags([$tag])
@@ -225,8 +217,7 @@ class ThemeComposer
      *       ->orderBy('publish_date', 'desc')
      *       ->paginate(10);.
      */
-    public function getPaginatedArticlesByCategoryId(int $id): \Illuminate\Pagination\LengthAwarePaginator
-    {
+    public function getPaginatedArticlesByCategoryId(int $id): \Illuminate\Pagination\LengthAwarePaginator {
         $rows = Article::published()
             ->publishedUntilToday()
             ->withCategories($id)
@@ -273,6 +264,7 @@ class ThemeComposer
 <<<<<<< HEAD
         // return 'aaa';
     // }
+<<<<<<< HEAD
 =======
         //return 'aaa';
     //}
@@ -317,7 +309,14 @@ class ThemeComposer
     public function getCardEvents(): Collection
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 >>>>>>> aff4d2d (rebase)
+=======
+=======
+
+    public function getCardEvents(): Collection {
+>>>>>>> afa2edf (Lint)
+>>>>>>> f0ffa9e (rebase)
         $str = '[
             {
               "date": "26",
@@ -396,6 +395,7 @@ class ThemeComposer
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCardPlaces(): Collection {
 =======
     public function getCardPlaces():Collection {
@@ -408,6 +408,8 @@ class ThemeComposer
 >>>>>>> e9dc7f3 (rebase)
 =======
 >>>>>>> aff4d2d (rebase)
+=======
+>>>>>>> f0ffa9e (rebase)
     public function getCardPlaces(): Collection {
 =======
     public function getCardPlaces():Collection {
@@ -425,7 +427,13 @@ class ThemeComposer
     public function getCardPlaces(): Collection
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 >>>>>>> aff4d2d (rebase)
+=======
+=======
+    public function getCardPlaces(): Collection {
+>>>>>>> afa2edf (Lint)
+>>>>>>> f0ffa9e (rebase)
         $str = '[
             {
               "category": "Categoria",

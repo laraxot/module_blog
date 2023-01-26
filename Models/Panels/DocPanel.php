@@ -11,8 +11,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class DocPanel.
  */
-class DocPanel extends XotBasePanel
-{
+class DocPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -27,8 +26,7 @@ class DocPanel extends XotBasePanel
     //	'rules_messages' => ['it'=>['required'=>'Nome Obbligatorio']],
     //	'value'=>'..',
 
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -76,8 +74,7 @@ class DocPanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }
