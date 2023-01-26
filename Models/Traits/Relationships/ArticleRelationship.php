@@ -29,6 +29,7 @@ trait ArticleRelationship {
     public function articles(): HasMany {
         return $this->hasMany(Article::class, 'parent_id', 'id');
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +39,9 @@ trait ArticleRelationship {
 >>>>>>> 47ddca0 (up)
 =======
 >>>>>>> d6d0466 (Lint)
+=======
+    /* -- usiamo spatie
+>>>>>>> 7e45013 (up)
     public function images(): MorphMany { // da rimettere spatie
         return $this->morphMany(Image::class, 'post');
     }
