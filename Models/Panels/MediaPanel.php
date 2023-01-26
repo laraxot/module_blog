@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Modules\Blog\Models\Media;
 // --- Services --
 
@@ -13,6 +14,12 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 =======
 >>>>>>> 315e874 (up)
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+// --- Services --
+
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> c4fb14d (Lint)
 
 class MediaPanel extends XotBasePanel {
     /**
