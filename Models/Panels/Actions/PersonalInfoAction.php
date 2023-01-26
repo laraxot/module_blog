@@ -34,6 +34,7 @@ class PersonalInfoAction extends XotBasePanelAction {
     public function handle(): Renderable {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null == $this->panel) {
 =======
        
@@ -41,6 +42,9 @@ class PersonalInfoAction extends XotBasePanelAction {
 >>>>>>> 056bec8 (Lint)
         if (null === $this->panel) {
 >>>>>>> 883dd21 (up)
+=======
+        if (null == $this->panel) {
+>>>>>>> ea58237 (up)
             throw new \Exception('this->panel is null');
         }
 
