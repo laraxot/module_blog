@@ -193,12 +193,27 @@ trait HasCategory {
         $categories = $this->prepareCategoryIds($categories);
         // dddx(is_array( $categories));
         // Sync model categories
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> d52b11e (rebase)
         // if (\is_array($categories)) {
         $this->categories()->sync($categories, $detaching);
         // } // else {
         // dddx($categories);
         // }
+<<<<<<< HEAD
+=======
+=======
+        if (\is_array($categories)) {
+            $this->categories()->sync($categories, $detaching);
+        } //else {
+            //dddx($categories);
+        //}
+>>>>>>> ea58237 (up)
+
+>>>>>>> d52b11e (rebase)
         return $this;
     }
 
