@@ -22,6 +22,14 @@ use Modules\Lang\Models\Post;
 >>>>>>> 6b1fa56 (.)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
+<<<<<<< HEAD
+=======
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+// -------- services --------
+//use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+
+// -------- bases -----------
+>>>>>>> 5a5000f (up)
 
 // -------- services --------
 // use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
