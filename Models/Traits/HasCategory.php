@@ -217,6 +217,7 @@ trait HasCategory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } //else {
             //dddx($categories);
         //}
@@ -238,9 +239,15 @@ trait HasCategory {
         // dddx($categories);
         // }
 =======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 1fdd40b (rebase)
+=======
         } //else {
             //dddx($categories);
         //}
+<<<<<<< HEAD
 >>>>>>> 1172c16 (up)
 <<<<<<< HEAD
 >>>>>>> 37f274f (rebase)
@@ -251,6 +258,9 @@ trait HasCategory {
         // }
 >>>>>>> 7333c06 (Lint)
 >>>>>>> c5a3a82 (rebase)
+=======
+>>>>>>> ea58237 (up)
+>>>>>>> 1fdd40b (rebase)
 
 >>>>>>> d52b11e (rebase)
         return $this;
