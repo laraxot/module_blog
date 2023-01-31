@@ -21,20 +21,25 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Class HomePanelPolicy.
  */
-class HomePanelPolicy extends XotBasePanelPolicy {
-    public function artisan(?UserContract $user, PanelContract $panel): bool {
+class HomePanelPolicy extends XotBasePanelPolicy
+{
+    public function artisan(?UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function test(UserContract $user, PanelContract $panel): bool {
+    public function test(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function home(?UserContract $user, PanelContract $panel): bool {
+    public function home(?UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function dashboard(?UserContract $user, PanelContract $panel): bool {
+    public function dashboard(?UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 }
