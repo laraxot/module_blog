@@ -56,6 +56,10 @@ use Modules\Rating\Contracts\HasLikeContract;
 // use Modules\Tag\Models\Traits\HasTagTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
+<<<<<<< HEAD
+=======
+use Modules\UI\Contracts\HasLikeContract;
+>>>>>>> 8dd23ec (up)
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
