@@ -58,12 +58,15 @@ use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\UI\Contracts\HasLikeContract;
 >>>>>>> 8dd23ec (up)
 =======
 use Modules\Rating\Contracts\HasLikeContract;
 >>>>>>> a71ed99 (up)
+=======
+>>>>>>> d7cf20b (Lint)
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
