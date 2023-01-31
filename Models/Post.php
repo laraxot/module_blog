@@ -185,7 +185,8 @@ class Post extends Model {
 
     public function setTitleAttribute(string $value): void {
         $this->attributes['title'] = $value;
-        $this->attributes['guid'] = Str::slug($value);
+        // $this->attributes['guid'] = Str::slug($value);
+        $this->attributes['guid'] = (string) str($value)->slug();
     }
 
     /**
@@ -222,7 +223,8 @@ class Post extends Model {
         if ('' === $value) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
-        $value = Str::slug($value);
+        // $value = Str::slug($value);
+        $value = str($value)->slug();
         $this->guid = $value;
         $this->save();
 
