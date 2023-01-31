@@ -8,6 +8,7 @@ namespace Modules\Blog\Models\Panels\Actions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
@@ -20,13 +21,20 @@ use Modules\Lang\Models\Post;
 =======
 // -------- models -----------
 >>>>>>> 6b1fa56 (.)
+=======
+>>>>>>> 8513cb9 (rebase)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
 =======
+=======
+// -------- models -----------
+>>>>>>> a91a603 (Lint)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Lang\Models\Post;
+
 // -------- services --------
-//use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+// use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
 >>>>>>> 5a5000f (up)
