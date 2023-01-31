@@ -10,6 +10,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 <<<<<<< HEAD
@@ -47,6 +48,19 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
+=======
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+<<<<<<< HEAD
+<<<<<<< HEAD
+use Illuminate\Support\Facades\Auth;
+use Modules\Blog\Models\Traits\PrivacyTrait;
+=======
+use Illuminate\Support\Facades\Auth;
+use Modules\Blog\Models\Traits\PrivacyTrait;
+use Modules\Geo\Models\Traits\GeoTrait;
+>>>>>>> 25f8a08 (Lint)
+>>>>>>> a6cf74c (rebase)
 use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
@@ -55,14 +69,20 @@ use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a6cf74c (rebase)
 =======
 >>>>>>> c744a19 (up)
 =======
 >>>>>>> 25f8a08 (Lint)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> c744a19 (up)
 >>>>>>> baed241 (rebase)
+=======
+>>>>>>> a6cf74c (rebase)
 
 /**
  * Modules\Blog\Models\Profile.
@@ -153,12 +173,15 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
 =======
 >>>>>>> 1a0a1c9 (rebase)
 =======
 >>>>>>> baed241 (rebase)
+=======
+>>>>>>> a6cf74c (rebase)
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
 =======
@@ -170,6 +193,7 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> 6e3c302 (Lint)
 =======
 >>>>>>> c744a19 (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
  *
@@ -193,6 +217,11 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> 1a0a1c9 (rebase)
 =======
 >>>>>>> baed241 (rebase)
+=======
+=======
+ *
+>>>>>>> 25f8a08 (Lint)
+>>>>>>> a6cf74c (rebase)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -246,7 +275,9 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,11 +431,16 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
 >>>>>>> 8192562 (rebase)
 =======
+=======
+ *
+>>>>>>> a6cf74c (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
- * @property-read string $status
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
- * @property-read int|null $statuses_count
+ *
+ * @property string                                                                $status
+ * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
+ * @property int|null                                                              $statuses_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile currentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
 >>>>>>> baed241 (rebase)
@@ -454,8 +490,11 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> baed241 (rebase)
+=======
+>>>>>>> a6cf74c (rebase)
     // use PrivacyTrait;
     use WidgetTrait;
     use HasStatuses;
@@ -465,13 +504,19 @@ class Profile extends BaseModelLang
      use HasStatuses;
 >>>>>>> c744a19 (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a6cf74c (rebase)
 =======
     // use PrivacyTrait;
     use WidgetTrait;
     use HasStatuses;
 >>>>>>> 25f8a08 (Lint)
+<<<<<<< HEAD
 =======
 >>>>>>> baed241 (rebase)
+=======
+>>>>>>> a6cf74c (rebase)
     // use HasTicketTrait;
     // use HasFactory;
 
