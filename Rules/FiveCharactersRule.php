@@ -17,6 +17,7 @@ namespace Modules\Blog\Rules;
 * https://marabesi.com/php/2017/05/31/laravel-custom-validator.html
 **/
 
+use Exception;
 use Illuminate\Contracts\Validation\Rule;
 
 /**
@@ -50,6 +51,9 @@ class FiveCharactersRule implements Rule {
         // return 'The :attribute must be 5 characters';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f930b9f (rebase)
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
@@ -60,6 +64,7 @@ class FiveCharactersRule implements Rule {
         if(!is_string($res)){
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
+<<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
         $res = trans('validation.only_uppercase');
@@ -68,6 +73,9 @@ class FiveCharactersRule implements Rule {
         }
 
 >>>>>>> a822353 (.)
+=======
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
         return $res;
     }
 }
