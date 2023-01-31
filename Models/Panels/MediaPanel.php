@@ -30,6 +30,7 @@ use Modules\Blog\Models\Media;
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b022d6c (up)
 =======
 use Modules\Xot\Contracts\RowsContract;
@@ -43,6 +44,11 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> 7424c65 (rebase)
+=======
+use Modules\Xot\Contracts\RowsContract;
+=======
+>>>>>>> 315e874 (up)
+>>>>>>> 781794c (rebase)
 
 class MediaPanel extends XotBasePanel {
     /**
