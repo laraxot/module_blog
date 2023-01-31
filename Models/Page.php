@@ -119,6 +119,7 @@ class Page extends BaseModel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 275df8b (rebase)
 =======
@@ -141,6 +142,10 @@ class Page extends BaseModel {
             // dddx($pages);
 >>>>>>> b8c59fa (Lint)
 >>>>>>> 944a6f3 (rebase)
+=======
+            //dddx($pages);
+        
+>>>>>>> e535ded (.)
         }
 
         // dddx($pages->all());
