@@ -243,6 +243,7 @@ class Category extends Model {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function scopeOfType(Builder $query, string $type): Builder {
     public function scopeOfType(Builder $query, string $type): Builder {
 =======
@@ -260,11 +261,19 @@ class Category extends Model {
     public function scopeOfType(Builder $query, string $type): Builder {
 >>>>>>> c24d571 (Lint)
 =======
+=======
+>>>>>>> 10087ae (rebase)
     public function scopeOfType(Builder $query, string $type): Builder {
 =======
     public function scopeOfType(Builder $query, string $type):Builder {
 >>>>>>> 7fdf4e1 (up)
+<<<<<<< HEAD
 >>>>>>> 87f37a6 (rebase)
+=======
+=======
+    public function scopeOfType(Builder $query, string $type): Builder {
+>>>>>>> 134e178 (Lint)
+>>>>>>> 10087ae (rebase)
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){

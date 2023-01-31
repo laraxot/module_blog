@@ -222,10 +222,14 @@ class ThemeComposer {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // public function compose(array ...$args):string {
 =======
     //public function compose(array ...$args):string {
 >>>>>>> 7fdf4e1 (up)
+=======
+    // public function compose(array ...$args):string {
+>>>>>>> 134e178 (Lint)
         /*
         dddx(
             [
@@ -235,6 +239,7 @@ class ThemeComposer {
         );
         */
         // error 404
+<<<<<<< HEAD
 <<<<<<< HEAD
         // return 'aaa';
     // }
@@ -246,6 +251,10 @@ class ThemeComposer {
         //return 'aaa';
     //}
 >>>>>>> 7fdf4e1 (up)
+=======
+        // return 'aaa';
+    // }
+>>>>>>> 134e178 (Lint)
 
 >>>>>>> 87f37a6 (rebase)
     public function getCardEvents(): Collection {
