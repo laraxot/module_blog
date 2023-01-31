@@ -5,6 +5,11 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Str;
+
+>>>>>>> 802efe7 (up)
 use Modules\Blog\Models\Label;
 
 class LabelFactory extends Factory {
@@ -21,7 +26,16 @@ class LabelFactory extends Factory {
      * @return array
      */
     public function definition() {
+
+
         return [
+<<<<<<< HEAD
+=======
+            'id' => $this->faker->randomNumber,
+            'title' => $this->faker->sentence,
+            'label_id' => $this->faker->integer,
+            'label_type' => $this->faker->word
+>>>>>>> 802efe7 (up)
         ];
     }
 }
