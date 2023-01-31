@@ -124,6 +124,7 @@ trait ArticleExtra {
             'slug' => $this->slug(),
         ];
     }
+    
 
 
 

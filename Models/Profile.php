@@ -714,6 +714,7 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
@@ -722,6 +723,10 @@ class Profile extends BaseModelLang
 >>>>>>> b996731 (rebase)
 =======
 >>>>>>> a3bd33a (rebase)
+=======
+=======
+>>>>>>> f930b9f (rebase)
+>>>>>>> bb3945d (rebase)
             $user = (object) [
                 'handle' => 'no-set',
 =======
@@ -729,11 +734,15 @@ class Profile extends BaseModelLang
                 'handle'=>'no-set',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb3945d (rebase)
 >>>>>>> f4041d1 (up)
 =======
             $user = (object) [
                 'handle' => 'no-set',
 >>>>>>> a822353 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b96306f (up)
@@ -750,6 +759,11 @@ class Profile extends BaseModelLang
 >>>>>>> b996731 (rebase)
 =======
 >>>>>>> a3bd33a (rebase)
+=======
+=======
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
+>>>>>>> bb3945d (rebase)
             ];
         }
 
@@ -767,6 +781,7 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
@@ -775,6 +790,10 @@ class Profile extends BaseModelLang
 >>>>>>> b996731 (rebase)
 =======
 >>>>>>> a3bd33a (rebase)
+=======
+=======
+>>>>>>> f930b9f (rebase)
+>>>>>>> bb3945d (rebase)
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
@@ -784,12 +803,16 @@ class Profile extends BaseModelLang
                 'first_name'=>'no-set',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb3945d (rebase)
 >>>>>>> f4041d1 (up)
 =======
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
 >>>>>>> a822353 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> b96306f (up)
@@ -807,6 +830,11 @@ class Profile extends BaseModelLang
 >>>>>>> b996731 (rebase)
 =======
 >>>>>>> a3bd33a (rebase)
+=======
+=======
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
+>>>>>>> bb3945d (rebase)
             ];
         }
 
