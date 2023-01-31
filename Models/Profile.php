@@ -685,12 +685,16 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 914e6a9 (rebase)
+=======
+>>>>>>> 4f828c4 (rebase)
 =======
     
 
 >>>>>>> b022d6c (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 5376387 (Lint)
@@ -709,6 +713,10 @@ class Profile extends BaseModelLang
 >>>>>>> 7424c65 (rebase)
 =======
 >>>>>>> 914e6a9 (rebase)
+=======
+=======
+>>>>>>> 5376387 (Lint)
+>>>>>>> 4f828c4 (rebase)
     // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany {
