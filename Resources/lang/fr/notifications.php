@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 5c25f35 (Lint)
 return [
     'approve_comment' => 'Approuver le commentaire',
     'reject_comment' => 'Rejeter le commentaire',
@@ -18,10 +23,14 @@ return [
     'approved_comment_mail_body' => 'Posté par :commentator_name',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     'enum_description_participating' => 'Lorsque vous participez',
 =======
     'enum_description_participating'=> 'Lorsque vous participez',
 >>>>>>> 6c99a65 (.)
+=======
+    'enum_description_participating' => 'Lorsque vous participez',
+>>>>>>> 5c25f35 (Lint)
     'enum_description_all' => 'Sur tous les commentaires',
     'enum_description_none' => 'Jamais',
     'enum_longdescription_participating' => 'Être notifié lors de la participation',
