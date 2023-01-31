@@ -197,6 +197,7 @@ trait HasCategory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // if (\is_array($categories)) {
         $this->categories()->sync($categories, $detaching);
         // } // else {
@@ -208,6 +209,8 @@ trait HasCategory {
 =======
 =======
 >>>>>>> 017e121 (rebase)
+=======
+>>>>>>> 12d4f1f (rebase)
         if (\is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
 <<<<<<< HEAD
@@ -224,6 +227,11 @@ trait HasCategory {
 =======
 >>>>>>> c5a3a82 (rebase)
         } // else {
+=======
+        // if (\is_array($categories)) {
+        $this->categories()->sync($categories, $detaching);
+        // } // else {
+>>>>>>> 6703626 (.)
         // dddx($categories);
         // }
 =======
