@@ -2,14 +2,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f98d93c (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
 >>>>>>> 5c25f35 (Lint)
+=======
+>>>>>>> f98d93c (rebase)
 return [
     'write_comment' => 'Deixe um comentário',
     'write_reply' => 'Deixe uma resposta',
@@ -31,11 +37,17 @@ return [
     'guest' => 'convidado',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f98d93c (rebase)
     'copied' => 'Link copiado',
 =======
     'copied' => 'Link copiado'
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 =======
     'copied' => 'Link copiado',
 >>>>>>> 5c25f35 (Lint)
+=======
+>>>>>>> f98d93c (rebase)
 ];

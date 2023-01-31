@@ -2,14 +2,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f98d93c (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
 >>>>>>> 5c25f35 (Lint)
+=======
+>>>>>>> f98d93c (rebase)
 return [
     'approve_comment' => 'Approva commento',
     'reject_comment' => 'Rifiuta commento',
