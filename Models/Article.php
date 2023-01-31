@@ -7,111 +7,31 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasTags;
-<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
-=======
-=======
->>>>>>> f930b9f (rebase)
-use Modules\Blog\Models\Traits\HasSlug;
-<<<<<<< HEAD
->>>>>>> c1a0d4d (up)
-// use Spatie\Sluggable\HasSlug;
-=======
-//use Spatie\Sluggable\HasSlug;
->>>>>>> 3757d50 (up)
-=======
->>>>>>> 313176e (rebase)
-=======
->>>>>>> bb3945d (rebase)
-=======
-=======
->>>>>>> f930b9f (rebase)
-use Modules\Blog\Models\Traits\HasSlug;
->>>>>>> 26c4c62 (.)
-use Modules\Blog\Models\Traits\HasTimestamps;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// use Modules\Blog\Models\Traits\PreparesSearch;
-=======
-<<<<<<< HEAD
-//use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> f4041d1 (up)
-=======
-// use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> a822353 (.)
-=======
-// use Modules\Blog\Models\Traits\HasTags;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bb2f9c5 (up)
-=======
->>>>>>> 8e6cec4 (up)
-// use Modules\Blog\Models\Traits\HasSlug;
-// use Spatie\Sluggable\HasSlug;
->>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
-use Modules\Blog\Models\Traits\HasTimestamps;
-<<<<<<< HEAD
-//use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> b96306f (up)
-<<<<<<< HEAD
->>>>>>> f930b9f (rebase)
-=======
-=======
-// use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> 1daf8a3 (Lint)
->>>>>>> af0dac7 (rebase)
-=======
-=======
->>>>>>> a3bd33a (rebase)
-// use Modules\Blog\Models\Traits\PreparesSearch;
-=======
-//use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> f4041d1 (up)
-<<<<<<< HEAD
->>>>>>> b996731 (rebase)
-=======
-=======
-// use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> a822353 (.)
->>>>>>> a3bd33a (rebase)
-=======
 //use Modules\Blog\Models\Traits\HasSlug;
-=======
-// use Modules\Blog\Models\Traits\HasSlug;
->>>>>>> bb94901 (rebase)
 // use Spatie\Sluggable\HasSlug;
+//use Spatie\Sluggable\HasSlug;
+use Modules\Blog\Models\Traits\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
-<<<<<<< HEAD
-//use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> b96306f (up)
-<<<<<<< HEAD
->>>>>>> f930b9f (rebase)
-<<<<<<< HEAD
->>>>>>> bb3945d (rebase)
-=======
-=======
-=======
 // use Modules\Blog\Models\Traits\PreparesSearch;
->>>>>>> 1daf8a3 (Lint)
->>>>>>> af0dac7 (rebase)
->>>>>>> bb94901 (rebase)
-=======
+//use Modules\Blog\Models\Traits\PreparesSearch;
+// use Modules\Blog\Models\Traits\PreparesSearch;
+// use Modules\Blog\Models\Traits\HasTags;
+// use Modules\Blog\Models\Traits\HasSlug;
+// use Spatie\Sluggable\HasSlug;
+//use Modules\Blog\Models\Traits\HasTimestamps;
+//use Modules\Blog\Models\Traits\PreparesSearch;
+// use Modules\Blog\Models\Traits\PreparesSearch;
+// use Modules\Blog\Models\Traits\PreparesSearch;
+//use Modules\Blog\Models\Traits\PreparesSearch;
+// use Modules\Blog\Models\Traits\PreparesSearch;
+//use Modules\Blog\Models\Traits\HasSlug;
+// use Modules\Blog\Models\Traits\HasSlug;
+// use Spatie\Sluggable\HasSlug;
+//use Modules\Blog\Models\Traits\HasTimestamps;
+//use Modules\Blog\Models\Traits\PreparesSearch;
+// use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\Blog\Models\Traits\HasTimestamps;
 <<<<<<< HEAD
 //use Modules\Blog\Models\Traits\PreparesSearch;
