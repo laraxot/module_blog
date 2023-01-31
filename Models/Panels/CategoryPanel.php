@@ -41,6 +41,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a3494d5 (rebase)
 =======
@@ -73,6 +74,10 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 1545477 (rebase)
 =======
 >>>>>>> adca127 (rebase)
+=======
+=======
+>>>>>>> a3494d5 (rebase)
+>>>>>>> c41b2a8 (rebase)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -87,6 +92,9 @@ class CategoryPanel extends XotBasePanel {
         return ''.$row->name;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c41b2a8 (rebase)
 >>>>>>> b022d6c (up)
 =======
         return (string)$row->name;
@@ -129,6 +137,7 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> ea58237 (up)
 =======
 >>>>>>> a780d70 (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a3494d5 (rebase)
 =======
@@ -220,6 +229,9 @@ class CategoryPanel extends XotBasePanel {
         return $name;
 >>>>>>> ea58237 (up)
 >>>>>>> 1fdd40b (rebase)
+=======
+>>>>>>> a3494d5 (rebase)
+>>>>>>> c41b2a8 (rebase)
     }
 
 <<<<<<< HEAD
