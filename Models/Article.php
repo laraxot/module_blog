@@ -61,6 +61,7 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\PreparesSearch;
 <<<<<<< HEAD
 =======
@@ -87,11 +88,19 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
 =======
+=======
+>>>>>>> a3bd33a (rebase)
 // use Modules\Blog\Models\Traits\PreparesSearch;
 =======
 //use Modules\Blog\Models\Traits\PreparesSearch;
 >>>>>>> f4041d1 (up)
+<<<<<<< HEAD
 >>>>>>> b996731 (rebase)
+=======
+=======
+// use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> a822353 (.)
+>>>>>>> a3bd33a (rebase)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Contracts\HasLikeContract;
 // use Modules\Tag\Models\Traits\HasTagTrait;
@@ -528,14 +537,25 @@ class Article extends BaseModelLang implements HasLikeContract
 <<<<<<< HEAD
 =======
     // use HasProfileTrait;
+<<<<<<< HEAD
     //use HasSlug;
 >>>>>>> f4041d1 (up)
+<<<<<<< HEAD
 >>>>>>> b996731 (rebase)
+<<<<<<< HEAD
 >>>>>>> 22a2215 (rebase)
+=======
+=======
+=======
+    // use HasSlug;
+>>>>>>> a822353 (.)
+>>>>>>> a3bd33a (rebase)
+>>>>>>> bf8a0d5 (rebase)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -550,8 +570,12 @@ class Article extends BaseModelLang implements HasLikeContract
 >>>>>>> 307d952 (rebase)
 =======
 >>>>>>> 22a2215 (rebase)
+=======
+>>>>>>> bf8a0d5 (rebase)
 <<<<<<< HEAD
     // use PreparesSearch;
+=======
+>>>>>>> a3bd33a (rebase)
 =======
     //use PreparesSearch;
 >>>>>>> f4041d1 (up)
@@ -562,8 +586,11 @@ class Article extends BaseModelLang implements HasLikeContract
     // use PreparesSearch;
 >>>>>>> a822353 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e8fc058 (rebase)
 =======
+=======
+>>>>>>> bf8a0d5 (rebase)
 =======
 =======
 >>>>>>> af0dac7 (rebase)
@@ -589,7 +616,12 @@ class Article extends BaseModelLang implements HasLikeContract
     //use PreparesSearch;
 >>>>>>> f4041d1 (up)
 >>>>>>> b996731 (rebase)
+<<<<<<< HEAD
 >>>>>>> 22a2215 (rebase)
+=======
+=======
+>>>>>>> a3bd33a (rebase)
+>>>>>>> bf8a0d5 (rebase)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
