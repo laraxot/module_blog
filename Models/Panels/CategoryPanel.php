@@ -43,12 +43,16 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> 648e6d8 (rebase)
 =======
 >>>>>>> a3494d5 (rebase)
 =======
 >>>>>>> 0088a11 (rebase)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 962cd73 (rebase)
@@ -84,6 +88,10 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> 355a234 (rebase)
+=======
+=======
+>>>>>>> 962cd73 (rebase)
+>>>>>>> 648e6d8 (rebase)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -155,11 +163,15 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 27d1a3f (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 648e6d8 (rebase)
 >>>>>>> 0088a11 (rebase)
 =======
 =======
         return (string) $row->name;
 >>>>>>> 5a12252 (Lint)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 962cd73 (rebase)
 =======
@@ -245,6 +257,9 @@ class CategoryPanel extends XotBasePanel {
 =======
 >>>>>>> 0088a11 (rebase)
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> 962cd73 (rebase)
+>>>>>>> 648e6d8 (rebase)
     }
 
 <<<<<<< HEAD
@@ -276,12 +291,15 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0b387a (rebase)
 =======
 >>>>>>> 1545477 (rebase)
 =======
 >>>>>>> adca127 (rebase)
+=======
+>>>>>>> 648e6d8 (rebase)
         // $rows = $this->row->all();
 
         $rows = Category::get();
@@ -360,6 +378,7 @@ class CategoryPanel extends XotBasePanel {
 =======
 =======
 >>>>>>> 962cd73 (rebase)
+<<<<<<< HEAD
 =======
 >>>>>>> 89d9d7e (rebase)
 =======
@@ -367,6 +386,8 @@ class CategoryPanel extends XotBasePanel {
 =======
 =======
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> 648e6d8 (rebase)
         // $rows = $this->row->all();
 
         $rows = Category::get();
@@ -376,12 +397,16 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 27d1a3f (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 648e6d8 (rebase)
 >>>>>>> 0088a11 (rebase)
 =======
 =======
         // $rows = $this->row->all();
         $rows = Category::all();
 >>>>>>> 5a12252 (Lint)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 962cd73 (rebase)
 =======
@@ -476,6 +501,9 @@ class CategoryPanel extends XotBasePanel {
 =======
 >>>>>>> 0088a11 (rebase)
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> 962cd73 (rebase)
+>>>>>>> 648e6d8 (rebase)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
