@@ -210,6 +210,7 @@ trait HasCategory {
             $this->categories()->sync($categories, $detaching);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } //else {
             //dddx($categories);
         //}
@@ -220,6 +221,8 @@ trait HasCategory {
         // }
 >>>>>>> 209739c (Lint)
 =======
+=======
+>>>>>>> c5a3a82 (rebase)
         } // else {
         // dddx($categories);
         // }
@@ -228,7 +231,15 @@ trait HasCategory {
             //dddx($categories);
         //}
 >>>>>>> 1172c16 (up)
+<<<<<<< HEAD
 >>>>>>> 37f274f (rebase)
+=======
+=======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 7333c06 (Lint)
+>>>>>>> c5a3a82 (rebase)
 
 >>>>>>> d52b11e (rebase)
         return $this;
