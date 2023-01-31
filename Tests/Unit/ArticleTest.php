@@ -13,4 +13,8 @@ class ArticleTest extends TestCase {
     public function testExample(): void {
         $this->assertTrue(true);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> da3c431 (up)
