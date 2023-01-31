@@ -13,6 +13,7 @@ trait ArticleMutator {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> de5af69 (up)
 trait ArticleMutator
@@ -27,6 +28,10 @@ trait ArticleMutator {
 >>>>>>> e0d1f4b (Lint)
 =======
 >>>>>>> de5af69 (up)
+=======
+trait ArticleMutator {
+    public function getParentIdAttribute(?int $value): ?int {
+>>>>>>> c24d571 (Lint)
         if (null !== $value) {
             return $value;
         }

@@ -17,6 +17,7 @@ class Article extends Component {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Article extends Component
 {
 >>>>>>> 71f0636 (up)
@@ -27,6 +28,9 @@ class Article extends Component {
 class Article extends Component
 {
 >>>>>>> de5af69 (up)
+=======
+class Article extends Component {
+>>>>>>> c24d571 (Lint)
     public array $attrs = [];
     public Model $row;
 
@@ -35,8 +39,7 @@ class Article extends Component
      *
      * @return void
      */
-    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '')
-    {
+    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '') {
         $this->attrs['class'] = $class;
         $this->attrs['style'] = $style;
         $this->attrs['id'] = $id;
@@ -46,8 +49,7 @@ class Article extends Component
     /**
      * Get the view / contents that represent the component.
      */
-    public function render(): Renderable
-    {
+    public function render(): Renderable {
         /**
          * @phpstan-var view-string
          */

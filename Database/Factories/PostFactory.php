@@ -18,6 +18,7 @@ use Module\Blog\Tests\TestSupport\Models\Post;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class PostFactory extends Factory {
     protected $model = Post::class;
 
@@ -44,6 +45,12 @@ class PostFactory extends Factory
     public function definition()
     {
 >>>>>>> de5af69 (up)
+=======
+class PostFactory extends Factory {
+    protected $model = Post::class;
+
+    public function definition() {
+>>>>>>> c24d571 (Lint)
         return [
             'title' => $this->faker->word,
         ];

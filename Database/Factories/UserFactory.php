@@ -18,6 +18,7 @@ use Module\Blog\Tests\TestSupport\Models\User;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class UserFactory extends Factory {
     protected $model = User::class;
 
@@ -44,6 +45,12 @@ class UserFactory extends Factory
     public function definition()
     {
 >>>>>>> de5af69 (up)
+=======
+class UserFactory extends Factory {
+    protected $model = User::class;
+
+    public function definition() {
+>>>>>>> c24d571 (Lint)
         return [
             'name' => $this->faker->name,
             'first_name' => $this->faker->firstName,

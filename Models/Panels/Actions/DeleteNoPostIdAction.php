@@ -15,6 +15,7 @@ class DeleteNoPostIdAction extends XotBasePanelAction {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class DeleteNoPostIdAction extends XotBasePanelAction
 {
 >>>>>>> 71f0636 (up)
@@ -25,6 +26,9 @@ class DeleteNoPostIdAction extends XotBasePanelAction {
 class DeleteNoPostIdAction extends XotBasePanelAction
 {
 >>>>>>> de5af69 (up)
+=======
+class DeleteNoPostIdAction extends XotBasePanelAction {
+>>>>>>> c24d571 (Lint)
     public bool $onContainer = true;
 
     public string $icon = '<i class="fas fa-heart-broken"></i>';
@@ -32,8 +36,7 @@ class DeleteNoPostIdAction extends XotBasePanelAction
     /**
      * @return mixed
      */
-    public function handle()
-    {
+    public function handle() {
         $rows = Post::query()
             ->whereNull('post_id')->delete();
 
