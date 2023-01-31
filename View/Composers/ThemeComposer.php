@@ -292,6 +292,7 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 87f37a6 (rebase)
     public function getCardEvents(): Collection {
 =======
@@ -317,6 +318,8 @@ class ThemeComposer {
 >>>>>>> 16670df (rebase)
 =======
 >>>>>>> 0f6aff8 (rebase)
+=======
+>>>>>>> b3e00df (rebase)
 <<<<<<< HEAD
     public function getCardEvents(): Collection {
 =======
@@ -332,12 +335,23 @@ class ThemeComposer {
 >>>>>>> 16670df (rebase)
 =======
 =======
+=======
+>>>>>>> e9dc7f3 (rebase)
     public function getCardEvents(): Collection {
 =======
     public function getCardEvents():Collection {
 >>>>>>> 725228b (up)
+<<<<<<< HEAD
 >>>>>>> 063c423 (rebase)
+<<<<<<< HEAD
 >>>>>>> 0f6aff8 (rebase)
+=======
+=======
+=======
+    public function getCardEvents(): Collection {
+>>>>>>> 8133ecc (Lint)
+>>>>>>> e9dc7f3 (rebase)
+>>>>>>> b3e00df (rebase)
         $str = '[
             {
               "date": "26",
@@ -414,6 +428,7 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCardPlaces(): Collection {
 =======
     public function getCardPlaces():Collection {
@@ -422,11 +437,19 @@ class ThemeComposer {
     public function getCardPlaces(): Collection {
 >>>>>>> 37feb52 (Lint)
 =======
+=======
+>>>>>>> e9dc7f3 (rebase)
     public function getCardPlaces(): Collection {
 =======
     public function getCardPlaces():Collection {
 >>>>>>> 725228b (up)
+<<<<<<< HEAD
 >>>>>>> 063c423 (rebase)
+=======
+=======
+    public function getCardPlaces(): Collection {
+>>>>>>> 8133ecc (Lint)
+>>>>>>> e9dc7f3 (rebase)
         $str = '[
             {
               "category": "Categoria",
