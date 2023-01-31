@@ -9,15 +9,21 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
+=======
+>>>>>>> c4fb14d (Lint)
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
 <<<<<<< HEAD
 =======
 use Modules\Xot\Models\Panels\Actions\ArtisanAction;
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
+=======
+>>>>>>> c4fb14d (Lint)
 
 /**
  * Class HomePanel.
