@@ -14,10 +14,13 @@ trait ArticleMutator {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> a3bd33a (rebase)
     public function getParentIdAttribute(?int $value): ?int {
 =======
     /**
@@ -29,6 +32,7 @@ trait ArticleMutator {
 =======
     public function getParentIdAttribute(?int $value): ?int {
 >>>>>>> a822353 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> b96306f (up)
 <<<<<<< HEAD
@@ -64,6 +68,8 @@ trait ArticleMutator {
     public function getParentIdAttribute(?int $value):?int {
 >>>>>>> f4041d1 (up)
 >>>>>>> b996731 (rebase)
+=======
+>>>>>>> a3bd33a (rebase)
         if (null !== $value) {
             return $value;
         }
