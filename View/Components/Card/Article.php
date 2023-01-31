@@ -17,6 +17,7 @@ use Modules\Cms\Services\PanelService;
 class Article extends Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class Article extends Component
 {
@@ -24,13 +25,18 @@ class Article extends Component
 =======
 class Article extends Component {
 >>>>>>> f0ffa9e (rebase)
+=======
+>>>>>>> 03e54aa (rebase)
     public array $attrs = [];
 =======
     public array $attrs=[];
 >>>>>>> 071b412 (up)
+<<<<<<< HEAD
 =======
     public array $attrs = [];
 >>>>>>> 7ae4511 (Lint)
+=======
+>>>>>>> 03e54aa (rebase)
     public Model $row;
 
     /**
