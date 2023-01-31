@@ -88,13 +88,22 @@ use Modules\Rating\Contracts\HasLikeContract;
 use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 94cba72 (rebase)
 =======
+=======
+>>>>>>> 31101c4 (rebase)
 <<<<<<< HEAD
 =======
 use Modules\UI\Contracts\HasLikeContract;
 >>>>>>> 8dd23ec (up)
+<<<<<<< HEAD
 >>>>>>> f8b22e7 (rebase)
+=======
+=======
+use Modules\Rating\Contracts\HasLikeContract;
+>>>>>>> a71ed99 (up)
+>>>>>>> 31101c4 (rebase)
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
