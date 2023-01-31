@@ -8,6 +8,7 @@ namespace Modules\Blog\Models\Traits\Mutators;
  * Undocumented trait.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 trait ArticleMutator {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,7 +46,14 @@ trait ArticleMutator
     public function getParentIdAttribute(?int $value): ?int
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 >>>>>>> aff4d2d (rebase)
+=======
+=======
+trait ArticleMutator {
+    public function getParentIdAttribute(?int $value): ?int {
+>>>>>>> afa2edf (Lint)
+>>>>>>> f0ffa9e (rebase)
         if (null !== $value) {
             return $value;
         }

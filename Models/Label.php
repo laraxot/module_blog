@@ -14,8 +14,7 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class Label extends BaseModel
-{
+class Label extends BaseModel {
     /**
      * @var string[]
      */

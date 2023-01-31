@@ -12,8 +12,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class PlacePanel.
  */
-class PlacePanel extends XotBasePanel
-{
+class PlacePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -33,16 +32,14 @@ class PlacePanel extends XotBasePanel
     /**
      * The relationships that should be eager loaded on index queries.
      */
-    public function with(): array
-    {
+    public function with(): array {
         return [];
     }
 
     /**
      * Get the fields displayed by the resource.
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -134,8 +131,7 @@ class PlacePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }
