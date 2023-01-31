@@ -40,7 +40,6 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @property int|null                                                                 $rating_objectives_count
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
  * @property mixed                                                                    $url
- *
  * @method static \Modules\Blog\Database\Factories\CommentFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       newQuery()
@@ -60,7 +59,6 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       withRating()
- *
  * @mixin \Eloquent
  */
 class Comment extends BaseModelLang {
