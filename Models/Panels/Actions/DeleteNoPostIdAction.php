@@ -6,6 +6,14 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
+<<<<<<< HEAD
+=======
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+// -------- services --------
+//use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+
+// -------- bases -----------
+>>>>>>> 5a5000f (up)
 
 /**
  * Class DeleteNoPostIdAction.
