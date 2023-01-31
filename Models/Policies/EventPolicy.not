@@ -8,6 +8,9 @@ namespace Modules\Blog\Models\Policies;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0bd72b3 (rebase)
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 =======
 use Modules\Xot\Models\Policies\XotBasePolicy;
@@ -24,6 +27,7 @@ se estendo
 Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models\User $user, Modules\Blog\Models\Event $post) should be compatible with Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy::index(Modules\LU\Models\User $user, $post)
 =======
 use Modules\Xot\Models\Policies\XotBasePolicy;
+<<<<<<< HEAD
 =======
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 >>>>>>> 1a0acfe (.)
@@ -43,6 +47,14 @@ Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models
 =======
 Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models\User $user, Modules\Blog\Models\Event $post) should be compatible with Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy::index(Modules\LU\Models\User $user, $post)
 >>>>>>> 0880c93 (.)
+=======
+
+/*
+use Modules\Xot\Models\Policies\XotBasePolicy;
+se estendo
+Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models\User $user, Modules\Blog\Models\Event $post) should be compatible with Modules\Xot\Models\Policies\XotBasePolicy::index(Modules\LU\Models\User $user, $post)
+>>>>>>> a698d0d (up)
+>>>>>>> 0bd72b3 (rebase)
 */
 
 /**
@@ -52,10 +64,14 @@ Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0bd72b3 (rebase)
 class EventPolicy extends XotBasePanelPolicy {
 =======
 class EventPolicy extends XotBasePolicy {
 >>>>>>> a698d0d (up)
+<<<<<<< HEAD
 =======
 class EventPolicy extends XotBasePanelPolicy {
 >>>>>>> cb44397 (.)
@@ -65,4 +81,6 @@ class EventPolicy extends XotBasePolicy {
 =======
 class EventPolicy extends XotBasePanelPolicy {
 >>>>>>> ce00485 (.)
+=======
+>>>>>>> 0bd72b3 (rebase)
 }
