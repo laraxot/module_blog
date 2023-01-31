@@ -40,6 +40,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a3494d5 (rebase)
 =======
@@ -70,6 +71,8 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> d0b387a (rebase)
 =======
 >>>>>>> 1545477 (rebase)
+=======
+>>>>>>> adca127 (rebase)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -96,6 +99,7 @@ class CategoryPanel extends XotBasePanel {
 =======
         $name=$row->name;
         if(is_string($name)){
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         $name = $row->name;
@@ -184,11 +188,18 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 056bec8 (Lint)
 >>>>>>> d0b387a (rebase)
 =======
+=======
+=======
+        $name = $row->name;
+        if (is_string($name)) {
+>>>>>>> 92e5287 (Lint)
+>>>>>>> adca127 (rebase)
             return $name;
         }
-        if(is_array($name)){
-            return implode('-',$name); 
+        if (is_array($name)) {
+            return implode('-', $name);
         }
+
         return '--';
 >>>>>>> dde14f6 (up)
 >>>>>>> 1545477 (rebase)
@@ -216,10 +227,13 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d0b387a (rebase)
 =======
 >>>>>>> 1545477 (rebase)
+=======
+>>>>>>> adca127 (rebase)
         // $rows = $this->row->all();
 
         $rows = Category::get();
@@ -243,6 +257,9 @@ class CategoryPanel extends XotBasePanel {
         $rows=Category::all();
 >>>>>>> dde14f6 (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> adca127 (rebase)
 =======
         // $rows = $this->row->all();
         /**
@@ -250,6 +267,7 @@ class CategoryPanel extends XotBasePanel {
          */
         $rows = Category::all();
 >>>>>>> 92e5287 (Lint)
+<<<<<<< HEAD
 =======
     public function optionsSelect():array {
 =======
@@ -371,6 +389,8 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> d0b387a (rebase)
 =======
 >>>>>>> 1545477 (rebase)
+=======
+>>>>>>> adca127 (rebase)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
