@@ -7,6 +7,7 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Http\Request;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Blog\Models\Media;
 // --- Services --
 
@@ -25,6 +26,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> c4fb14d (Lint)
 =======
+=======
+>>>>>>> 648f2e6 (rebase)
 use Modules\Blog\Models\Media;
 // --- Services --
 
@@ -48,7 +51,16 @@ use Modules\Xot\Contracts\RowsContract;
 use Modules\Xot\Contracts\RowsContract;
 =======
 >>>>>>> 315e874 (up)
+<<<<<<< HEAD
 >>>>>>> 781794c (rebase)
+=======
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+// --- Services --
+
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> c4fb14d (Lint)
+>>>>>>> 648f2e6 (rebase)
 
 class MediaPanel extends XotBasePanel {
     /**

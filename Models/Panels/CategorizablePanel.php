@@ -11,18 +11,27 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 781794c (rebase)
+=======
+>>>>>>> 648f2e6 (rebase)
 use Modules\Xot\Contracts\RowsContract;
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> c4fb14d (Lint)
 =======
 >>>>>>> 781794c (rebase)
+=======
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> c4fb14d (Lint)
+>>>>>>> 648f2e6 (rebase)
 
 class CategorizablePanel extends XotBasePanel {
     /**
