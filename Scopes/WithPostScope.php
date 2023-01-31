@@ -27,12 +27,18 @@ class WithPostScope implements Scope
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
+=======
+>>>>>>> af0dac7 (rebase)
         $model_class = get_class($model);
 =======
         $model_class =get_class($model);
 >>>>>>> b96306f (up)
+=======
+        $model_class = get_class($model);
+>>>>>>> 1daf8a3 (Lint)
         $model_name = basename($model_class);
         $lang = 'it';
 <<<<<<< HEAD
@@ -42,6 +48,7 @@ class WithPostScope implements Scope
 
 <<<<<<< HEAD
         $post_type = Str::snake($model_name);
+<<<<<<< HEAD
 <<<<<<< HEAD
         // $post_type = (string) str($model_name)->snake();
 =======
@@ -67,7 +74,13 @@ class WithPostScope implements Scope
 =======
         //$post_type = (string) str($model_name)->snake();
 >>>>>>> b96306f (up)
+<<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
+=======
+=======
+        // $post_type = (string) str($model_name)->snake();
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
 
 >>>>>>> e853350 (rebase)
         $builder->leftJoin($post_table.' as post', function ($join) use ($model_table, $lang, $post_type) {
