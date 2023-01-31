@@ -145,6 +145,7 @@ class HomePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             // ->limit(8)
             ->get()
             // ->take(8)
@@ -162,6 +163,12 @@ class HomePanel extends XotBasePanel {
             //->take(8)
             ;
 >>>>>>> 883dd21 (up)
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 056bec8 (Lint)
 
         return $navCategories;
     }
@@ -172,6 +179,7 @@ class HomePanel extends XotBasePanel {
     public function footerCategories(): Collection {
         $footerCategories = Category::query()
             ->has('articles', '>', 0)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             // ->limit(8)
@@ -188,6 +196,12 @@ class HomePanel extends XotBasePanel {
             //->take(8)
             ;
 >>>>>>> 883dd21 (up)
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 056bec8 (Lint)
 
         return $footerCategories;
     }

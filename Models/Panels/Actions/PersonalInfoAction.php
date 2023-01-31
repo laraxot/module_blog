@@ -18,7 +18,6 @@ use Modules\Theme\Services\ThemeService;
 =======
 >>>>>>> a91a603 (Lint)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Theme\Services\ThemeService;
 
 // -------- bases -----------
 
@@ -34,9 +33,12 @@ class PersonalInfoAction extends XotBasePanelAction {
 
     public function handle(): Renderable {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (null == $this->panel) {
 =======
        
+=======
+>>>>>>> 056bec8 (Lint)
         if (null === $this->panel) {
 >>>>>>> 883dd21 (up)
             throw new \Exception('this->panel is null');

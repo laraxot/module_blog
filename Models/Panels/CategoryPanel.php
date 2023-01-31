@@ -25,6 +25,7 @@ class CategoryPanel extends XotBasePanel {
     public function optionLabel($row): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $name = $row->name;
         // if (is_string($name)) {
         //    return $name;
@@ -40,12 +41,16 @@ class CategoryPanel extends XotBasePanel {
 =======
         return (string)$row->name;
 >>>>>>> 883dd21 (up)
+=======
+        return (string) $row->name;
+>>>>>>> 056bec8 (Lint)
     }
 
     /**
      * @return array
      */
     public function optionsSelect() {
+<<<<<<< HEAD
 <<<<<<< HEAD
         // $rows = $this->row->all();
 
@@ -54,6 +59,10 @@ class CategoryPanel extends XotBasePanel {
         //$rows = $this->row->all();
         $rows=Category::all();
 >>>>>>> 883dd21 (up)
+=======
+        // $rows = $this->row->all();
+        $rows = Category::all();
+>>>>>>> 056bec8 (Lint)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
