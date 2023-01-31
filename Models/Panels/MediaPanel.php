@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 914e6a9 (rebase)
 use Modules\Blog\Models\Media;
 // --- Services --
 
@@ -26,6 +29,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> c4fb14d (Lint)
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 648f2e6 (rebase)
 use Modules\Blog\Models\Media;
@@ -61,6 +65,14 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> c4fb14d (Lint)
 >>>>>>> 648f2e6 (rebase)
+=======
+use Modules\Blog\Models\Media;
+// --- Services --
+
+use Modules\Xot\Contracts\RowsContract;
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> b022d6c (up)
+>>>>>>> 914e6a9 (rebase)
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -73,6 +85,7 @@ class MediaPanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +107,11 @@ class MediaPanel extends XotBasePanel {
 =======
 >>>>>>> bc82fdc (Lint)
 >>>>>>> 7424c65 (rebase)
+=======
+=======
+
+>>>>>>> b022d6c (up)
+>>>>>>> 914e6a9 (rebase)
     /**
      * on select the option label.
      *
