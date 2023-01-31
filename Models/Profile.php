@@ -483,6 +483,7 @@ class Profile extends BaseModelLang
         return Attribute::make(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             get: fn ($value) => false, // ! empty($this->twitter()),
 =======
             get: fn ($value) => false, //! empty($this->twitter()),
@@ -490,6 +491,12 @@ class Profile extends BaseModelLang
 =======
             get: fn ($value) => false, // ! empty($this->twitter()),
 >>>>>>> 209739c (Lint)
+=======
+            get: fn ($value) => false, // ! empty($this->twitter()),
+=======
+            get: fn ($value) => false, //! empty($this->twitter()),
+>>>>>>> 1172c16 (up)
+>>>>>>> 37f274f (rebase)
         );
     }
 
