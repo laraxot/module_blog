@@ -215,9 +215,14 @@ trait HasCategory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 955c157 (rebase)
 =======
 >>>>>>> 37f274f (rebase)
+=======
+>>>>>>> c5a3a82 (rebase)
         } // else {
         // dddx($categories);
         // }
@@ -274,8 +279,19 @@ trait HasCategory {
 =======
 =======
 >>>>>>> 1172c16 (up)
+<<<<<<< HEAD
 >>>>>>> 37f274f (rebase)
+<<<<<<< HEAD
 >>>>>>> d2bbae9 (rebase)
+=======
+=======
+=======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 7333c06 (Lint)
+>>>>>>> c5a3a82 (rebase)
+>>>>>>> 955c157 (rebase)
 
         return $this;
     }
