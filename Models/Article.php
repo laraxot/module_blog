@@ -7,6 +7,7 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasTags;
 <<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
@@ -43,7 +44,13 @@ use Modules\Blog\Models\Traits\HasSlug;
 =======
 //use Spatie\Sluggable\HasSlug;
 >>>>>>> 3757d50 (up)
+<<<<<<< HEAD
 >>>>>>> d372a0c (rebase)
+=======
+=======
+use Modules\Blog\Models\Traits\HasSlug;
+>>>>>>> 26c4c62 (.)
+>>>>>>> 0bf2d02 (rebase)
 use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 use Spatie\ModelStatus\HasStatuses;
@@ -186,6 +193,7 @@ use Spatie\Tags\HasTags; // spatie tags
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 378fec2 (up)
 class Article extends BaseModelLang implements HasLikeContract {
 =======
@@ -202,6 +210,10 @@ class Article extends BaseModelLang implements HasLikeContract
 =======
 class Article extends BaseModelLang implements HasLikeContract {
 >>>>>>> c24d571 (Lint)
+=======
+class Article extends BaseModelLang implements HasLikeContract
+{
+>>>>>>> 0bf2d02 (rebase)
     use HasAuthor;
     use HasCategory;
     use HasLikes;
