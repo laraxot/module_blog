@@ -8,6 +8,10 @@ namespace Modules\Blog\Models\Panels\Actions;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
+<<<<<<< HEAD
+=======
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+>>>>>>> 5a5000f (up)
 
 // -------- bases -----------
 
