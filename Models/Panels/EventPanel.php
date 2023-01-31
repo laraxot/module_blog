@@ -12,8 +12,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class EventPanel.
  */
-class EventPanel extends XotBasePanel
-{
+class EventPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -22,8 +21,7 @@ class EventPanel extends XotBasePanel
     /**
      * Get the fields displayed by the resource.
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',

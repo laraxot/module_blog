@@ -7,8 +7,7 @@ namespace Modules\Blog\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Blog\Models\Category;
 
-class CategoryFactory extends Factory
-{
+class CategoryFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -21,8 +20,7 @@ class CategoryFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
             // 'id' => $this->faker->randomNumber()
         ];
