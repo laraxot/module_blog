@@ -43,5 +43,6 @@ use Modules\Blog\Models\Traits\HasCategory;
 class ExtraField extends BaseModel {
     use HasCategory;
 
-    protected $fillable = ['id', 'name', 'type', 'rules'];
+    protected $fillable = ['id', 'name', 'type',
+        'rules', 'options', 'attributes', 'collection_name'];
 }
