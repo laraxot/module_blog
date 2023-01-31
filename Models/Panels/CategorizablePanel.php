@@ -9,10 +9,14 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 // --- Services --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Xot\Contracts\RowsContract;
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> c4fb14d (Lint)
 
 class CategorizablePanel extends XotBasePanel {
     /**
