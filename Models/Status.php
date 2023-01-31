@@ -17,6 +17,7 @@ use Spatie\ModelStatus\Status as BaseStatus;
  * @property \Illuminate\Support\Carbon|null               $created_at
  * @property \Illuminate\Support\Carbon|null               $updated_at
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $model
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Status newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Status newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Status query()
@@ -27,6 +28,7 @@ use Spatie\ModelStatus\Status as BaseStatus;
  * @method static \Illuminate\Database\Eloquent\Builder|Status whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Status whereReason($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Status whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Status extends BaseStatus {
