@@ -45,6 +45,7 @@
         "orchestra/testbench": "^7.15",
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 802efe7 (up)
         "fakerphp/faker": "^1.14",
@@ -58,6 +59,13 @@
         "nunomaduro/larastan": "^2.2",
         "orchestra/testbench": "^7.15",
 >>>>>>> 802efe7 (up)
+=======
+        "fakerphp/faker": "^1.14",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "inertiajs/inertia-laravel": "^0.6.3",
+        "nette/php-generator": "^3.5",
+>>>>>>> 6b00753 (.)
+>>>>>>> 2a99ba1 (rebase)
         "pestphp/pest": "^1.22",
         "pestphp/pest-plugin-laravel": "^1.3",
         "phpstan/extension-installer": "^1.1",
@@ -68,17 +76,24 @@
         "spatie/phpunit-snapshot-assertions": "^4.2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "spatie/test-time": "^1.2",
         "nesbot/carbon": "^2.63"
 =======
 =======
 >>>>>>> b2584c5 (rebase)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2a99ba1 (rebase)
+>>>>>>> 4039f82 (rebase)
         "spatie/test-time": "^1.2"
 =======
         "spatie/test-time": "^1.2",
         "nesbot/carbon": "^2.63"
 >>>>>>> 6b00753 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ee21c39 (rebase)
 =======
@@ -86,6 +101,13 @@
         "spatie/test-time": "^1.2"
 >>>>>>> 802efe7 (up)
 >>>>>>> b2584c5 (rebase)
+=======
+=======
+        "spatie/test-time": "^1.2"
+>>>>>>> 802efe7 (up)
+=======
+>>>>>>> 2a99ba1 (rebase)
+>>>>>>> 4039f82 (rebase)
     },
     "scripts": {
         "post-autoload-dump": [
@@ -93,18 +115,26 @@
         ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 802efe7 (up)
+=======
+>>>>>>> 2a99ba1 (rebase)
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6b00753 (.)
 =======
 >>>>>>> 802efe7 (up)
+=======
+=======
+>>>>>>> 6b00753 (.)
+>>>>>>> 2a99ba1 (rebase)
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
         "test-coverage": "vendor/bin/pest --coverage-html coverage",
@@ -121,6 +151,9 @@
     "prefer-stable": true
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a99ba1 (rebase)
 }
 =======
 <<<<<<< HEAD
@@ -129,9 +162,17 @@
 }
 >>>>>>> 6b00753 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ee21c39 (rebase)
 =======
 =======
 }
 >>>>>>> 802efe7 (up)
 >>>>>>> b2584c5 (rebase)
+=======
+=======
+}
+>>>>>>> 802efe7 (up)
+=======
+>>>>>>> 2a99ba1 (rebase)
+>>>>>>> 4039f82 (rebase)
