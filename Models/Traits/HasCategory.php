@@ -204,6 +204,7 @@ trait HasCategory {
         if (\is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } //else {
             //dddx($categories);
         //}
@@ -213,6 +214,16 @@ trait HasCategory {
         // dddx($categories);
         // }
 >>>>>>> 209739c (Lint)
+=======
+        } // else {
+        // dddx($categories);
+        // }
+=======
+        } //else {
+            //dddx($categories);
+        //}
+>>>>>>> 1172c16 (up)
+>>>>>>> 37f274f (rebase)
 
         return $this;
     }
