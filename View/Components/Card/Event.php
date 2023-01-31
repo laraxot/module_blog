@@ -24,6 +24,7 @@ class Event extends Component
 =======
 class Event extends Component {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> e0d1f4b (Lint)
 =======
 class Event extends Component
@@ -35,10 +36,16 @@ class Event extends Component {
 =======
 <<<<<<< HEAD
 >>>>>>> d01bfa1 (rebase)
+=======
+<<<<<<< HEAD
+>>>>>>> a18c913 (rebase)
     public array $attrs = [];
 =======
     public array $attrs=[];
 >>>>>>> 071b412 (up)
+=======
+    public array $attrs = [];
+>>>>>>> 7ae4511 (Lint)
     public Model $row;
 
     /**
