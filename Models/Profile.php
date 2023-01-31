@@ -749,15 +749,19 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> b996731 (rebase)
             $user = (object) [
                 'handle' => 'no-set',
 =======
             $user=(object)[
                 'handle'=>'no-set',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
@@ -774,6 +778,9 @@ class Profile extends BaseModelLang
                 'handle' => 'no-set',
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> f4041d1 (up)
+>>>>>>> b996731 (rebase)
             ];
         }
 
@@ -788,10 +795,13 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> b996731 (rebase)
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
@@ -799,6 +809,7 @@ class Profile extends BaseModelLang
         if($user==null){
             $user=(object)[
                 'first_name'=>'no-set',
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
@@ -817,6 +828,9 @@ class Profile extends BaseModelLang
                 'first_name' => 'no-set',
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> f4041d1 (up)
+>>>>>>> b996731 (rebase)
             ];
         }
 
