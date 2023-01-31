@@ -15,6 +15,7 @@ class ThemeComposer {
      * ---.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
      */
     /**
@@ -24,6 +25,9 @@ class ThemeComposer {
 =======
         
 >>>>>>> 48af1a0 (up)
+=======
+
+>>>>>>> 104688c (Lint)
      */
     /**
      * Undocumented function.
