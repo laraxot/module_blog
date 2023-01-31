@@ -32,11 +32,17 @@ class CategorizablePanel extends XotBasePanel
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> b022d6c (up)
 =======
 >>>>>>> 5376387 (Lint)
+=======
+=======
+
+>>>>>>> a780d70 (up)
+>>>>>>> a3494d5 (rebase)
     /**
      * on select the option label.
      *

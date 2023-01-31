@@ -13,6 +13,7 @@ use Modules\Blog\Models\Media;
 use Modules\Cms\Models\Panels\XotBasePanel;
 <<<<<<< HEAD
 use Modules\Xot\Contracts\RowsContract;
+<<<<<<< HEAD
 =======
 >>>>>>> 315e874 (up)
 =======
@@ -31,6 +32,9 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> 5376387 (Lint)
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> a3494d5 (rebase)
 
 class MediaPanel extends XotBasePanel
 {
@@ -46,18 +50,28 @@ class MediaPanel extends XotBasePanel
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> b022d6c (up)
 =======
 >>>>>>> 5376387 (Lint)
+=======
+=======
+
+>>>>>>> a780d70 (up)
+>>>>>>> a3494d5 (rebase)
     /**
      * on select the option label.
      *
      * @param Media $row
      */
+<<<<<<< HEAD
     public function optionLabel($row): string
     {
+=======
+    public function optionLabel($row): string {
+>>>>>>> a780d70 (up)
         return (string) $row->name;
     }
 
