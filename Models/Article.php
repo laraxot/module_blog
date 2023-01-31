@@ -7,6 +7,7 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasTags;
 <<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
@@ -18,6 +19,9 @@ use Modules\Blog\Models\Traits\HasSlug;
 =======
 //use Spatie\Sluggable\HasSlug;
 >>>>>>> 3757d50 (up)
+=======
+use Modules\Blog\Models\Traits\HasSlug;
+>>>>>>> 26c4c62 (.)
 use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\LU\Models\Traits\HasProfileTrait;
@@ -159,7 +163,8 @@ use Spatie\Tags\HasTags; // spatie tags
  *
  * @mixin \Eloquent
  */
-class Article extends BaseModelLang implements HasLikeContract {
+class Article extends BaseModelLang implements HasLikeContract
+{
     use HasAuthor;
     use HasCategory;
     use HasLikes;
