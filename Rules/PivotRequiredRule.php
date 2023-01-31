@@ -66,12 +66,15 @@ class PivotRequiredRule implements Rule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b996731 (rebase)
 =======
 >>>>>>> a3bd33a (rebase)
 =======
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
      * @param int    $value
 =======
      * @param int  $value
@@ -83,22 +86,31 @@ class PivotRequiredRule implements Rule {
 >>>>>>> a822353 (.)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> af0dac7 (rebase)
 =======
 >>>>>>> bb3945d (rebase)
+=======
+=======
+>>>>>>> af0dac7 (rebase)
+>>>>>>> bb94901 (rebase)
      * @param int    $value
 =======
      * @param int  $value
 >>>>>>> b96306f (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb94901 (rebase)
 >>>>>>> f930b9f (rebase)
 =======
 =======
      * @param int    $value
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 >>>>>>> b996731 (rebase)
 =======
@@ -109,6 +121,8 @@ class PivotRequiredRule implements Rule {
 =======
 >>>>>>> f930b9f (rebase)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
      *
      * @return bool
      */
@@ -124,11 +138,14 @@ class PivotRequiredRule implements Rule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // $value = (int) $value;
 =======
 >>>>>>> a3bd33a (rebase)
 =======
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
 =======
         //$value = (int) $value;
 >>>>>>> f4041d1 (up)
@@ -140,21 +157,28 @@ class PivotRequiredRule implements Rule {
 =======
 =======
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
         // $value = (int) $value;
 =======
         //$value = (int) $value;
 >>>>>>> b96306f (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb94901 (rebase)
 >>>>>>> f930b9f (rebase)
 =======
 =======
         // $value = (int) $value;
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 =======
         //$value = (int) $value;
@@ -165,6 +189,8 @@ class PivotRequiredRule implements Rule {
 =======
 >>>>>>> f930b9f (rebase)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
         if ($value && ! $value_required) {
             return false;
         }

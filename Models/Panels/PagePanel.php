@@ -12,6 +12,7 @@ namespace Modules\Blog\Models\Panels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
 =======
 use Exception;
@@ -26,10 +27,13 @@ use Illuminate\Database\Eloquent\Model;
 =======
 =======
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> bb94901 (rebase)
 use Illuminate\Contracts\Support\Renderable;
 =======
 use Exception;
 >>>>>>> b96306f (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
 =======
@@ -60,12 +64,16 @@ use Illuminate\Contracts\Support\Renderable;
 use Exception;
 >>>>>>> b96306f (up)
 >>>>>>> bb3945d (rebase)
+=======
+=======
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> bb94901 (rebase)
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Cms\Models\Panels\XotBasePanel;
-use Illuminate\Contracts\Support\Renderable;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
+use Modules\Cms\Models\Panels\XotBasePanel;
 
 // ---- bases --
 
@@ -307,6 +315,7 @@ class PagePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
@@ -317,6 +326,8 @@ class PagePanel extends XotBasePanel {
 >>>>>>> 3063b59 (rebase)
 =======
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
 =======
@@ -340,12 +351,16 @@ class PagePanel extends XotBasePanel {
 =======
 >>>>>>> b96306f (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
 =======
+=======
+>>>>>>> bb94901 (rebase)
 =======
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
 >>>>>>> 1daf8a3 (Lint)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> af0dac7 (rebase)
 =======
@@ -380,6 +395,8 @@ class PagePanel extends XotBasePanel {
 =======
 >>>>>>> b96306f (up)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
             }
             $url = $url_components['path'];
 

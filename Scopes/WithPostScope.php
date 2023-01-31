@@ -31,12 +31,15 @@ class WithPostScope implements Scope
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
 =======
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
         $model_class = get_class($model);
 =======
         $model_class =get_class($model);
@@ -48,11 +51,15 @@ class WithPostScope implements Scope
 =======
 >>>>>>> a822353 (.)
 =======
+=======
+>>>>>>> af0dac7 (rebase)
         $model_class = get_class($model);
 =======
         $model_class =get_class($model);
 >>>>>>> b96306f (up)
+<<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
+<<<<<<< HEAD
 >>>>>>> bb3945d (rebase)
         $model_name = basename($model_class);
         $lang = 'it';
@@ -89,10 +96,18 @@ class WithPostScope implements Scope
         $model_class = get_class($model);
 >>>>>>> a822353 (.)
 >>>>>>> a3bd33a (rebase)
+=======
+=======
+=======
+        $model_class = get_class($model);
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
+>>>>>>> bb94901 (rebase)
         $model_name = basename($model_class);
         $lang = 'it';
 <<<<<<< HEAD
         $post_type = Str::snake($model_name);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         //$post_type = (string) str($model_name)->snake();
@@ -112,6 +127,8 @@ class WithPostScope implements Scope
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
 =======
+=======
+>>>>>>> bb94901 (rebase)
 =======
 
 <<<<<<< HEAD
@@ -134,13 +151,24 @@ class WithPostScope implements Scope
 >>>>>>> a822353 (.)
 >>>>>>> a3bd33a (rebase)
 =======
+=======
+>>>>>>> af0dac7 (rebase)
 <<<<<<< HEAD
         // $post_type = (string) str($model_name)->snake();
 =======
         //$post_type = (string) str($model_name)->snake();
 >>>>>>> b96306f (up)
+<<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
+<<<<<<< HEAD
 >>>>>>> bb3945d (rebase)
+=======
+=======
+=======
+        // $post_type = (string) str($model_name)->snake();
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
+>>>>>>> bb94901 (rebase)
 
         $builder->leftJoin($post_table.' as post', function ($join) use ($model_table, $lang, $post_type) {
             $join->on('post.post_id', '=', $model_table.'.id')
