@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -10,6 +11,12 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> 197df28 (Lint)
+=======
+declare(strict_types=1);
+
+=======
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 return [
     'write_comment' => 'Leave a comment',
     'write_reply' => 'Leave a reply',
@@ -31,6 +38,7 @@ return [
     'guest' => 'guest',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link copied',
 =======
     'copied' => 'Link copied'
@@ -38,4 +46,10 @@ return [
 =======
     'copied' => 'Link copied',
 >>>>>>> 197df28 (Lint)
+=======
+    'copied' => 'Link copied',
+=======
+    'copied' => 'Link copied'
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 ];

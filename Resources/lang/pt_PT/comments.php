@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -10,6 +11,12 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> 197df28 (Lint)
+=======
+declare(strict_types=1);
+
+=======
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 return [
     'write_comment' => 'Deixe um comentário',
     'write_reply' => 'Deixe uma resposta',
@@ -31,6 +38,7 @@ return [
     'guest' => 'convidado',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link copiado',
 =======
     'copied' => 'Link copiado'
@@ -38,4 +46,10 @@ return [
 =======
     'copied' => 'Link copiado',
 >>>>>>> 197df28 (Lint)
+=======
+    'copied' => 'Link copiado',
+=======
+    'copied' => 'Link copiado'
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 ];

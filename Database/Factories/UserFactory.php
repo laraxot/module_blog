@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -10,6 +11,12 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> 197df28 (Lint)
+=======
+declare(strict_types=1);
+
+=======
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 namespace Module\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -19,6 +26,9 @@ use Module\Blog\Tests\TestSupport\Models\User;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5967355 (rebase)
 class UserFactory extends Factory {
     protected $model = User::class;
 
@@ -30,6 +40,7 @@ class UserFactory extends Factory
 
     public function definition()
     {
+<<<<<<< HEAD
 >>>>>>> f784731 (.)
 =======
 class UserFactory extends Factory {
@@ -51,6 +62,9 @@ class UserFactory extends Factory {
 
     public function definition() {
 >>>>>>> c24d571 (Lint)
+=======
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
         return [
             'name' => $this->faker->name,
             'first_name' => $this->faker->firstName,

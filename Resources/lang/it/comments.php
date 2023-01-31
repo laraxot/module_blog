@@ -2,6 +2,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -10,6 +11,12 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> 197df28 (Lint)
+=======
+declare(strict_types=1);
+
+=======
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 return [
     'write_comment' => 'Lascia un commento',
     'write_reply' => 'Rispondi al commento',
@@ -27,6 +34,7 @@ return [
     'send_notifications' => 'Notifica se qualcuno risponde',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link copiato',
 =======
     'copied' => 'Link copiato'
@@ -34,4 +42,10 @@ return [
 =======
     'copied' => 'Link copiato',
 >>>>>>> 197df28 (Lint)
+=======
+    'copied' => 'Link copiato',
+=======
+    'copied' => 'Link copiato'
+>>>>>>> 6c99a65 (.)
+>>>>>>> 5967355 (rebase)
 ];
