@@ -50,12 +50,18 @@ class ThemeComposer {
         return $rows;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
 =======
 >>>>>>> ea58237 (up)
 =======
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
 >>>>>>> 48af1a0 (up)
+=======
+        $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
+=======
+>>>>>>> ea58237 (up)
+>>>>>>> 1fdd40b (rebase)
         */
     }
 
