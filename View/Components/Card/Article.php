@@ -13,7 +13,11 @@ use Modules\Cms\Services\PanelService;
  * Class Article.
  */
 class Article extends Component {
+<<<<<<< HEAD
     public array $attrs = [];
+=======
+    public array $attrs=[];
+>>>>>>> 071b412 (up)
     public Model $row;
 
     /**
