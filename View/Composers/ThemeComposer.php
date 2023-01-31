@@ -206,6 +206,7 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // public function compose(array ...$args):string {
 =======
     //public function compose(array ...$args):string {
@@ -214,11 +215,19 @@ class ThemeComposer {
     // public function compose(array ...$args):string {
 >>>>>>> 134e178 (Lint)
 =======
+=======
+>>>>>>> 39485d1 (rebase)
     // public function compose(array ...$args):string {
 =======
     //public function compose(array ...$args):string {
 >>>>>>> d4223a3 (up)
+<<<<<<< HEAD
 >>>>>>> 776498c (rebase)
+=======
+=======
+    // public function compose(array ...$args):string {
+>>>>>>> 764eb6d (Lint)
+>>>>>>> 39485d1 (rebase)
         /*
         dddx(
             [
@@ -231,8 +240,11 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 776498c (rebase)
+=======
+>>>>>>> 39485d1 (rebase)
         // return 'aaa';
     // }
 =======
@@ -246,7 +258,14 @@ class ThemeComposer {
 >>>>>>> 134e178 (Lint)
 =======
 >>>>>>> d4223a3 (up)
+<<<<<<< HEAD
 >>>>>>> 776498c (rebase)
+=======
+=======
+        // return 'aaa';
+    // }
+>>>>>>> 764eb6d (Lint)
+>>>>>>> 39485d1 (rebase)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
