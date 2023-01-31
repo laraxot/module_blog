@@ -50,10 +50,13 @@ class PersonalInfoAction extends XotBasePanelAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47d8285 (rebase)
 =======
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
     public function handle(): Renderable {
 <<<<<<< HEAD
 <<<<<<< HEAD

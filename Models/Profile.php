@@ -708,6 +708,7 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Profile extends BaseModelLang {
     // use GeoTrait; -- to profile in geo
 =======
@@ -729,19 +730,27 @@ class Profile extends BaseModelLang
 >>>>>>> f0ffa9e (rebase)
 =======
 >>>>>>> 192b493 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
 class Profile extends BaseModelLang
 {
     use GeoTrait;
 =======
 class Profile extends BaseModelLang {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
 =======
 class Profile extends BaseModelLang
 {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 =======
 class Profile extends BaseModelLang {
 >>>>>>> afa2edf (Lint)
+=======
+>>>>>>> ea4d650 (rebase)
     // use GeoTrait; -- to profile in geo
 >>>>>>> 0cf44f8 (up)
 >>>>>>> 6f3084b (rebase)

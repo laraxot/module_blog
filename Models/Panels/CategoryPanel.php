@@ -11,7 +11,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class CategoryPanel.
  */
-class CategoryPanel extends XotBasePanel {
+class CategoryPanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -24,7 +25,11 @@ class CategoryPanel extends XotBasePanel {
      */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
     public function optionLabel($row): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +60,8 @@ class CategoryPanel extends XotBasePanel {
 =======
 >>>>>>> 00fe3eb (rebase)
 =======
+>>>>>>> ea4d650 (rebase)
+=======
 >>>>>>> a3494d5 (rebase)
 =======
 >>>>>>> 0088a11 (rebase)
@@ -73,6 +80,7 @@ class CategoryPanel extends XotBasePanel {
     public function optionLabel($row): string
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> aff4d2d (rebase)
 =======
@@ -106,6 +114,9 @@ class CategoryPanel extends XotBasePanel {
 =======
 >>>>>>> 20e02a4 (rebase)
 >>>>>>> 00fe3eb (rebase)
+=======
+>>>>>>> aff4d2d (rebase)
+>>>>>>> ea4d650 (rebase)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -541,6 +552,9 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
     public function optionsSelect() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -563,6 +577,7 @@ class CategoryPanel extends XotBasePanel {
     public function optionsSelect()
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 =======
     public function optionsSelect() {
 >>>>>>> afa2edf (Lint)
@@ -571,6 +586,8 @@ class CategoryPanel extends XotBasePanel {
 =======
 =======
 >>>>>>> 6944330 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
         // $rows = $this->row->all();
 
         $rows = Category::get();
@@ -706,7 +723,8 @@ class CategoryPanel extends XotBasePanel {
 
         'value'=>'..',
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Text',
@@ -724,7 +742,8 @@ class CategoryPanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [];
     }
 }

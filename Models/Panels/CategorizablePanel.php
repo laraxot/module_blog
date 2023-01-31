@@ -106,18 +106,25 @@ class CategorizablePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
     public function optionLabel($row): string
     {
 =======
     public function optionLabel($row): string {
 >>>>>>> 27d1a3f (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
 =======
     public function optionLabel($row): string
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 =======
     public function optionLabel($row): string {
 >>>>>>> afa2edf (Lint)
@@ -127,6 +134,8 @@ class CategorizablePanel extends XotBasePanel
 >>>>>>> 94220ac (.)
 =======
 >>>>>>> 355a234 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
         return (string) $row->id;
     }
 

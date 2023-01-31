@@ -9,6 +9,9 @@ namespace Modules\Blog\Models\Traits\Mutators;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
 trait ArticleMutator {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -63,6 +66,7 @@ trait ArticleMutator
     {
 >>>>>>> 42ca46e (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> aff4d2d (rebase)
 =======
 =======
@@ -96,6 +100,9 @@ trait ArticleMutator {
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
 >>>>>>> bb94901 (rebase)
+=======
+>>>>>>> aff4d2d (rebase)
+>>>>>>> ea4d650 (rebase)
         if (null !== $value) {
             return $value;
         }

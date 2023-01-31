@@ -168,18 +168,25 @@ class MediaPanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
     public function optionLabel($row): string
     {
 =======
     public function optionLabel($row): string {
 >>>>>>> a780d70 (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
 =======
     public function optionLabel($row): string
     {
 >>>>>>> 42ca46e (up)
+<<<<<<< HEAD
 =======
     public function optionLabel($row): string {
 >>>>>>> afa2edf (Lint)
@@ -189,6 +196,8 @@ class MediaPanel extends XotBasePanel
 >>>>>>> 94220ac (.)
 =======
 >>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
         return (string) $row->name;
     }
 
