@@ -238,10 +238,13 @@ class Profile extends BaseModelLang {
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 
 >>>>>>> b022d6c (up)
+=======
+>>>>>>> 5376387 (Lint)
     // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany {
