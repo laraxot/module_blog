@@ -8,8 +8,16 @@ namespace Modules\Blog\Models;
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 // use Modules\Blog\Models\Traits\HasTags;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
+=======
+use Modules\Blog\Models\Traits\HasSlug;
+<<<<<<< HEAD
+>>>>>>> c1a0d4d (up)
 // use Spatie\Sluggable\HasSlug;
+=======
+//use Spatie\Sluggable\HasSlug;
+>>>>>>> 3757d50 (up)
 use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\LU\Models\Traits\HasProfileTrait;
