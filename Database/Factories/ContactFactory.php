@@ -25,8 +25,11 @@ class ContactFactory extends Factory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0088a11 (rebase)
+=======
+>>>>>>> 962cd73 (rebase)
             // 'id' => $this->faker->randomNumber,
             // 'post_id' => $this->faker->integer,
             // 'post_type' => $this->faker->word,
@@ -43,7 +46,15 @@ class ContactFactory extends Factory {
 >>>>>>> 056bec8 (Lint)
 =======
 >>>>>>> 27d1a3f (up)
+<<<<<<< HEAD
 >>>>>>> 0088a11 (rebase)
+=======
+=======
+            // 'id' => $this->faker->randomNumber,
+            // 'post_id' => $this->faker->integer,
+            // 'post_type' => $this->faker->word,
+>>>>>>> 5a12252 (Lint)
+>>>>>>> 962cd73 (rebase)
         ];
     }
 }
