@@ -52,7 +52,19 @@ use Modules\Blog\Models\Traits\HasSlug;
 >>>>>>> 26c4c62 (.)
 >>>>>>> 0bf2d02 (rebase)
 use Modules\Blog\Models\Traits\HasTimestamps;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\PreparesSearch;
+<<<<<<< HEAD
+=======
+=======
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> f4041d1 (up)
+use Modules\LU\Models\Traits\HasProfileTrait;
+use Modules\Rating\Contracts\HasLikeContract;
+// use Modules\Tag\Models\Traits\HasTagTrait;
+use Modules\Rating\Models\Traits\HasLikes;
+use Modules\Rating\Models\Traits\RatingTrait;
+>>>>>>> 94cba72 (rebase)
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
@@ -220,13 +232,28 @@ class Article extends BaseModelLang implements HasLikeContract
     use HasCategory;
     use HasLikes;
     // use HasProfileTrait;
+<<<<<<< HEAD
+    // use HasSlug;
+<<<<<<< HEAD
     // use HasSlug;
     // use HasSlug;
-    // use HasSlug;
+=======
+=======
+    //use HasSlug;
+>>>>>>> f4041d1 (up)
+>>>>>>> 94cba72 (rebase)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // use PreparesSearch;
+=======
+    //use PreparesSearch;
+>>>>>>> f4041d1 (up)
+>>>>>>> 94cba72 (rebase)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
