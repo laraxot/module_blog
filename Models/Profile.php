@@ -130,10 +130,14 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8192562 (rebase)
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
 =======
 >>>>>>> 802efe7 (up)
+<<<<<<< HEAD
 =======
  *
 >>>>>>> 6e3c302 (Lint)
@@ -152,6 +156,8 @@ use Spatie\ModelStatus\HasStatuses;
 =======
  *
 >>>>>>> c5b6d43 (.)
+=======
+>>>>>>> 8192562 (rebase)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -205,8 +211,8 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- *
  * @mixin \Eloquent
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
@@ -350,6 +356,10 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  *
  * @mixin \Eloquent
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
+>>>>>>> 8192562 (rebase)
  */
 <<<<<<< HEAD
 <<<<<<< HEAD

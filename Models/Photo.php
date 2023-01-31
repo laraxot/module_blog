@@ -1,0 +1,55 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Blog\Models;
+
+// ----- traits ----
+use Modules\Rating\Models\Traits\RatingTrait;
+
+/**
+ * Modules\Blog\Models\Photo.
+ *
+ * @property int                                                                  $post_id
+ * @property string|null                                                          $updated_by
+ * @property string|null                                                          $created_by
+ * @property \Illuminate\Support\Carbon|null                                      $created_at
+ * @property \Illuminate\Support\Carbon|null                                      $updated_at
+ * @property string|null                                                          $guid
+ * @property string|null                                                          $image_src
+ * @property string|null                                                          $lang
+ * @property string|null                                                          $post_type
+ * @property string|null                                                          $subtitle
+ * @property string|null                                                          $title
+ * @property string|null                                                          $txt
+ * @property string|null                                                          $user_handle
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Image[] $images
+ * @property int|null                                                             $images_count
+ * @property \Modules\Lang\Models\Post|null                                       $post
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
+ * @property int|null                                                             $posts_count
+ * @property mixed                                                                $url
+ * @method static \Modules\Blog\Database\Factories\PhotoFactory       factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo         whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ * @mixin \Eloquent
+ * @property int $id
+ * @property int|null $user_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Photo whereUserId($value)
+ */
+class Photo extends BaseModelLang {
+    // use RatingTrait;
+    /**
+     * @var string[]
+     */
+    protected $fillable = ['id', 'article_type', 'published_at'];
+}
