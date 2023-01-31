@@ -10,6 +10,7 @@ namespace Modules\Blog\Models\Panels\Actions;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ use Modules\Lang\Models\Post;
 >>>>>>> 8513cb9 (rebase)
 =======
 >>>>>>> baed241 (rebase)
+=======
+>>>>>>> 96ca200 (rebase)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
@@ -51,6 +54,7 @@ use Modules\Lang\Models\Post;
 >>>>>>> 9972855 (up)
 >>>>>>> c744a19 (up)
 
+<<<<<<< HEAD
 // -------- services --------
 // use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
@@ -69,6 +73,8 @@ use Modules\Lang\Models\Post;
 class DeleteNoPostIdAction extends XotBasePanelAction {
 =======
 =======
+=======
+>>>>>>> 96ca200 (rebase)
 =======
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
