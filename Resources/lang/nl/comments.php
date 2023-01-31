@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> f784731 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 197df28 (Lint)
 return [
     'write_comment' => 'Plaats een opmerking',
     'write_reply' => 'Reageer',
@@ -21,8 +26,12 @@ return [
     'just_now' => 'Zojuist',
     'send_notifications' => 'Informeer me over reacties.',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link gekopieerd',
 =======
     'copied' => 'Link gekopieerd'
 >>>>>>> f784731 (.)
+=======
+    'copied' => 'Link gekopieerd',
+>>>>>>> 197df28 (Lint)
 ];

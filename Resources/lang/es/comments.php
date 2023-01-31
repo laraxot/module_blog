@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> f784731 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 197df28 (Lint)
 return [
     'write_comment' => 'Deja un comentario',
     'write_reply' => 'Deja una respuesta',

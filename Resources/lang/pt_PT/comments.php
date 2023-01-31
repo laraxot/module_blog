@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> f784731 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 197df28 (Lint)
 return [
     'write_comment' => 'Deixe um comentário',
     'write_reply' => 'Deixe uma resposta',
@@ -25,8 +30,12 @@ return [
     'awaits_approval' => 'Aguardando aprovação',
     'guest' => 'convidado',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link copiado',
 =======
     'copied' => 'Link copiado'
 >>>>>>> f784731 (.)
+=======
+    'copied' => 'Link copiado',
+>>>>>>> 197df28 (Lint)
 ];
