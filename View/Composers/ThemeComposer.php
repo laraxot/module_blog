@@ -470,6 +470,7 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getCardEvents() {
 >>>>>>> 7fdf4e1 (up)
 <<<<<<< HEAD
@@ -497,13 +498,27 @@ class ThemeComposer {
 =======
 =======
 =======
+=======
+>>>>>>> e9dc7f3 (rebase)
     public function getCardEvents(): Collection {
 =======
     public function getCardEvents():Collection {
 >>>>>>> 725228b (up)
+<<<<<<< HEAD
 >>>>>>> 063c423 (rebase)
+<<<<<<< HEAD
 >>>>>>> 7b4b1c4 (rebase)
+<<<<<<< HEAD
 >>>>>>> e181c74 (rebase)
+=======
+=======
+=======
+=======
+    public function getCardEvents(): Collection {
+>>>>>>> 8133ecc (Lint)
+>>>>>>> e9dc7f3 (rebase)
+>>>>>>> a6be9d1 (rebase)
+>>>>>>> ff53917 (rebase)
         $str = '[
             {
               "date": "26",
@@ -586,12 +601,15 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4312ce9 (rebase)
 =======
 >>>>>>> 1e22110 (rebase)
 =======
 >>>>>>> 7b4b1c4 (rebase)
+=======
+>>>>>>> a6be9d1 (rebase)
     public function getCardPlaces(): Collection {
 =======
     public function getCardPlaces():Collection {
@@ -603,6 +621,7 @@ class ThemeComposer {
 >>>>>>> 37feb52 (Lint)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> e9dc7f3 (rebase)
 =======
@@ -611,17 +630,25 @@ class ThemeComposer {
 >>>>>>> f0ffa9e (rebase)
 =======
 >>>>>>> 7b4b1c4 (rebase)
+=======
+=======
+>>>>>>> e9dc7f3 (rebase)
+>>>>>>> a6be9d1 (rebase)
     public function getCardPlaces(): Collection {
 =======
     public function getCardPlaces():Collection {
 >>>>>>> 725228b (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a6be9d1 (rebase)
 >>>>>>> 063c423 (rebase)
 =======
 =======
     public function getCardPlaces(): Collection {
 >>>>>>> 8133ecc (Lint)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> e9dc7f3 (rebase)
 =======
@@ -646,6 +673,9 @@ class ThemeComposer {
 =======
 >>>>>>> 063c423 (rebase)
 >>>>>>> 7b4b1c4 (rebase)
+=======
+>>>>>>> e9dc7f3 (rebase)
+>>>>>>> a6be9d1 (rebase)
         $str = '[
             {
               "category": "Categoria",
