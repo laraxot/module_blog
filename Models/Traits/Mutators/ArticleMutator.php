@@ -10,16 +10,23 @@ namespace Modules\Blog\Models\Traits\Mutators;
 trait ArticleMutator {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f930b9f (rebase)
     public function getParentIdAttribute(?int $value): ?int {
 =======
     /**
      
      */
     public function getParentIdAttribute(?int $value):?int {
+<<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
     public function getParentIdAttribute(?int $value): ?int {
 >>>>>>> a822353 (.)
+=======
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
         if (null !== $value) {
             return $value;
         }

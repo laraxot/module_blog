@@ -8,10 +8,13 @@ namespace Modules\Blog\Models;
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasTags;
 <<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
 =======
+=======
+>>>>>>> f930b9f (rebase)
 use Modules\Blog\Models\Traits\HasSlug;
 <<<<<<< HEAD
 >>>>>>> c1a0d4d (up)
@@ -27,11 +30,20 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 <<<<<<< HEAD
 // use Modules\Blog\Models\Traits\PreparesSearch;
 =======
+<<<<<<< HEAD
 //use Modules\Blog\Models\Traits\PreparesSearch;
 >>>>>>> f4041d1 (up)
 =======
 // use Modules\Blog\Models\Traits\PreparesSearch;
 >>>>>>> a822353 (.)
+=======
+// use Modules\Blog\Models\Traits\HasTags;
+//use Modules\Blog\Models\Traits\HasSlug;
+// use Spatie\Sluggable\HasSlug;
+use Modules\Blog\Models\Traits\HasTimestamps;
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Contracts\HasLikeContract;
 // use Modules\Tag\Models\Traits\HasTagTrait;
@@ -181,6 +193,7 @@ class Article extends BaseModelLang implements HasLikeContract
     // use HasProfileTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // use HasSlug;
 =======
     //use HasSlug;
@@ -188,10 +201,17 @@ class Article extends BaseModelLang implements HasLikeContract
 =======
     // use HasSlug;
 >>>>>>> a822353 (.)
+=======
+    // use HasSlug;
+=======
+    //use HasSlug;
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // use PreparesSearch;
@@ -201,6 +221,12 @@ class Article extends BaseModelLang implements HasLikeContract
 =======
     // use PreparesSearch;
 >>>>>>> a822353 (.)
+=======
+    // use PreparesSearch;
+=======
+    //use PreparesSearch;
+>>>>>>> b96306f (up)
+>>>>>>> f930b9f (rebase)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
