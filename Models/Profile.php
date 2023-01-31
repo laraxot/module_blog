@@ -715,10 +715,14 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb94901 (rebase)
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 >>>>>>> b996731 (rebase)
 =======
@@ -727,6 +731,8 @@ class Profile extends BaseModelLang
 =======
 >>>>>>> f930b9f (rebase)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
             $user = (object) [
                 'handle' => 'no-set',
 =======
@@ -762,8 +768,18 @@ class Profile extends BaseModelLang
 =======
 =======
 >>>>>>> b96306f (up)
+<<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
+<<<<<<< HEAD
 >>>>>>> bb3945d (rebase)
+=======
+=======
+=======
+            $user = (object) [
+                'handle' => 'no-set',
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
+>>>>>>> bb94901 (rebase)
             ];
         }
 
@@ -782,10 +798,14 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb94901 (rebase)
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 >>>>>>> b996731 (rebase)
 =======
@@ -794,6 +814,8 @@ class Profile extends BaseModelLang
 =======
 >>>>>>> f930b9f (rebase)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
         if (null == $user) {
             $user = (object) [
                 'first_name' => 'no-set',
@@ -833,8 +855,19 @@ class Profile extends BaseModelLang
 =======
 =======
 >>>>>>> b96306f (up)
+<<<<<<< HEAD
 >>>>>>> f930b9f (rebase)
+<<<<<<< HEAD
 >>>>>>> bb3945d (rebase)
+=======
+=======
+=======
+        if (null == $user) {
+            $user = (object) [
+                'first_name' => 'no-set',
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
+>>>>>>> bb94901 (rebase)
             ];
         }
 

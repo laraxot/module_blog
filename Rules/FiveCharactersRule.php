@@ -17,7 +17,6 @@ namespace Modules\Blog\Rules;
 * https://marabesi.com/php/2017/05/31/laravel-custom-validator.html
 **/
 
-use Exception;
 use Illuminate\Contracts\Validation\Rule;
 
 /**
@@ -56,10 +55,14 @@ class FiveCharactersRule implements Rule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb94901 (rebase)
 =======
 >>>>>>> f930b9f (rebase)
 =======
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 >>>>>>> b996731 (rebase)
 =======
@@ -68,6 +71,8 @@ class FiveCharactersRule implements Rule {
 =======
 >>>>>>> f930b9f (rebase)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
@@ -104,6 +109,9 @@ class FiveCharactersRule implements Rule {
 >>>>>>> b96306f (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb94901 (rebase)
 >>>>>>> f930b9f (rebase)
 =======
 =======
@@ -114,6 +122,7 @@ class FiveCharactersRule implements Rule {
 
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+<<<<<<< HEAD
 =======
 =======
         $res= trans('validation.only_uppercase');
@@ -128,6 +137,8 @@ class FiveCharactersRule implements Rule {
 =======
 >>>>>>> f930b9f (rebase)
 >>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
         return $res;
     }
 }
