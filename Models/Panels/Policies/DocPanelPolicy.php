@@ -36,12 +36,15 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Class DocPanelPolicy.
  */
-class DocPanelPolicy extends XotBasePanelPolicy {
-    public function rate(UserContract $user, PanelContract $panel): bool {
+class DocPanelPolicy extends XotBasePanelPolicy
+{
+    public function rate(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function changePos(UserContract $user, PanelContract $panel): bool {
+    public function changePos(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 }
