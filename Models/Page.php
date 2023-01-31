@@ -12,14 +12,16 @@ use Sushi\Sushi;
 /**
  * Modules\Blog\Models\Page.
  *
- * @property int $id
- * @property-read \Illuminate\Database\Eloquent\Collection|Page[] $sons
- * @property-read int|null $sons_count
+ * @property int                                             $id
+ * @property \Illuminate\Database\Eloquent\Collection|Page[] $sons
+ * @property int|null                                        $sons_count
+ *
  * @method static \Modules\Blog\Database\Factories\PageFactory factory(...$parameters)
- * @method static \Illuminate\Database\Eloquent\Builder|Page newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Page newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Page query()
- * @method static \Illuminate\Database\Eloquent\Builder|Page whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page   newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Page   newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Page   query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Page   whereId($value)
+ *
  * @mixin \Eloquent
  */
 class Page extends BaseModel {

@@ -6,10 +6,13 @@ namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Str;
 
 >>>>>>> 378fec2 (up)
+=======
+>>>>>>> 9e2a502 (Lint)
 use Modules\Blog\Models\Label;
 
 class LabelFactory extends Factory {
@@ -27,6 +30,7 @@ class LabelFactory extends Factory {
      */
     public function definition() {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return [
 =======
 
@@ -34,6 +38,9 @@ class LabelFactory extends Factory {
         return [
             
 >>>>>>> 378fec2 (up)
+=======
+        return [
+>>>>>>> 9e2a502 (Lint)
         ];
     }
 }

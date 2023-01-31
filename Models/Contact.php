@@ -77,6 +77,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newQuery()
 =======
  *
+<<<<<<< HEAD
  * @property string|null $guid
  * @property string|null $image_src
  * @property-read string|null $lang
@@ -93,9 +94,28 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact newQuery()
 >>>>>>> 378fec2 (up)
+=======
+ * @property string|null                                                          $guid
+ * @property string|null                                                          $image_src
+ * @property string|null                                                          $lang
+ * @property string|null                                                          $post_type
+ * @property string|null                                                          $subtitle
+ * @property string|null                                                          $title
+ * @property string|null                                                          $txt
+ * @property string|null                                                          $user_handle
+ * @property \Modules\Lang\Models\Post|null                                       $post
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
+ * @property int|null                                                             $posts_count
+ * @property mixed                                                                $url
+ *
+ * @method static \Modules\Blog\Database\Factories\ContactFactory     factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact       newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact       newQuery()
+>>>>>>> 9e2a502 (Lint)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact       query()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  */
 class Contact extends BaseModelLang {
