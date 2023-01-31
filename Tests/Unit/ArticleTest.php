@@ -15,10 +15,16 @@ class ArticleTest extends TestCase {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d6d0ed6 (rebase)
 }
 =======
 }
 >>>>>>> da3c431 (up)
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 78b6abe (Lint)
+=======
+>>>>>>> d6d0ed6 (rebase)
