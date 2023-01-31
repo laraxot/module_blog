@@ -428,6 +428,7 @@ use Spatie\Tags\HasTags; // spatie tags
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 378fec2 (up)
 class Article extends BaseModelLang implements HasLikeContract {
 =======
@@ -448,6 +449,9 @@ class Article extends BaseModelLang implements HasLikeContract {
 class Article extends BaseModelLang implements HasLikeContract
 {
 >>>>>>> 0bf2d02 (rebase)
+=======
+class Article extends BaseModelLang implements HasLikeContract {
+>>>>>>> aef633b (rebase)
     use HasAuthor;
     use HasCategory;
     use HasLikes;

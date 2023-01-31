@@ -40,8 +40,7 @@ use Modules\Tag\Models\Tag;
  * Class HomePanel.
  *  forse meglio esterndere l'home panel di Xot?
  */
-class HomePanel extends XotBasePanel
-{
+class HomePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -55,8 +54,7 @@ class HomePanel extends XotBasePanel
     /**
      * @return object[]
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -94,8 +92,7 @@ class HomePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         /**
          * @var string
          */
@@ -108,13 +105,11 @@ class HomePanel extends XotBasePanel
         ];
     }
 
-    public function hasLang(): bool
-    {
+    public function hasLang(): bool {
         return true;
     }
 
-    public function featuredArticles(): Collection
-    {
+    public function featuredArticles(): Collection {
         $rows = Article::published()
             ->showHomepage()
             ->publishedUntilToday()
@@ -125,8 +120,7 @@ class HomePanel extends XotBasePanel
         return $rows;
     }
 
-    public function latestArticles(): Collection
-    {
+    public function latestArticles(): Collection {
         $latest_articles = Article::published()
             ->publishedUntilToday()
             // ->orderBy('publish_date', 'desc')
@@ -137,8 +131,7 @@ class HomePanel extends XotBasePanel
         return $latest_articles;
     }
 
-    public function authors(): Collection
-    {
+    public function authors(): Collection {
         // $authors = User::userIsAuthor()->take(4)->get();
         $authors = User::query()
             ->inRandomOrder()->limit(4)->get();
@@ -146,8 +139,7 @@ class HomePanel extends XotBasePanel
         return $authors;
     }
 
-    public function navCategories(): Collection
-    {
+    public function navCategories(): Collection {
         $navCategories = Category::query()
             ->has('articles', '>', 0)
 <<<<<<< HEAD
@@ -216,8 +208,7 @@ class HomePanel extends XotBasePanel
     /**
      * Undocumented function.
      */
-    public function footerCategories(): Collection
-    {
+    public function footerCategories(): Collection {
         $footerCategories = Category::query()
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -270,8 +261,7 @@ class HomePanel extends XotBasePanel
         return $footerCategories;
     }
 
-    public function footerAuthors(): Collection
-    {
+    public function footerAuthors(): Collection {
         // $footerAuthors = User::userIsAuthor()->take(8)->get();
         $footerAuthors = User::query()
             ->inRandomOrder()->limit(8)->get();

@@ -10,8 +10,7 @@ use Modules\Blog\Models\Page as Model;
 /**
  * Class PageFactory.
  */
-class PageFactory extends Factory
-{
+class PageFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,8 +23,7 @@ class PageFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
+    public function definition() {
         return [
             // 'title' => $faker->sentence,
             // 'description' => $faker->paragraph,

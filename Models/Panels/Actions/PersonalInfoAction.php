@@ -24,14 +24,14 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class PersonalInfoAction.
  */
-class PersonalInfoAction extends XotBasePanelAction
-{
+class PersonalInfoAction extends XotBasePanelAction {
     public bool $onContainer = false; // onlyContainer
 
     public bool $onItem = true; // onlyContainer
 
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +47,13 @@ class PersonalInfoAction extends XotBasePanelAction
     public function handle(): Renderable
     {
 >>>>>>> 00a7996 (.)
+=======
+    public function handle(): Renderable
+    {
+=======
+    public function handle(): Renderable {
+>>>>>>> afa2edf (Lint)
+>>>>>>> f0ffa9e (rebase)
         if (null == $this->panel) {
 =======
 <<<<<<< HEAD
@@ -80,8 +87,7 @@ class PersonalInfoAction extends XotBasePanelAction
         return $this->panel->view();
     }
 
-    public function postHandle(): Renderable
-    {
+    public function postHandle(): Renderable {
         $data = request()->all();
         // dddx($data['handle']);
         /*
