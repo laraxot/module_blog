@@ -1,10 +1,15 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+=======
+declare(strict_types=1);
+
+>>>>>>> 5c25f35 (Lint)
 return [
     'write_comment' => 'Plaats een opmerking',
     'write_reply' => 'Reageer',
@@ -21,8 +26,12 @@ return [
     'just_now' => 'Zojuist',
     'send_notifications' => 'Informeer me over reacties.',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link gekopieerd',
 =======
     'copied' => 'Link gekopieerd'
 >>>>>>> 6c99a65 (.)
+=======
+    'copied' => 'Link gekopieerd',
+>>>>>>> 5c25f35 (Lint)
 ];
