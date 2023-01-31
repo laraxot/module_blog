@@ -113,12 +113,15 @@ Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0bd72b3 (rebase)
 =======
 >>>>>>> beba6a5 (rebase)
 =======
 >>>>>>> 2aee9d4 (rebase)
+=======
+>>>>>>> 5edd280 (rebase)
 class EventPolicy extends XotBasePanelPolicy {
 =======
 class EventPolicy extends XotBasePolicy {
@@ -132,6 +135,7 @@ class EventPolicy extends XotBasePanelPolicy {
 class EventPolicy extends XotBasePolicy {
 >>>>>>> 3729812 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class EventPolicy extends XotBasePanelPolicy {
 >>>>>>> ce00485 (.)
@@ -144,4 +148,9 @@ class EventPolicy extends XotBasePanelPolicy {
 >>>>>>> beba6a5 (rebase)
 =======
 >>>>>>> 2aee9d4 (rebase)
+=======
+=======
+class EventPolicy extends XotBasePanelPolicy {
+>>>>>>> ce00485 (.)
+>>>>>>> 5edd280 (rebase)
 }
