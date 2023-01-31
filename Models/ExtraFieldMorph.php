@@ -5,19 +5,20 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 /**
- * Modules\Blog\Models\ExtraFieldMorph
+ * Modules\Blog\Models\ExtraFieldMorph.
  *
- * @property int $id
- * @property string|null $model_type
- * @property int|null $model_id
- * @property int|null $user_id
- * @property string|null $created_by
- * @property string|null $updated_by
+ * @property int                             $id
+ * @property string|null                     $model_type
+ * @property int|null                        $model_id
+ * @property int|null                        $user_id
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int|null $extra_field_id
- * @property string|null $value
- * @property string|null $value_class
+ * @property int|null                        $extra_field_id
+ * @property string|null                     $value
+ * @property string|null                     $value_class
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraFieldMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraFieldMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraFieldMorph query()
@@ -32,6 +33,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraFieldMorph whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraFieldMorph whereValue($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ExtraFieldMorph whereValueClass($value)
+ *
  * @mixin \Eloquent
  */
 class ExtraFieldMorph extends BaseMorphPivot {
