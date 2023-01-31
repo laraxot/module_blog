@@ -35,7 +35,10 @@ class ThemeComposer {
             ->get();
 
         return $rows;
+<<<<<<< HEAD
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
+=======
+>>>>>>> ea58237 (up)
         */
     }
 

@@ -194,11 +194,19 @@ trait HasCategory {
 
         // dddx(is_array( $categories));
         // Sync model categories
+<<<<<<< HEAD
         // if (\is_array($categories)) {
         $this->categories()->sync($categories, $detaching);
         // } // else {
         // dddx($categories);
         // }
+=======
+        if (\is_array($categories)) {
+            $this->categories()->sync($categories, $detaching);
+        } //else {
+            //dddx($categories);
+        //}
+>>>>>>> ea58237 (up)
 
         return $this;
     }
