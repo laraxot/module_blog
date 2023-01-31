@@ -121,6 +121,9 @@ use Spatie\Tags\HasTags; // spatie tags
  * Modules\Blog\Models\Article.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8213e79 (Lint)
  * @property int                                                                      $id
  * @property string|null                                                              $article_type
  * @property \Illuminate\Support\Carbon|null                                          $published_at
@@ -196,6 +199,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article       notPinned()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       notPublished()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       notShared()
+<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       otherCurrentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       pinned()
@@ -364,10 +368,59 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article withAnyTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withCategories($categories)
 >>>>>>> bc6d311 (up)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       otherCurrentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       pinned()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       popular()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       published()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       publishedUntilToday()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       recent()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       search($searching)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       shared()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       showHomepage()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       submitted()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       tag($id)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       trending()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereApprovedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereArticleType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereDeclinedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereIsFeatured($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereIsPinned($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereOriginalUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereParentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereParentType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       wherePos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       wherePublishedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereRatingsAvg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereRatingsCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereReadTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereSeriesId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereSharedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereShowOnHomepage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereStatusId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereSubmittedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withAllCategories($categories)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withAnyCategories($categories)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withAnyTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withCategories($categories)
+>>>>>>> 8213e79 (Lint)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Article withRating()
- * @method static \Illuminate\Database\Eloquent\Builder|Article withoutAnyCategories()
- * @method static \Illuminate\Database\Eloquent\Builder|Article withoutCategories($categories)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withRating()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutAnyCategories()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutCategories($categories)
+ *
  * @mixin \Eloquent
  */
 <<<<<<< HEAD

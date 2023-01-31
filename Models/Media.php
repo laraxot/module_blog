@@ -16,35 +16,37 @@ use Spatie\Tags\HasTags;
 /**
  * Modules\Blog\Models\Media.
  *
- * @property int $id
- * @property string $model_type
- * @property int $model_id
- * @property string|null $uuid
- * @property string $collection_name
- * @property string $name
- * @property string $file_name
- * @property string|null $mime_type
- * @property string $disk
- * @property string|null $conversions_disk
- * @property int $size
- * @property array $manipulations
- * @property array $custom_properties
- * @property array $generated_conversions
- * @property array $responsive_images
- * @property int|null $order_column
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property-read string $status
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $model
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[] $tags
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
- * @property-read int|null $statuses_count
- * @property-read int|null $tags_count
+ * @property int                                                                   $id
+ * @property string                                                                $model_type
+ * @property int                                                                   $model_id
+ * @property string|null                                                           $uuid
+ * @property string                                                                $collection_name
+ * @property string                                                                $name
+ * @property string                                                                $file_name
+ * @property string|null                                                           $mime_type
+ * @property string                                                                $disk
+ * @property string|null                                                           $conversions_disk
+ * @property int                                                                   $size
+ * @property array                                                                 $manipulations
+ * @property array                                                                 $custom_properties
+ * @property array                                                                 $generated_conversions
+ * @property array                                                                 $responsive_images
+ * @property int|null                                                              $order_column
+ * @property \Illuminate\Support\Carbon|null                                       $created_at
+ * @property \Illuminate\Support\Carbon|null                                       $updated_at
+ * @property string|null                                                           $created_by
+ * @property string|null                                                           $updated_by
+ * @property string                                                                $status
+ * @property \Illuminate\Database\Eloquent\Model|\Eloquent                         $model
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[]    $tags
+ * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
+ * @property int|null                                                              $statuses_count
+ * @property int|null                                                              $tags_count
+ *
  * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|static[] all($columns = ['*'])
- * @method static \Illuminate\Database\Eloquent\Builder|Media currentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       currentStatus(...$names)
  * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|static[] get($columns = ['*'])
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -52,6 +54,10 @@ use Spatie\Tags\HasTags;
 >>>>>>> 9e2a502 (Lint)
 =======
 >>>>>>> 3ee9df2 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 9d4a705 (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newQuery()
  * @method static Builder|Media                                                                     ordered()
@@ -183,6 +189,7 @@ use Spatie\Tags\HasTags;
 =======
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9e2a502 (Lint)
 =======
 >>>>>>> b2584c5 (rebase)
@@ -205,6 +212,8 @@ use Spatie\Tags\HasTags;
  *
 >>>>>>> f039311 (rebase)
 =======
+=======
+>>>>>>> 9d4a705 (rebase)
 =======
  * @method static \Illuminate\Database\Eloquent\Builder|Media newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Media newQuery()
@@ -236,7 +245,12 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Media withAnyTagsOfAnyType($tags)
 >>>>>>> bc6d311 (up)
+<<<<<<< HEAD
 >>>>>>> 3ee9df2 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 9d4a705 (rebase)
  * @mixin \Eloquent
  */
 class Media extends BaseMedia

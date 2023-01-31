@@ -22,6 +22,7 @@ namespace Modules\Blog\Models;
  * @property mixed                                                                $url
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
  * @method static \Modules\Blog\Database\Factories\ContactFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact   newQuery()
@@ -63,6 +64,11 @@ namespace Modules\Blog\Models;
 =======
 <<<<<<< HEAD
 >>>>>>> 3ee9df2 (rebase)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 9d4a705 (rebase)
  * @property string|null                                                          $guid
  * @property string|null                                                          $image_src
  * @property string|null                                                          $lang
@@ -79,6 +85,7 @@ namespace Modules\Blog\Models;
  * @method static \Modules\Blog\Database\Factories\ContactFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newQuery()
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
  *
@@ -122,10 +129,16 @@ namespace Modules\Blog\Models;
 >>>>>>> 9e2a502 (Lint)
 =======
 >>>>>>> bc6d311 (up)
+<<<<<<< HEAD
 >>>>>>> 3ee9df2 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 9d4a705 (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact       query()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  */
 class Contact extends BaseModelLang
