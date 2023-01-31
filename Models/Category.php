@@ -176,6 +176,7 @@ use Spatie\Translatable\HasTranslations;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 378fec2 (up)
 class Category extends Model {
 =======
@@ -203,6 +204,9 @@ class Category extends Model {
 class Category extends Model
 {
 >>>>>>> 1316785 (rebase)
+=======
+class Category extends Model {
+>>>>>>> 360b73d (rebase)
     use HasFactory;
     use HasSlug;
     use HasTranslations;
@@ -287,8 +291,7 @@ class Category extends Model
     /**
      * Get all attached models of the given class to the category.
      */
-    public function entries(string $class): MorphToMany
-    {
+    public function entries(string $class): MorphToMany {
         // return $this->morphedByMany($class, 'categorizable', config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
         return $this->morphedByMany($class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
@@ -296,14 +299,14 @@ class Category extends Model
     /**
      * Get the options for generating the slug.
      */
-    public function getSlugOptions(): SlugOptions
-    {
+    public function getSlugOptions(): SlugOptions {
         return SlugOptions::create()
                           // ->doNotGenerateSlugsOnUpdate() // ?
                           ->generateSlugsFrom('name')
                           ->saveSlugsTo('slug');
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -347,6 +350,8 @@ class Category extends Model
 >>>>>>> aef633b (rebase)
 =======
 >>>>>>> 1316785 (rebase)
+=======
+>>>>>>> 360b73d (rebase)
     public function scopeOfType(Builder $query, string $type): Builder {
 =======
     public function scopeOfType(Builder $query, string $type):Builder {
@@ -415,7 +420,13 @@ class Category extends Model
     public function scopeOfType(Builder $query, string $type): Builder
     {
 >>>>>>> 92d6d85 (.)
+<<<<<<< HEAD
 >>>>>>> 1316785 (rebase)
+=======
+=======
+    public function scopeOfType(Builder $query, string $type): Builder {
+>>>>>>> 0834824 (Lint)
+>>>>>>> 360b73d (rebase)
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){
@@ -424,21 +435,18 @@ class Category extends Model
         */
     }
 
-    public function categorizables(): HasMany
-    {
+    public function categorizables(): HasMany {
         return $this->hasMany(Categorizable::class, 'category_id');
     }
 
-    public function articles(): MorphToMany
-    {
+    public function articles(): MorphToMany {
         return $this->morphedByMany(self::class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
 
     /**
      * @return string
      */
-    public function getRouteKeyName()
-    {
+    public function getRouteKeyName() {
         return RouteService::inAdmin() ? 'id' : 'slug';
     }
 }
