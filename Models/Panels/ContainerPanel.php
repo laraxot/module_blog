@@ -11,8 +11,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class ContainerPanel.
  */
-class ContainerPanel extends XotBasePanel
-{
+class ContainerPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -26,8 +25,7 @@ class ContainerPanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Text',
@@ -40,8 +38,7 @@ class ContainerPanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }

@@ -166,8 +166,7 @@ use Spatie\Tags\HasTags;
 >>>>>>> 6fa5a25 (rebase)
  * @mixin \Eloquent
  */
-class Media extends BaseMedia
-{
+class Media extends BaseMedia {
     // use Searchable;
     // use Cachable;
     use HasFactory;

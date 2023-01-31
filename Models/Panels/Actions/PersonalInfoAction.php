@@ -36,8 +36,7 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class PersonalInfoAction.
  */
-class PersonalInfoAction extends XotBasePanelAction
-{
+class PersonalInfoAction extends XotBasePanelAction {
     public bool $onContainer = false; // onlyContainer
 
     public bool $onItem = true; // onlyContainer
@@ -51,12 +50,15 @@ class PersonalInfoAction extends XotBasePanelAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47d8285 (rebase)
 =======
 >>>>>>> 355a234 (rebase)
 =======
 >>>>>>> ea4d650 (rebase)
+=======
+>>>>>>> ae00439 (rebase)
     public function handle(): Renderable {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +82,7 @@ class PersonalInfoAction extends XotBasePanelAction
     public function handle(): Renderable {
 >>>>>>> afa2edf (Lint)
 >>>>>>> f0ffa9e (rebase)
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -88,6 +91,8 @@ class PersonalInfoAction extends XotBasePanelAction
     {
 >>>>>>> 00a7996 (.)
 >>>>>>> 47d8285 (rebase)
+=======
+>>>>>>> ae00439 (rebase)
         if (null == $this->panel) {
 =======
 <<<<<<< HEAD
@@ -162,8 +167,7 @@ class PersonalInfoAction extends XotBasePanelAction
         return $this->panel->view();
     }
 
-    public function postHandle(): Renderable
-    {
+    public function postHandle(): Renderable {
         $data = request()->all();
         // dddx($data['handle']);
         /*
