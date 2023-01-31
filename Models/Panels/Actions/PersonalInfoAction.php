@@ -52,6 +52,7 @@ class PersonalInfoAction extends XotBasePanelAction {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 0088a11 (rebase)
@@ -94,6 +95,13 @@ class PersonalInfoAction extends XotBasePanelAction {
         if (null == $this->panel) {
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
+=======
+        if (null == $this->panel) {
+=======
+       
+        if (null === $this->panel) {
+>>>>>>> 883dd21 (up)
+>>>>>>> f031549 (rebase)
             throw new \Exception('this->panel is null');
         }
 
