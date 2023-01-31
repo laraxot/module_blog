@@ -14,6 +14,9 @@ use Sushi\Sushi;
  * Modules\Blog\Models\Home.
  *
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8213e79 (Lint)
  * @property int|null                                                              $id
  * @property string|null                                                           $name
  * @property string|null                                                           $icon_src
@@ -39,6 +42,7 @@ use Sushi\Sushi;
  * @method static \Modules\Blog\Database\Factories\HomeFactory        factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newQuery()
+<<<<<<< HEAD
 =======
  * @property int|null $id
  * @property string|null $name
@@ -65,15 +69,18 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home newQuery()
 >>>>>>> bc6d311 (up)
+=======
+>>>>>>> 8213e79 (Lint)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Home ofLayoutPosition($layout_position)
- * @method static \Illuminate\Database\Eloquent\Builder|Home query()
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereIconSrc($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          ofLayoutPosition($layout_position)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereIconSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  */
 class Home extends BaseModelLang {
