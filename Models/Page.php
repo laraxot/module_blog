@@ -115,6 +115,15 @@ class Page extends BaseModel {
                 ];
             });
             $pages = $pages->merge($tmp);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            // dddx($pages);
+=======
+            //dddx($pages);
+        
+>>>>>>> cbaaa41 (.)
+>>>>>>> fce9f13 (rebase)
         }
 
         // dddx($pages->all());
