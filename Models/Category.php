@@ -53,7 +53,6 @@ use Spatie\Translatable\HasTranslations;
  * @property \Kalnoy\Nestedset\Collection|Category[]                                       $children
  * @property int|null                                                                      $children_count
  * @property Category|null                                                                 $parent
- *
  * @method static \Kalnoy\Nestedset\Collection|static[]       all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ancestorsAndSelf($id, array $columns = [])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ancestorsOf($id, array $columns = [])
@@ -164,13 +163,13 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Query\Builder|Category withTrashed()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     withoutRoot()
  * @method static \Illuminate\Database\Query\Builder|Category withoutTrashed()
- *
  * @mixin \Eloquent
  *
  * @property \Kalnoy\Nestedset\Collection|Category[] $articles
  * @property int|null                                $articles_count
  */
-class Category extends Model {
+class Category extends Model
+{
     use HasFactory;
     use HasSlug;
     use HasTranslations;
@@ -255,7 +254,8 @@ class Category extends Model {
     /**
      * Get all attached models of the given class to the category.
      */
-    public function entries(string $class): MorphToMany {
+    public function entries(string $class): MorphToMany
+    {
         // return $this->morphedByMany($class, 'categorizable', config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
         return $this->morphedByMany($class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
@@ -263,7 +263,8 @@ class Category extends Model {
     /**
      * Get the options for generating the slug.
      */
-    public function getSlugOptions(): SlugOptions {
+    public function getSlugOptions(): SlugOptions
+    {
         return SlugOptions::create()
                           // ->doNotGenerateSlugsOnUpdate() // ?
                           ->generateSlugsFrom('name')
@@ -281,10 +282,13 @@ class Category extends Model {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 34ad686 (rebase)
 =======
 >>>>>>> d557c94 (rebase)
+=======
+>>>>>>> 48f4792 (rebase)
     public function scopeOfType(Builder $query, string $type): Builder {
 =======
     public function scopeOfType(Builder $query, string $type):Builder {
@@ -298,6 +302,7 @@ class Category extends Model {
     public function scopeOfType(Builder $query, string $type): Builder
     {
 >>>>>>> b02ae09 (.)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 39485d1 (rebase)
@@ -344,6 +349,8 @@ class Category extends Model {
     public function scopeOfType(Builder $query, string $type): Builder {
 >>>>>>> 134e178 (Lint)
 >>>>>>> d557c94 (rebase)
+=======
+>>>>>>> 48f4792 (rebase)
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){
@@ -352,18 +359,21 @@ class Category extends Model {
         */
     }
 
-    public function categorizables(): HasMany {
+    public function categorizables(): HasMany
+    {
         return $this->hasMany(Categorizable::class, 'category_id');
     }
 
-    public function articles(): MorphToMany {
+    public function articles(): MorphToMany
+    {
         return $this->morphedByMany(self::class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
 
     /**
      * @return string
      */
-    public function getRouteKeyName() {
+    public function getRouteKeyName()
+    {
         return RouteService::inAdmin() ? 'id' : 'slug';
     }
 }

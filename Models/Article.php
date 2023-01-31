@@ -156,7 +156,6 @@ use Spatie\Tags\HasTags; // spatie tags
  * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[]    $statuses
  * @property int|null                                                                 $statuses_count
  * @property int|null                                                                 $tags_count
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Article       approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       article($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       author($id)
@@ -392,7 +391,6 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withRating()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutAnyCategories()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutCategories($categories)
- *
  * @mixin \Eloquent
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Article withoutTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
