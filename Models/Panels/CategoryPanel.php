@@ -124,8 +124,12 @@ class CategoryPanel extends XotBasePanel {
         //    return $name;
        //}
 >>>>>>> 1172c16 (up)
+=======
+        //    return $name;
+        // }
+>>>>>>> 7333c06 (Lint)
         if (is_array($name)) {
-            $name= implode('-', $name);
+            $name = implode('-', $name);
         }
 
 <<<<<<< HEAD
@@ -142,6 +146,9 @@ class CategoryPanel extends XotBasePanel {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c5a3a82 (rebase)
     /**
      * @return array
      */
@@ -249,6 +256,9 @@ class CategoryPanel extends XotBasePanel {
 =======
 =======
     public function optionsSelect():array {
+=======
+    public function optionsSelect(): array {
+>>>>>>> 7333c06 (Lint)
         // $rows = $this->row->all();
         $rows = Category::get();
 >>>>>>> 1172c16 (up)
@@ -270,6 +280,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
 >>>>>>> ea58237 (up)
@@ -280,6 +291,13 @@ class CategoryPanel extends XotBasePanel {
         
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
+=======
+=======
+        
+>>>>>>> 1172c16 (up)
+=======
+>>>>>>> 7333c06 (Lint)
+>>>>>>> c5a3a82 (rebase)
     }
 
     /**
