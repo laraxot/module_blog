@@ -7,7 +7,8 @@ namespace Modules\Blog\Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Modules\Blog\Models\Contact;
 
-class ContactFactory extends Factory {
+class ContactFactory extends Factory
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -20,7 +21,8 @@ class ContactFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition()
+    {
         return [
             // 'id' => $this->faker->randomNumber,
             // 'post_id' => $this->faker->integer,

@@ -175,7 +175,8 @@ use Spatie\Tags\HasTags;
 >>>>>>> 9e2a502 (Lint)
  * @mixin \Eloquent
  */
-class Media extends BaseMedia {
+class Media extends BaseMedia
+{
     // use Searchable;
     // use Cachable;
     use HasFactory;

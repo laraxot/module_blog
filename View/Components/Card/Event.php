@@ -16,12 +16,17 @@ class Event extends Component {
  * Class Event.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Event extends Component
 {
 >>>>>>> 71f0636 (up)
 =======
 class Event extends Component {
 >>>>>>> e0d1f4b (Lint)
+=======
+class Event extends Component
+{
+>>>>>>> de5af69 (up)
     public array $attrs = [];
     public Model $row;
 
@@ -30,7 +35,8 @@ class Event extends Component {
      *
      * @return void
      */
-    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '') {
+    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '')
+    {
         $this->attrs['class'] = $class;
         $this->attrs['style'] = $style;
         $this->attrs['id'] = $id;
@@ -40,7 +46,8 @@ class Event extends Component {
     /**
      * Get the view / contents that represent the component.
      */
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */

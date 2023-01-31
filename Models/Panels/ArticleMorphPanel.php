@@ -10,13 +10,15 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class ArticleMorphPanel.
  */
-class ArticleMorphPanel extends XotBasePanel {
+class ArticleMorphPanel extends XotBasePanel
+{
     protected static string $model = 'Modules\Blog\Models\ArticleMorph';
 
     /**
      * @return object[]
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Text',

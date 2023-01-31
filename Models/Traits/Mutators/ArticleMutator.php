@@ -12,15 +12,21 @@ trait ArticleMutator {
  * Undocumented trait.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> de5af69 (up)
 trait ArticleMutator
 {
     public function getParentIdAttribute(?int $value): ?int
     {
+<<<<<<< HEAD
 >>>>>>> 71f0636 (up)
 =======
 trait ArticleMutator {
     public function getParentIdAttribute(?int $value): ?int {
 >>>>>>> e0d1f4b (Lint)
+=======
+>>>>>>> de5af69 (up)
         if (null !== $value) {
             return $value;
         }

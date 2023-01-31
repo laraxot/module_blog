@@ -16,19 +16,26 @@ class DocPanelPolicy extends XotBasePanelPolicy {
  * Class DocPanelPolicy.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> de5af69 (up)
 class DocPanelPolicy extends XotBasePanelPolicy
 {
     public function rate(UserContract $user, PanelContract $panel): bool
     {
+<<<<<<< HEAD
 >>>>>>> 71f0636 (up)
 =======
 class DocPanelPolicy extends XotBasePanelPolicy {
     public function rate(UserContract $user, PanelContract $panel): bool {
 >>>>>>> e0d1f4b (Lint)
+=======
+>>>>>>> de5af69 (up)
         return true;
     }
 
-    public function changePos(UserContract $user, PanelContract $panel): bool {
+    public function changePos(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 }

@@ -11,20 +11,25 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Class PagePanelPolicy.
  */
-class PagePanelPolicy extends XotBasePanelPolicy {
-    public function sendMsg(UserContract $user, PanelContract $panel): bool {
+class PagePanelPolicy extends XotBasePanelPolicy
+{
+    public function sendMsg(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function articleCreate(UserContract $user, PanelContract $panel): bool {
+    public function articleCreate(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function threadCreate(UserContract $user, PanelContract $panel): bool {
+    public function threadCreate(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 
-    public function articleModerate(UserContract $user, PanelContract $panel): bool {
+    public function articleModerate(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 }
