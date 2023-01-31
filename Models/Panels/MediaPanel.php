@@ -20,6 +20,9 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> 315e874 (up)
 =======
@@ -78,7 +81,13 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> 5376387 (Lint)
+<<<<<<< HEAD
 >>>>>>> 4f828c4 (rebase)
+=======
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> a3494d5 (rebase)
+>>>>>>> c41b2a8 (rebase)
 
 class MediaPanel extends XotBasePanel
 {
@@ -98,19 +107,26 @@ class MediaPanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4f828c4 (rebase)
+=======
+>>>>>>> c41b2a8 (rebase)
 =======
 
 >>>>>>> b022d6c (up)
 =======
 >>>>>>> 5376387 (Lint)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c41b2a8 (rebase)
 =======
 =======
 
 >>>>>>> a780d70 (up)
 >>>>>>> a3494d5 (rebase)
+<<<<<<< HEAD
 =======
 =======
 
@@ -125,6 +141,8 @@ class MediaPanel extends XotBasePanel
 >>>>>>> 914e6a9 (rebase)
 =======
 >>>>>>> 4f828c4 (rebase)
+=======
+>>>>>>> c41b2a8 (rebase)
     /**
      * on select the option label.
      *
@@ -134,11 +152,15 @@ class MediaPanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c41b2a8 (rebase)
     public function optionLabel($row): string
     {
 =======
     public function optionLabel($row): string {
 >>>>>>> a780d70 (up)
+<<<<<<< HEAD
 =======
     public function optionLabel($row): string
     {
@@ -150,6 +172,8 @@ class MediaPanel extends XotBasePanel
     public function optionLabel($row): string
     {
 >>>>>>> 94220ac (.)
+=======
+>>>>>>> c41b2a8 (rebase)
         return (string) $row->name;
     }
 

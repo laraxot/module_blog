@@ -197,6 +197,7 @@ class HomePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
 =======
@@ -207,6 +208,8 @@ class HomePanel extends XotBasePanel
 >>>>>>> d0b387a (rebase)
 =======
 >>>>>>> 48f4792 (rebase)
+=======
+>>>>>>> c41b2a8 (rebase)
             // ->limit(8)
             ->get()
             // ->take(8)
@@ -220,10 +223,13 @@ class HomePanel extends XotBasePanel
 >>>>>>> b022d6c (up)
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 0088a11 (rebase)
 =======
 >>>>>>> 962cd73 (rebase)
 =======
+=======
+>>>>>>> c41b2a8 (rebase)
             ->limit(8)
 >>>>>>> a780d70 (up)
 >>>>>>> a3494d5 (rebase)
