@@ -6,12 +6,17 @@ namespace Modules\Blog\Models\Panels\Policies;
 
 use Modules\Cms\Contracts\PanelContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 use Modules\Xot\Contracts\UserContract as User;
 =======
 use Modules\Xot\Contracts\UserContract as User;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 >>>>>>> 315e874 (up)
+=======
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+use Modules\Xot\Contracts\UserContract as User;
+>>>>>>> c4fb14d (Lint)
 
 /**
  * Class PostPanelPolicy.

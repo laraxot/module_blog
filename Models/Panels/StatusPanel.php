@@ -11,9 +11,12 @@ use Modules\Blog\Models\Status;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
+=======
+>>>>>>> c4fb14d (Lint)
 
 class StatusPanel extends XotBasePanel {
     /**

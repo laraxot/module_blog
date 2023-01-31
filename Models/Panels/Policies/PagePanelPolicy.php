@@ -12,12 +12,17 @@ use App\User;
 
 use Modules\Cms\Contracts\PanelContract;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 use Modules\Xot\Contracts\UserContract;
 =======
 use Modules\Xot\Contracts\UserContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 >>>>>>> 315e874 (up)
+=======
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
+use Modules\Xot\Contracts\UserContract;
+>>>>>>> c4fb14d (Lint)
 
 /**
  * Class PagePanelPolicy.
