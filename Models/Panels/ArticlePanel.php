@@ -11,11 +11,17 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Rating\Models\Panels\Actions\RateItAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
 =======
 >>>>>>> c4fb14d (Lint)
+=======
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 315e874 (up)
+>>>>>>> 781794c (rebase)
 
 /**
  * Class ArticlePanel.
