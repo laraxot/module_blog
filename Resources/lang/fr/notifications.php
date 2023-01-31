@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -12,11 +13,20 @@ declare(strict_types=1);
 
 >>>>>>> 197df28 (Lint)
 =======
+=======
+>>>>>>> fb6cf60 (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 >>>>>>> 5967355 (rebase)
+=======
+=======
+declare(strict_types=1);
+
+>>>>>>> 5c25f35 (Lint)
+>>>>>>> fb6cf60 (rebase)
 return [
     'approve_comment' => 'Approuver le commentaire',
     'reject_comment' => 'Rejeter le commentaire',
@@ -32,6 +42,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'enum_description_participating' => 'Lorsque vous participez',
     'enum_description_participating' => 'Lorsque vous participez',
 =======
@@ -41,11 +52,19 @@ return [
     'enum_description_participating' => 'Lorsque vous participez',
 >>>>>>> 197df28 (Lint)
 =======
+=======
+>>>>>>> fb6cf60 (rebase)
     'enum_description_participating' => 'Lorsque vous participez',
 =======
     'enum_description_participating'=> 'Lorsque vous participez',
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 >>>>>>> 5967355 (rebase)
+=======
+=======
+    'enum_description_participating' => 'Lorsque vous participez',
+>>>>>>> 5c25f35 (Lint)
+>>>>>>> fb6cf60 (rebase)
     'enum_description_all' => 'Sur tous les commentaires',
     'enum_description_none' => 'Jamais',
     'enum_longdescription_participating' => 'Être notifié lors de la participation',

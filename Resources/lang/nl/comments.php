@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
@@ -12,11 +13,20 @@ declare(strict_types=1);
 
 >>>>>>> 197df28 (Lint)
 =======
+=======
+>>>>>>> fb6cf60 (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 >>>>>>> 5967355 (rebase)
+=======
+=======
+declare(strict_types=1);
+
+>>>>>>> 5c25f35 (Lint)
+>>>>>>> fb6cf60 (rebase)
 return [
     'write_comment' => 'Plaats een opmerking',
     'write_reply' => 'Reageer',
@@ -35,6 +45,7 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Link gekopieerd',
 =======
     'copied' => 'Link gekopieerd'
@@ -43,9 +54,17 @@ return [
     'copied' => 'Link gekopieerd',
 >>>>>>> 197df28 (Lint)
 =======
+=======
+>>>>>>> fb6cf60 (rebase)
     'copied' => 'Link gekopieerd',
 =======
     'copied' => 'Link gekopieerd'
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 >>>>>>> 5967355 (rebase)
+=======
+=======
+    'copied' => 'Link gekopieerd',
+>>>>>>> 5c25f35 (Lint)
+>>>>>>> fb6cf60 (rebase)
 ];
