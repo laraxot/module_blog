@@ -42,7 +42,6 @@ use Spatie\Tags\HasTags;
  * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[] $statuses
  * @property int|null                                                              $statuses_count
  * @property int|null                                                              $tags_count
- *
  * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|static[] all($columns = ['*'])
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       currentStatus(...$names)
  * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|static[] get($columns = ['*'])
@@ -79,6 +78,7 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,10 +180,10 @@ use Spatie\Tags\HasTags;
 =======
  *
 >>>>>>> 0401392 (rebase)
+=======
+>>>>>>> e585fd6 (rebase)
  * @mixin \Eloquent
- *
  * @property int $user_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Media whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Media withoutTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  */
