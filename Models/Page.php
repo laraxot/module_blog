@@ -125,12 +125,15 @@ class Page extends BaseModel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 275df8b (rebase)
 =======
 >>>>>>> 944a6f3 (rebase)
 =======
 >>>>>>> 2f76c57 (rebase)
+=======
+>>>>>>> 3a18d61 (rebase)
             // dddx($pages);
 =======
             //dddx($pages);
@@ -143,6 +146,7 @@ class Page extends BaseModel
 >>>>>>> be111b1 (Lint)
 =======
 >>>>>>> 160756d (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 275df8b (rebase)
 =======
@@ -160,6 +164,11 @@ class Page extends BaseModel
 =======
 >>>>>>> 160756d (.)
 >>>>>>> 2f76c57 (rebase)
+=======
+=======
+            // dddx($pages);
+>>>>>>> b8c59fa (Lint)
+>>>>>>> 3a18d61 (rebase)
         }
 
         // dddx($pages->all());
