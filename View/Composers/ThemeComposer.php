@@ -11,6 +11,7 @@ use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
 class ThemeComposer {
+<<<<<<< HEAD
     /*
      * ---.
 
@@ -29,10 +30,19 @@ class ThemeComposer {
 
 >>>>>>> 104688c (Lint)
      */
+=======
+<<<<<<< HEAD
+>>>>>>> f3c85d2 (rebase)
     /**
      * Undocumented function.
      *
      * @return Collection<Article>
+=======
+    /*
+     * ---.
+
+        
+>>>>>>> 48af1a0 (up)
      */
     /**
      * Undocumented function.
@@ -56,17 +66,23 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f3c85d2 (rebase)
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
 =======
 >>>>>>> ea58237 (up)
 =======
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
 >>>>>>> 48af1a0 (up)
+<<<<<<< HEAD
 =======
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
 =======
 >>>>>>> ea58237 (up)
 >>>>>>> 1fdd40b (rebase)
+=======
+>>>>>>> f3c85d2 (rebase)
         */
     }
 
