@@ -230,6 +230,7 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // public function compose(array ...$args):string {
 =======
     //public function compose(array ...$args):string {
@@ -333,6 +334,25 @@ class ThemeComposer {
     public function getCardEvents(): Collection {
 >>>>>>> afa2edf (Lint)
 >>>>>>> f0ffa9e (rebase)
+=======
+    public function getCardEvents(): Collection {
+=======
+    //public function compose(array ...$args):string {
+        /*
+        dddx(
+            [
+            'args'=>$args,
+
+            ]
+        );
+        */
+        // error 404
+        //return 'aaa';
+    //}
+
+    public function getCardEvents() {
+>>>>>>> 7fdf4e1 (up)
+>>>>>>> 34ad686 (rebase)
         $str = '[
             {
               "date": "26",
