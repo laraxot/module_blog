@@ -7,9 +7,9 @@ namespace Modules\Blog\Models\Panels\Policies;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 
 /*
-use Modules\Xot\Models\Policies\XotBasePolicy;
+use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 se estendo
-Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models\User $user, Modules\Blog\Models\Event $post) should be compatible with Modules\Xot\Models\Policies\XotBasePolicy::index(Modules\LU\Models\User $user, $post)
+Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models\User $user, Modules\Blog\Models\Event $post) should be compatible with Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy::index(Modules\LU\Models\User $user, $post)
 */
 
 /**
