@@ -187,12 +187,15 @@ class HomePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
 =======
 >>>>>>> 914e6a9 (rebase)
 =======
 >>>>>>> f031549 (rebase)
+=======
+>>>>>>> d0b387a (rebase)
             // ->limit(8)
             ->get()
             // ->take(8)
@@ -263,7 +266,16 @@ class HomePanel extends XotBasePanel {
             //->take(8)
             ;
 >>>>>>> 883dd21 (up)
+<<<<<<< HEAD
 >>>>>>> f031549 (rebase)
+=======
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 056bec8 (Lint)
+>>>>>>> d0b387a (rebase)
 
         return $navCategories;
     }
@@ -281,10 +293,13 @@ class HomePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
 =======
 >>>>>>> f031549 (rebase)
+=======
+>>>>>>> d0b387a (rebase)
             // ->limit(8)
             ->get()
             // ->take(8)
@@ -304,12 +319,16 @@ class HomePanel extends XotBasePanel {
             ;
 >>>>>>> 883dd21 (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0b387a (rebase)
 =======
             // ->limit(8)
             ->get()
             // ->take(8)
         ;
 >>>>>>> 056bec8 (Lint)
+<<<<<<< HEAD
 =======
             ->has('articles', '>', 0)->get();
 >>>>>>> b02ae09 (.)
@@ -335,6 +354,8 @@ class HomePanel extends XotBasePanel {
 >>>>>>> 8192562 (rebase)
 =======
 >>>>>>> f031549 (rebase)
+=======
+>>>>>>> d0b387a (rebase)
 
         return $footerCategories;
     }

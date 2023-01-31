@@ -30,7 +30,6 @@ use Modules\Theme\Services\ThemeService;
 =======
 >>>>>>> 8513cb9 (rebase)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
-use Modules\Theme\Services\ThemeService;
 
 // -------- bases -----------
 
@@ -49,6 +48,7 @@ class PersonalInfoAction extends XotBasePanelAction {
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function handle(): Renderable {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -96,9 +96,13 @@ class PersonalInfoAction extends XotBasePanelAction {
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
 =======
+=======
+>>>>>>> d0b387a (rebase)
         if (null == $this->panel) {
 =======
        
+=======
+>>>>>>> 056bec8 (Lint)
         if (null === $this->panel) {
 >>>>>>> 883dd21 (up)
 >>>>>>> f031549 (rebase)
