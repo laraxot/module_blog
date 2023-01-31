@@ -191,11 +191,12 @@ trait HasCategory {
     public function syncCategories($categories, bool $detaching = true) {
         // Find categories
         $categories = $this->prepareCategoryIds($categories);
+
         // dddx(is_array( $categories));
         // Sync model categories
-        if (\is_array($categories)) {
-            $this->categories()->sync($categories, $detaching);
-        } // else {
+        // if (\is_array($categories)) {
+        $this->categories()->sync($categories, $detaching);
+        // } // else {
         // dddx($categories);
         // }
 

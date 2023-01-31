@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Modules\Cms\Models\Panels\XotBasePanel;
 // --- Services --
 
-use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
 
 class CategorizablePanel extends XotBasePanel {

@@ -11,6 +11,11 @@ use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
 class ThemeComposer {
+    /*
+     * ---.
+
+
+     */
     /**
      * Undocumented function.
      *
@@ -194,6 +199,19 @@ class ThemeComposer {
 
         return $rows;
     }
+
+    // public function compose(array ...$args):string {
+        /*
+        dddx(
+            [
+            'args'=>$args,
+
+            ]
+        );
+        */
+        // error 404
+        // return 'aaa';
+    // }
 
     public function getCardEvents(): Collection {
         $str = '[

@@ -27,9 +27,6 @@ class CategoryPanel extends XotBasePanel {
         // if (is_string($name)) {
         //    return $name;
         // }
-        if (is_null($name)) {
-            $name = '';
-        }
         if (is_array($name)) {
             $name = implode('-', $name);
         }

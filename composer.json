@@ -41,6 +41,46 @@
         "nette/php-generator": "^3.5",
         "nunomaduro/larastan": "^2.2",
         "orchestra/testbench": "^7.15",
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 802efe7 (up)
+        "fakerphp/faker": "^1.14",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "inertiajs/inertia-laravel": "^0.6.3",
+        "nesbot/carbon": "^2.63",
+        "nette/php-generator": "^3.5",
+<<<<<<< HEAD
+>>>>>>> 6b00753 (.)
+=======
+        "nunomaduro/larastan": "^2.2",
+        "orchestra/testbench": "^7.15",
+>>>>>>> 802efe7 (up)
+=======
+=======
+=======
+>>>>>>> 802efe7 (up)
+>>>>>>> 8192562 (rebase)
+        "fakerphp/faker": "^1.14",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "inertiajs/inertia-laravel": "^0.6.3",
+        "nesbot/carbon": "^2.63",
+        "nette/php-generator": "^3.5",
+<<<<<<< HEAD
+>>>>>>> 6b00753 (.)
+<<<<<<< HEAD
+>>>>>>> 2a99ba1 (rebase)
+=======
+=======
+        "nunomaduro/larastan": "^2.2",
+        "orchestra/testbench": "^7.15",
+>>>>>>> 802efe7 (up)
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 6d76482 (up)
         "pestphp/pest": "^1.22",
         "pestphp/pest-plugin-laravel": "^1.3",
         "phpstan/extension-installer": "^1.1",
@@ -49,17 +89,79 @@
         "spatie/laravel-typescript-transformer": "^2.1.6",
         "spatie/pest-plugin-snapshots": "^1.1",
         "spatie/phpunit-snapshot-assertions": "^4.2",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a99ba1 (rebase)
+=======
+>>>>>>> 8192562 (rebase)
         "spatie/test-time": "^1.2"
+=======
+        "spatie/test-time": "^1.2",
+        "nesbot/carbon": "^2.63"
+>>>>>>> 6b00753 (.)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "spatie/test-time": "^1.2"
+>>>>>>> 802efe7 (up)
+=======
+>>>>>>> 2a99ba1 (rebase)
+=======
+=======
+        "spatie/test-time": "^1.2"
+>>>>>>> 802efe7 (up)
+>>>>>>> 8192562 (rebase)
+=======
+        "spatie/test-time": "^1.2"
+>>>>>>> 6d76482 (up)
     },
     "scripts": {
         "post-autoload-dump": [
             "@php vendor/bin/testbench package:discover --ansi"
         ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 802efe7 (up)
+=======
+>>>>>>> 2a99ba1 (rebase)
+=======
+=======
+>>>>>>> 802efe7 (up)
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 6d76482 (up)
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta"
         ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 6b00753 (.)
+=======
+>>>>>>> 802efe7 (up)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6b00753 (.)
+>>>>>>> 2a99ba1 (rebase)
+=======
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 6d76482 (up)
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
         "test-coverage": "vendor/bin/pest --coverage-html coverage",
@@ -74,4 +176,31 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2a99ba1 (rebase)
+=======
+>>>>>>> 8192562 (rebase)
 }
+=======
+}
+>>>>>>> 6b00753 (.)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 802efe7 (up)
+=======
+>>>>>>> 2a99ba1 (rebase)
+=======
+=======
+}
+>>>>>>> 802efe7 (up)
+>>>>>>> 8192562 (rebase)
+=======
+}
+>>>>>>> 6d76482 (up)

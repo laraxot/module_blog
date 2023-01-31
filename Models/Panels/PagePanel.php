@@ -5,7 +5,81 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
+=======
+use Exception;
+>>>>>>> f4041d1 (up)
+=======
+use Illuminate\Contracts\Support\Renderable;
+<<<<<<< HEAD
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> a822353 (.)
+=======
+>>>>>>> 9f910bb (.)
+=======
+=======
+>>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> bb94901 (rebase)
+use Illuminate\Contracts\Support\Renderable;
+=======
+use Exception;
+>>>>>>> b96306f (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f930b9f (rebase)
+=======
+=======
+use Illuminate\Contracts\Support\Renderable;
+<<<<<<< HEAD
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 1daf8a3 (Lint)
+<<<<<<< HEAD
+>>>>>>> af0dac7 (rebase)
+=======
+=======
+>>>>>>> c029664 (.)
+>>>>>>> c505cad (rebase)
+=======
+use Exception;
+>>>>>>> b996731 (rebase)
+=======
+use Illuminate\Contracts\Support\Renderable;
+<<<<<<< HEAD
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> a3bd33a (rebase)
+=======
+>>>>>>> f73f6fd (.)
+=======
+use Illuminate\Contracts\Support\Renderable;
+=======
+use Exception;
+>>>>>>> b96306f (up)
+>>>>>>> bb3945d (rebase)
+=======
+=======
+use Illuminate\Contracts\Support\Renderable;
+<<<<<<< HEAD
+use Illuminate\Database\Eloquent\Model;
+>>>>>>> 1daf8a3 (Lint)
+<<<<<<< HEAD
+>>>>>>> bb94901 (rebase)
+=======
+=======
+>>>>>>> c029664 (.)
+>>>>>>> 15844ac (rebase)
+=======
+use Illuminate\Contracts\Support\Renderable;
+>>>>>>> 6d76482 (up)
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
@@ -60,7 +134,98 @@ class PagePanel extends XotBasePanel {
     /**
      * index navigation.
      */
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c505cad (rebase)
+=======
+>>>>>>> 3063b59 (rebase)
+=======
+>>>>>>> aff4d2d (rebase)
+=======
+>>>>>>> f0ffa9e (rebase)
+=======
+>>>>>>> 15844ac (rebase)
+=======
+>>>>>>> a7a8072 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
+=======
+>>>>>>> ae00439 (rebase)
     public function indexNav(): ?Renderable {
+=======
+    public function indexNav(): ?Renderable
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 9f910bb (.)
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> f980f97 (Lint)
+=======
+>>>>>>> c029664 (.)
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c505cad (rebase)
+=======
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> 9a30267 (Lint)
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 3063b59 (rebase)
+=======
+=======
+>>>>>>> ea4d650 (rebase)
+=======
+    public function indexNav(): ?Renderable
+    {
+>>>>>>> 42ca46e (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> aff4d2d (rebase)
+=======
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> afa2edf (Lint)
+>>>>>>> f0ffa9e (rebase)
+=======
+    public function indexNav(): ?Renderable
+    {
+>>>>>>> f73f6fd (.)
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> 8901544 (Lint)
+=======
+>>>>>>> c029664 (.)
+>>>>>>> 15844ac (rebase)
+=======
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> 9a30267 (Lint)
+>>>>>>> a7a8072 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
+=======
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> afa2edf (Lint)
+>>>>>>> ae00439 (rebase)
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> 6d76482 (up)
         dddx('qui');
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
@@ -185,8 +350,124 @@ class PagePanel extends XotBasePanel {
 
         if ([] !== $params) {
             $url_components = parse_url($url);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f930b9f (rebase)
+=======
+>>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> c505cad (rebase)
+=======
+>>>>>>> 3063b59 (rebase)
+=======
+>>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
+=======
+>>>>>>> 15844ac (rebase)
+=======
+>>>>>>> a7a8072 (rebase)
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
+=======
+            if(!isset($url_components['path'])){
+                throw new Exception('['.__LINE__.']['.__FILE__.']');
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f4041d1 (up)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> a822353 (.)
+=======
+            if (!isset($url_components['path'])) {
+                throw new \Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+>>>>>>> 9f910bb (.)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> f980f97 (Lint)
+=======
+>>>>>>> b96306f (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f930b9f (rebase)
+=======
+=======
+>>>>>>> bb94901 (rebase)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> 1daf8a3 (Lint)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> af0dac7 (rebase)
+=======
+=======
+>>>>>>> 15844ac (rebase)
+=======
+            if (!isset($url_components['path'])) {
+                throw new \Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+>>>>>>> c029664 (.)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> c505cad (rebase)
+=======
+=======
+>>>>>>> a7a8072 (rebase)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> 9a30267 (Lint)
+<<<<<<< HEAD
+>>>>>>> 3063b59 (rebase)
+=======
+            if(!isset($url_components['path'])){
+                throw new Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> b996731 (rebase)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> a3bd33a (rebase)
+=======
+            if (!isset($url_components['path'])) {
+                throw new \Exception('[' . __LINE__ . '][' . __FILE__ . ']');
+>>>>>>> f73f6fd (.)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> 8901544 (Lint)
+=======
+>>>>>>> b96306f (up)
+>>>>>>> bb3945d (rebase)
+=======
+>>>>>>> bb94901 (rebase)
+=======
+>>>>>>> 15844ac (rebase)
+=======
+>>>>>>> a7a8072 (rebase)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> 6d76482 (up)
             }
             $url = $url_components['path'];
 

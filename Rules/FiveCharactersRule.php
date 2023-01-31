@@ -53,11 +53,6 @@ class FiveCharactersRule implements Rule {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-        $res = trans('validation.only_uppercase');
-        if (! is_string($res)) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
-        }
-
         return $res;
     }
 }

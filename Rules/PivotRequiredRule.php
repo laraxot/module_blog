@@ -68,6 +68,7 @@ class PivotRequiredRule implements Rule {
         // $data = (\Request::all());//phpstan
         $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
+        // $value = (int) $value;
         if ($value && ! $value_required) {
             return false;
         }
