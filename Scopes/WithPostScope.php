@@ -10,13 +10,15 @@ use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Support\Str;
 use Modules\Tenant\Services\TenantService;
 
-class WithPostScope implements Scope {
+class WithPostScope implements Scope
+{
     /**
      * Apply the scope to a given Eloquent query builder.
      *
      * @return void
      */
-    public function apply(Builder $builder, Model $model) {
+    public function apply(Builder $builder, Model $model)
+    {
         // $builder->where('is_active', '=', 1);
         $post = TenantService::model('post');
         // $post_table = with(new Post())->getTable();
@@ -57,7 +59,6 @@ class WithPostScope implements Scope {
 >>>>>>> a822353 (.)
         $model_name = basename($model_class);
         $lang = 'it';
-
         $post_type = Str::snake($model_name);
 <<<<<<< HEAD
         //$post_type = (string) str($model_name)->snake();
