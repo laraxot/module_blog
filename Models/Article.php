@@ -50,7 +50,13 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 // use Modules\Blog\Models\Traits\HasTags;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bb2f9c5 (up)
 // use Modules\Blog\Models\Traits\HasSlug;
+=======
+use Modules\Blog\Models\Traits\HasSlug;
+>>>>>>> 88b0171 (Lint)
 // use Spatie\Sluggable\HasSlug;
 use Modules\Blog\Models\Traits\HasTimestamps;
 <<<<<<< HEAD
