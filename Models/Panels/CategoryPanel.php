@@ -36,6 +36,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a3494d5 (rebase)
 =======
@@ -58,6 +59,8 @@ class CategoryPanel extends XotBasePanel {
     public function optionLabel($row): string {
 >>>>>>> afa2edf (Lint)
 >>>>>>> f0ffa9e (rebase)
+=======
+>>>>>>> 914e6a9 (rebase)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -70,6 +73,7 @@ class CategoryPanel extends XotBasePanel {
         return $name;
 =======
         return ''.$row->name;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b022d6c (up)
 =======
@@ -157,6 +161,9 @@ class CategoryPanel extends XotBasePanel {
         return $name;
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
+=======
+>>>>>>> b022d6c (up)
+>>>>>>> 914e6a9 (rebase)
     }
 
 <<<<<<< HEAD
