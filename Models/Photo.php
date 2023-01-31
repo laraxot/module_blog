@@ -29,7 +29,6 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  * @property mixed                                                                $url
- *
  * @method static \Modules\Blog\Database\Factories\PhotoFactory       factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Photo         newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Photo         newQuery()
@@ -41,12 +40,9 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Photo         whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Photo         whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- *
  * @mixin \Eloquent
- *
  * @property int      $id
  * @property int|null $user_id
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Photo whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Photo whereUserId($value)
  */
