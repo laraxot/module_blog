@@ -23,16 +23,6 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Page   whereId($value)
  *
  * @mixin \Eloquent
- *
- * @property int|null    $parent_id
- * @property string|null $guid
- * @property string|null $title
- * @property string|null $ns
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Page whereGuid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Page whereNs($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Page whereParentId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle($value)
  */
 class Page extends BaseModel {
     use Sushi;
@@ -115,61 +105,7 @@ class Page extends BaseModel {
                 ];
             });
             $pages = $pages->merge($tmp);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 275df8b (rebase)
-=======
->>>>>>> 944a6f3 (rebase)
-=======
->>>>>>> 2f76c57 (rebase)
-=======
->>>>>>> 3a18d61 (rebase)
             // dddx($pages);
-=======
-            //dddx($pages);
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cbaaa41 (.)
-=======
-            // dddx($pages);
->>>>>>> be111b1 (Lint)
-=======
->>>>>>> 160756d (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 275df8b (rebase)
-=======
-=======
-            // dddx($pages);
->>>>>>> b8c59fa (Lint)
->>>>>>> 944a6f3 (rebase)
-=======
-            //dddx($pages);
-        
->>>>>>> e535ded (.)
-=======
-            // dddx($pages);
->>>>>>> a19dda3 (Lint)
-=======
->>>>>>> 160756d (.)
->>>>>>> 2f76c57 (rebase)
-=======
-=======
-            // dddx($pages);
->>>>>>> b8c59fa (Lint)
->>>>>>> 3a18d61 (rebase)
-=======
-            // dddx($pages);
->>>>>>> 6d76482 (up)
         }
 
         // dddx($pages->all());
