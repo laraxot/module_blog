@@ -9,6 +9,7 @@ use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasTags;
 <<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
@@ -50,6 +51,8 @@ use Modules\Blog\Models\Traits\HasSlug;
 <<<<<<< HEAD
 >>>>>>> d372a0c (rebase)
 =======
+=======
+>>>>>>> 313176e (rebase)
 =======
 use Modules\Blog\Models\Traits\HasSlug;
 >>>>>>> 26c4c62 (.)
@@ -431,6 +434,7 @@ use Spatie\Tags\HasTags; // spatie tags
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 378fec2 (up)
 class Article extends BaseModelLang implements HasLikeContract {
 =======
@@ -461,6 +465,10 @@ class Article extends BaseModelLang implements HasLikeContract
 =======
 class Article extends BaseModelLang implements HasLikeContract {
 >>>>>>> 360b73d (rebase)
+=======
+class Article extends BaseModelLang implements HasLikeContract
+{
+>>>>>>> 8dbdb6a (rebase)
     use HasAuthor;
     use HasCategory;
     use HasLikes;
