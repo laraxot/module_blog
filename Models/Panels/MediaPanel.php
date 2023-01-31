@@ -9,7 +9,10 @@ use Modules\Blog\Models\Media;
 // --- Services --
 
 use Modules\Cms\Models\Panels\XotBasePanel;
+<<<<<<< HEAD
 use Modules\Xot\Contracts\RowsContract;
+=======
+>>>>>>> 315e874 (up)
 
 class MediaPanel extends XotBasePanel {
     /**
