@@ -15,16 +15,20 @@ use Sushi\Sushi;
  * @property int                                             $id
  * @property \Illuminate\Database\Eloquent\Collection|Page[] $sons
  * @property int|null                                        $sons_count
+ *
  * @method static \Modules\Blog\Database\Factories\PageFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   query()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   whereId($value)
+ *
  * @mixin \Eloquent
- * @property int|null $parent_id
+ *
+ * @property int|null    $parent_id
  * @property string|null $guid
  * @property string|null $title
  * @property string|null $ns
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereGuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereNs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereParentId($value)
