@@ -31,8 +31,11 @@ use Spatie\Translatable\HasTranslations;
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
  * @property int                                                                           $id
  * @property int|null                                                                      $parent_id
  * @property string|null                                                                   $created_by
@@ -79,6 +82,9 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     newQuery()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ofType(string $type)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f1bc22 (rebase)
 =======
  * @property int $id
  * @property int|null $parent_id
@@ -125,50 +131,49 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category newQuery()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category ofType(string $type)
 >>>>>>> bc6d311 (up)
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
  * @method static \Illuminate\Database\Query\Builder|Category onlyTrashed()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereAncestorOf(bool $id, bool $andSelf = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereDescendantOf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereNodeBetween($values)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereNotDescendantOf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     query()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     rebuildSubtree($root, array $data, $delete = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     rebuildTree(array $data, $delete = false, $root = null)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     reversed()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     root(array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereAncestorOf($id, $andSelf = false, $boolean = 'and')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereAncestorOrSelf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereCreatedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereCreatedBy($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDeletedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDescription($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIconSrc($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereId($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsAfter($id, $boolean = 'and')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsBefore($id, $boolean = 'and')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsLeaf()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsRoot()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereLft($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereName($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereNodeBetween($values, $boolean = 'and', $not = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereNotDescendantOf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereParentId($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereRgt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereSlug($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereUpdatedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereUpdatedBy($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     withDepth(string $as = 'depth')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereAncestorOf(bool $id, bool $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereNodeBetween($values)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category query()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category rebuildSubtree($root, array $data, $delete = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category rebuildTree(array $data, $delete = false, $root = null)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category reversed()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category root(array $columns = [])
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereAncestorOf($id, $andSelf = false, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereAncestorOrSelf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedAt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedBy($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDeletedAt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescription($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIconSrc($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereId($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsAfter($id, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsBefore($id, $boolean = 'and')
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsLeaf()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsRoot()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereLft($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereName($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNodeBetween($values, $boolean = 'and', $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereParentId($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereRgt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereSlug($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereUpdatedAt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereUpdatedBy($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category withDepth(string $as = 'depth')
  * @method static \Illuminate\Database\Query\Builder|Category withTrashed()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     withoutRoot()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category withoutRoot()
  * @method static \Illuminate\Database\Query\Builder|Category withoutTrashed()
- *
  * @mixin \Eloquent
- *
- * @property \Kalnoy\Nestedset\Collection|Category[] $articles
- * @property int|null                                $articles_count
  */
 class Category extends Model
 {
