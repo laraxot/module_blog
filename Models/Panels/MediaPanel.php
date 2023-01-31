@@ -25,9 +25,12 @@ use Modules\Xot\Contracts\RowsContract;
 use Modules\Blog\Models\Media;
 // --- Services --
 
-use Modules\Xot\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
+<<<<<<< HEAD
 >>>>>>> b022d6c (up)
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> 5376387 (Lint)
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -41,9 +44,12 @@ class MediaPanel extends XotBasePanel {
     public static string $title = 'title';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> b022d6c (up)
+=======
+>>>>>>> 5376387 (Lint)
     /**
      * on select the option label.
      *
