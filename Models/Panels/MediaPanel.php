@@ -6,6 +6,7 @@ namespace Modules\Blog\Models\Panels;
 
 use Illuminate\Http\Request;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Blog\Models\Media;
 // --- Services --
 
@@ -20,6 +21,13 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> c4fb14d (Lint)
+=======
+use Modules\Blog\Models\Media;
+// --- Services --
+
+use Modules\Xot\Contracts\RowsContract;
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> b022d6c (up)
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -32,6 +40,10 @@ class MediaPanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b022d6c (up)
     /**
      * on select the option label.
      *
