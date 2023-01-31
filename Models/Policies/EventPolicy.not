@@ -33,8 +33,12 @@ Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models
  * Class EventPolicy.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class EventPolicy extends XotBasePanelPolicy {
 =======
 class EventPolicy extends XotBasePolicy {
 >>>>>>> a698d0d (up)
+=======
+class EventPolicy extends XotBasePanelPolicy {
+>>>>>>> cb44397 (.)
 }
