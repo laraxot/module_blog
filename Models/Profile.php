@@ -972,12 +972,15 @@ class Profile extends BaseModelLang
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1fdd40b (rebase)
 =======
 >>>>>>> 2028365 (rebase)
 =======
 >>>>>>> d2bbae9 (rebase)
+=======
+>>>>>>> 955c157 (rebase)
             get: fn ($value) => false, // ! empty($this->twitter()),
 =======
             get: fn ($value) => false, //! empty($this->twitter()),
@@ -989,22 +992,31 @@ class Profile extends BaseModelLang
 >>>>>>> 209739c (Lint)
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c5a3a82 (rebase)
 =======
 >>>>>>> d2bbae9 (rebase)
+=======
+=======
+>>>>>>> c5a3a82 (rebase)
+>>>>>>> 955c157 (rebase)
             get: fn ($value) => false, // ! empty($this->twitter()),
 =======
             get: fn ($value) => false, //! empty($this->twitter()),
 >>>>>>> 1172c16 (up)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 955c157 (rebase)
 >>>>>>> 37f274f (rebase)
 =======
 =======
             get: fn ($value) => false, // ! empty($this->twitter()),
 >>>>>>> 7333c06 (Lint)
 >>>>>>> c5a3a82 (rebase)
+<<<<<<< HEAD
 =======
 >>>>>>> 1fdd40b (rebase)
 =======
@@ -1015,6 +1027,8 @@ class Profile extends BaseModelLang
 =======
 >>>>>>> 37f274f (rebase)
 >>>>>>> d2bbae9 (rebase)
+=======
+>>>>>>> 955c157 (rebase)
         );
     }
 

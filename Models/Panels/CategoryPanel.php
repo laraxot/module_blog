@@ -213,6 +213,7 @@ class CategoryPanel extends XotBasePanel {
         //    return $name;
         // }
 >>>>>>> 7333c06 (Lint)
+<<<<<<< HEAD
         if (is_array($name)) {
             $name = implode('-', $name);
         }
@@ -294,8 +295,10 @@ class CategoryPanel extends XotBasePanel {
         //    return $name;
        //}
 >>>>>>> 1172c16 (up)
+=======
+>>>>>>> 955c157 (rebase)
         if (is_array($name)) {
-            $name= implode('-', $name);
+            $name = implode('-', $name);
         }
 
 <<<<<<< HEAD
@@ -320,6 +323,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c5a3a82 (rebase)
 =======
@@ -328,6 +332,10 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 2028365 (rebase)
 =======
 >>>>>>> 2e66bb4 (rebase)
+=======
+=======
+>>>>>>> c5a3a82 (rebase)
+>>>>>>> 955c157 (rebase)
     /**
      * @return array
      */
@@ -510,6 +518,7 @@ class CategoryPanel extends XotBasePanel {
 =======
     public function optionsSelect():array {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function optionsSelect(): array {
 >>>>>>> 7333c06 (Lint)
@@ -589,6 +598,11 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 20e02a4 (rebase)
 >>>>>>> 00fe3eb (rebase)
 =======
+=======
+=======
+    public function optionsSelect(): array {
+>>>>>>> 7333c06 (Lint)
+>>>>>>> 955c157 (rebase)
         // $rows = $this->row->all();
         $rows = Category::get();
 >>>>>>> 1172c16 (up)
@@ -615,10 +629,13 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2028365 (rebase)
 =======
 >>>>>>> d2bbae9 (rebase)
+=======
+>>>>>>> 955c157 (rebase)
 =======
         
 >>>>>>> ea58237 (up)
@@ -634,6 +651,9 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 955c157 (rebase)
 =======
 =======
         
@@ -641,6 +661,7 @@ class CategoryPanel extends XotBasePanel {
 =======
 >>>>>>> 7333c06 (Lint)
 >>>>>>> c5a3a82 (rebase)
+<<<<<<< HEAD
 =======
 =======
         
@@ -650,6 +671,8 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 2028365 (rebase)
 =======
 >>>>>>> d2bbae9 (rebase)
+=======
+>>>>>>> 955c157 (rebase)
     }
 
     /**
