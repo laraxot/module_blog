@@ -71,6 +71,7 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  * @property mixed                                                                $url
+ *
  * @method static \Modules\Blog\Database\Factories\ContactFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newQuery()
@@ -114,6 +115,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       query()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  *
  * @property int                             $id

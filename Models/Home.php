@@ -113,6 +113,7 @@ use Sushi\Sushi;
  * @property mixed                                                                 $url
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
  * @property int|null                                                              $widgets_count
+ *
  * @method static \Modules\Blog\Database\Factories\HomeFactory        factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newQuery()
@@ -180,6 +181,7 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home          whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Home          whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  */
 class Home extends BaseModelLang {

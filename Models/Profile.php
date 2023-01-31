@@ -156,6 +156,7 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
 =======
@@ -170,6 +171,9 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> 25f8a08 (Lint)
 =======
 >>>>>>> b02ae09 (.)
+=======
+ *
+>>>>>>> ee04bc7 (.)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -223,6 +227,7 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
