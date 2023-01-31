@@ -11,7 +11,6 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Label   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Label   newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Label   query()
- *
  * @mixin \Eloquent
  *
  * @property int                             $id
@@ -34,7 +33,8 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereUpdatedBy($value)
  */
-class Label extends BaseModel {
+class Label extends BaseModel
+{
     /**
      * @var string[]
      */
