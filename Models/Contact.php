@@ -81,7 +81,6 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  * @property mixed                                                                $url
- *
  * @method static \Modules\Blog\Database\Factories\ContactFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newQuery()
@@ -138,8 +137,20 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       query()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- *
  * @mixin \Eloquent
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property string|null $created_by
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $updated_by
+ * @property int|null $post_id
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact wherePostId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact wherePostType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedBy($value)
  */
 class Contact extends BaseModelLang {
     protected $fillable = ['id', 'post_id', 'post_type'];
