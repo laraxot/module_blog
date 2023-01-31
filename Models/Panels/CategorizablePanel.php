@@ -52,10 +52,13 @@ class CategorizablePanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4f828c4 (rebase)
 =======
 >>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> a939533 (rebase)
 =======
 
 >>>>>>> b022d6c (up)
@@ -71,6 +74,9 @@ class CategorizablePanel extends XotBasePanel
 >>>>>>> a780d70 (up)
 >>>>>>> a3494d5 (rebase)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a939533 (rebase)
 =======
 =======
 
@@ -78,6 +84,7 @@ class CategorizablePanel extends XotBasePanel
 =======
 >>>>>>> bc82fdc (Lint)
 >>>>>>> 7424c65 (rebase)
+<<<<<<< HEAD
 =======
 =======
 
@@ -87,6 +94,8 @@ class CategorizablePanel extends XotBasePanel
 >>>>>>> 4f828c4 (rebase)
 =======
 >>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> a939533 (rebase)
     /**
      * on select the option label.
      *
