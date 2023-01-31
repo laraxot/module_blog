@@ -40,22 +40,10 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUpdatedBy($value)
  *
  * @mixin \Eloquent
-<<<<<<< HEAD:Models/PhotoMorph.to_media
-<<<<<<< HEAD:Models/PhotoMorph.to_media
  *
  * @property int|null $photo_id
  * @property int|null $user_id
  *
-=======
- * @property int|null $photo_id
- * @property int|null $user_id
->>>>>>> fa90f5a (up):Models/PhotoMorph.php
-=======
- *
- * @property int|null $photo_id
- * @property int|null $user_id
- *
->>>>>>> 8443a7b (Lint):Models/PhotoMorph.php
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph wherePhotoId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|PhotoMorph whereUserId($value)
  */

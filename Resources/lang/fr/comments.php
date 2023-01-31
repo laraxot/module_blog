@@ -1,32 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare(strict_types=1);
 
-=======
->>>>>>> f784731 (.)
-=======
-declare(strict_types=1);
-
->>>>>>> 197df28 (Lint)
-=======
-=======
->>>>>>> fb6cf60 (rebase)
-declare(strict_types=1);
-
-=======
->>>>>>> 6c99a65 (.)
-<<<<<<< HEAD
->>>>>>> 5967355 (rebase)
-=======
-=======
-declare(strict_types=1);
-
->>>>>>> 5c25f35 (Lint)
->>>>>>> fb6cf60 (rebase)
 return [
     'write_comment' => 'Laissez un commentaire',
     'write_reply' => 'Laissez une réponse',
@@ -46,29 +21,5 @@ return [
     'approve_comment' => 'Approuver',
     'awaits_approval' => 'En attente d\'approbation',
     'guest' => 'invité',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     'copied' => 'Lien copié',
-=======
-    'copied' => 'Lien copié'
->>>>>>> f784731 (.)
-=======
-    'copied' => 'Lien copié',
->>>>>>> 197df28 (Lint)
-=======
-=======
->>>>>>> fb6cf60 (rebase)
-    'copied' => 'Lien copié',
-=======
-    'copied' => 'Lien copié'
->>>>>>> 6c99a65 (.)
-<<<<<<< HEAD
->>>>>>> 5967355 (rebase)
-=======
-=======
-    'copied' => 'Lien copié',
->>>>>>> 5c25f35 (Lint)
->>>>>>> fb6cf60 (rebase)
 ];

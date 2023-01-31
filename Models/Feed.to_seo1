@@ -24,49 +24,11 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Feed   whereUpdatedAt($value)
  *
  * @mixin \Eloquent
-<<<<<<< HEAD:Models/Feed.to_seo1
-<<<<<<< HEAD:Models/Feed.to_seo1
-<<<<<<< HEAD:Models/Feed.to_seo1
-<<<<<<< HEAD:Models/Feed.to_seo1
-<<<<<<< HEAD:Models/Feed.to_seo1
-<<<<<<< HEAD:Models/Feed.to_seo1
-=======
->>>>>>> 25f8a08 (Lint):Models/Feed.php
-=======
->>>>>>> c5b6d43 (.):Models/Feed.php
  *
  * @property int         $id
  * @property string|null $created_by
  * @property string|null $updated_by
  *
-<<<<<<< HEAD:Models/Feed.to_seo1
-<<<<<<< HEAD:Models/Feed.to_seo1
-=======
- * @property int $id
- * @property string|null $created_by
- * @property string|null $updated_by
->>>>>>> 802efe7 (up):Models/Feed.php
-=======
- *
- * @property int         $id
- * @property string|null $created_by
- * @property string|null $updated_by
- *
->>>>>>> 6e3c302 (Lint):Models/Feed.php
-=======
- * @property int         $id
- * @property string|null $created_by
- * @property string|null $updated_by
->>>>>>> c744a19 (up):Models/Feed.php
-=======
->>>>>>> 25f8a08 (Lint):Models/Feed.php
-=======
- * @property int         $id
- * @property string|null $created_by
- * @property string|null $updated_by
->>>>>>> 6b1fa56 (.):Models/Feed.php
-=======
->>>>>>> c5b6d43 (.):Models/Feed.php
  * @method static \Illuminate\Database\Eloquent\Builder|Feed whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Feed whereUpdatedBy($value)

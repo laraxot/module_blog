@@ -17,32 +17,6 @@ error_log
 
 *.cache
 /build
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 41e74f3 (rebase)
 *.old
 *.to_*
 *.old*
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 51f522d (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 05b0597 (rebase)
-=======
-=======
->>>>>>> 0df6d98 (rebase)
-=======
-*.old
-*.to_*
-*.old*
->>>>>>> 83cb1cd (rebase)
-<<<<<<< HEAD
->>>>>>> a6038a6 (rebase)
-=======
-=======
->>>>>>> 41e74f3 (rebase)
->>>>>>> 0df6d98 (rebase)

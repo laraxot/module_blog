@@ -26,195 +26,7 @@ use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
 
-<<<<<<< HEAD
-=======
-/**
- * Modules\Blog\Models\Category.
- *
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8213e79 (Lint)
- * @property int                                                                           $id
- * @property int|null                                                                      $parent_id
- * @property string|null                                                                   $created_by
- * @property string|null                                                                   $updated_by
- * @property \Illuminate\Support\Carbon|null                                               $created_at
- * @property \Illuminate\Support\Carbon|null                                               $updated_at
- * @property string|null                                                                   $icon_src
- * @property int                                                                           $_rgt
- * @property string                                                                        $slug
- * @property array                                                                         $name
- * @property int                                                                           $_lft
- * @property array|null                                                                    $description
- * @property \Illuminate\Support\Carbon|null                                               $deleted_at
- * @property \Kalnoy\Nestedset\Collection|Category[]                                       $articles
- * @property int|null                                                                      $articles_count
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Categorizable[] $categorizables
- * @property int|null                                                                      $categorizables_count
- * @property \Kalnoy\Nestedset\Collection|Category[]                                       $children
- * @property int|null                                                                      $children_count
- * @property Category|null                                                                 $parent
- *
- * @method static \Kalnoy\Nestedset\Collection|static[]       all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ancestorsAndSelf($id, array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ancestorsOf($id, array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     applyNestedSetScope(?string $table = null)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     countErrors()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     d()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     defaultOrder(string $dir = 'asc')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     descendantsAndSelf($id, array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     descendantsOf($id, array $columns = [], $andSelf = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     fixSubtree($root)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     fixTree($root = null)
- * @method static \Kalnoy\Nestedset\Collection|static[]       get($columns = ['*'])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     getNodeData($id, $required = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     getPlainNodeData($id, $required = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     getTotalErrors()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     hasChildren()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     hasParent()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     isBroken()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     leaves(array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     makeGap(int $cut, int $height)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     moveNode($key, $position)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     newModelQuery()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     newQuery()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ofType(string $type)
-<<<<<<< HEAD
-=======
- * @property int $id
- * @property int|null $parent_id
- * @property string|null $created_by
- * @property string|null $updated_by
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null $icon_src
- * @property int $_rgt
- * @property string $slug
- * @property array $name
- * @property int $_lft
- * @property array|null $description
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property-read \Kalnoy\Nestedset\Collection|Category[] $articles
- * @property-read int|null $articles_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Categorizable[] $categorizables
- * @property-read int|null $categorizables_count
- * @property-read \Kalnoy\Nestedset\Collection|Category[] $children
- * @property-read int|null $children_count
- * @property-read Category|null $parent
- * @method static \Kalnoy\Nestedset\Collection|static[] all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsAndSelf($id, array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsOf($id, array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category applyNestedSetScope(?string $table = null)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category countErrors()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category d()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category defaultOrder(string $dir = 'asc')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category descendantsAndSelf($id, array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category descendantsOf($id, array $columns = [], $andSelf = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category fixSubtree($root)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category fixTree($root = null)
- * @method static \Kalnoy\Nestedset\Collection|static[] get($columns = ['*'])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category getNodeData($id, $required = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category getPlainNodeData($id, $required = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category getTotalErrors()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category hasChildren()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category hasParent()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category isBroken()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category leaves(array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category makeGap(int $cut, int $height)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category moveNode($key, $position)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category newModelQuery()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category newQuery()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category ofType(string $type)
->>>>>>> bc6d311 (up)
-=======
->>>>>>> 8213e79 (Lint)
- * @method static \Illuminate\Database\Query\Builder|Category onlyTrashed()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereAncestorOf(bool $id, bool $andSelf = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereDescendantOf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereNodeBetween($values)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereNotDescendantOf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     query()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     rebuildSubtree($root, array $data, $delete = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     rebuildTree(array $data, $delete = false, $root = null)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     reversed()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     root(array $columns = [])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereAncestorOf($id, $andSelf = false, $boolean = 'and')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereAncestorOrSelf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereCreatedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereCreatedBy($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDeletedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereDescription($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIconSrc($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereId($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsAfter($id, $boolean = 'and')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsBefore($id, $boolean = 'and')
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsLeaf()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereIsRoot()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereLft($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereName($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereNodeBetween($values, $boolean = 'and', $not = false)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereNotDescendantOf($id)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereParentId($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereRgt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereSlug($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereUpdatedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     whereUpdatedBy($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     withDepth(string $as = 'depth')
- * @method static \Illuminate\Database\Query\Builder|Category withTrashed()
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category     withoutRoot()
- * @method static \Illuminate\Database\Query\Builder|Category withoutTrashed()
- *
- * @mixin \Eloquent
- *
- * @property \Kalnoy\Nestedset\Collection|Category[] $articles
- * @property int|null                                $articles_count
- */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 378fec2 (up)
 class Category extends Model {
-=======
-class Category extends Model
-{
->>>>>>> 71f0636 (up)
-=======
-class Category extends Model {
->>>>>>> e0d1f4b (Lint)
-=======
-class Category extends Model
-{
->>>>>>> de5af69 (up)
-=======
-class Category extends Model {
->>>>>>> c24d571 (Lint)
-=======
-class Category extends Model
-{
->>>>>>> 5ab9321 (rebase)
-=======
-class Category extends Model {
->>>>>>> aef633b (rebase)
-=======
-class Category extends Model
-{
->>>>>>> 1316785 (rebase)
-=======
-class Category extends Model {
->>>>>>> 360b73d (rebase)
-=======
-class Category extends Model
-{
->>>>>>> bc3e845 (rebase)
     use HasFactory;
     use HasSlug;
     use HasTranslations;
@@ -299,8 +111,7 @@ class Category extends Model
     /**
      * Get all attached models of the given class to the category.
      */
-    public function entries(string $class): MorphToMany
-    {
+    public function entries(string $class): MorphToMany {
         // return $this->morphedByMany($class, 'categorizable', config('rinvex.categories.tables.categorizables'), 'category_id', 'categorizable_id', 'id', 'id');
         return $this->morphedByMany($class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
@@ -308,224 +119,14 @@ class Category extends Model
     /**
      * Get the options for generating the slug.
      */
-    public function getSlugOptions(): SlugOptions
-    {
+    public function getSlugOptions(): SlugOptions {
         return SlugOptions::create()
                           // ->doNotGenerateSlugsOnUpdate() // ?
                           ->generateSlugsFrom('name')
                           ->saveSlugsTo('slug');
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     public function scopeOfType(Builder $query, string $type): Builder {
-    public function scopeOfType(Builder $query, string $type): Builder {
-=======
-    public function scopeOfType(Builder $query, string $type): Builder
-    {
->>>>>>> 71f0636 (up)
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> e0d1f4b (Lint)
-=======
-    public function scopeOfType(Builder $query, string $type): Builder
-    {
->>>>>>> de5af69 (up)
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> c24d571 (Lint)
-=======
-=======
->>>>>>> 10087ae (rebase)
-=======
->>>>>>> 5ab9321 (rebase)
-=======
->>>>>>> c3a61c0 (rebase)
-=======
->>>>>>> 4ec714a (rebase)
-=======
->>>>>>> 6fec78e (rebase)
-=======
->>>>>>> aef633b (rebase)
-=======
->>>>>>> 1316785 (rebase)
-=======
->>>>>>> 360b73d (rebase)
-=======
-=======
->>>>>>> 34ad686 (rebase)
->>>>>>> 36a25d7 (rebase)
-=======
-=======
->>>>>>> bc3e845 (rebase)
-=======
->>>>>>> fbb32c8 (rebase)
-=======
->>>>>>> eb91b15 (rebase)
-=======
->>>>>>> 34ad686 (rebase)
-=======
->>>>>>> d557c94 (rebase)
-<<<<<<< HEAD
->>>>>>> bd304cc (rebase)
-=======
-=======
->>>>>>> 48f4792 (rebase)
-<<<<<<< HEAD
->>>>>>> bc3e845 (rebase)
-=======
-=======
->>>>>>> a79c6ef (rebase)
-<<<<<<< HEAD
->>>>>>> fbb32c8 (rebase)
-=======
-=======
->>>>>>> 924ceb6 (.)
->>>>>>> eb91b15 (rebase)
-    public function scopeOfType(Builder $query, string $type): Builder {
-=======
-    public function scopeOfType(Builder $query, string $type):Builder {
->>>>>>> 7fdf4e1 (up)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 87f37a6 (rebase)
-=======
-=======
->>>>>>> 36a25d7 (rebase)
-=======
->>>>>>> bd304cc (rebase)
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> 134e178 (Lint)
-<<<<<<< HEAD
->>>>>>> 10087ae (rebase)
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder
-    {
->>>>>>> b02ae09 (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 5ab9321 (rebase)
-=======
-=======
->>>>>>> bc3e845 (rebase)
-=======
->>>>>>> fbb32c8 (rebase)
-=======
-=======
->>>>>>> 39485d1 (rebase)
-<<<<<<< HEAD
-=======
->>>>>>> aff4d2d (rebase)
-=======
->>>>>>> f0ffa9e (rebase)
-=======
-=======
->>>>>>> a79c6ef (rebase)
-=======
->>>>>>> 924ceb6 (.)
-    public function scopeOfType(Builder $query, string $type): Builder
-    {
-=======
-    public function scopeOfType(Builder $query, string $type):Builder {
->>>>>>> d4223a3 (up)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 924ceb6 (.)
->>>>>>> 776498c (rebase)
-<<<<<<< HEAD
->>>>>>> c3a61c0 (rebase)
-=======
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> 764eb6d (Lint)
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 39485d1 (rebase)
-<<<<<<< HEAD
->>>>>>> 4ec714a (rebase)
-=======
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder
-    {
->>>>>>> 42ca46e (up)
-<<<<<<< HEAD
->>>>>>> aff4d2d (rebase)
-<<<<<<< HEAD
->>>>>>> 6fec78e (rebase)
-=======
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> afa2edf (Lint)
->>>>>>> f0ffa9e (rebase)
-<<<<<<< HEAD
->>>>>>> aef633b (rebase)
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder
-    {
->>>>>>> 92d6d85 (.)
-<<<<<<< HEAD
->>>>>>> 1316785 (rebase)
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> 0834824 (Lint)
-<<<<<<< HEAD
->>>>>>> 360b73d (rebase)
-=======
-=======
->>>>>>> 34ad686 (rebase)
-<<<<<<< HEAD
->>>>>>> 36a25d7 (rebase)
-=======
-=======
-=======
-    public function scopeOfType(Builder $query, string $type): Builder {
->>>>>>> 134e178 (Lint)
->>>>>>> d557c94 (rebase)
-<<<<<<< HEAD
->>>>>>> bd304cc (rebase)
-=======
-=======
->>>>>>> 48f4792 (rebase)
-<<<<<<< HEAD
->>>>>>> bc3e845 (rebase)
-=======
-=======
->>>>>>> 776498c (rebase)
->>>>>>> a79c6ef (rebase)
-<<<<<<< HEAD
->>>>>>> fbb32c8 (rebase)
-=======
-=======
->>>>>>> 39485d1 (rebase)
->>>>>>> 924ceb6 (.)
->>>>>>> eb91b15 (rebase)
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){
@@ -534,21 +135,18 @@ class Category extends Model
         */
     }
 
-    public function categorizables(): HasMany
-    {
+    public function categorizables(): HasMany {
         return $this->hasMany(Categorizable::class, 'category_id');
     }
 
-    public function articles(): MorphToMany
-    {
+    public function articles(): MorphToMany {
         return $this->morphedByMany(self::class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
 
     /**
      * @return string
      */
-    public function getRouteKeyName()
-    {
+    public function getRouteKeyName() {
         return RouteService::inAdmin() ? 'id' : 'slug';
     }
 }

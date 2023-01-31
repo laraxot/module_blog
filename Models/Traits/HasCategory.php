@@ -193,118 +193,12 @@ trait HasCategory {
         $categories = $this->prepareCategoryIds($categories);
         // dddx(is_array( $categories));
         // Sync model categories
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> d52b11e (rebase)
-=======
-<<<<<<< HEAD
->>>>>>> eb30de4 (rebase)
-=======
-<<<<<<< HEAD
->>>>>>> 1d3a7a1 (rebase)
         // if (\is_array($categories)) {
         $this->categories()->sync($categories, $detaching);
         // } // else {
-=======
-        } // else {
->>>>>>> 2028365 (rebase)
         // dddx($categories);
         // }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 017e121 (rebase)
-        if (\is_array($categories)) {
-            $this->categories()->sync($categories, $detaching);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 955c157 (rebase)
-=======
->>>>>>> 37f274f (rebase)
-=======
->>>>>>> c5a3a82 (rebase)
-        } // else {
-        // dddx($categories);
-        // }
-=======
->>>>>>> d2bbae9 (rebase)
-        } //else {
-            //dddx($categories);
-        //}
-<<<<<<< HEAD
->>>>>>> ea58237 (up)
-=======
-        } // else {
-        // dddx($categories);
-        // }
->>>>>>> 209739c (Lint)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5a3a82 (rebase)
-        } // else {
-=======
-        // if (\is_array($categories)) {
-        $this->categories()->sync($categories, $detaching);
-        // } // else {
->>>>>>> 6703626 (.)
-        // dddx($categories);
-        // }
-=======
-        } // else {
-        // dddx($categories);
-        // }
->>>>>>> 1fdd40b (rebase)
-=======
-        } //else {
-            //dddx($categories);
-        //}
-<<<<<<< HEAD
->>>>>>> 1172c16 (up)
-<<<<<<< HEAD
->>>>>>> 37f274f (rebase)
-=======
-=======
-        } // else {
-        // dddx($categories);
-        // }
->>>>>>> 7333c06 (Lint)
->>>>>>> c5a3a82 (rebase)
-=======
->>>>>>> ea58237 (up)
->>>>>>> 1fdd40b (rebase)
-=======
->>>>>>> 2028365 (rebase)
-=======
-=======
->>>>>>> 1172c16 (up)
-<<<<<<< HEAD
->>>>>>> 37f274f (rebase)
-<<<<<<< HEAD
->>>>>>> d2bbae9 (rebase)
-=======
-=======
-=======
-        } // else {
-        // dddx($categories);
-        // }
->>>>>>> 7333c06 (Lint)
->>>>>>> c5a3a82 (rebase)
->>>>>>> 955c157 (rebase)
-
->>>>>>> d52b11e (rebase)
         return $this;
     }
 

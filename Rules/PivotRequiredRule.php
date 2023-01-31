@@ -59,46 +59,7 @@ class PivotRequiredRule implements Rule {
      * Determine if the validation rule passes.
      *
      * @param string $attribute
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> b996731 (rebase)
-=======
->>>>>>> a3bd33a (rebase)
      * @param int    $value
-=======
-     * @param int  $value
->>>>>>> f4041d1 (up)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-     * @param int    $value
->>>>>>> a822353 (.)
-=======
-=======
->>>>>>> af0dac7 (rebase)
-     * @param int    $value
-=======
-     * @param int  $value
->>>>>>> b96306f (up)
-<<<<<<< HEAD
->>>>>>> f930b9f (rebase)
-=======
-=======
-     * @param int    $value
->>>>>>> 1daf8a3 (Lint)
->>>>>>> af0dac7 (rebase)
-=======
->>>>>>> b996731 (rebase)
-=======
-=======
-     * @param int    $value
->>>>>>> a822353 (.)
->>>>>>> a3bd33a (rebase)
      *
      * @return bool
      */
@@ -107,43 +68,7 @@ class PivotRequiredRule implements Rule {
         // $data = (\Request::all());//phpstan
         $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         // $value = (int) $value;
-=======
->>>>>>> a3bd33a (rebase)
-=======
-        //$value = (int) $value;
->>>>>>> f4041d1 (up)
-=======
-        // $value = (int) $value;
->>>>>>> a822353 (.)
-<<<<<<< HEAD
-=======
-=======
->>>>>>> af0dac7 (rebase)
-        // $value = (int) $value;
-=======
-        //$value = (int) $value;
->>>>>>> b96306f (up)
-<<<<<<< HEAD
->>>>>>> f930b9f (rebase)
-=======
-=======
-        // $value = (int) $value;
->>>>>>> 1daf8a3 (Lint)
->>>>>>> af0dac7 (rebase)
-=======
-=======
-        //$value = (int) $value;
->>>>>>> f4041d1 (up)
->>>>>>> b996731 (rebase)
-=======
->>>>>>> a3bd33a (rebase)
         if ($value && ! $value_required) {
             return false;
         }

@@ -34,8 +34,7 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereParentId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle($value)
  */
-class Page extends BaseModel
-{
+class Page extends BaseModel {
     use Sushi;
     /**
      * @var string[]
@@ -58,13 +57,11 @@ class Page extends BaseModel
 
     // --------- relationship ---------------
 
-    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
+    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    public function getRows(): array
-    {
+    public function getRows(): array {
         // creates nss array
         $nss = [];
 
@@ -118,67 +115,6 @@ class Page extends BaseModel
                 ];
             });
             $pages = $pages->merge($tmp);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c5733db (rebase)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 275df8b (rebase)
-<<<<<<< HEAD
->>>>>>> d11e1dc (rebase)
-=======
-=======
->>>>>>> 944a6f3 (rebase)
->>>>>>> 9f88bce (rebase)
-            // dddx($pages);
-=======
-            //dddx($pages);
-        
-<<<<<<< HEAD
->>>>>>> cbaaa41 (.)
-<<<<<<< HEAD
->>>>>>> fce9f13 (rebase)
-=======
-=======
-            // dddx($pages);
->>>>>>> be111b1 (Lint)
-<<<<<<< HEAD
->>>>>>> c5733db (rebase)
-=======
-=======
->>>>>>> 160756d (.)
-<<<<<<< HEAD
->>>>>>> 275df8b (rebase)
-<<<<<<< HEAD
->>>>>>> d11e1dc (rebase)
-=======
-=======
-=======
-            // dddx($pages);
->>>>>>> b8c59fa (Lint)
->>>>>>> 944a6f3 (rebase)
-<<<<<<< HEAD
->>>>>>> 9f88bce (rebase)
-=======
-=======
-            //dddx($pages);
-        
->>>>>>> e535ded (.)
-<<<<<<< HEAD
->>>>>>> 055c390 (rebase)
-=======
-=======
-            // dddx($pages);
->>>>>>> a19dda3 (Lint)
->>>>>>> af06c13 (rebase)
         }
 
         // dddx($pages->all());
