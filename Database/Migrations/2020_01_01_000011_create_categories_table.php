@@ -11,15 +11,13 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateCategoriesTable.
  */
-class CreateCategoriesTable extends XotBaseMigration
-{
+class CreateCategoriesTable extends XotBaseMigration {
     /**
      * db up.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {

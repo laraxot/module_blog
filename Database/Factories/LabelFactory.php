@@ -15,8 +15,7 @@ use Illuminate\Support\Str;
 >>>>>>> 9e2a502 (Lint)
 use Modules\Blog\Models\Label;
 
-class LabelFactory extends Factory
-{
+class LabelFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
@@ -30,6 +29,7 @@ class LabelFactory extends Factory
      * @return array
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function definition() {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +37,9 @@ class LabelFactory extends Factory
     public function definition()
     {
 >>>>>>> 71f0636 (up)
+=======
+    public function definition() {
+>>>>>>> e0d1f4b (Lint)
         return [
 =======
 

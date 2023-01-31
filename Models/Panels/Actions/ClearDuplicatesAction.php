@@ -14,8 +14,7 @@ use Modules\Lang\Models\Post;
 /**
  * Class ClearDuplicatesAction.
  */
-class ClearDuplicatesAction extends XotBasePanelAction
-{
+class ClearDuplicatesAction extends XotBasePanelAction {
     public bool $onContainer = true;
 
     public bool $onItem = false;
@@ -27,8 +26,7 @@ class ClearDuplicatesAction extends XotBasePanelAction
      *
      * @return string
      */
-    public function handle()
-    {
+    public function handle() {
         /*
         SELECT post_id,post_type,count(post_id) as q
         FROM posts
