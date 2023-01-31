@@ -196,9 +196,13 @@ trait HasCategory {
         // Sync model categories
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // if (\is_array($categories)) {
         $this->categories()->sync($categories, $detaching);
         // } // else {
+=======
+        } // else {
+>>>>>>> 2028365 (rebase)
         // dddx($categories);
         // }
 =======
@@ -219,6 +223,7 @@ trait HasCategory {
         // dddx($categories);
         // }
 >>>>>>> 209739c (Lint)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> c5a3a82 (rebase)
@@ -253,6 +258,8 @@ trait HasCategory {
 =======
 >>>>>>> ea58237 (up)
 >>>>>>> 1fdd40b (rebase)
+=======
+>>>>>>> 2028365 (rebase)
 
         return $this;
     }
