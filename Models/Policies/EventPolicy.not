@@ -51,6 +51,7 @@ Declaration of Modules\Blog\Models\Policies\EventPolicy::index(Modules\LU\Models
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class EventPolicy extends XotBasePanelPolicy {
 =======
 class EventPolicy extends XotBasePolicy {
@@ -61,4 +62,7 @@ class EventPolicy extends XotBasePanelPolicy {
 =======
 class EventPolicy extends XotBasePolicy {
 >>>>>>> 3729812 (.)
+=======
+class EventPolicy extends XotBasePanelPolicy {
+>>>>>>> ce00485 (.)
 }
