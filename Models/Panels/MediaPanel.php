@@ -69,10 +69,16 @@ use Modules\Xot\Contracts\RowsContract;
 use Modules\Blog\Models\Media;
 // --- Services --
 
-use Modules\Xot\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
+<<<<<<< HEAD
 >>>>>>> b022d6c (up)
+<<<<<<< HEAD
 >>>>>>> 914e6a9 (rebase)
+=======
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> 5376387 (Lint)
+>>>>>>> 4f828c4 (rebase)
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -90,11 +96,15 @@ class MediaPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f828c4 (rebase)
 =======
 
 >>>>>>> b022d6c (up)
 =======
 >>>>>>> 5376387 (Lint)
+<<<<<<< HEAD
 =======
 =======
 
@@ -112,6 +122,8 @@ class MediaPanel extends XotBasePanel {
 
 >>>>>>> b022d6c (up)
 >>>>>>> 914e6a9 (rebase)
+=======
+>>>>>>> 4f828c4 (rebase)
     /**
      * on select the option label.
      *

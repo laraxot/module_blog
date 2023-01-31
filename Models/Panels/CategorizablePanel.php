@@ -49,11 +49,15 @@ class CategorizablePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f828c4 (rebase)
 =======
 
 >>>>>>> b022d6c (up)
 =======
 >>>>>>> 5376387 (Lint)
+<<<<<<< HEAD
 =======
 =======
 
@@ -71,6 +75,8 @@ class CategorizablePanel extends XotBasePanel {
 
 >>>>>>> b022d6c (up)
 >>>>>>> 914e6a9 (rebase)
+=======
+>>>>>>> 4f828c4 (rebase)
     /**
      * on select the option label.
      *
