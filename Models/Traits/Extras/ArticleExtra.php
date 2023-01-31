@@ -124,6 +124,7 @@ trait ArticleExtra {
             'slug' => $this->slug(),
         ];
     }
+    
 
 
     public function splitBody(string $value): array {
