@@ -9,8 +9,6 @@ use Modules\Blog\Models\Article;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Rating\Models\Panels\Actions\RateItAction;
 
-// ---- bases --
-
 /**
  * Class ArticlePanel.
  */

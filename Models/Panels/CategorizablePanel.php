@@ -44,7 +44,7 @@ class CategorizablePanel extends XotBasePanel {
      *
      * @return RowsContract
      */
-    public static function indexQuery(array $data, $query) {
+    public function indexQuery(array $data, $query) {
         // return $query->where('user_id', $request->user()->id);
         return $query;
     }
@@ -55,34 +55,29 @@ class CategorizablePanel extends XotBasePanel {
      */
     public function fields(): array {
         return [
-            0 => (object) [
-                'type' => 'Text',
+            (object) [
+                'type' => 'Id',
                 'name' => 'id',
                 'comment' => 'not in Doctrine',
             ],
-            1 => (object) [
-                'type' => 'Text',
-                'name' => 'post_id',
-                'comment' => 'not in Doctrine',
-            ],
-            2 => (object) [
-                'type' => 'Text',
-                'name' => 'post_type',
-                'comment' => 'not in Doctrine',
-            ],
-            3 => (object) [
-                'type' => 'Text',
-                'name' => 'photo_id',
-                'comment' => 'not in Doctrine',
-            ],
-            4 => (object) [
-                'type' => 'Text',
-                'name' => 'related_type',
-                'comment' => 'not in Doctrine',
-            ],
-            5 => (object) [
-                'type' => 'Text',
+            (object) [
+                'type' => 'Integer',
                 'name' => 'user_id',
+                'comment' => 'not in Doctrine',
+            ],
+            (object) [
+                'type' => 'Text',
+                'name' => 'categorizable_type',
+                'comment' => 'not in Doctrine',
+            ],
+            (object) [
+                'type' => 'Integer',
+                'name' => 'categorizable_id',
+                'comment' => 'not in Doctrine',
+            ],
+            (object) [
+                'type' => 'Integer',
+                'name' => 'category_id',
                 'comment' => 'not in Doctrine',
             ],
         ];

@@ -8,9 +8,6 @@ use Modules\Cms\Contracts\PanelContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 use Modules\Xot\Contracts\UserContract;
 
-/**
- * Class DocPanelPolicy.
- */
 class DocPanelPolicy extends XotBasePanelPolicy {
     public function rate(UserContract $user, PanelContract $panel): bool {
         return true;

@@ -16,91 +16,96 @@ use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
+use Modules\Xot\Contracts\ModelProfileContract;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Modules\Blog\Models\Profile.
  *
- * @property int                                                                     $id
- * @property string|null                                                             $post_type
- * @property string|null                                                             $bio
- * @property \Illuminate\Support\Carbon|null                                         $created_at
- * @property \Illuminate\Support\Carbon|null                                         $updated_at
- * @property string|null                                                             $created_by
- * @property string|null                                                             $updated_by
- * @property string|null                                                             $deleted_by
- * @property string|null                                                             $firstname
- * @property string|null                                                             $surname
- * @property string|null                                                             $email
- * @property string|null                                                             $phone
- * @property string|null                                                             $address
- * @property int|null                                                                $user_id
- * @property string|null                                                             $premise
- * @property string|null                                                             $premise_short
- * @property string|null                                                             $locality
- * @property string|null                                                             $locality_short
- * @property string|null                                                             $postal_town
- * @property string|null                                                             $postal_town_short
- * @property string|null                                                             $administrative_area_level_3
- * @property string|null                                                             $administrative_area_level_3_short
- * @property string|null                                                             $administrative_area_level_2
- * @property string|null                                                             $administrative_area_level_2_short
- * @property string|null                                                             $administrative_area_level_1
- * @property string|null                                                             $administrative_area_level_1_short
- * @property string|null                                                             $country
- * @property string|null                                                             $country_short
- * @property string|null                                                             $street_number
- * @property string|null                                                             $street_number_short
- * @property string|null                                                             $route
- * @property string|null                                                             $route_short
- * @property string|null                                                             $postal_code
- * @property string|null                                                             $postal_code_short
- * @property string|null                                                             $googleplace_url
- * @property string|null                                                             $googleplace_url_short
- * @property string|null                                                             $point_of_interest
- * @property string|null                                                             $point_of_interest_short
- * @property string|null                                                             $political
- * @property string|null                                                             $political_short
- * @property string|null                                                             $campground
- * @property string|null                                                             $campground_short
- * @property string|null                                                             $github_username
- * @property string|null                                                             $twitter
- * @property string|null                                                             $first_name
- * @property string|null                                                             $last_name
- * @property mixed                                                                   $handle
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[] $articles
- * @property int|null                                                                $articles_count
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]   $containerWidgets
- * @property int|null                                                                $container_widgets_count
- * @property string|null                                                             $full_name
- * @property string|null                                                             $guid
- * @property string|null                                                             $image_src
- * @property string|null                                                             $lang
- * @property string                                                                  $status
- * @property string|null                                                             $subtitle
- * @property string|null                                                             $title
- * @property string|null                                                             $txt
- * @property string|null                                                             $user_handle
- * @property \Modules\Lang\Models\Post|null                                          $post
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[]    $posts
- * @property int|null                                                                $posts_count
- * @property \Modules\LU\Models\Profile|null                                         $profile
- * @property mixed                                                                   $url
- * @property \Illuminate\Database\Eloquent\Collection|\Spatie\ModelStatus\Status[]   $statuses
- * @property int|null                                                                $statuses_count
- * @property User|null                                                               $user
- * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]   $widgets
- * @property int|null                                                                $widgets_count
+ * @property int                                                                          $id
+ * @property string|null                                                                  $post_type
+ * @property string|null                                                                  $bio
+ * @property \Illuminate\Support\Carbon|null                                              $created_at
+ * @property \Illuminate\Support\Carbon|null                                              $updated_at
+ * @property string|null                                                                  $created_by
+ * @property string|null                                                                  $updated_by
+ * @property string|null                                                                  $deleted_by
+ * @property string|null                                                                  $firstname
+ * @property string|null                                                                  $surname
+ * @property string|null                                                                  $email
+ * @property string|null                                                                  $phone
+ * @property string|null                                                                  $address
+ * @property int|null                                                                     $user_id
+ * @property string|null                                                                  $premise
+ * @property string|null                                                                  $premise_short
+ * @property string|null                                                                  $locality
+ * @property string|null                                                                  $locality_short
+ * @property string|null                                                                  $postal_town
+ * @property string|null                                                                  $postal_town_short
+ * @property string|null                                                                  $administrative_area_level_3
+ * @property string|null                                                                  $administrative_area_level_3_short
+ * @property string|null                                                                  $administrative_area_level_2
+ * @property string|null                                                                  $administrative_area_level_2_short
+ * @property string|null                                                                  $administrative_area_level_1
+ * @property string|null                                                                  $administrative_area_level_1_short
+ * @property string|null                                                                  $country
+ * @property string|null                                                                  $country_short
+ * @property string|null                                                                  $street_number
+ * @property string|null                                                                  $street_number_short
+ * @property string|null                                                                  $route
+ * @property string|null                                                                  $route_short
+ * @property string|null                                                                  $postal_code
+ * @property string|null                                                                  $postal_code_short
+ * @property string|null                                                                  $googleplace_url
+ * @property string|null                                                                  $googleplace_url_short
+ * @property string|null                                                                  $point_of_interest
+ * @property string|null                                                                  $point_of_interest_short
+ * @property string|null                                                                  $political
+ * @property string|null                                                                  $political_short
+ * @property string|null                                                                  $campground
+ * @property string|null                                                                  $campground_short
+ * @property mixed                                                                        $handle
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
+ * @property int|null                                                                     $articles_count
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
+ * @property int|null                                                                     $container_widgets_count
+ * @property string|null                                                                  $first_name
+ * @property string|null                                                                  $full_name
+ * @property string|null                                                                  $guid
+ * @property string|null                                                                  $image_src
+ * @property string|null                                                                  $lang
+ * @property string                                                                       $status
+ * @property string|null                                                                  $subtitle
+ * @property string|null                                                                  $title
+ * @property string|null                                                                  $txt
+ * @property string|null                                                                  $user_handle
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
+ * @property int|null                                                                     $permissions_count
+ * @property \Modules\Lang\Models\Post|null                                               $post
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property int|null                                                                     $posts_count
+ * @property \Modules\LU\Models\Profile|null                                              $profile
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
+ * @property int|null                                                                     $roles_count
+ * @property mixed                                                                        $url
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\ModelStatus\Status>    $statuses
+ * @property int|null                                                                     $statuses_count
+ * @property User|null                                                                    $user
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
+ * @property int|null                                                                     $widgets_count
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
- * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
+ * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       ofLayoutPosition($layout_position)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       otherCurrentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile       permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile       role($roles, $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereAddress($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereAdministrativeAreaLevel1($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereAdministrativeAreaLevel1Short($value)
@@ -118,11 +123,9 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereDeletedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereFirstname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereGithubUsername($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereGoogleplaceUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereGoogleplaceUrlShort($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereLastName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereLocality($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereLocalityShort($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       wherePhone($value)
@@ -142,7 +145,6 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereStreetNumber($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereStreetNumberShort($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereSurname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereTwitter($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
@@ -150,12 +152,13 @@ use Spatie\ModelStatus\HasStatuses;
  *
  * @mixin \Eloquent
  */
-class Profile extends BaseModelLang {
+class Profile extends BaseModelLang implements ModelProfileContract {
     // use GeoTrait; -- to profile in geo
     use HasProfileTrait;
+    use HasRoles;
+    use HasStatuses;
     // use PrivacyTrait;
     use WidgetTrait;
-    use HasStatuses;
     // use HasTicketTrait;
     // use HasFactory;
 
@@ -217,7 +220,7 @@ class Profile extends BaseModelLang {
 
     protected function username(): Attribute {
         $user = $this->user;
-        if (null == $user) {
+        if (null === $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
             // dddx($user1->username());
             $user = (object) [
@@ -232,7 +235,7 @@ class Profile extends BaseModelLang {
 
     protected function name(): Attribute {
         $user = $this->user;
-        if (null == $user) {
+        if (null === $user) {
             $user = (object) [
                 'first_name' => 'no-set',
             ];

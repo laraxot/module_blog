@@ -7,11 +7,9 @@ namespace Modules\Blog\View\Components\Card;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\View\Component;
+use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Services\PanelService;
 
-/**
- * Class Event.
- */
 class Event extends Component {
     public array $attrs = [];
     public Model $row;
@@ -35,7 +33,8 @@ class Event extends Component {
         /**
          * @phpstan-var view-string
          */
-        $view = 'blog::components.card.event';
+        // $view = 'blog::components.card.event';
+        $view = app(GetViewAction::class)->execute();
 
         $view_params = [
             'view' => $view,

@@ -12,11 +12,11 @@ use Sushi\Sushi;
 /**
  * Modules\Blog\Models\Page.
  *
- * @property int                                             $id
- * @property \Illuminate\Database\Eloquent\Collection|Page[] $sons
- * @property int|null                                        $sons_count
+ * @property int                                                 $id
+ * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ * @property int|null                                            $sons_count
  *
- * @method static \Modules\Blog\Database\Factories\PageFactory factory(...$parameters)
+ * @method static \Modules\Blog\Database\Factories\PageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   query()
@@ -105,7 +105,6 @@ class Page extends BaseModel {
                 ];
             });
             $pages = $pages->merge($tmp);
-            // dddx($pages);
         }
 
         // dddx($pages->all());

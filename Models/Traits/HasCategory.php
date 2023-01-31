@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://github.com/rinvex/laravel-categories/blob/master/src/Traits/Categorizable.php
  */
@@ -13,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection as BaseCollection;
+use Illuminate\Support\Str;
 use Modules\Blog\Models\Category;
 
 trait HasCategory {
@@ -122,15 +124,6 @@ trait HasCategory {
     }
 
     /**
-     * Scope query with any of the given categories.
-     *
-     * @param mixed $categories
-     */
-    public function scopeWithCategories(Builder $builder, $categories): Builder {
-        return static::scopeWithAnyCategories($builder, $categories);
-    }
-
-    /**
      * Scope query without any of the given categories.
      *
      * @param mixed $categories
@@ -189,16 +182,8 @@ trait HasCategory {
      * @return $this
      */
     public function syncCategories($categories, bool $detaching = true) {
-        // Find categories
         $categories = $this->prepareCategoryIds($categories);
-
-        // dddx(is_array( $categories));
-        // Sync model categories
-        // if (\is_array($categories)) {
         $this->categories()->sync($categories, $detaching);
-        // } // else {
-        // dddx($categories);
-        // }
 
         return $this;
     }
@@ -212,6 +197,21 @@ trait HasCategory {
      */
     public function attachCategories($categories) {
         return $this->syncCategories($categories, false);
+    }
+
+    /**
+     * Attach model categories.
+     *
+     * @return $this
+     */
+    public function attachCategoryName(string $name) {
+        $slug = Str::slug($name);
+        $item = app(Category::class)->firstOrCreate(['slug' => $slug], ['name' => $name]);
+        $detaching = false;
+        $categories = [$item->id];
+        $this->categories()->sync($categories, $detaching);
+
+        return $this;
     }
 
     /**
@@ -248,9 +248,10 @@ trait HasCategory {
 
         // Find categories by their slugs
         if (\is_string($categories) || (\is_array($categories) && \is_string(Arr::first($categories)))) {
+            // Called 'pluck' on Laravel collection, but could have been retrieved as a query
             $categories_ids = app(Category::class)
                 ->whereIn('slug', (array) $categories)
-                ->get()
+                // ->get()
                 ->pluck('id');
             $categories_arr = Arr::wrap($categories);
 

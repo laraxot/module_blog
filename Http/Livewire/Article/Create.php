@@ -7,6 +7,7 @@ namespace Modules\Blog\Http\Livewire\Article;
 use Illuminate\Contracts\Support\Renderable;
 use Livewire\Component;
 use Modules\Blog\Models\Article;
+use Modules\Cms\Actions\GetViewAction;
 use Modules\Xot\Actions\Model\StoreAction;
 
 /**
@@ -14,6 +15,11 @@ use Modules\Xot\Actions\Model\StoreAction;
  */
 class Create extends Component {
     public array $form_data = [];
+    public string $tpl;
+
+    public function mount(string $tpl = 'v1'): void {
+        $this->tpl = $tpl;
+    }
 
     /**
      * Undocumented function.
@@ -22,7 +28,7 @@ class Create extends Component {
         /**
          * @phpstan-var view-string
          */
-        $view = 'blog::livewire.article.create';
+        $view = app(GetViewAction::class)->execute($this->tpl);
 
         $view_params = [
             'view' => $view,

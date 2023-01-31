@@ -56,6 +56,6 @@ class PagesController extends Controller {
             ]);
         }
 
-        return view()->make($view, $view_params);
+        return view($view, $view_params);
     }
 }
