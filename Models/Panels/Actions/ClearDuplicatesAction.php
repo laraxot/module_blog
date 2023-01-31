@@ -9,9 +9,12 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 >>>>>>> 5a5000f (up)
+=======
+>>>>>>> a91a603 (Lint)
 
 // -------- bases -----------
 
