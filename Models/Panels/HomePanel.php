@@ -17,6 +17,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Xot\Models\Panels\Actions\ArtisanAction;
 <<<<<<< HEAD
@@ -24,6 +25,9 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
 =======
 >>>>>>> c4fb14d (Lint)
+=======
+use Modules\Cms\Models\Panels\Actions\ArtisanAction;
+>>>>>>> 5a5000f (up)
 
 /**
  * Class HomePanel.

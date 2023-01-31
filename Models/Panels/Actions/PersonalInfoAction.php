@@ -10,6 +10,10 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Session;
+<<<<<<< HEAD
+=======
+use Modules\Theme\Services\ThemeService;
+>>>>>>> 5a5000f (up)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
