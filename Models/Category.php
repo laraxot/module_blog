@@ -49,7 +49,6 @@ use Spatie\Translatable\HasTranslations;
  * @property \Kalnoy\Nestedset\Collection|Category[]                                       $children
  * @property int|null                                                                      $children_count
  * @property Category|null                                                                 $parent
- *
  * @method static \Kalnoy\Nestedset\Collection|static[]       all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ancestorsAndSelf($id, array $columns = [])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ancestorsOf($id, array $columns = [])
@@ -111,9 +110,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Query\Builder|Category withTrashed()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     withoutRoot()
  * @method static \Illuminate\Database\Query\Builder|Category withoutTrashed()
- *
  * @mixin \Eloquent
- *
  * @property \Kalnoy\Nestedset\Collection|Category[] $articles
  * @property int|null                                $articles_count
  */
