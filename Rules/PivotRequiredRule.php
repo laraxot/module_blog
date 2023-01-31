@@ -63,10 +63,14 @@ class PivotRequiredRule implements Rule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b996731 (rebase)
      * @param int    $value
 =======
      * @param int  $value
 >>>>>>> f4041d1 (up)
+<<<<<<< HEAD
 =======
      * @param int    $value
 >>>>>>> a822353 (.)
@@ -84,6 +88,8 @@ class PivotRequiredRule implements Rule {
      * @param int    $value
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+=======
+>>>>>>> b996731 (rebase)
      *
      * @return bool
      */
@@ -96,6 +102,7 @@ class PivotRequiredRule implements Rule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // $value = (int) $value;
 =======
         //$value = (int) $value;
@@ -117,6 +124,11 @@ class PivotRequiredRule implements Rule {
         // $value = (int) $value;
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
+=======
+=======
+        //$value = (int) $value;
+>>>>>>> f4041d1 (up)
+>>>>>>> b996731 (rebase)
         if ($value && ! $value_required) {
             return false;
         }
