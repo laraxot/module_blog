@@ -30,6 +30,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 >>>>>>> 5a5000f (up)
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 648f2e6 (rebase)
@@ -54,6 +55,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 >>>>>>> c4fb14d (Lint)
 >>>>>>> 648f2e6 (rebase)
+=======
+>>>>>>> 658d838 (rebase)
 
 /**
  * Class HomePanel.

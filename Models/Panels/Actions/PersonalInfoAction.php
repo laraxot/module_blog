@@ -12,11 +12,17 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\Session;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Modules\Theme\Services\ThemeService;
 >>>>>>> 5a5000f (up)
 =======
 >>>>>>> a91a603 (Lint)
+=======
+=======
+use Modules\Theme\Services\ThemeService;
+>>>>>>> 5a5000f (up)
+>>>>>>> 658d838 (rebase)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
