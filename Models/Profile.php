@@ -237,6 +237,11 @@ class Profile extends BaseModelLang {
         'handle' => UserField::class,
     ];
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> b022d6c (up)
     // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany {
