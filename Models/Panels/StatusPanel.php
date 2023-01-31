@@ -13,16 +13,22 @@ use Modules\Xot\Contracts\RowsContract;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 648f2e6 (rebase)
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
 =======
 >>>>>>> c4fb14d (Lint)
+<<<<<<< HEAD
 =======
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 315e874 (up)
 >>>>>>> 781794c (rebase)
+=======
+>>>>>>> 648f2e6 (rebase)
 
 class StatusPanel extends XotBasePanel {
     /**
