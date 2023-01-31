@@ -1,35 +1,7 @@
 <?php
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f98d93c (rebase)
-=======
->>>>>>> e7b73dd (rebase)
 declare(strict_types=1);
 
-=======
->>>>>>> 6c99a65 (.)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> e7b73dd (rebase)
-=======
-declare(strict_types=1);
-
->>>>>>> 5c25f35 (Lint)
-<<<<<<< HEAD
-=======
->>>>>>> f98d93c (rebase)
-=======
->>>>>>> e7b73dd (rebase)
-=======
-declare(strict_types=1);
-
->>>>>>> 6d76482 (up)
 return [
     'write_comment' => 'Deja un comentario',
     'write_reply' => 'Deja una respuesta',

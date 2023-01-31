@@ -48,106 +48,11 @@ class FiveCharactersRule implements Rule {
      */
     public function message() {
         // return 'The :attribute must be 5 characters';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bb94901 (rebase)
-=======
->>>>>>> f930b9f (rebase)
-=======
->>>>>>> af0dac7 (rebase)
-<<<<<<< HEAD
-=======
->>>>>>> b996731 (rebase)
-=======
->>>>>>> a3bd33a (rebase)
-=======
-=======
->>>>>>> f930b9f (rebase)
->>>>>>> bb3945d (rebase)
-=======
->>>>>>> bb94901 (rebase)
-=======
->>>>>>> 6d76482 (up)
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 6d76482 (up)
-        $res = trans('validation.only_uppercase');
-        if (! is_string($res)) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
-        }
-
-<<<<<<< HEAD
->>>>>>> bb3945d (rebase)
-=======
->>>>>>> f930b9f (rebase)
-=======
-        $res= trans('validation.only_uppercase');
-        if(!is_string($res)){
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
-        }
-<<<<<<< HEAD
->>>>>>> f4041d1 (up)
-=======
-        $res = trans('validation.only_uppercase');
-        if (! is_string($res)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
-        }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a822353 (.)
-=======
->>>>>>> b96306f (up)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> bb94901 (rebase)
->>>>>>> f930b9f (rebase)
-=======
-=======
-        $res = trans('validation.only_uppercase');
-        if (! is_string($res)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
-        }
-
->>>>>>> 1daf8a3 (Lint)
->>>>>>> af0dac7 (rebase)
-<<<<<<< HEAD
-=======
-=======
-        $res= trans('validation.only_uppercase');
-        if(!is_string($res)){
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
-        }
->>>>>>> f4041d1 (up)
->>>>>>> b996731 (rebase)
-=======
->>>>>>> a822353 (.)
->>>>>>> a3bd33a (rebase)
-=======
->>>>>>> f930b9f (rebase)
->>>>>>> bb3945d (rebase)
-=======
->>>>>>> bb94901 (rebase)
-=======
->>>>>>> 6d76482 (up)
         return $res;
     }
 }

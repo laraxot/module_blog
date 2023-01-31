@@ -12,7 +12,37 @@ use Sushi\Sushi;
 
 /**
  * Modules\Blog\Models\Home.
+<<<<<<< HEAD
 >>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
+ * @property int|null                                                              $id
+ * @property string|null                                                           $name
+ * @property string|null                                                           $icon_src
+ * @property string|null                                                           $created_by
+ * @property string|null                                                           $updated_by
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $containerWidgets
+ * @property int|null                                                              $container_widgets_count
+ * @property string|null                                                           $guid
+ * @property string|null                                                           $image_src
+ * @property string|null                                                           $lang
+ * @property string|null                                                           $post_type
+ * @property string|null                                                           $subtitle
+ * @property string|null                                                           $title
+ * @property string|null                                                           $txt
+ * @property string|null                                                           $user_handle
+ * @property \Modules\Lang\Models\Post|null                                        $post
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[]  $posts
+ * @property int|null                                                              $posts_count
+ * @property mixed                                                                 $url
+ * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[] $widgets
+ * @property int|null                                                              $widgets_count
+ *
+ * @method static \Modules\Blog\Database\Factories\HomeFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home   newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Home   newQuery()
+=======
+>>>>>>> 47ce820f83a6b78c9e67117ec7a92c012d45978e
  * @property int|null                                                              $id
  * @property string|null                                                           $name
  * @property string|null                                                           $icon_src
