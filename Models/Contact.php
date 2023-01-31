@@ -6,9 +6,6 @@ namespace Modules\Blog\Models;
 
 /**
  * Modules\Blog\Models\Contact.
-<<<<<<< HEAD
->>>>>>> 6fa5a25 (rebase)
-=======
 >>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  * @property string|null                                                          $guid
  * @property string|null                                                          $image_src
@@ -26,7 +23,6 @@ namespace Modules\Blog\Models;
  * @method static \Modules\Blog\Database\Factories\ContactFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact   newQuery()
-=======
 >>>>>>> 47ce820f83a6b78c9e67117ec7a92c012d45978e
  * @property string|null                                                          $guid
  * @property string|null                                                          $image_src

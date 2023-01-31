@@ -133,10 +133,6 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
-<<<<<<< HEAD
->>>>>>> 6fa5a25 (rebase)
-=======
->>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 >>>>>>> 47ce820f83a6b78c9e67117ec7a92c012d45978e
  * @mixin \Eloquent
  */

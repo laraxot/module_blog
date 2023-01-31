@@ -12,9 +12,6 @@ use Sushi\Sushi;
 
 /**
  * Modules\Blog\Models\Home.
-<<<<<<< HEAD
->>>>>>> 6fa5a25 (rebase)
-=======
 >>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  * @property int|null                                                              $id
  * @property string|null                                                           $name
@@ -41,7 +38,6 @@ use Sushi\Sushi;
  * @method static \Modules\Blog\Database\Factories\HomeFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Home   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home   newQuery()
-=======
 >>>>>>> 47ce820f83a6b78c9e67117ec7a92c012d45978e
  * @property int|null                                                              $id
  * @property string|null                                                           $name
