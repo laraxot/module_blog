@@ -38,5 +38,6 @@ namespace Modules\Blog\Models\Panels\Policies;
 >>>>>>> 094f3bc (rebase)
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 
-class CategorizablePanelPolicy extends XotBasePanelPolicy {
+class CategorizablePanelPolicy extends XotBasePanelPolicy
+{
 }

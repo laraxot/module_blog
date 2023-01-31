@@ -9,5 +9,6 @@ use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 /**
  * Class ContactPanelPolicy.
  */
-class ContactPanelPolicy extends XotBasePanelPolicy {
+class ContactPanelPolicy extends XotBasePanelPolicy
+{
 }

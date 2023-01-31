@@ -5,13 +5,15 @@ declare(strict_types=1);
 use Illuminate\Database\Schema\Blueprint;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-class CreateExtraFieldMorphTable extends XotBaseMigration {
+class CreateExtraFieldMorphTable extends XotBaseMigration
+{
     /**
      * db up.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
