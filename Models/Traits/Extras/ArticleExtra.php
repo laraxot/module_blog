@@ -127,18 +127,6 @@ trait ArticleExtra {
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
-=======
-
-
-
->>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
     public function splitBody(string $value): array {
         return $this->split($value);
     }
