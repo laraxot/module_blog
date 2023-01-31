@@ -107,12 +107,16 @@ use Modules\Rating\Models\Traits\RatingTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bfcbaa8 (rebase)
 =======
 use Modules\UI\Contracts\HasLikeContract;
 >>>>>>> 8dd23ec (up)
 =======
 use Modules\Rating\Contracts\HasLikeContract;
 >>>>>>> a71ed99 (up)
+<<<<<<< HEAD
 =======
 >>>>>>> d7cf20b (Lint)
 =======
@@ -120,6 +124,8 @@ use Modules\Rating\Contracts\HasLikeContract;
 use Modules\UI\Contracts\HasLikeContract;
 >>>>>>> 8dd23ec (up)
 >>>>>>> 68e1c05 (rebase)
+=======
+>>>>>>> bfcbaa8 (rebase)
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
