@@ -3,19 +3,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
+=======
+>>>>>>> e7b73dd (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e7b73dd (rebase)
 =======
 declare(strict_types=1);
 
 >>>>>>> 5c25f35 (Lint)
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
+=======
+>>>>>>> e7b73dd (rebase)
 return [
     'approve_comment' => 'Aprovar comentário',
     'reject_comment' => 'Rejeitar comentário',
@@ -31,18 +40,27 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
+=======
+>>>>>>> e7b73dd (rebase)
     'enum_description_participating' => 'Ao participar',
 =======
     'enum_description_participating'=> 'Ao participar',
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     'enum_description_participating' => 'Ao participar',
 >>>>>>> 5c25f35 (Lint)
 =======
 >>>>>>> f98d93c (rebase)
+=======
+=======
+    'enum_description_participating' => 'Ao participar',
+>>>>>>> 5c25f35 (Lint)
+>>>>>>> e7b73dd (rebase)
     'enum_description_all' => 'Em todos os comentários',
     'enum_description_none' => 'Nunca',
     'enum_longdescription_participating' => 'Seja notificado ao participar',

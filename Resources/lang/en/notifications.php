@@ -3,19 +3,28 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
+=======
+>>>>>>> e7b73dd (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e7b73dd (rebase)
 =======
 declare(strict_types=1);
 
 >>>>>>> 5c25f35 (Lint)
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
+=======
+>>>>>>> e7b73dd (rebase)
 return [
     'approve_comment' => 'Approve comment',
     'reject_comment' => 'Reject comment',
@@ -31,18 +40,27 @@ return [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
+=======
+>>>>>>> e7b73dd (rebase)
     'enum_description_participating' => 'When participating',
 =======
     'enum_description_participating'=> 'When participating',
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     'enum_description_participating' => 'When participating',
 >>>>>>> 5c25f35 (Lint)
 =======
 >>>>>>> f98d93c (rebase)
+=======
+=======
+    'enum_description_participating' => 'When participating',
+>>>>>>> 5c25f35 (Lint)
+>>>>>>> e7b73dd (rebase)
     'enum_description_all' => 'On all comments',
     'enum_description_none' => 'Never',
     'enum_longdescription_participating' => 'Get notified when participating',
