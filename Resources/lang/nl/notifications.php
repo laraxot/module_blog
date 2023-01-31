@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> f784731 (.)
 return [
     'approve_comment' => 'Keur opmerking goed',
     'reject_comment' => 'Keur opmerking af',
@@ -14,7 +17,11 @@ return [
     'approved_comment_mail_title' => 'Een nieuwe opmerking op ":commentable_name"',
     'approved_comment_mail_body' => 'Geschreven door :commentator_name',
 
+<<<<<<< HEAD
     'enum_description_participating' => 'Bij deelname aan gesprek',
+=======
+    'enum_description_participating'=> 'Bij deelname aan gesprek',
+>>>>>>> f784731 (.)
     'enum_description_all' => 'Bij alle opmerkingen',
     'enum_description_none' => 'Nooit',
     'enum_longdescription_participating' => 'Krijg een notificatie op dit gesprek',

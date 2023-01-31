@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> f784731 (.)
 return [
     'approve_comment' => 'Approuver le commentaire',
     'reject_comment' => 'Rejeter le commentaire',
@@ -14,8 +17,12 @@ return [
     'approved_comment_mail_title' => 'Un nouveau commentaire sur ":commentable_name "',
     'approved_comment_mail_body' => 'Posté par :commentator_name',
 
+<<<<<<< HEAD
     'enum_description_participating' => 'Lorsque vous participez',
     'enum_description_participating' => 'Lorsque vous participez',
+=======
+    'enum_description_participating'=> 'Lorsque vous participez',
+>>>>>>> f784731 (.)
     'enum_description_all' => 'Sur tous les commentaires',
     'enum_description_none' => 'Jamais',
     'enum_longdescription_participating' => 'Être notifié lors de la participation',

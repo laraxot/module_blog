@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> f784731 (.)
 return [
     'approve_comment' => 'Approva commento',
     'reject_comment' => 'Rifiuta commento',

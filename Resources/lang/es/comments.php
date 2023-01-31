@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> f784731 (.)
 return [
     'write_comment' => 'Deja un comentario',
     'write_reply' => 'Deja una respuesta',
