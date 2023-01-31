@@ -2,14 +2,20 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f98d93c (rebase)
 declare(strict_types=1);
 
 =======
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 =======
 declare(strict_types=1);
 
 >>>>>>> 5c25f35 (Lint)
+=======
+>>>>>>> f98d93c (rebase)
 return [
     'approve_comment' => 'Keur opmerking goed',
     'reject_comment' => 'Keur opmerking af',
@@ -24,13 +30,19 @@ return [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f98d93c (rebase)
     'enum_description_participating' => 'Bij deelname aan gesprek',
 =======
     'enum_description_participating'=> 'Bij deelname aan gesprek',
 >>>>>>> 6c99a65 (.)
+<<<<<<< HEAD
 =======
     'enum_description_participating' => 'Bij deelname aan gesprek',
 >>>>>>> 5c25f35 (Lint)
+=======
+>>>>>>> f98d93c (rebase)
     'enum_description_all' => 'Bij alle opmerkingen',
     'enum_description_none' => 'Nooit',
     'enum_longdescription_participating' => 'Krijg een notificatie op dit gesprek',
