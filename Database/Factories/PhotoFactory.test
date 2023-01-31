@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 000210a (rebase)
 use Illuminate\Support\Str;
 
 use Modules\Blog\Models\Photo;
@@ -24,16 +27,22 @@ use Modules\Blog\Models\Photo;
 >>>>>>> fa90f5a (up)
 >>>>>>> b02ae09 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 000210a (rebase)
 =======
 use Illuminate\Support\Str;
 
 use Modules\Blog\Models\Photo;
 >>>>>>> 92d6d85 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 802efe7 (up)
 >>>>>>> 8192562 (rebase)
 =======
 >>>>>>> 48f4792 (rebase)
+=======
+>>>>>>> 000210a (rebase)
 
 class PhotoFactory extends Factory {
     /**
@@ -44,6 +53,9 @@ class PhotoFactory extends Factory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 000210a (rebase)
     protected $model = Photo::class;
 =======
     protected $model = Modules\Blog\Models\Photo::class;
@@ -55,6 +67,7 @@ class PhotoFactory extends Factory {
 =======
     protected $model = Photo::class;
 >>>>>>> 92d6d85 (.)
+<<<<<<< HEAD
 =======
     protected $model = Photo::class;
 =======
@@ -68,6 +81,8 @@ class PhotoFactory extends Factory {
 >>>>>>> fa90f5a (up)
 >>>>>>> b02ae09 (.)
 >>>>>>> 48f4792 (rebase)
+=======
+>>>>>>> 000210a (rebase)
 
     /**
      * Define the model's default state.
@@ -78,8 +93,11 @@ class PhotoFactory extends Factory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 000210a (rebase)
 
 
         return [
@@ -97,15 +115,21 @@ class PhotoFactory extends Factory {
 >>>>>>> fa90f5a (up)
 >>>>>>> b02ae09 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 000210a (rebase)
 =======
         return [
             'id' => $this->faker->randomNumber
 >>>>>>> 92d6d85 (.)
+<<<<<<< HEAD
 =======
 >>>>>>> 802efe7 (up)
 >>>>>>> 8192562 (rebase)
 =======
 >>>>>>> 48f4792 (rebase)
+=======
+>>>>>>> 000210a (rebase)
         ];
     }
 }
