@@ -214,6 +214,7 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Profile extends BaseModelLang {
     // use GeoTrait; -- to profile in geo
 =======
@@ -221,6 +222,15 @@ class Profile extends BaseModelLang
 {
     use GeoTrait;
 >>>>>>> b02ae09 (.)
+=======
+class Profile extends BaseModelLang
+{
+    use GeoTrait;
+=======
+class Profile extends BaseModelLang {
+    // use GeoTrait; -- to profile in geo
+>>>>>>> 0cf44f8 (up)
+>>>>>>> 6f3084b (rebase)
     use HasProfileTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
