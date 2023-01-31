@@ -8,15 +8,13 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateArticlesTable.
  */
-class CreateArticlesTable extends XotBaseMigration
-{
+class CreateArticlesTable extends XotBaseMigration {
     /**
      * db up.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {

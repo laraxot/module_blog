@@ -7,6 +7,9 @@ namespace Modules\Blog\Tests;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae00439 (rebase)
 class TestCase extends \Orchestra\Testbench\TestCase {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,6 +25,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 {
 >>>>>>> a58bbf1 (.)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class TestCase extends \Orchestra\Testbench\TestCase {
 >>>>>>> f0ffa9e (rebase)
@@ -31,6 +35,11 @@ class TestCase extends \Orchestra\Testbench\TestCase {
 >>>>>>> a6f3582 (rebase)
 =======
 >>>>>>> cb04fce (rebase)
+=======
+=======
+class TestCase extends \Orchestra\Testbench\TestCase {
+>>>>>>> f0ffa9e (rebase)
+>>>>>>> ae00439 (rebase)
 }
 =======
 }

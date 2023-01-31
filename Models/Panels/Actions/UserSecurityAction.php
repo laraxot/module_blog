@@ -17,16 +17,14 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class UserSecurityAction.
  */
-class UserSecurityAction extends XotBasePanelAction
-{
+class UserSecurityAction extends XotBasePanelAction {
     public bool $onContainer = false; // onlyContainer
 
     public bool $onItem = true; // onlyContainer
 
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
-    public function handle(): View
-    {
+    public function handle(): View {
         if (null == $this->panel) {
             throw new \Exception('panel is null');
         }
@@ -37,8 +35,7 @@ class UserSecurityAction extends XotBasePanelAction
     /**
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function postHandle(): View
-    {
+    public function postHandle(): View {
         $data = request()->all();
 
         Validator::make($data, [

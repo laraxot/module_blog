@@ -95,8 +95,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 >>>>>>> a939533 (rebase)
 
-class MediaPanel extends XotBasePanel
-{
+class MediaPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -169,10 +168,13 @@ class MediaPanel extends XotBasePanel
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> ea4d650 (rebase)
+=======
+>>>>>>> ae00439 (rebase)
     public function optionLabel($row): string
     {
 =======
@@ -187,6 +189,7 @@ class MediaPanel extends XotBasePanel
     {
 >>>>>>> 42ca46e (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public function optionLabel($row): string {
 >>>>>>> afa2edf (Lint)
@@ -198,14 +201,18 @@ class MediaPanel extends XotBasePanel
 >>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> ea4d650 (rebase)
+=======
+=======
+    public function optionLabel($row): string {
+>>>>>>> afa2edf (Lint)
+>>>>>>> ae00439 (rebase)
         return (string) $row->name;
     }
 
     /**
      * index navigation.
      */
-    public function indexNav(): ?\Illuminate\Contracts\Support\Renderable
-    {
+    public function indexNav(): ?\Illuminate\Contracts\Support\Renderable {
         return null;
     }
 
@@ -216,8 +223,7 @@ class MediaPanel extends XotBasePanel
      *
      * @return RowsContract
      */
-    public static function indexQuery(array $data, $query)
-    {
+    public static function indexQuery(array $data, $query) {
         // return $query->where('user_id', $request->user()->id);
         return $query;
     }
@@ -226,8 +232,7 @@ class MediaPanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             0 => (object) [
                 'type' => 'Id',
@@ -377,8 +382,7 @@ class MediaPanel extends XotBasePanel
     /**
      * Get the tabs available.
      */
-    public function tabs(): array
-    {
+    public function tabs(): array {
         $tabs_name = [];
 
         return $tabs_name;
@@ -387,8 +391,7 @@ class MediaPanel extends XotBasePanel
     /**
      * Get the cards available for the request.
      */
-    public function cards(Request $request): array
-    {
+    public function cards(Request $request): array {
         return [];
     }
 
@@ -397,24 +400,21 @@ class MediaPanel extends XotBasePanel
      *
      * @param \Illuminate\Http\Request $request
      */
-    public function filters(Request $request = null): array
-    {
+    public function filters(Request $request = null): array {
         return [];
     }
 
     /**
      * Get the lenses available for the resource.
      */
-    public function lenses(Request $request): array
-    {
+    public function lenses(Request $request): array {
         return [];
     }
 
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }
