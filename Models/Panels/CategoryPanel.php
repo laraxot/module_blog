@@ -28,6 +28,9 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a3494d5 (rebase)
         $name = $row->name;
         // if (is_string($name)) {
 <<<<<<< HEAD
@@ -40,6 +43,7 @@ class CategoryPanel extends XotBasePanel {
         return $name;
 =======
         return ''.$row->name;
+<<<<<<< HEAD
 >>>>>>> b022d6c (up)
 =======
         return (string)$row->name;
@@ -76,6 +80,9 @@ class CategoryPanel extends XotBasePanel {
 =======
         return $name;
 >>>>>>> ea58237 (up)
+=======
+>>>>>>> a780d70 (up)
+>>>>>>> a3494d5 (rebase)
     }
 
 <<<<<<< HEAD
