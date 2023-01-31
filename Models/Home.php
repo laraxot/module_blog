@@ -16,10 +16,15 @@ use Sushi\Sushi;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
 =======
 >>>>>>> 2f1bc22 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 6fa5a25 (rebase)
  * @property int|null                                                              $id
  * @property string|null                                                           $name
  * @property string|null                                                           $icon_src
@@ -47,8 +52,11 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newQuery()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2f1bc22 (rebase)
+=======
+>>>>>>> 6fa5a25 (rebase)
 =======
  * @property int|null $id
  * @property string|null $name
@@ -76,19 +84,25 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home newQuery()
 >>>>>>> bc6d311 (up)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
 =======
 >>>>>>> 2f1bc22 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 6fa5a25 (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Home ofLayoutPosition($layout_position)
- * @method static \Illuminate\Database\Eloquent\Builder|Home query()
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereIconSrc($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Home whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          ofLayoutPosition($layout_position)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereIconSrc($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Home          whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  */
 class Home extends BaseModelLang {

@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 use Modules\Blog\Models\ExtraField;
 
 class ExtraFieldFactory extends Factory {
@@ -23,13 +21,11 @@ class ExtraFieldFactory extends Factory {
      * @return array
      */
     public function definition() {
-
-
         return [
             'id' => $this->faker->randomNumber,
             'name' => $this->faker->name,
             'type' => $this->faker->word,
-            'rules' => $this->faker->text
+            'rules' => $this->faker->text,
         ];
     }
 }
