@@ -9,6 +9,10 @@ use Modules\Blog\Models\Article;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Rating\Models\Panels\Actions\RateItAction;
+<<<<<<< HEAD
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 315e874 (up)
 
 /**
  * Class ArticlePanel.

@@ -13,6 +13,11 @@ use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
+<<<<<<< HEAD
+=======
+use Modules\Xot\Models\Panels\Actions\ArtisanAction;
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 315e874 (up)
 
 /**
  * Class HomePanel.
