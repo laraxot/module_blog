@@ -353,6 +353,7 @@ use Spatie\ModelStatus\HasStatuses;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Profile extends BaseModelLang {
     // use GeoTrait; -- to profile in geo
 =======
@@ -361,11 +362,17 @@ class Profile extends BaseModelLang
     use GeoTrait;
 >>>>>>> b02ae09 (.)
 =======
+=======
+>>>>>>> aff4d2d (rebase)
 class Profile extends BaseModelLang
 {
     use GeoTrait;
 =======
 class Profile extends BaseModelLang {
+=======
+class Profile extends BaseModelLang
+{
+>>>>>>> 42ca46e (up)
     // use GeoTrait; -- to profile in geo
 >>>>>>> 0cf44f8 (up)
 >>>>>>> 6f3084b (rebase)

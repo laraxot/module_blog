@@ -34,6 +34,7 @@ class PersonalInfoAction extends XotBasePanelAction
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function handle(): Renderable {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -41,6 +42,8 @@ class PersonalInfoAction extends XotBasePanelAction
 =======
 =======
 >>>>>>> 0088a11 (rebase)
+=======
+>>>>>>> aff4d2d (rebase)
     public function handle(): Renderable
     {
 >>>>>>> 00a7996 (.)
@@ -64,6 +67,10 @@ class PersonalInfoAction extends XotBasePanelAction
 >>>>>>> 0088a11 (rebase)
 =======
 =======
+=======
+    public function handle(): Renderable
+    {
+>>>>>>> 42ca46e (up)
         if (null == $this->panel) {
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)

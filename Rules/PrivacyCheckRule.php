@@ -42,14 +42,16 @@ http://www.coding4developers.com/laravel/customize-validation-error-response-in-
 /**
  * Class PrivacyCheckRule.
  */
-class PrivacyCheckRule implements Rule, ImplicitRule {
+class PrivacyCheckRule implements Rule, ImplicitRule
+{
     public ?string $field_name;
     public ?string $field_name_required;
 
     /**
      * Create a new rule instance.
      */
-    public function __construct(?string $field_name = null, ?string $field_name_required = null) {
+    public function __construct(?string $field_name = null, ?string $field_name_required = null)
+    {
         // dddx($field_name);
         $this->field_name = $field_name;
         $this->field_name_required = $field_name_required;
@@ -64,7 +66,8 @@ class PrivacyCheckRule implements Rule, ImplicitRule {
      *
      * @return bool
      */
-    public function passes($attribute, $value) {
+    public function passes($attribute, $value)
+    {
         /*
         if($value==''){
             $data=(\Request::all());
@@ -116,7 +119,8 @@ class PrivacyCheckRule implements Rule, ImplicitRule {
      *
      * @return string
      */
-    public function message() {
+    public function message()
+    {
         return ':attribute must be checked.';
     }
 }

@@ -11,7 +11,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class ContactPanel.
  */
-class ContactPanel extends XotBasePanel {
+class ContactPanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -25,7 +26,8 @@ class ContactPanel extends XotBasePanel {
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Id',
@@ -38,7 +40,8 @@ class ContactPanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [];
     }
 }
