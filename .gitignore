@@ -18,8 +18,14 @@ error_log
 *.cache
 /build
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.old
 *.to_*
 *.old*
 =======
 >>>>>>> 51f522d (.)
+=======
+*.old
+*.to_*
+*.old*
+>>>>>>> 83cb1cd (rebase)
