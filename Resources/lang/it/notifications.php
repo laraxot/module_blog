@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
 =======
@@ -25,6 +26,10 @@ declare(strict_types=1);
 >>>>>>> f98d93c (rebase)
 =======
 >>>>>>> e7b73dd (rebase)
+=======
+declare(strict_types=1);
+
+>>>>>>> 6d76482 (up)
 return [
     'approve_comment' => 'Approva commento',
     'reject_comment' => 'Rifiuta commento',

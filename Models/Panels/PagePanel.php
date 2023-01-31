@@ -13,6 +13,7 @@ namespace Modules\Blog\Models\Panels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
 =======
 use Exception;
@@ -76,6 +77,9 @@ use Illuminate\Database\Eloquent\Model;
 =======
 >>>>>>> c029664 (.)
 >>>>>>> 15844ac (rebase)
+=======
+use Illuminate\Contracts\Support\Renderable;
+>>>>>>> 6d76482 (up)
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
 use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
@@ -130,6 +134,7 @@ class PagePanel extends XotBasePanel {
     /**
      * index navigation.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +223,9 @@ class PagePanel extends XotBasePanel {
     public function indexNav(): ?Renderable {
 >>>>>>> afa2edf (Lint)
 >>>>>>> ae00439 (rebase)
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> 6d76482 (up)
         dddx('qui');
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
@@ -358,6 +366,7 @@ class PagePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
@@ -455,6 +464,10 @@ class PagePanel extends XotBasePanel {
 >>>>>>> 15844ac (rebase)
 =======
 >>>>>>> a7a8072 (rebase)
+=======
+            if (! isset($url_components['path'])) {
+                throw new \Exception('['.__LINE__.']['.__FILE__.']');
+>>>>>>> 6d76482 (up)
             }
             $url = $url_components['path'];
 

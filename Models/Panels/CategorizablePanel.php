@@ -12,6 +12,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 781794c (rebase)
 =======
@@ -32,6 +33,10 @@ use Modules\Xot\Contracts\RowsContract;
 use Modules\Xot\Contracts\RowsContract;
 >>>>>>> c4fb14d (Lint)
 >>>>>>> 648f2e6 (rebase)
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> 6d76482 (up)
 
 class CategorizablePanel extends XotBasePanel {
     /**
@@ -44,6 +49,7 @@ class CategorizablePanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,11 +101,14 @@ class CategorizablePanel extends XotBasePanel {
 >>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> a939533 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     /**
      * on select the option label.
      *
      * @param \Modules\Blog\Models\Categorizable $row
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,6 +153,9 @@ class CategorizablePanel extends XotBasePanel {
     public function optionLabel($row): string {
 >>>>>>> afa2edf (Lint)
 >>>>>>> ae00439 (rebase)
+=======
+    public function optionLabel($row): string {
+>>>>>>> 6d76482 (up)
         return (string) $row->id;
     }
 

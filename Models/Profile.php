@@ -13,6 +13,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 <<<<<<< HEAD
@@ -55,12 +56,13 @@ use Modules\Geo\Models\Traits\GeoTrait;
 >>>>>>> 6c06ca4 (rebase)
 =======
 >>>>>>> 0d06fda (rebase)
+=======
+>>>>>>> 6d76482 (up)
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
@@ -81,12 +83,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
+=======
+>>>>>>> 6d76482 (up)
 use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -103,10 +108,13 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> baed241 (rebase)
 =======
 >>>>>>> a6cf74c (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
 /**
  * Modules\Blog\Models\Profile.
  *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +127,8 @@ use Spatie\ModelStatus\HasStatuses;
 =======
 >>>>>>> 8213e79 (Lint)
 >>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> 6d76482 (up)
  * @property int                                                                     $id
  * @property string|null                                                             $post_type
  * @property string|null                                                             $bio
@@ -189,6 +199,7 @@ use Spatie\ModelStatus\HasStatuses;
  * @property User|null                                                               $user
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Xot\Models\Widget[]   $widgets
  * @property int|null                                                                $widgets_count
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -433,12 +444,13 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile newQuery()
 =======
+=======
+>>>>>>> 6d76482 (up)
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
->>>>>>> 8213e79 (Lint)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       ofLayoutPosition($layout_position)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       otherCurrentStatus(...$names)
@@ -712,6 +724,7 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Profile extends BaseModelLang {
     // use GeoTrait; -- to profile in geo
 =======
@@ -818,6 +831,14 @@ class Profile extends BaseModelLang
 >>>>>>> baed241 (rebase)
 =======
 >>>>>>> a6cf74c (rebase)
+=======
+class Profile extends BaseModelLang {
+    // use GeoTrait;
+    use HasProfileTrait;
+    // use PrivacyTrait;
+    use WidgetTrait;
+    use HasStatuses;
+>>>>>>> 6d76482 (up)
     // use HasTicketTrait;
     // use HasFactory;
 
@@ -854,6 +875,7 @@ class Profile extends BaseModelLang
         'handle' => UserField::class,
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -917,6 +939,8 @@ class Profile extends BaseModelLang
 >>>>>>> bc82fdc (Lint)
 >>>>>>> 7424c65 (rebase)
 >>>>>>> a939533 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     // ------- RELATIONSHIP ----------
 
     public function articles(): HasMany {
@@ -945,6 +969,7 @@ class Profile extends BaseModelLang
         if (null == $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
             // dddx($user1->username());
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1017,6 +1042,10 @@ class Profile extends BaseModelLang
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
 >>>>>>> bb94901 (rebase)
+=======
+            $user = (object) [
+                'handle' => 'no-set',
+>>>>>>> 6d76482 (up)
             ];
         }
 
@@ -1027,6 +1056,7 @@ class Profile extends BaseModelLang
 
     protected function name(): Attribute {
         $user = $this->user;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1104,6 +1134,11 @@ class Profile extends BaseModelLang
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
 >>>>>>> bb94901 (rebase)
+=======
+        if (null == $user) {
+            $user = (object) [
+                'first_name' => 'no-set',
+>>>>>>> 6d76482 (up)
             ];
         }
 
@@ -1131,6 +1166,7 @@ class Profile extends BaseModelLang
 
     protected function hasTwitterAccount(): Attribute {
         return Attribute::make(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1195,6 +1231,9 @@ class Profile extends BaseModelLang
 >>>>>>> d2bbae9 (rebase)
 =======
 >>>>>>> 955c157 (rebase)
+=======
+            get: fn ($value) => false, // ! empty($this->twitter()),
+>>>>>>> 6d76482 (up)
         );
     }
 

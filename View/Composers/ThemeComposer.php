@@ -10,9 +10,8 @@ use Modules\Blog\Models\Category;
 use Modules\LU\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 class ThemeComposer {
+<<<<<<< HEAD
 <<<<<<< HEAD
     /*
      * ---.
@@ -57,6 +56,8 @@ class ThemeComposer {
 
 >>>>>>> 104688c (Lint)
      */
+=======
+>>>>>>> 6d76482 (up)
     /**
      * Undocumented function.
      *
@@ -80,6 +81,7 @@ class ThemeComposer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f3c85d2 (rebase)
         $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
@@ -96,6 +98,9 @@ class ThemeComposer {
 >>>>>>> 1fdd40b (rebase)
 =======
 >>>>>>> f3c85d2 (rebase)
+=======
+        $featured_articles = $article->published()->showHomepage()->publishedUntilToday()->orderBy('publish_date', 'desc')->get();
+>>>>>>> 6d76482 (up)
         */
     }
 
@@ -260,6 +265,7 @@ class ThemeComposer {
         return $rows;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -483,6 +489,9 @@ class ThemeComposer {
 >>>>>>> afa2edf (Lint)
 >>>>>>> f0ffa9e (rebase)
 >>>>>>> ae00439 (rebase)
+=======
+    public function getCardEvents(): Collection {
+>>>>>>> 6d76482 (up)
         $str = '[
             {
               "date": "26",
@@ -556,6 +565,7 @@ class ThemeComposer {
         return collect(json_decode($str));
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -667,6 +677,9 @@ class ThemeComposer {
 >>>>>>> ea4d650 (rebase)
 =======
 >>>>>>> ae00439 (rebase)
+=======
+    public function getCardPlaces(): Collection {
+>>>>>>> 6d76482 (up)
         $str = '[
             {
               "category": "Categoria",

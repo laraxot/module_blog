@@ -11,6 +11,7 @@ use Modules\Lang\Models\Post;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8513cb9 (rebase)
 =======
@@ -26,6 +27,8 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 >>>>>>> 658d838 (rebase)
 =======
 >>>>>>> 8513cb9 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
 // -------- bases -----------
 

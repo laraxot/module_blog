@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
 =======
@@ -25,6 +26,10 @@ declare(strict_types=1);
 >>>>>>> f98d93c (rebase)
 =======
 >>>>>>> e7b73dd (rebase)
+=======
+declare(strict_types=1);
+
+>>>>>>> 6d76482 (up)
 return [
     'approve_comment' => 'Keur opmerking goed',
     'reject_comment' => 'Keur opmerking af',
@@ -37,6 +42,7 @@ return [
     'approved_comment_mail_title' => 'Een nieuwe opmerking op ":commentable_name"',
     'approved_comment_mail_body' => 'Geschreven door :commentator_name',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +67,9 @@ return [
     'enum_description_participating' => 'Bij deelname aan gesprek',
 >>>>>>> 5c25f35 (Lint)
 >>>>>>> e7b73dd (rebase)
+=======
+    'enum_description_participating' => 'Bij deelname aan gesprek',
+>>>>>>> 6d76482 (up)
     'enum_description_all' => 'Bij alle opmerkingen',
     'enum_description_none' => 'Nooit',
     'enum_longdescription_participating' => 'Krijg een notificatie op dit gesprek',
