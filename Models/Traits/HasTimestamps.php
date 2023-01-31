@@ -6,12 +6,15 @@ namespace Modules\Blog\Models\Traits;
 
 use Carbon\Carbon;
 
-trait HasTimestamps {
-    public function createdAt(): ?Carbon {
+trait HasTimestamps
+{
+    public function createdAt(): ?Carbon
+    {
         return $this->created_at;
     }
 
-    public function updatedAt(): ?Carbon {
+    public function updatedAt(): ?Carbon
+    {
         return $this->updated_at;
     }
 }

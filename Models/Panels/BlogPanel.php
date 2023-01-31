@@ -10,7 +10,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class BlogPanel.
  */
-class BlogPanel extends XotBasePanel {
+class BlogPanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -24,7 +25,8 @@ class BlogPanel extends XotBasePanel {
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
         ];
     }
@@ -32,7 +34,8 @@ class BlogPanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [];
     }
 }

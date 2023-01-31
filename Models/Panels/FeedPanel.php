@@ -10,7 +10,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class FeedPanel.
  */
-class FeedPanel extends XotBasePanel {
+class FeedPanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -29,7 +30,8 @@ class FeedPanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [];
     }
 }
