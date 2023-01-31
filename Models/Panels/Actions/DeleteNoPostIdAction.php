@@ -6,6 +6,7 @@ namespace Modules\Blog\Models\Panels\Actions;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 use Modules\Lang\Models\Post;
 <<<<<<< HEAD
@@ -32,8 +33,16 @@ use Modules\Lang\Models\Post;
 >>>>>>> c744a19 (up)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 class DeleteNoPostIdAction extends XotBasePanelAction {
 =======
+=======
+=======
+use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
+use Modules\Lang\Models\Post;
+
+>>>>>>> 522e2d3 (up)
+>>>>>>> aef2fc3 (rebase)
 /**
  * Class DeleteNoPostIdAction.
  */
