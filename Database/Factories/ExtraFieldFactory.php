@@ -5,20 +5,17 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Str;
 
->>>>>>> 378fec2 (up)
-use Modules\Blog\Models\Label;
+use Modules\Blog\Models\ExtraField;
 
-class LabelFactory extends Factory {
+class ExtraFieldFactory extends Factory {
     /**
      * The name of the factory's corresponding model.
      *
      * @var class-string<\Illuminate\Database\Eloquent\Model>
      */
-    protected $model = Label::class;
+    protected $model = ExtraField::class;
 
     /**
      * Define the model's default state.
@@ -26,14 +23,13 @@ class LabelFactory extends Factory {
      * @return array
      */
     public function definition() {
-<<<<<<< HEAD
-        return [
-=======
 
 
         return [
-            
->>>>>>> 378fec2 (up)
+            'id' => $this->faker->randomNumber,
+            'name' => $this->faker->name,
+            'type' => $this->faker->word,
+            'rules' => $this->faker->text
         ];
     }
 }
