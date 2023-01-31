@@ -29,6 +29,7 @@ namespace Modules\Blog\Models;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property int|null                                                             $posts_count
  * @property mixed                                                                $url
+ *
  * @method static \Modules\Blog\Database\Factories\PrivacyFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy       newQuery()
@@ -43,6 +44,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy       whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Privacy       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
+ *
  * @mixin \Eloquent
  */
 class Privacy extends BaseModelLang {
