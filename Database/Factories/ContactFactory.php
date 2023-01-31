@@ -30,6 +30,7 @@ class ContactFactory extends Factory {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 648e6d8 (rebase)
 =======
@@ -99,6 +100,11 @@ class ContactFactory extends Factory {
 >>>>>>> 5a12252 (Lint)
 >>>>>>> 962cd73 (rebase)
 >>>>>>> 648e6d8 (rebase)
+=======
+            // 'id' => $this->faker->randomNumber,
+            // 'post_id' => $this->faker->integer,
+            // 'post_type' => $this->faker->word,
+>>>>>>> 6d76482 (up)
         ];
     }
 }

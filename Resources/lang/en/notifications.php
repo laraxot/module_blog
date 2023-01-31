@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
 =======
@@ -25,6 +26,10 @@ declare(strict_types=1);
 >>>>>>> f98d93c (rebase)
 =======
 >>>>>>> e7b73dd (rebase)
+=======
+declare(strict_types=1);
+
+>>>>>>> 6d76482 (up)
 return [
     'approve_comment' => 'Approve comment',
     'reject_comment' => 'Reject comment',
@@ -37,6 +42,7 @@ return [
     'approved_comment_mail_title' => 'A new comment on ":commentable_name"',
     'approved_comment_mail_body' => 'Posted by :commentator_name',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +67,9 @@ return [
     'enum_description_participating' => 'When participating',
 >>>>>>> 5c25f35 (Lint)
 >>>>>>> e7b73dd (rebase)
+=======
+    'enum_description_participating' => 'When participating',
+>>>>>>> 6d76482 (up)
     'enum_description_all' => 'On all comments',
     'enum_description_none' => 'Never',
     'enum_longdescription_participating' => 'Get notified when participating',

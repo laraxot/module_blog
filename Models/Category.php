@@ -33,6 +33,7 @@ use Spatie\Translatable\HasTranslations;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
 =======
@@ -41,6 +42,8 @@ use Spatie\Translatable\HasTranslations;
 =======
 >>>>>>> 8213e79 (Lint)
 >>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> 6d76482 (up)
  * @property int                                                                           $id
  * @property int|null                                                                      $parent_id
  * @property string|null                                                                   $created_by
@@ -86,6 +89,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     newModelQuery()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     newQuery()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     ofType(string $type)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -149,6 +153,8 @@ use Spatie\Translatable\HasTranslations;
 =======
 >>>>>>> 8213e79 (Lint)
 >>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> 6d76482 (up)
  * @method static \Illuminate\Database\Query\Builder|Category onlyTrashed()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereAncestorOf(bool $id, bool $andSelf = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category     orWhereDescendantOf($id)
@@ -307,6 +313,7 @@ class Category extends Model {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 34ad686 (rebase)
 =======
@@ -438,6 +445,9 @@ class Category extends Model {
     public function scopeOfType(Builder $query, string $type): Builder {
 >>>>>>> 0834824 (Lint)
 >>>>>>> fc09051 (rebase)
+=======
+    public function scopeOfType(Builder $query, string $type): Builder {
+>>>>>>> 6d76482 (up)
         return $query->whereRelation('categorizables', 'categorizable_type', $type);
         /*
         return $query->whereHas('categorizables',function($q) use($type){

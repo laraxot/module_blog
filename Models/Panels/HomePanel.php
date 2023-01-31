@@ -13,6 +13,7 @@ use Modules\Blog\Models\Category;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8513cb9 (rebase)
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
@@ -63,12 +64,17 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 658d838 (rebase)
 =======
 =======
+=======
+>>>>>>> 6d76482 (up)
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
+<<<<<<< HEAD
 >>>>>>> a91a603 (Lint)
 >>>>>>> 8513cb9 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
 /**
  * Class HomePanel.
@@ -192,6 +198,7 @@ class HomePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
 =======
@@ -208,10 +215,13 @@ class HomePanel extends XotBasePanel {
 >>>>>>> 355a234 (rebase)
 =======
 >>>>>>> 648e6d8 (rebase)
+=======
+>>>>>>> 6d76482 (up)
             // ->limit(8)
             ->get()
             // ->take(8)
         ;
+<<<<<<< HEAD
 =======
             ->take(8)
 <<<<<<< HEAD
@@ -320,6 +330,8 @@ class HomePanel extends XotBasePanel {
 >>>>>>> 5a12252 (Lint)
 >>>>>>> 962cd73 (rebase)
 >>>>>>> 648e6d8 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
         return $navCategories;
     }
@@ -329,6 +341,7 @@ class HomePanel extends XotBasePanel {
      */
     public function footerCategories(): Collection {
         $footerCategories = Category::query()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,21 +399,16 @@ class HomePanel extends XotBasePanel {
 =======
             ->has('articles', '>', 0)->get();
 =======
+=======
+>>>>>>> 6d76482 (up)
             ->has('articles', '>', 0)
 <<<<<<< HEAD
 <<<<<<< HEAD
             // ->limit(8)
             ->get()
-<<<<<<< HEAD
-            //->take(8)
-            ;
->>>>>>> 27d1a3f (up)
-<<<<<<< HEAD
->>>>>>> 0088a11 (rebase)
-=======
-=======
             // ->take(8)
         ;
+<<<<<<< HEAD
 >>>>>>> 5a12252 (Lint)
 >>>>>>> 962cd73 (rebase)
 =======
@@ -436,6 +444,8 @@ class HomePanel extends XotBasePanel {
 >>>>>>> 5a12252 (Lint)
 >>>>>>> 962cd73 (rebase)
 >>>>>>> 648e6d8 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
         return $footerCategories;
     }

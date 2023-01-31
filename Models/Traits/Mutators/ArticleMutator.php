@@ -11,6 +11,7 @@ namespace Modules\Blog\Models\Traits\Mutators;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ea4d650 (rebase)
 =======
@@ -76,6 +77,8 @@ trait ArticleMutator
 >>>>>>> aff4d2d (rebase)
 =======
 =======
+=======
+>>>>>>> 6d76482 (up)
 trait ArticleMutator {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,9 +115,12 @@ trait ArticleMutator {
 >>>>>>> ea4d650 (rebase)
 =======
     public function getParentIdAttribute(?int $value): ?int {
+<<<<<<< HEAD
 >>>>>>> afa2edf (Lint)
 >>>>>>> f0ffa9e (rebase)
 >>>>>>> ae00439 (rebase)
+=======
+>>>>>>> 6d76482 (up)
         if (null !== $value) {
             return $value;
         }

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
 =======
@@ -25,6 +26,10 @@ declare(strict_types=1);
 >>>>>>> f98d93c (rebase)
 =======
 >>>>>>> e7b73dd (rebase)
+=======
+declare(strict_types=1);
+
+>>>>>>> 6d76482 (up)
 return [
     'write_comment' => 'Laissez un commentaire',
     'write_reply' => 'Laissez une réponse',
@@ -44,6 +49,7 @@ return [
     'approve_comment' => 'Approuver',
     'awaits_approval' => 'En attente d\'approbation',
     'guest' => 'invité',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,4 +74,7 @@ return [
     'copied' => 'Lien copié',
 >>>>>>> 5c25f35 (Lint)
 >>>>>>> e7b73dd (rebase)
+=======
+    'copied' => 'Lien copié',
+>>>>>>> 6d76482 (up)
 ];

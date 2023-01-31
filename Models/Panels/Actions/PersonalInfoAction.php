@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Session;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8513cb9 (rebase)
 =======
@@ -29,6 +30,8 @@ use Modules\Theme\Services\ThemeService;
 >>>>>>> 658d838 (rebase)
 =======
 >>>>>>> 8513cb9 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 
 // -------- bases -----------
@@ -43,6 +46,7 @@ class PersonalInfoAction extends XotBasePanelAction {
 
     public string $icon = '<i class="far fa-file-excel fa-1x"></i>';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,6 +165,10 @@ class PersonalInfoAction extends XotBasePanelAction {
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
 >>>>>>> d2bbae9 (rebase)
+=======
+    public function handle(): Renderable {
+        if (null == $this->panel) {
+>>>>>>> 6d76482 (up)
             throw new \Exception('this->panel is null');
         }
 

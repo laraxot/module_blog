@@ -56,6 +56,7 @@ class FiveCharactersRule implements Rule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> bb94901 (rebase)
 =======
@@ -73,19 +74,25 @@ class FiveCharactersRule implements Rule {
 >>>>>>> bb3945d (rebase)
 =======
 >>>>>>> bb94901 (rebase)
+=======
+>>>>>>> 6d76482 (up)
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 6d76482 (up)
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
+<<<<<<< HEAD
 >>>>>>> bb3945d (rebase)
 =======
 >>>>>>> f930b9f (rebase)
@@ -139,6 +146,8 @@ class FiveCharactersRule implements Rule {
 >>>>>>> bb3945d (rebase)
 =======
 >>>>>>> bb94901 (rebase)
+=======
+>>>>>>> 6d76482 (up)
         return $res;
     }
 }

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f98d93c (rebase)
 =======
@@ -25,6 +26,10 @@ declare(strict_types=1);
 >>>>>>> f98d93c (rebase)
 =======
 >>>>>>> e7b73dd (rebase)
+=======
+declare(strict_types=1);
+
+>>>>>>> 6d76482 (up)
 return [
     'approve_comment' => 'Approuver le commentaire',
     'reject_comment' => 'Rejeter le commentaire',
@@ -37,6 +42,7 @@ return [
     'approved_comment_mail_title' => 'Un nouveau commentaire sur ":commentable_name "',
     'approved_comment_mail_body' => 'Posté par :commentator_name',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +67,9 @@ return [
     'enum_description_participating' => 'Lorsque vous participez',
 >>>>>>> 5c25f35 (Lint)
 >>>>>>> e7b73dd (rebase)
+=======
+    'enum_description_participating' => 'Lorsque vous participez',
+>>>>>>> 6d76482 (up)
     'enum_description_all' => 'Sur tous les commentaires',
     'enum_description_none' => 'Jamais',
     'enum_longdescription_participating' => 'Être notifié lors de la participation',

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 914e6a9 (rebase)
 use Modules\Blog\Models\Media;
@@ -38,10 +39,13 @@ use Modules\Xot\Contracts\RowsContract;
 <<<<<<< HEAD
 =======
 >>>>>>> 648f2e6 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 use Modules\Blog\Models\Media;
 // --- Services --
 
 use Modules\Cms\Models\Panels\XotBasePanel;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b022d6c (up)
@@ -94,6 +98,9 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> a939533 (rebase)
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> 6d76482 (up)
 
 class MediaPanel extends XotBasePanel {
     /**
@@ -106,6 +113,7 @@ class MediaPanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,11 +165,14 @@ class MediaPanel extends XotBasePanel {
 >>>>>>> c41b2a8 (rebase)
 =======
 >>>>>>> a939533 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     /**
      * on select the option label.
      *
      * @param Media $row
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,6 +217,9 @@ class MediaPanel extends XotBasePanel {
     public function optionLabel($row): string {
 >>>>>>> afa2edf (Lint)
 >>>>>>> ae00439 (rebase)
+=======
+    public function optionLabel($row): string {
+>>>>>>> 6d76482 (up)
         return (string) $row->name;
     }
 

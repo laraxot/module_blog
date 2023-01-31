@@ -11,6 +11,7 @@ use Modules\Blog\Models\Traits\HasCategory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasTags;
 <<<<<<< HEAD
 // use Modules\Blog\Models\Traits\HasSlug;
@@ -104,11 +105,16 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 >>>>>>> 1daf8a3 (Lint)
 >>>>>>> af0dac7 (rebase)
 >>>>>>> bb94901 (rebase)
+=======
+use Modules\Blog\Models\Traits\HasTimestamps;
+// use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> 6d76482 (up)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Contracts\HasLikeContract;
 // use Modules\Tag\Models\Traits\HasTagTrait;
 use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,12 +146,15 @@ use Modules\UI\Contracts\HasLikeContract;
 =======
 >>>>>>> d7cf20b (Lint)
 >>>>>>> 304eb5a (rebase)
+=======
+>>>>>>> 6d76482 (up)
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
 /**
  * Modules\Blog\Models\Article.
  *
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -158,6 +167,8 @@ use Spatie\Tags\HasTags; // spatie tags
 =======
 >>>>>>> 8213e79 (Lint)
 >>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> 6d76482 (up)
  * @property int                                                                      $id
  * @property string|null                                                              $article_type
  * @property \Illuminate\Support\Carbon|null                                          $published_at
@@ -233,7 +244,6 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article       notPinned()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       notPublished()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       notShared()
-<<<<<<< HEAD
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       otherCurrentStatus(...$names)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       pinned()
@@ -280,6 +290,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withAnyTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withCategories($categories)
+<<<<<<< HEAD
 =======
  * @property int $id
  * @property string|null $article_type
@@ -459,6 +470,8 @@ use Spatie\Tags\HasTags; // spatie tags
 >>>>>>> 2f1bc22 (rebase)
 =======
 >>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> 6d76482 (up)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withRating()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutAnyCategories()
@@ -471,6 +484,7 @@ class Article extends BaseModelLang implements HasLikeContract {
     use HasCategory;
     use HasLikes;
 <<<<<<< HEAD
+<<<<<<< HEAD
     // use HasProfileTrait;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -535,6 +549,8 @@ class Article extends BaseModelLang implements HasLikeContract {
 >>>>>>> bb3945d (rebase)
 =======
 >>>>>>> bb94901 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
@@ -547,6 +563,7 @@ class Article extends BaseModelLang implements HasLikeContract {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // use PreparesSearch;
 =======
 >>>>>>> a3bd33a (rebase)
@@ -599,6 +616,8 @@ class Article extends BaseModelLang implements HasLikeContract {
 >>>>>>> bb3945d (rebase)
 =======
 >>>>>>> bb94901 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;

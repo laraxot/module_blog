@@ -12,6 +12,7 @@ use Modules\Rating\Models\Panels\Actions\RateItAction;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 648f2e6 (rebase)
 =======
@@ -27,6 +28,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 781794c (rebase)
 =======
 >>>>>>> 648f2e6 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
 // ---- bases --
 

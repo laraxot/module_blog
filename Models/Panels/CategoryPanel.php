@@ -26,6 +26,7 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ea4d650 (rebase)
 =======
@@ -125,9 +126,11 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> ea4d650 (rebase)
 =======
 >>>>>>> ae00439 (rebase)
+=======
+    public function optionLabel($row): string {
+>>>>>>> 6d76482 (up)
         $name = $row->name;
         // if (is_string($name)) {
-<<<<<<< HEAD
         //    return $name;
         // }
         if (is_array($name)) {
@@ -135,6 +138,7 @@ class CategoryPanel extends XotBasePanel {
         }
 
         return $name;
+<<<<<<< HEAD
 =======
         return ''.$row->name;
 <<<<<<< HEAD
@@ -435,10 +439,15 @@ class CategoryPanel extends XotBasePanel {
         $rows = Category::get();
 >>>>>>> ea58237 (up)
 =======
+=======
+    }
+
+>>>>>>> 6d76482 (up)
     /**
      * @return array
      */
     public function optionsSelect() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -668,6 +677,11 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 97dcb1f (rebase)
 =======
 >>>>>>> 6944330 (rebase)
+=======
+        // $rows = $this->row->all();
+
+        $rows = Category::get();
+>>>>>>> 6d76482 (up)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
@@ -682,6 +696,7 @@ class CategoryPanel extends XotBasePanel {
         // dddx($rows2);
 
         return $rows2;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -733,6 +748,8 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> d2bbae9 (rebase)
 =======
 >>>>>>> 955c157 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     }
 
     /**

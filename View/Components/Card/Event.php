@@ -16,6 +16,7 @@ use Modules\Cms\Services\PanelService;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ae00439 (rebase)
 class Event extends Component {
@@ -64,6 +65,10 @@ class Event extends Component {
     public array $attrs = [];
 >>>>>>> 7ae4511 (Lint)
 >>>>>>> fd40c94 (rebase)
+=======
+class Event extends Component {
+    public array $attrs = [];
+>>>>>>> 6d76482 (up)
     public Model $row;
 
     /**
