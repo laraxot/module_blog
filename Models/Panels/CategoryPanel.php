@@ -283,19 +283,35 @@ class CategoryPanel extends XotBasePanel {
 =======
 =======
         $name = $row->name;
+<<<<<<< HEAD
         if (is_string($name)) {
 >>>>>>> eab47b7 (Lint)
 >>>>>>> 00fe3eb (rebase)
             return $name;
         }
+=======
+        //if (is_string($name)) {
+        //    return $name;
+       //}
+>>>>>>> 1172c16 (up)
         if (is_array($name)) {
-            return implode('-', $name);
+            $name= implode('-', $name);
         }
 
+<<<<<<< HEAD
         return '--';
 >>>>>>> a0663a2 (up)
+<<<<<<< HEAD
 >>>>>>> 89d9d7e (rebase)
+<<<<<<< HEAD
 >>>>>>> 505e5c9 (rebase)
+=======
+=======
+=======
+        return $name;
+>>>>>>> 1172c16 (up)
+>>>>>>> 37f274f (rebase)
+>>>>>>> d2bbae9 (rebase)
     }
 
 <<<<<<< HEAD
@@ -486,10 +502,14 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> eab47b7 (Lint)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d2bbae9 (rebase)
 >>>>>>> 20e02a4 (rebase)
 =======
 =======
     public function optionsSelect():array {
+<<<<<<< HEAD
 =======
     public function optionsSelect(): array {
 >>>>>>> 7333c06 (Lint)
@@ -568,6 +588,12 @@ class CategoryPanel extends XotBasePanel {
 =======
 >>>>>>> 20e02a4 (rebase)
 >>>>>>> 00fe3eb (rebase)
+=======
+        // $rows = $this->row->all();
+        $rows = Category::get();
+>>>>>>> 1172c16 (up)
+>>>>>>> 37f274f (rebase)
+>>>>>>> d2bbae9 (rebase)
         $rows2 = $rows->map(function ($item) {
             // dddx($item);
             if ('' !== $item->name) {
@@ -588,19 +614,26 @@ class CategoryPanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2028365 (rebase)
+=======
+>>>>>>> d2bbae9 (rebase)
 =======
         
 >>>>>>> ea58237 (up)
 =======
 >>>>>>> 209739c (Lint)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d2bbae9 (rebase)
 =======
 =======
         
 >>>>>>> 1172c16 (up)
 >>>>>>> 37f274f (rebase)
+<<<<<<< HEAD
 =======
 =======
         
@@ -615,6 +648,8 @@ class CategoryPanel extends XotBasePanel {
 >>>>>>> 1fdd40b (rebase)
 =======
 >>>>>>> 2028365 (rebase)
+=======
+>>>>>>> d2bbae9 (rebase)
     }
 
     /**
