@@ -19,13 +19,19 @@ error_log
 /build
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 41e74f3 (rebase)
 *.old
 *.to_*
 *.old*
 =======
 >>>>>>> 51f522d (.)
+<<<<<<< HEAD
 =======
 *.old
 *.to_*
 *.old*
 >>>>>>> 83cb1cd (rebase)
+=======
+>>>>>>> 41e74f3 (rebase)
