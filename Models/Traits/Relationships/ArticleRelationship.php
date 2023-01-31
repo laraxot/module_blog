@@ -15,18 +15,21 @@ use Modules\Xot\Models\Image;
 /**
  * Undocumented trait.
  */
-trait ArticleRelationship {
+trait ArticleRelationship
+{
     /**
      * Undocumented function
      * phpstan-return Collection
      * 26     Method Modules\Blog\Models\Article::sons() has invalid return type Modules\Blog\Models\Traits\Relationships\Collection.
      */
-    public function sons(): HasMany {
+    public function sons(): HasMany
+    {
         return $this->hasMany(Article::class, 'parent_id', 'id');
         // ->with(['post'])->orderBy('pos');
     }
 
-    public function articles(): HasMany {
+    public function articles(): HasMany
+    {
         return $this->hasMany(Article::class, 'parent_id', 'id');
     }
 <<<<<<< HEAD
@@ -172,7 +175,8 @@ trait ArticleRelationship {
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphMany
      */
-    public function comments() {
+    public function comments()
+    {
         return $this->morphMany(Comment::class, 'post');
     }
 }

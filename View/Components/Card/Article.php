@@ -14,15 +14,22 @@ use Modules\Cms\Services\PanelService;
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class Article extends Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+class Article extends Component {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> ea4d650 (rebase)
+=======
 class Article extends Component
 {
 >>>>>>> aff4d2d (rebase)
+<<<<<<< HEAD
 =======
 class Article extends Component {
 >>>>>>> f0ffa9e (rebase)
@@ -30,6 +37,8 @@ class Article extends Component {
 >>>>>>> 03e54aa (rebase)
 =======
 >>>>>>> fd40c94 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
     public array $attrs = [];
 =======
     public array $attrs=[];
@@ -53,7 +62,8 @@ class Article extends Component {
      *
      * @return void
      */
-    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '') {
+    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '')
+    {
         $this->attrs['class'] = $class;
         $this->attrs['style'] = $style;
         $this->attrs['id'] = $id;
@@ -63,7 +73,8 @@ class Article extends Component {
     /**
      * Get the view / contents that represent the component.
      */
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */

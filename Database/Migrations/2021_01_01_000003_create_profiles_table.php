@@ -13,13 +13,15 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateProfilesTable.
  */
-class CreateProfilesTable extends XotBaseMigration {
+class CreateProfilesTable extends XotBaseMigration
+{
     /**
      * db up.
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         // -- CREATE --
         $this->tableCreate(
             function (Blueprint $table) {
