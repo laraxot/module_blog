@@ -12,6 +12,9 @@ use Modules\Blog\Models\Category;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8513cb9 (rebase)
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 =======
 >>>>>>> c4fb14d (Lint)
@@ -30,6 +33,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 >>>>>>> 5a5000f (up)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -57,6 +61,14 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 648f2e6 (rebase)
 =======
 >>>>>>> 658d838 (rebase)
+=======
+=======
+use Modules\Cms\Models\Panels\Actions\ArtisanAction;
+use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\LU\Models\User;
+use Modules\Tag\Models\Tag;
+>>>>>>> a91a603 (Lint)
+>>>>>>> 8513cb9 (rebase)
 
 /**
  * Class HomePanel.
