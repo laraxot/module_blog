@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 use Illuminate\Support\Str;
 
@@ -16,10 +17,17 @@ use Illuminate\Support\Str;
 >>>>>>> 9e2a502 (Lint)
 =======
 =======
+>>>>>>> 0401392 (rebase)
+=======
 use Illuminate\Support\Str;
 
 >>>>>>> 802efe7 (up)
+<<<<<<< HEAD
 >>>>>>> b2584c5 (rebase)
+=======
+=======
+>>>>>>> 6e3c302 (Lint)
+>>>>>>> 0401392 (rebase)
 use Modules\Blog\Models\Label;
 
 class LabelFactory extends Factory {
@@ -40,6 +48,7 @@ class LabelFactory extends Factory {
 <<<<<<< HEAD
 <<<<<<< HEAD
     public function definition() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,15 +79,24 @@ class LabelFactory extends Factory {
 =======
 
 
+=======
+>>>>>>> 0401392 (rebase)
         return [
 <<<<<<< HEAD
 =======
             'id' => $this->faker->randomNumber,
             'title' => $this->faker->sentence,
             'label_id' => $this->faker->integer,
+<<<<<<< HEAD
             'label_type' => $this->faker->word
 >>>>>>> 802efe7 (up)
+<<<<<<< HEAD
 >>>>>>> b2584c5 (rebase)
+=======
+=======
+            'label_type' => $this->faker->word,
+>>>>>>> 6e3c302 (Lint)
+>>>>>>> 0401392 (rebase)
         ];
     }
 }

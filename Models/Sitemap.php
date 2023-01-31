@@ -18,6 +18,7 @@ namespace Modules\Blog\Models;
  * @property string|null                     $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Modules\Blog\Database\Factories\SitemapFactory factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap   newQuery()
@@ -27,6 +28,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap   whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap   whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Sitemap   whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class Sitemap extends BaseModel {
