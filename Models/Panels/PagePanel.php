@@ -11,6 +11,7 @@ namespace Modules\Blog\Models\Panels;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Contracts\Support\Renderable;
 =======
 use Exception;
@@ -53,10 +54,18 @@ use Illuminate\Database\Eloquent\Model;
 >>>>>>> a3bd33a (rebase)
 =======
 >>>>>>> f73f6fd (.)
+=======
+use Illuminate\Contracts\Support\Renderable;
+=======
+use Exception;
+>>>>>>> b96306f (up)
+>>>>>>> bb3945d (rebase)
 use Illuminate\Support\Arr;
 use Modules\Blog\Models\Page;
-use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Illuminate\Contracts\Support\Renderable;
+use Modules\Blog\Models\Panels\Traits\XotBasePanelTrait;
 
 // ---- bases --
 
@@ -297,6 +306,7 @@ class PagePanel extends XotBasePanel {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f930b9f (rebase)
 =======
@@ -305,11 +315,14 @@ class PagePanel extends XotBasePanel {
 >>>>>>> c505cad (rebase)
 =======
 >>>>>>> 3063b59 (rebase)
+=======
+>>>>>>> bb3945d (rebase)
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
 =======
             if(!isset($url_components['path'])){
                 throw new Exception('['.__LINE__.']['.__FILE__.']');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f4041d1 (up)
 =======
@@ -364,6 +377,9 @@ class PagePanel extends XotBasePanel {
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
 >>>>>>> 8901544 (Lint)
+=======
+>>>>>>> b96306f (up)
+>>>>>>> bb3945d (rebase)
             }
             $url = $url_components['path'];
 
