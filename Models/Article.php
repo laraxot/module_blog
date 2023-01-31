@@ -23,7 +23,11 @@ use Modules\Blog\Models\Traits\HasSlug;
 use Modules\Blog\Models\Traits\HasSlug;
 >>>>>>> 26c4c62 (.)
 use Modules\Blog\Models\Traits\HasTimestamps;
+<<<<<<< HEAD
 // use Modules\Blog\Models\Traits\PreparesSearch;
+=======
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> f4041d1 (up)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Contracts\HasLikeContract;
 // use Modules\Tag\Models\Traits\HasTagTrait;
@@ -171,12 +175,20 @@ class Article extends BaseModelLang implements HasLikeContract
     use HasCategory;
     use HasLikes;
     // use HasProfileTrait;
+<<<<<<< HEAD
     // use HasSlug;
+=======
+    //use HasSlug;
+>>>>>>> f4041d1 (up)
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
+<<<<<<< HEAD
     // use PreparesSearch;
+=======
+    //use PreparesSearch;
+>>>>>>> f4041d1 (up)
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;
