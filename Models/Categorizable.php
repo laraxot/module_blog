@@ -17,7 +17,6 @@ namespace Modules\Blog\Models;
  * @property string|null                     $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable query()
@@ -28,7 +27,6 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereUpdatedBy($value)
- *
  * @mixin \Eloquent
  */
 class Categorizable extends BaseMorphPivot {

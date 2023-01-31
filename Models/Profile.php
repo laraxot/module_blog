@@ -11,6 +11,7 @@ namespace Modules\Blog\Models;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 <<<<<<< HEAD
@@ -49,6 +50,8 @@ use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
 =======
+=======
+>>>>>>> 6c06ca4 (rebase)
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 <<<<<<< HEAD
@@ -63,7 +66,16 @@ use Modules\Geo\Models\Traits\GeoTrait;
 >>>>>>> a6cf74c (rebase)
 use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
+=======
+>>>>>>> 6b1fa56 (.)
 use Modules\LU\Models\User;
+use Modules\LU\Casts\UserField;
+use Spatie\ModelStatus\HasStatuses;
+use Illuminate\Support\Facades\Auth;
+use Modules\Geo\Models\Traits\GeoTrait;
+use Modules\Xot\Models\Traits\WidgetTrait;
+use Modules\Blog\Models\Traits\PrivacyTrait;
+use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
@@ -176,6 +188,7 @@ use Spatie\ModelStatus\HasStatuses;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8192562 (rebase)
 =======
@@ -188,6 +201,8 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> 48f4792 (rebase)
 =======
 >>>>>>> f15828b (rebase)
+=======
+>>>>>>> 6c06ca4 (rebase)
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
 =======
@@ -213,6 +228,7 @@ use Spatie\ModelStatus\HasStatuses;
 >>>>>>> ee04bc7 (.)
 =======
 >>>>>>> 6b1fa56 (.)
+<<<<<<< HEAD
 =======
  *
 >>>>>>> c5b6d43 (.)
@@ -237,6 +253,8 @@ use Spatie\ModelStatus\HasStatuses;
  *
 >>>>>>> ee04bc7 (.)
 >>>>>>> f15828b (rebase)
+=======
+>>>>>>> 6c06ca4 (rebase)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -290,8 +308,8 @@ use Spatie\ModelStatus\HasStatuses;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- *
  * @mixin \Eloquent
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,6 +317,8 @@ use Spatie\ModelStatus\HasStatuses;
 =======
 >>>>>>> 1a0a1c9 (rebase)
  *
+=======
+>>>>>>> 6c06ca4 (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
  *
