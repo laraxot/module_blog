@@ -50,8 +50,11 @@ class PersonalInfoAction extends XotBasePanelAction
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 47d8285 (rebase)
+=======
+>>>>>>> 355a234 (rebase)
     public function handle(): Renderable {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +80,8 @@ class PersonalInfoAction extends XotBasePanelAction
 >>>>>>> f0ffa9e (rebase)
 =======
 =======
+=======
+>>>>>>> 0088a11 (rebase)
     public function handle(): Renderable
     {
 >>>>>>> 00a7996 (.)
@@ -94,6 +99,7 @@ class PersonalInfoAction extends XotBasePanelAction
 >>>>>>> ea58237 (up)
 =======
     public function handle(): Renderable {
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (null === $this->panel) {
 >>>>>>> 27d1a3f (up)
@@ -127,6 +133,12 @@ class PersonalInfoAction extends XotBasePanelAction
         if (null == $this->panel) {
 >>>>>>> ea58237 (up)
 >>>>>>> 1fdd40b (rebase)
+=======
+       
+        if (null === $this->panel) {
+>>>>>>> 27d1a3f (up)
+>>>>>>> 0088a11 (rebase)
+>>>>>>> 355a234 (rebase)
             throw new \Exception('this->panel is null');
         }
 
