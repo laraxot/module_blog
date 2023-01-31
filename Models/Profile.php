@@ -65,7 +65,10 @@ use Modules\Blog\Models\Traits\PrivacyTrait;
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
@@ -87,7 +90,10 @@ use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
@@ -242,7 +248,10 @@ use Spatie\ModelStatus\HasStatuses;
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 =======
 >>>>>>> 802efe7 (up)
 <<<<<<< HEAD
@@ -299,7 +308,10 @@ use Spatie\ModelStatus\HasStatuses;
  *
 >>>>>>> c5b6d43 (.)
 >>>>>>> 0d06fda (rebase)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory(...$parameters)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
@@ -356,8 +368,11 @@ use Spatie\ModelStatus\HasStatuses;
  *
  * @mixin \Eloquent
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -719,7 +734,10 @@ use Spatie\ModelStatus\HasStatuses;
  *
  * @mixin \Eloquent
 >>>>>>> 2f1bc22 (rebase)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -844,7 +862,10 @@ class Profile extends BaseModelLang
 >>>>>>> a6cf74c (rebase)
 =======
 class Profile extends BaseModelLang {
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
     // use GeoTrait;
     use HasProfileTrait;
     // use PrivacyTrait;

@@ -12,8 +12,11 @@ use Modules\Tag\Models\Tag;
 
 class ThemeComposer {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
     /*
      * ---.
@@ -23,6 +26,44 @@ class ThemeComposer {
 
      */
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+    /**
+     * Undocumented function.
+     *
+     * @return Collection<Article>
+=======
+        
+>>>>>>> 48af1a0 (up)
+=======
+
+>>>>>>> 104688c (Lint)
+     */
+=======
+<<<<<<< HEAD
+>>>>>>> f3c85d2 (rebase)
+    /**
+     * Undocumented function.
+     *
+     * @return Collection<Article>
+=======
+=======
+class ThemeComposer
+{
+>>>>>>> aff4d2d (rebase)
+=======
+class ThemeComposer {
+>>>>>>> f0ffa9e (rebase)
+    /*
+     * ---.
+
+<<<<<<< HEAD
+        
+>>>>>>> 48af1a0 (up)
+=======
+
+>>>>>>> 104688c (Lint)
+     */
+=======
+>>>>>>> 6d76482 (up)
     /**
      * Undocumented function.
      *
@@ -269,8 +310,11 @@ class ThemeComposer {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -378,6 +422,7 @@ class ThemeComposer {
 >>>>>>> aff4d2d (rebase)
 =======
 =======
+<<<<<<< HEAD
 
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
     public function getCardEvents(): Collection {
@@ -490,10 +535,126 @@ class ThemeComposer {
 =======
 =======
 =======
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 
     public function getCardEvents(): Collection {
 >>>>>>> afa2edf (Lint)
 >>>>>>> f0ffa9e (rebase)
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> d557c94 (rebase)
+=======
+>>>>>>> a79c6ef (rebase)
+=======
+>>>>>>> 924ceb6 (.)
+    public function getCardEvents(): Collection {
+=======
+    //public function compose(array ...$args):string {
+=======
+    // public function compose(array ...$args):string {
+>>>>>>> 134e178 (Lint)
+=======
+=======
+>>>>>>> 39485d1 (rebase)
+    // public function compose(array ...$args):string {
+=======
+    //public function compose(array ...$args):string {
+>>>>>>> d4223a3 (up)
+<<<<<<< HEAD
+>>>>>>> 776498c (rebase)
+=======
+=======
+    // public function compose(array ...$args):string {
+>>>>>>> 764eb6d (Lint)
+>>>>>>> 39485d1 (rebase)
+        /*
+        dddx(
+            [
+            'args'=>$args,
+
+            ]
+        );
+        */
+        // error 404
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // return 'aaa';
+    // }
+<<<<<<< HEAD
+=======
+        //return 'aaa';
+    //}
+>>>>>>> d4223a3 (up)
+=======
+        // return 'aaa';
+    // }
+>>>>>>> 764eb6d (Lint)
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public function getCardEvents() {
+>>>>>>> 7fdf4e1 (up)
+<<<<<<< HEAD
+>>>>>>> 34ad686 (rebase)
+=======
+=======
+    public function getCardEvents():Collection {
+>>>>>>> 61ca642 (up)
+<<<<<<< HEAD
+>>>>>>> 4312ce9 (rebase)
+=======
+=======
+    public function getCardEvents(): Collection {
+>>>>>>> 37feb52 (Lint)
+<<<<<<< HEAD
+>>>>>>> 1e22110 (rebase)
+=======
+=======
+=======
+>>>>>>> e9dc7f3 (rebase)
+=======
+>>>>>>> aff4d2d (rebase)
+    public function getCardEvents(): Collection {
+=======
+    public function getCardEvents():Collection {
+>>>>>>> 725228b (up)
+<<<<<<< HEAD
+>>>>>>> 063c423 (rebase)
+<<<<<<< HEAD
+>>>>>>> 7b4b1c4 (rebase)
+=======
+=======
+=======
+    public function getCardEvents(): Collection {
+>>>>>>> 8133ecc (Lint)
+<<<<<<< HEAD
+>>>>>>> e9dc7f3 (rebase)
+<<<<<<< HEAD
+>>>>>>> a6be9d1 (rebase)
+=======
+=======
+=======
+    public function getCardEvents(): Collection
+    {
+>>>>>>> 42ca46e (up)
+<<<<<<< HEAD
+>>>>>>> aff4d2d (rebase)
+<<<<<<< HEAD
+>>>>>>> ea4d650 (rebase)
+=======
+=======
+=======
+
+    public function getCardEvents(): Collection {
+>>>>>>> afa2edf (Lint)
+>>>>>>> f0ffa9e (rebase)
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 >>>>>>> ae00439 (rebase)
 =======
     public function getCardEvents(): Collection {

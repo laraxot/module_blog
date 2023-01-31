@@ -91,8 +91,11 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,7 +147,10 @@ use Spatie\Tags\HasTags;
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newQuery()
  * @method static Builder|Media                                                                     ordered()
@@ -175,8 +181,11 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8213e79 (Lint)
 =======
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 >>>>>>> b4476b9 (Lint)
 >>>>>>> 8213e79 (Lint)
 =======
@@ -205,7 +214,10 @@ use Spatie\Tags\HasTags;
 =======
 >>>>>>> 8213e79 (Lint)
 >>>>>>> 6fa5a25 (rebase)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  * @mixin \Eloquent
  */
 class Media extends BaseMedia {

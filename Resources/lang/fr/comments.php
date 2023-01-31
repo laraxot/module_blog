@@ -1,10 +1,13 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,7 +37,10 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 return [
     'write_comment' => 'Laissez un commentaire',
     'write_reply' => 'Laissez une réponse',
@@ -55,9 +61,12 @@ return [
     'awaits_approval' => 'En attente d\'approbation',
     'guest' => 'invité',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'copied' => 'Lien copié',
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,5 +94,8 @@ return [
 =======
     'copied' => 'Lien copié',
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 ];

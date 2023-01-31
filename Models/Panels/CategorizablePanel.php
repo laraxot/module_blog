@@ -9,9 +9,12 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 // --- Services --
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 use Modules\Cms\Models\Panels\XotBasePanel;
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,7 +23,10 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 >>>>>>> 781794c (rebase)
 =======
 >>>>>>> 648f2e6 (rebase)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 use Modules\Xot\Contracts\RowsContract;
 =======
 use Modules\Cms\Models\Panels\XotBasePanel;

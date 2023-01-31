@@ -13,9 +13,12 @@ use Sushi\Sushi;
 /**
  * Modules\Blog\Models\Home.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8213e79 (Lint)
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,7 +34,10 @@ use Sushi\Sushi;
 =======
 >>>>>>> 8213e79 (Lint)
 >>>>>>> 6fa5a25 (rebase)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
  * @property int|null                                                              $id
  * @property string|null                                                           $name
  * @property string|null                                                           $icon_src

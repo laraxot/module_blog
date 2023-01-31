@@ -1,10 +1,13 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 declare(strict_types=1);
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,15 +37,21 @@ declare(strict_types=1);
 declare(strict_types=1);
 
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 namespace Module\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Module\Blog\Tests\TestSupport\Models\Post;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,7 +62,10 @@ use Module\Blog\Tests\TestSupport\Models\Post;
 >>>>>>> e7b73dd (rebase)
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 class PostFactory extends Factory {
     protected $model = Post::class;
 
@@ -61,7 +73,10 @@ class PostFactory extends Factory {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 class PostFactory extends Factory
 {
     protected $model = Post::class;
@@ -86,7 +101,10 @@ class PostFactory extends Factory {
 >>>>>>> e7b73dd (rebase)
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
         return [
             'title' => $this->faker->word,
         ];

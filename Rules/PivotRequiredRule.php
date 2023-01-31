@@ -136,8 +136,11 @@ class PivotRequiredRule implements Rule {
         $data = request()->all(); // phpstan
         $value_required = Arr::get($data, $key_required);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,7 +203,10 @@ class PivotRequiredRule implements Rule {
 >>>>>>> bb94901 (rebase)
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
         if ($value && ! $value_required) {
             return false;
         }

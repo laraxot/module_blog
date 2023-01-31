@@ -8,8 +8,11 @@ namespace Modules\Blog\Models;
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,7 +113,57 @@ use Modules\Blog\Models\Traits\HasTimestamps;
 >>>>>>> bb94901 (rebase)
 =======
 use Modules\Blog\Models\Traits\HasTimestamps;
+<<<<<<< HEAD
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> b96306f (up)
+<<<<<<< HEAD
+>>>>>>> f930b9f (rebase)
+=======
+=======
 // use Modules\Blog\Models\Traits\PreparesSearch;
+<<<<<<< HEAD
+=======
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
+=======
+=======
+>>>>>>> a3bd33a (rebase)
+// use Modules\Blog\Models\Traits\PreparesSearch;
+=======
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> f4041d1 (up)
+<<<<<<< HEAD
+>>>>>>> b996731 (rebase)
+=======
+=======
+// use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> a822353 (.)
+>>>>>>> a3bd33a (rebase)
+=======
+//use Modules\Blog\Models\Traits\HasSlug;
+=======
+// use Modules\Blog\Models\Traits\HasSlug;
+>>>>>>> bb94901 (rebase)
+// use Spatie\Sluggable\HasSlug;
+use Modules\Blog\Models\Traits\HasTimestamps;
+<<<<<<< HEAD
+//use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> b96306f (up)
+<<<<<<< HEAD
+>>>>>>> f930b9f (rebase)
+<<<<<<< HEAD
+>>>>>>> bb3945d (rebase)
+=======
+=======
+=======
+// use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> 1daf8a3 (Lint)
+>>>>>>> af0dac7 (rebase)
+>>>>>>> bb94901 (rebase)
+=======
+use Modules\Blog\Models\Traits\HasTimestamps;
+// use Modules\Blog\Models\Traits\PreparesSearch;
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 >>>>>>> 6d76482 (up)
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\Rating\Contracts\HasLikeContract;
@@ -487,8 +540,11 @@ class Article extends BaseModelLang implements HasLikeContract {
     use HasCategory;
     use HasLikes;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
     // use HasProfileTrait;
 <<<<<<< HEAD
@@ -556,14 +612,20 @@ class Article extends BaseModelLang implements HasLikeContract {
 >>>>>>> bb94901 (rebase)
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
     use HasStatuses; // non so se funziona, credo meglio HasProfileTrait
     use HasTags;
     // use HasTagTrait;
     use HasTimestamps;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -626,7 +688,10 @@ class Article extends BaseModelLang implements HasLikeContract {
 >>>>>>> bb94901 (rebase)
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
     use RatingTrait;
     use Traits\Extras\ArticleExtra;
     use Traits\Mutators\ArticleMutator;

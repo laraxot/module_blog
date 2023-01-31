@@ -82,22 +82,31 @@ class FiveCharactersRule implements Rule {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
         $res = trans('validation.only_uppercase');
         if (! is_string($res)) {
             throw new Exception('['.__LINE__.']['.__FILE__.']');
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
 >>>>>>> bb3945d (rebase)
 =======
 >>>>>>> f930b9f (rebase)
@@ -153,7 +162,10 @@ class FiveCharactersRule implements Rule {
 >>>>>>> bb94901 (rebase)
 =======
 >>>>>>> 6d76482 (up)
+<<<<<<< HEAD
 >>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+=======
+>>>>>>> 532d468a4759d4f5fa7956f2f94f26f0016c6484
         return $res;
     }
 }
