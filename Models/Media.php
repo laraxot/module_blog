@@ -46,65 +46,166 @@ use Spatie\Tags\HasTags;
  * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|static[] all($columns = ['*'])
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       currentStatus(...$names)
  * @method static \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|static[] get($columns = ['*'])
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newQuery()
- * @method static Builder|Media                                                                     ordered()
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       otherCurrentStatus(...$names)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       query()
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCollectionName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereConversionsDisk($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCustomProperties($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereDisk($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereFileName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereGeneratedConversions($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereManipulations($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereMimeType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereOrderColumn($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereResponsiveImages($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereSize($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUuid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newQuery()
- * @method static Builder|Media                                                                     ordered()
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       otherCurrentStatus(...$names)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       query()
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCollectionName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereConversionsDisk($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCustomProperties($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereDisk($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereFileName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereGeneratedConversions($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereManipulations($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereMimeType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereOrderColumn($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereResponsiveImages($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereSize($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUuid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
- * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 6fa5a25 (rebase)
+=======
+>>>>>>> b4476b9 (Lint)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newQuery()
+ * @method static Builder|Media                                                                     ordered()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       otherCurrentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCollectionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereConversionsDisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCustomProperties($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereDisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereFileName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereGeneratedConversions($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereManipulations($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereMimeType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereOrderColumn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereResponsiveImages($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereSize($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+ *
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f1bc22 (rebase)
+=======
+>>>>>>> 6fa5a25 (rebase)
+=======
+ * @method static \Illuminate\Database\Eloquent\Builder|Media newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media newQuery()
+ * @method static Builder|Media ordered()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media otherCurrentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereCollectionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereConversionsDisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereCustomProperties($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereDisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereFileName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereGeneratedConversions($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereManipulations($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereMimeType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereModelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereModelType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereOrderColumn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereResponsiveImages($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereSize($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media whereUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media withAnyTagsOfAnyType($tags)
+>>>>>>> bc6d311 (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       newQuery()
+ * @method static Builder|Media                                                                     ordered()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       otherCurrentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCollectionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereConversionsDisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereCustomProperties($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereDisk($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereFileName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereGeneratedConversions($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereManipulations($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereMimeType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereModelType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereOrderColumn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereResponsiveImages($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereSize($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       whereUuid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
+<<<<<<< HEAD
+>>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> b4476b9 (Lint)
+>>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 8192562 (rebase)
+=======
+ *
+>>>>>>> 1a0a1c9 (rebase)
+=======
+>>>>>>> baed241 (rebase)
+=======
+ *
+>>>>>>> a6cf74c (rebase)
+=======
+>>>>>>> 48f4792 (rebase)
+=======
+ *
+>>>>>>> f15828b (rebase)
+=======
+>>>>>>> 6c06ca4 (rebase)
+=======
+ *
+>>>>>>> 0d06fda (rebase)
+=======
+>>>>>>> 2f1bc22 (rebase)
+=======
+=======
+>>>>>>> 8213e79 (Lint)
+>>>>>>> 6fa5a25 (rebase)
+>>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
  * @mixin \Eloquent
  */
 class Media extends BaseMedia {

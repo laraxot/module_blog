@@ -9,10 +9,72 @@ namespace Modules\Blog\Models\Panels;
 use Illuminate\Database\Eloquent\Collection;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8513cb9 (rebase)
+use Modules\Cms\Models\Panels\Actions\ArtisanAction;
+=======
+>>>>>>> c4fb14d (Lint)
+use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\LU\Models\User;
+use Modules\Tag\Models\Tag;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Modules\Xot\Models\Panels\Actions\ArtisanAction;
+<<<<<<< HEAD
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 315e874 (up)
+=======
+>>>>>>> c4fb14d (Lint)
+=======
+use Modules\Cms\Models\Panels\Actions\ArtisanAction;
+>>>>>>> 5a5000f (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 648f2e6 (rebase)
+use Modules\Cms\Models\Panels\Actions\ArtisanAction;
+=======
+>>>>>>> c4fb14d (Lint)
+use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\LU\Models\User;
+use Modules\Tag\Models\Tag;
+<<<<<<< HEAD
+>>>>>>> a91a603 (Lint)
+=======
+<<<<<<< HEAD
+=======
+use Modules\Xot\Models\Panels\Actions\ArtisanAction;
+<<<<<<< HEAD
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 315e874 (up)
+<<<<<<< HEAD
+>>>>>>> 781794c (rebase)
+=======
+=======
+>>>>>>> c4fb14d (Lint)
+>>>>>>> 648f2e6 (rebase)
+=======
+>>>>>>> 658d838 (rebase)
+=======
+=======
+=======
+>>>>>>> 6d76482 (up)
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\LU\Models\User;
 use Modules\Tag\Models\Tag;
+<<<<<<< HEAD
+>>>>>>> a91a603 (Lint)
+>>>>>>> 8513cb9 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
 /**
  * Class HomePanel.
@@ -120,10 +182,156 @@ class HomePanel extends XotBasePanel {
     public function navCategories(): Collection {
         $navCategories = Category::query()
             ->has('articles', '>', 0)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> 914e6a9 (rebase)
+=======
+>>>>>>> f031549 (rebase)
+=======
+>>>>>>> d0b387a (rebase)
+=======
+>>>>>>> 48f4792 (rebase)
+=======
+>>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> 355a234 (rebase)
+=======
+>>>>>>> 648e6d8 (rebase)
+=======
+>>>>>>> 6d76482 (up)
             // ->limit(8)
             ->get()
             // ->take(8)
         ;
+<<<<<<< HEAD
+=======
+            ->take(8)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            ->limit(8)
+>>>>>>> b022d6c (up)
+=======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0088a11 (rebase)
+=======
+>>>>>>> 962cd73 (rebase)
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> 0088a11 (rebase)
+=======
+>>>>>>> 355a234 (rebase)
+=======
+>>>>>>> 648e6d8 (rebase)
+            ->limit(8)
+>>>>>>> a780d70 (up)
+>>>>>>> a3494d5 (rebase)
+            ->get();
+<<<<<<< HEAD
+>>>>>>> 802efe7 (up)
+=======
+>>>>>>> 0088a11 (rebase)
+=======
+            //->limit(8)
+            ->get()
+            //->take(8)
+            ;
+<<<<<<< HEAD
+>>>>>>> 883dd21 (up)
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 056bec8 (Lint)
+=======
+            ->get();
+>>>>>>> b02ae09 (.)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 27d1a3f (up)
+<<<<<<< HEAD
+>>>>>>> 0088a11 (rebase)
+=======
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 5a12252 (Lint)
+>>>>>>> 962cd73 (rebase)
+=======
+=======
+=======
+            ->limit(8)
+>>>>>>> b022d6c (up)
+>>>>>>> 914e6a9 (rebase)
+            ->get();
+>>>>>>> 802efe7 (up)
+<<<<<<< HEAD
+>>>>>>> 8192562 (rebase)
+=======
+=======
+            //->limit(8)
+            ->get()
+            //->take(8)
+            ;
+>>>>>>> 883dd21 (up)
+<<<<<<< HEAD
+>>>>>>> f031549 (rebase)
+=======
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 056bec8 (Lint)
+>>>>>>> d0b387a (rebase)
+=======
+>>>>>>> 48f4792 (rebase)
+=======
+=======
+>>>>>>> 27d1a3f (up)
+<<<<<<< HEAD
+>>>>>>> 0088a11 (rebase)
+<<<<<<< HEAD
+>>>>>>> 355a234 (rebase)
+=======
+=======
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 5a12252 (Lint)
+>>>>>>> 962cd73 (rebase)
+>>>>>>> 648e6d8 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
         return $navCategories;
     }
@@ -133,11 +341,111 @@ class HomePanel extends XotBasePanel {
      */
     public function footerCategories(): Collection {
         $footerCategories = Category::query()
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 48f4792 (rebase)
+=======
+>>>>>>> 355a234 (rebase)
             ->has('articles', '>', 0)
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> f031549 (rebase)
+=======
+>>>>>>> d0b387a (rebase)
             // ->limit(8)
             ->get()
             // ->take(8)
         ;
+=======
+            ->take(8)
+            ->get();
+>>>>>>> 802efe7 (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f031549 (rebase)
+=======
+            //->limit(8)
+            ->get()
+            //->take(8)
+            ;
+>>>>>>> 883dd21 (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0b387a (rebase)
+=======
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+>>>>>>> 056bec8 (Lint)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            ->has('articles', '>', 0)->get();
+>>>>>>> b02ae09 (.)
+=======
+            ->has('articles', '>', 0)->get();
+=======
+=======
+>>>>>>> 6d76482 (up)
+            ->has('articles', '>', 0)
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // ->limit(8)
+            ->get()
+            // ->take(8)
+        ;
+<<<<<<< HEAD
+>>>>>>> 5a12252 (Lint)
+>>>>>>> 962cd73 (rebase)
+=======
+>>>>>>> 8192562 (rebase)
+=======
+>>>>>>> f031549 (rebase)
+=======
+>>>>>>> d0b387a (rebase)
+=======
+=======
+            ->has('articles', '>', 0)->get();
+>>>>>>> b02ae09 (.)
+>>>>>>> 48f4792 (rebase)
+=======
+            //->limit(8)
+=======
+            // ->limit(8)
+>>>>>>> 648e6d8 (rebase)
+            ->get()
+<<<<<<< HEAD
+            //->take(8)
+            ;
+>>>>>>> 27d1a3f (up)
+<<<<<<< HEAD
+>>>>>>> 0088a11 (rebase)
+<<<<<<< HEAD
+>>>>>>> 355a234 (rebase)
+=======
+=======
+=======
+            // ->take(8)
+        ;
+>>>>>>> 5a12252 (Lint)
+>>>>>>> 962cd73 (rebase)
+>>>>>>> 648e6d8 (rebase)
+=======
+>>>>>>> 6d76482 (up)
 
         return $footerCategories;
     }

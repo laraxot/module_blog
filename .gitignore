@@ -17,6 +17,42 @@ error_log
 
 *.cache
 /build
+<<<<<<< HEAD
 *.old
 *.to_*
 *.old*
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 41e74f3 (rebase)
+=======
+>>>>>>> b944c33 (rebase)
+*.old
+*.to_*
+*.old*
+=======
+>>>>>>> 51f522d (.)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b944c33 (rebase)
+=======
+*.old
+*.to_*
+*.old*
+>>>>>>> 83cb1cd (rebase)
+<<<<<<< HEAD
+=======
+>>>>>>> 41e74f3 (rebase)
+=======
+>>>>>>> b944c33 (rebase)
+=======
+*.old
+*.to_*
+*.old*
+>>>>>>> 6d76482 (up)
+>>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a

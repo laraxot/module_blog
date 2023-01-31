@@ -8,8 +8,39 @@ use Illuminate\Http\Request;
 use Modules\Cms\Models\Panels\XotBasePanel;
 // --- Services --
 
+<<<<<<< HEAD
+use Modules\Cms\Models\Panels\XotBasePanel;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 781794c (rebase)
+=======
+>>>>>>> 648f2e6 (rebase)
+>>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+use Modules\Xot\Contracts\RowsContract;
+=======
+use Modules\Cms\Models\Panels\XotBasePanel;
+>>>>>>> 315e874 (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> c4fb14d (Lint)
+=======
+>>>>>>> 781794c (rebase)
+=======
+=======
+use Modules\Xot\Contracts\RowsContract;
+>>>>>>> c4fb14d (Lint)
+>>>>>>> 648f2e6 (rebase)
+=======
 use Modules\Cms\Models\Panels\XotBasePanel;
 use Modules\Xot\Contracts\RowsContract;
+>>>>>>> 6d76482 (up)
 
 class CategorizablePanel extends XotBasePanel {
     /**
@@ -22,12 +53,113 @@ class CategorizablePanel extends XotBasePanel {
      */
     public static string $title = 'title';
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4f828c4 (rebase)
+=======
+>>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> a939533 (rebase)
+=======
+
+>>>>>>> b022d6c (up)
+=======
+>>>>>>> 5376387 (Lint)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c41b2a8 (rebase)
+=======
+=======
+
+>>>>>>> a780d70 (up)
+>>>>>>> a3494d5 (rebase)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a939533 (rebase)
+=======
+=======
+
+>>>>>>> a780d70 (up)
+=======
+>>>>>>> bc82fdc (Lint)
+>>>>>>> 7424c65 (rebase)
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> b022d6c (up)
+>>>>>>> 914e6a9 (rebase)
+=======
+>>>>>>> 4f828c4 (rebase)
+=======
+>>>>>>> c41b2a8 (rebase)
+=======
+>>>>>>> a939533 (rebase)
+=======
+>>>>>>> 6d76482 (up)
     /**
      * on select the option label.
      *
      * @param \Modules\Blog\Models\Categorizable $row
      */
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 355a234 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
+=======
+>>>>>>> ae00439 (rebase)
+    public function optionLabel($row): string
+    {
+=======
     public function optionLabel($row): string {
+>>>>>>> 27d1a3f (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea4d650 (rebase)
+=======
+    public function optionLabel($row): string
+    {
+>>>>>>> 42ca46e (up)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    public function optionLabel($row): string {
+>>>>>>> afa2edf (Lint)
+=======
+    public function optionLabel($row): string
+    {
+>>>>>>> 94220ac (.)
+=======
+>>>>>>> 355a234 (rebase)
+=======
+>>>>>>> ea4d650 (rebase)
+=======
+=======
+    public function optionLabel($row): string {
+>>>>>>> afa2edf (Lint)
+>>>>>>> ae00439 (rebase)
+=======
+    public function optionLabel($row): string {
+>>>>>>> 6d76482 (up)
         return (string) $row->id;
     }
 

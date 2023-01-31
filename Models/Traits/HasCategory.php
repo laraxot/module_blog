@@ -193,11 +193,126 @@ trait HasCategory {
         $categories = $this->prepareCategoryIds($categories);
         // dddx(is_array( $categories));
         // Sync model categories
+<<<<<<< HEAD
+        if (\is_array($categories)) {
+            $this->categories()->sync($categories, $detaching);
+        } // else {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        // if (\is_array($categories)) {
+        $this->categories()->sync($categories, $detaching);
+        // } // else {
+=======
+        } // else {
+>>>>>>> 2028365 (rebase)
+>>>>>>> 31b2874bced50f2cc56f4271d588e071d41fd17a
+        // dddx($categories);
+        // }
+=======
+=======
+>>>>>>> 017e121 (rebase)
+=======
+>>>>>>> 12d4f1f (rebase)
+        if (\is_array($categories)) {
+            $this->categories()->sync($categories, $detaching);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 955c157 (rebase)
+=======
+>>>>>>> 37f274f (rebase)
+=======
+>>>>>>> c5a3a82 (rebase)
+        } // else {
+=======
+        // if (\is_array($categories)) {
+        $this->categories()->sync($categories, $detaching);
+        // } // else {
+>>>>>>> 6703626 (.)
+        // dddx($categories);
+        // }
+=======
+>>>>>>> d2bbae9 (rebase)
+        } //else {
+            //dddx($categories);
+        //}
+<<<<<<< HEAD
+>>>>>>> ea58237 (up)
+=======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 209739c (Lint)
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> c5a3a82 (rebase)
+        } // else {
+=======
+        // if (\is_array($categories)) {
+        $this->categories()->sync($categories, $detaching);
+        // } // else {
+>>>>>>> 6703626 (.)
+        // dddx($categories);
+        // }
+=======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 1fdd40b (rebase)
+=======
+        } //else {
+            //dddx($categories);
+        //}
+<<<<<<< HEAD
+>>>>>>> 1172c16 (up)
+<<<<<<< HEAD
+>>>>>>> 37f274f (rebase)
+=======
+=======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 7333c06 (Lint)
+>>>>>>> c5a3a82 (rebase)
+=======
+>>>>>>> ea58237 (up)
+>>>>>>> 1fdd40b (rebase)
+=======
+>>>>>>> 2028365 (rebase)
+=======
+=======
+>>>>>>> 1172c16 (up)
+<<<<<<< HEAD
+>>>>>>> 37f274f (rebase)
+<<<<<<< HEAD
+>>>>>>> d2bbae9 (rebase)
+=======
+=======
+=======
+        } // else {
+        // dddx($categories);
+        // }
+>>>>>>> 7333c06 (Lint)
+>>>>>>> c5a3a82 (rebase)
+>>>>>>> 955c157 (rebase)
+=======
         if (\is_array($categories)) {
             $this->categories()->sync($categories, $detaching);
         } // else {
         // dddx($categories);
         // }
+>>>>>>> 6d76482 (up)
 
         return $this;
     }
