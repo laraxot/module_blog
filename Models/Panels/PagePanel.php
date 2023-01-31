@@ -86,8 +86,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class PagePanel.
  */
-class PagePanel extends XotBasePanel
-{
+class PagePanel extends XotBasePanel {
     use XotBasePanelTrait;
     /**
      * The model the resource corresponds to.
@@ -109,8 +108,7 @@ class PagePanel extends XotBasePanel
      *
      * @return string[]
      */
-    public function with(): array
-    {
+    public function with(): array {
         return ['post'];
     }
 
@@ -125,14 +123,14 @@ class PagePanel extends XotBasePanel
      *
      * @param Page $row
      */
-    public function optionLabel($row): string
-    {
+    public function optionLabel($row): string {
         return (string) $row->title;
     }
 
     /**
      * index navigation.
      */
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -152,6 +150,8 @@ class PagePanel extends XotBasePanel
 >>>>>>> f0ffa9e (rebase)
 =======
 >>>>>>> 15844ac (rebase)
+=======
+>>>>>>> a7a8072 (rebase)
     public function indexNav(): ?Renderable {
 =======
     public function indexNav(): ?Renderable
@@ -164,6 +164,7 @@ class PagePanel extends XotBasePanel
 >>>>>>> f980f97 (Lint)
 =======
 >>>>>>> c029664 (.)
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c505cad (rebase)
 =======
@@ -194,15 +195,20 @@ class PagePanel extends XotBasePanel
 =======
 >>>>>>> c029664 (.)
 >>>>>>> 15844ac (rebase)
+=======
+=======
+    public function indexNav(): ?Renderable {
+>>>>>>> 9a30267 (Lint)
+>>>>>>> a7a8072 (rebase)
         dddx('qui');
         [$containers, $items] = params2ContainerItem();
         $last_item = last($items);
-        if (!inAdmin()) {
+        if (! inAdmin()) {
             // siccome non so dove metterlo, per ora dentro pub_theme
             /**
              * @phpstan-var view-string
              */
-            $view = 'pub_theme::pages.' . $last_item . '.index.nav';
+            $view = 'pub_theme::pages.'.$last_item.'.index.nav';
 
             return view()->make($view);
         }
@@ -213,9 +219,7 @@ class PagePanel extends XotBasePanel
     /**
      * Get the fields displayed by the resource.
      */
-    public function fields(): array
-    {
-
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -308,20 +312,19 @@ class PagePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [
             new Actions\SendMsgAction(),
         ];
     }
 
     // temporaneo perchè altrimenti mi da /it/pages/0
-    public function url(string $act = 'show', array $params = []): string
-    {
+    public function url(string $act = 'show', array $params = []): string {
         $url = $this->route->{__FUNCTION__}($act);
 
         if ([] !== $params) {
             $url_components = parse_url($url);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,6 +354,8 @@ class PagePanel extends XotBasePanel
 >>>>>>> bb94901 (rebase)
 =======
 >>>>>>> 15844ac (rebase)
+=======
+>>>>>>> a7a8072 (rebase)
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
 =======
@@ -396,12 +401,16 @@ class PagePanel extends XotBasePanel
 >>>>>>> c029664 (.)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c505cad (rebase)
 =======
+=======
+>>>>>>> a7a8072 (rebase)
 =======
             if (! isset($url_components['path'])) {
                 throw new \Exception('['.__LINE__.']['.__FILE__.']');
 >>>>>>> 9a30267 (Lint)
+<<<<<<< HEAD
 >>>>>>> 3063b59 (rebase)
 =======
             if(!isset($url_components['path'])){
@@ -426,6 +435,8 @@ class PagePanel extends XotBasePanel
 >>>>>>> bb94901 (rebase)
 =======
 >>>>>>> 15844ac (rebase)
+=======
+>>>>>>> a7a8072 (rebase)
             }
             $url = $url_components['path'];
 
@@ -435,7 +446,7 @@ class PagePanel extends XotBasePanel
                 $merged = array_replace_recursive($originalParams, $params);
             }
 
-            $url .= '?' . Arr::query($merged);
+            $url .= '?'.Arr::query($merged);
         }
 
         return $url;
