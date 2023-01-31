@@ -40,7 +40,8 @@ use Modules\Lang\Models\Post;
 /**
  * Class DeleteNoPostIdAction.
  */
-class DeleteNoPostIdAction extends XotBasePanelAction {
+class DeleteNoPostIdAction extends XotBasePanelAction
+{
     public bool $onContainer = true;
 
     public string $icon = '<i class="fas fa-heart-broken"></i>';
@@ -48,7 +49,8 @@ class DeleteNoPostIdAction extends XotBasePanelAction {
     /**
      * @return mixed
      */
-    public function handle() {
+    public function handle()
+    {
         $rows = Post::query()
             ->whereNull('post_id')->delete();
 
