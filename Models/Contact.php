@@ -9,8 +9,11 @@ namespace Modules\Blog\Models;
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
  * @property string|null                                                          $guid
  * @property string|null                                                          $image_src
  * @property string|null                                                          $lang
@@ -28,6 +31,9 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact       newQuery()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2f1bc22 (rebase)
 =======
  * @property string|null $guid
  * @property string|null $image_src
@@ -45,28 +51,15 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Contact newQuery()
 >>>>>>> bc6d311 (up)
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact       query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Contact query()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- *
  * @mixin \Eloquent
- *
- * @property int                             $id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property string|null                     $created_by
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property string|null                     $updated_by
- * @property int|null                        $post_id
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact wherePostId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedBy($value)
  */
 class Contact extends BaseModelLang
 {

@@ -148,8 +148,11 @@ use Spatie\Tags\HasTags; // spatie tags
  *
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
  * @property int                                                                      $id
  * @property string|null                                                              $article_type
  * @property \Illuminate\Support\Carbon|null                                          $published_at
@@ -394,6 +397,7 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article withAnyTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Article withCategories($categories)
 >>>>>>> bc6d311 (up)
+<<<<<<< HEAD
 =======
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       otherCurrentStatus(...$names)
@@ -442,14 +446,13 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withAnyTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withCategories($categories)
 >>>>>>> 8213e79 (Lint)
+=======
+>>>>>>> 2f1bc22 (rebase)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Article       withRating()
- * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutAnyCategories()
- * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutCategories($categories)
- *
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withRating()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withoutAnyCategories()
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withoutCategories($categories)
  * @mixin \Eloquent
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Article withoutTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  */
 class Article extends BaseModelLang implements HasLikeContract
 {
