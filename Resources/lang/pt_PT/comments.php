@@ -1,7 +1,10 @@
 <?php
 
+<<<<<<< HEAD
 declare(strict_types=1);
 
+=======
+>>>>>>> 6c99a65 (.)
 return [
     'write_comment' => 'Deixe um comentário',
     'write_reply' => 'Deixe uma resposta',
@@ -21,5 +24,9 @@ return [
     'approve_comment' => 'Aprovar',
     'awaits_approval' => 'Aguardando aprovação',
     'guest' => 'convidado',
+<<<<<<< HEAD
     'copied' => 'Link copiado',
+=======
+    'copied' => 'Link copiado'
+>>>>>>> 6c99a65 (.)
 ];
