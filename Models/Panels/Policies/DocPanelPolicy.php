@@ -8,12 +8,23 @@ use Modules\Cms\Contracts\PanelContract;
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 use Modules\Xot\Contracts\UserContract;
 
+<<<<<<< HEAD
 class DocPanelPolicy extends XotBasePanelPolicy {
     public function rate(UserContract $user, PanelContract $panel): bool {
+=======
+/**
+ * Class DocPanelPolicy.
+ */
+class DocPanelPolicy extends XotBasePanelPolicy
+{
+    public function rate(UserContract $user, PanelContract $panel): bool
+    {
+>>>>>>> 71f0636 (up)
         return true;
     }
 
-    public function changePos(UserContract $user, PanelContract $panel): bool {
+    public function changePos(UserContract $user, PanelContract $panel): bool
+    {
         return true;
     }
 }

@@ -11,13 +11,15 @@ use Illuminate\Routing\Controller;
 /**
  * Class FeedController.
  */
-class FeedController extends Controller {
+class FeedController extends Controller
+{
     private static ?FeedController $instance = null;
 
     /**
      * @return FeedController|null
      */
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (null === self::$instance) {
             self::$instance = new self();
         }
@@ -28,21 +30,24 @@ class FeedController extends Controller {
     /**
      * @return FeedController|null
      */
-    public function index() {
+    public function index()
+    {
         return self::getInstance(); // / per il fluent, o chaining
     }
 
     /**
      * @return FeedController|null
      */
-    public function show() {
+    public function show()
+    {
         return self::getInstance(); // / per il fluent, o chaining
     }
 
     /**
      * @return string
      */
-    public function out() {
+    public function out()
+    {
         return 'to-do';
     }
 }

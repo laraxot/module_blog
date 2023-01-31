@@ -18,5 +18,6 @@ namespace Modules\Blog\Models\Panels\Policies;
 >>>>>>> 4011d2d (up)
 use Modules\Cms\Models\Panels\Policies\XotBasePanelPolicy;
 
-class CategorizablePanelPolicy extends XotBasePanelPolicy {
+class CategorizablePanelPolicy extends XotBasePanelPolicy
+{
 }

@@ -9,7 +9,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\View\Component;
 use Modules\Cms\Services\PanelService;
 
+<<<<<<< HEAD
 class Article extends Component {
+=======
+/**
+ * Class Article.
+ */
+class Article extends Component
+{
+>>>>>>> 71f0636 (up)
     public array $attrs = [];
     public Model $row;
 
@@ -18,7 +26,8 @@ class Article extends Component {
      *
      * @return void
      */
-    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '') {
+    public function __construct(Model $row, ?string $class = '', ?string $style = '', ?string $id = '')
+    {
         $this->attrs['class'] = $class;
         $this->attrs['style'] = $style;
         $this->attrs['id'] = $id;
@@ -28,7 +37,8 @@ class Article extends Component {
     /**
      * Get the view / contents that represent the component.
      */
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */

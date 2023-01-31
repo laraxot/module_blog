@@ -12,7 +12,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class FavoritePanel.
  */
-class FavoritePanel extends XotBasePanel {
+class FavoritePanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -21,7 +22,8 @@ class FavoritePanel extends XotBasePanel {
     /**
      * @return object[]
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             0 => (object) [
                 'type' => 'Id',
@@ -49,7 +51,8 @@ class FavoritePanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [
             new Actions\Favorite\NoMoreFavoriteAction(Auth::id()),
         ];

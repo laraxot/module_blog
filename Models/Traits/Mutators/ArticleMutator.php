@@ -4,8 +4,18 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits\Mutators;
 
+<<<<<<< HEAD
 trait ArticleMutator {
     public function getParentIdAttribute(?int $value): ?int {
+=======
+/**
+ * Undocumented trait.
+ */
+trait ArticleMutator
+{
+    public function getParentIdAttribute(?int $value): ?int
+    {
+>>>>>>> 71f0636 (up)
         if (null !== $value) {
             return $value;
         }

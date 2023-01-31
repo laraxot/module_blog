@@ -16,7 +16,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class ProfilePanel.
  */
-class ProfilePanel extends XotBasePanel {
+class ProfilePanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -27,7 +28,8 @@ class ProfilePanel extends XotBasePanel {
     /**
      * @return object[]
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Id',
@@ -83,7 +85,8 @@ class ProfilePanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(Request $request = null): array {
+    public function actions(Request $request = null): array
+    {
         return [
             new \Modules\Blog\Models\Panels\Actions\PersonalInfoAction(),
             new \Modules\Blog\Models\Panels\Actions\UserSecurityAction(),
@@ -95,7 +98,8 @@ class ProfilePanel extends XotBasePanel {
     /**
      * @param int $size
      */
-    public function avatar($size = 100): ?string {
+    public function avatar($size = 100): ?string
+    {
         // if (null === $this->row) {
         //    throw new \Exception('row is null');
         // }
@@ -123,7 +127,8 @@ class ProfilePanel extends XotBasePanel {
         return "https://www.gravatar.com/avatar/$email?d=$default&s=$size";
     }
 
-    public function storeCallback(array $params): object {
+    public function storeCallback(array $params): object
+    {
         extract($params);
         /*
         * metto apposto il titolo della pagina del profilo
@@ -176,7 +181,8 @@ class ProfilePanel extends XotBasePanel {
     }
     */
 
-    public function isSuperAdmin(): bool {
+    public function isSuperAdmin(): bool
+    {
         // 232 Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
         // $user = $this->row->user;
         // $user = $this->row->getRelationValue('user');
