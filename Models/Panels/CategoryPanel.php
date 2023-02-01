@@ -24,14 +24,11 @@ class CategoryPanel extends XotBasePanel {
      */
     public function optionLabel($row): string {
         $name = $row->name;
-        // if (is_string($name)) {
-        //    return $name;
-        // }
         if (is_array($name)) {
             $name = implode('-', $name);
         }
 
-        return $name;
+        return (string) $name;
     }
 
     /**
