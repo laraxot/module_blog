@@ -7,13 +7,14 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
-use Modules\Blog\Models\Traits\HasSlug; // spatie tags
+use Modules\Blog\Models\Traits\HasSlug;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\Blog\Models\Traits\HasTimestamps;
+use Modules\Rating\Contracts\HasLikeContract;
 use Modules\Rating\Models\Traits\HasLikes;
 use Modules\Rating\Models\Traits\RatingTrait;
 use Spatie\ModelStatus\HasStatuses;
-use Spatie\Tags\HasTags;
+use Spatie\Tags\HasTags; // spatie tags
 
 class Article extends BaseModelLang implements HasLikeContract {
     use HasAuthor;
