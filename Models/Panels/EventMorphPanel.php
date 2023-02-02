@@ -1,64 +1,196 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Modules\Blog\Models\Panels;
 
-// --- Services --
+use Illuminate\Http\Request;
+use Modules\Xot\Contracts\RowsContract;
+use Illuminate\Contracts\Support\Renderable;
+
 
 use Modules\Cms\Models\Panels\XotBasePanel;
 
-/**
- * Class EventMorphPanel.
- */
 class EventMorphPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
+     *
+     * @var string
      */
-    public static string $model = 'Modules\Blog\Models\EventMorph';
+    public static string $model = 'EventMorph';
 
     /**
-     * @return object[]
+     * The single value that should be used to represent the resource when being displayed.
+     *
+     * @var string
+     */
+    public static string $title = 'title';
+
+    /**
+     * The columns that should be searched.
+     *
+     * @var array
+     */
+    public static $search = array (
+);
+
+    /**
+     * The relationships that should be eager loaded on index queries.
+     *
+     */
+    public function with():array {
+        return [];
+    }
+
+    public function search() :array {
+
+        return [];
+    }
+
+    /**
+     * on select the option id
+     *
+     * quando aggiungi un campo select, è il numero della chiave
+     * che viene messo come valore su value="id"
+     *
+     * @param EventMorph $row
+     *
+     * @return int|string|null
+     */
+    public function optionId($row) {
+        $key = $row->getKey();
+        if(null===$key||(!is_string($key)&&!is_int($key))){
+            throw new \Exception('['.__LINE__.']['.class_basename(__CLASS__).']');
+        }
+        return $key;
+    }
+
+    /**
+     * on select the option label.
+     *
+     * @param EventMorph $row
+     */
+    public function optionLabel($row):string {
+        return 'To Set';
+    }
+
+    /**
+     * index navigation.
+     */
+    public function indexNav(): ?Renderable {
+        return null;
+    }
+
+    /**
+     * Build an "index" query for the given resource.
+     *
+     * @param RowsContract $query
+     *
+     * @return RowsContract
+     */
+    public static function indexQuery(array $data, $query)
+    {
+        //return $query->where('user_id', $request->user()->id);
+        return $query;
+    }
+
+
+
+    /**
+     * Get the fields displayed by the resource.
+     *
+     * @return array
+        'col_size' => 6,
+        'sortable' => 1,
+        'rules' => 'required',
+        'rules_messages' => ['it'=>['required'=>'Nome Obbligatorio']],
+        'value'=>'..',
      */
     public function fields(): array {
-        return [
-            (object) [
-                'type' => 'Id',
-                'name' => 'id',
-                'comment' => null,
-            ],
-            (object) [
-                'type' => 'BigInt',
-                'name' => 'post_id',
-                'comment' => null,
-            ],
-            (object) [
-                'type' => 'String',
-                'name' => 'post_type',
-                'comment' => null,
-            ],
-            (object) [
-                'type' => 'BigInt',
-                'name' => 'event_id',
-                'comment' => null,
-            ],
-            (object) [
-                'type' => 'String',
-                'name' => 'related_type',
-                'comment' => null,
-            ],
-            (object) [
-                'type' => 'Integer',
-                'name' => 'user_id',
-                'comment' => null,
-            ],
-        ];
+        return array (
+  0 => 
+  (object) array(
+     'type' => 'Id',
+     'name' => 'id',
+     'comment' => NULL,
+  ),
+  1 => 
+  (object) array(
+     'type' => 'Bigint',
+     'name' => 'post_id',
+     'comment' => NULL,
+  ),
+  2 => 
+  (object) array(
+     'type' => 'String',
+     'name' => 'post_type',
+     'comment' => NULL,
+  ),
+  3 => 
+  (object) array(
+     'type' => 'Bigint',
+     'name' => 'event_id',
+     'comment' => NULL,
+  ),
+  4 => 
+  (object) array(
+     'type' => 'String',
+     'name' => 'related_type',
+     'comment' => NULL,
+  ),
+  5 => 
+  (object) array(
+     'type' => 'Integer',
+     'name' => 'user_id',
+     'comment' => NULL,
+  ),
+);
+    }
+
+    /**
+     * Get the tabs available.
+     *
+     * @return array
+     */
+    public function tabs():array {
+        $tabs_name = [];
+
+        return $tabs_name;
+    }
+
+    /**
+     * Get the cards available for the request.
+     *
+     * @return array
+     */
+    public function cards(Request $request):array {
+        return [];
+    }
+
+    /**
+     * Get the filters available for the resource.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return array
+     */
+    public function filters(Request $request = null):array {
+        return [];
+    }
+
+    /**
+     * Get the lenses available for the resource.
+     *
+     * @return array
+     */
+    public function lenses(Request $request):array {
+        return [];
     }
 
     /**
      * Get the actions available for the resource.
+     *
+     * @return array
      */
-    public function actions(): array {
+    public function actions():array {
         return [];
     }
 }
