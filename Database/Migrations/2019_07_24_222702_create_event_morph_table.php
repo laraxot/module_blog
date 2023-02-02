@@ -10,7 +10,8 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateEventMorphTable.
  */
-class CreateEventMorphTable extends XotBaseMigration {
+class CreateEventMorphTable extends XotBaseMigration
+{
     /*
     public function getTable(): string {
         return with(new MyModel())->getTable();
@@ -21,7 +22,8 @@ class CreateEventMorphTable extends XotBaseMigration {
      *
      * @return void
      */
-    public function up() {
+    public function up()
+    {
         // ----- create -----
         $this->tableCreate(
             function (Blueprint $table) {

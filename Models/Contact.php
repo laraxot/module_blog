@@ -44,6 +44,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Contact whereUpdatedBy($value)
  */
-class Contact extends BaseModelLang {
+class Contact extends BaseModelLang
+{
     protected $fillable = ['id', 'post_id', 'post_type'];
 }

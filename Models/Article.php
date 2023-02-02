@@ -16,7 +16,8 @@ use Modules\Rating\Models\Traits\RatingTrait;
 use Spatie\ModelStatus\HasStatuses;
 use Spatie\Tags\HasTags; // spatie tags
 
-class Article extends BaseModelLang implements HasLikeContract {
+class Article extends BaseModelLang implements HasLikeContract
+{
     use HasAuthor;
     use HasCategory;
     use HasLikes;

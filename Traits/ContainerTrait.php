@@ -14,13 +14,15 @@ use Modules\Lang\Models\Post;
 /**
  * Trait ContainerTrait.
  */
-trait ContainerTrait {
+trait ContainerTrait
+{
     protected UserRepository $repository;
 
     /**
      * @return bool|\Illuminate\Config\Repository|\Illuminate\Contracts\Foundation\Application|mixed|string
      */
-    public function getModel() {
+    public function getModel()
+    {
         // return new Post;
         $params = optional(\Route::current())->parameters();
         extract($params);
@@ -53,7 +55,8 @@ trait ContainerTrait {
     /**
      * @return string
      */
-    public function getController() {
+    public function getController()
+    {
         $params = optional(\Route::current())->parameters();
         extract($params);
         $model = $this->getModel();
@@ -81,7 +84,8 @@ trait ContainerTrait {
      *
      * @return mixed
      */
-    public function __call($method, $args) {
+    public function __call($method, $args)
+    {
         // dddx($args);
         $controller = $this->getController();
         // dd($controller);
