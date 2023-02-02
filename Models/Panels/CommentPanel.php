@@ -11,8 +11,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class CommentPanel.
  */
-class CommentPanel extends XotBasePanel
-{
+class CommentPanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -21,8 +20,7 @@ class CommentPanel extends XotBasePanel
     /**
      * @return object[]
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',

@@ -58,8 +58,7 @@ use Modules\Geo\Models\Traits\HasPlaceTrait;
  *
  * @mixin \Eloquent
  */
-class Event extends BaseModelLang
-{
+class Event extends BaseModelLang {
     use HasFactory;
     use HasPlaceTrait;
 
@@ -96,8 +95,7 @@ class Event extends BaseModelLang
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    protected static function newFactory()
-    {
+    protected static function newFactory() {
         return EventFactory::new();
     }
 

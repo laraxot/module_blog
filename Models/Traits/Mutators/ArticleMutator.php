@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Models\Traits\Mutators;
 
-trait ArticleMutator
-{
-    public function getParentIdAttribute(?int $value): ?int
-    {
+trait ArticleMutator {
+    public function getParentIdAttribute(?int $value): ?int {
         if (null !== $value) {
             return $value;
         }

@@ -34,8 +34,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Label whereUpdatedBy($value)
  */
-class Label extends BaseModel
-{
+class Label extends BaseModel {
     /**
      * @var string[]
      */

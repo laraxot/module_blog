@@ -11,15 +11,12 @@ use Modules\Xot\Contracts\UserContract;
 /**
  * Class PhotoPanelPolicy.
  */
-class PhotoPanelPolicy extends XotBasePanelPolicy
-{
-    public function rate(UserContract $user, PanelContract $panel): bool
-    {
+class PhotoPanelPolicy extends XotBasePanelPolicy {
+    public function rate(UserContract $user, PanelContract $panel): bool {
         return true;
     }
 
-    public function uploadimagetest(UserContract $user, PanelContract $panel): bool
-    {
+    public function uploadimagetest(UserContract $user, PanelContract $panel): bool {
         return true;
     }
 }
