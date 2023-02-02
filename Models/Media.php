@@ -199,8 +199,7 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Media withoutTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  */
-class Media extends BaseMedia
-{
+class Media extends BaseMedia {
     // use Searchable;
     // use Cachable;
     use HasFactory;

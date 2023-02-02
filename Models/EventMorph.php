@@ -38,8 +38,7 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class EventMorph extends BaseMorphPivot
-{
+class EventMorph extends BaseMorphPivot {
     /**
      * @var string[]
      */
