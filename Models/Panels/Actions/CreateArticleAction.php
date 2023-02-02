@@ -12,8 +12,7 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class CreateArticleAction.
  */
-class CreateArticleAction extends XotBasePanelAction
-{
+class CreateArticleAction extends XotBasePanelAction {
     public bool $onContainer = true;
 
     public string $icon = '<i class="fa fa-arrow-up"></i><i class="fa fa-arrow-down"></i>';
@@ -23,8 +22,7 @@ class CreateArticleAction extends XotBasePanelAction
      *
      * @return mixed
      */
-    public function handle()
-    {
+    public function handle() {
         return $this->panel->view();
     }
 }
