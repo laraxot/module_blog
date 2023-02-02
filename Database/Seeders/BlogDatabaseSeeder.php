@@ -10,11 +10,13 @@ use Illuminate\Database\Seeder;
 /**
  * Class BlogDatabaseSeeder.
  */
-class BlogDatabaseSeeder extends Seeder {
+class BlogDatabaseSeeder extends Seeder
+{
     /**
      * @return void
      */
-    public function run() {
+    public function run()
+    {
         Model::unguard();
         // $this->call("OthersTableSeeder");
     }

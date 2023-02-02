@@ -11,7 +11,8 @@ use Modules\Blog\Models\Event as Model;
 /**
  * Class ArticleFactory.
  */
-class EventFactory extends Factory {
+class EventFactory extends Factory
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -24,7 +25,8 @@ class EventFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
+    public function definition()
+    {
         $add_day = random_int(-20, 20);
         $add_minutes = random_int(1, 3) * 30;
         $date_start = now()->addDays($add_day);
