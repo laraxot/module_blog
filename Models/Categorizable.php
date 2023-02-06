@@ -31,7 +31,8 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class Categorizable extends BaseMorphPivot {
+class Categorizable extends BaseMorphPivot
+{
     /**
      * @var string[]
      */
