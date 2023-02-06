@@ -50,8 +50,9 @@ class Categories extends Component {
     }
 
     public function assign() {
-        $this->model->categories()->attach($this->form_data['available_cats']);
-
+        if (\is_iterable($this->form_data['available_cats'])) {
+            $this->model->categories()->attach($this->form_data['available_cats']);
+        }
         $this->showPage();
     }
 
