@@ -11,8 +11,7 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class ImagePanel.
  */
-class ImagePanel extends XotBasePanel
-{
+class ImagePanel extends XotBasePanel {
     /**
      * The model the resource corresponds to.
      */
@@ -33,8 +32,7 @@ class ImagePanel extends XotBasePanel
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array
-    {
+    public function fields(): array {
         return [
             (object) [
                 'type' => 'Id',
@@ -87,8 +85,7 @@ class ImagePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array
-    {
+    public function actions(): array {
         return [];
     }
 }
