@@ -6,13 +6,21 @@ namespace Modules\Blog\Http\Livewire\Input;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Livewire\Component;
+use Modules\Blog\Actions\GetCategoryOptionsByModelAction;
 use Modules\Blog\Models\Category;
 
 class Categories extends Component {
-    public string $tpl = 'v1';
+    public string $tpl;
     public string $name;
     public array $form_data = [];
+    public array $options = [];
+    public array $selectedTasks = [];
+    public array $selectedOptions = [];
+    public array $values = [];
+
     /**
      * @var mixed
      */
@@ -20,18 +28,25 @@ class Categories extends Component {
 
     public Model $model;
 
+    public string $model_type;
+
     /**
      * @param mixed $value
      */
-    public function mount(string $name, Model $model, $value, $tpl = 'v1'): void {
+    public function mount(string $name, Model $model, $value, $tpl = 'v2'): void {
         $this->name = $name;
         $this->model = $model;
+        $this->model_type = Str::snake(class_basename($model));
         $this->value = $value;
         $this->tpl = $tpl;
-
-        $this->showPage();
+        $this->options = app(GetCategoryOptionsByModelAction::class)->execute($model);
+        $this->values = $value->pluck('id')->all();
     }
 
+    public function setValues(array $values) {
+        $this->values = $values;
+    }
+    /*
     public function showPage() {
         $this->availableCategories = $this->getAvailableCategories();
         $this->assignedCategories = $this->getAssignedCategories();
@@ -61,6 +76,7 @@ class Categories extends Component {
 
         $this->showPage();
     }
+    */
 
     public function render(): Renderable {
         /**
@@ -75,6 +91,19 @@ class Categories extends Component {
         return view($view, $view_params);
     }
 
+    /**
+     * Undocumented function.
+     *
+     * @param string|int|array|null $value
+     *
+     * @return void
+     */
+    public function selectedOptions($value) {
+        $value = Arr::wrap($value);
+        $this->selectedOptions = $value;
+    }
+
+    /*
     public static function attributes(): array {
         return [
             // Set the modal size to 2xl, you can choose between:
@@ -83,6 +112,8 @@ class Categories extends Component {
         ];
     }
 
+
     public function save(): void {
     }
+    */
 }
