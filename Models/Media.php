@@ -191,7 +191,7 @@ use Spatie\Tags\HasTags;
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAllTagsOfAnyType($tags)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
  * @method static \Illuminate\Database\Eloquent\Builder|Media                                       withAnyTagsOfAnyType($tags)
->>>>>>> 733e7fa (rebase)
+
  * @mixin \Eloquent
  *
  * @property int $user_id
