@@ -10,6 +10,16 @@ use Spatie\Sluggable\SlugOptions;
 
 /**
  * Undocumented trait.
+
+ *
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null                     $original_url
+ * @property \Illuminate\Support\Carbon|null $submitted_at
+ * @property \Illuminate\Support\Carbon|null $approved_at
+ * @property \Illuminate\Support\Carbon|null $declined_at
+ * @property \Illuminate\Support\Carbon|null $shared_at
+ * @property bool                            $is_pinned
  */
 trait ArticleExtra {
     public function title(): ?string {

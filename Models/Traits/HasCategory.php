@@ -247,9 +247,10 @@ trait HasCategory {
 
         // Find categories by their slugs
         if (\is_string($categories) || (\is_array($categories) && \is_string(Arr::first($categories)))) {
+            // Called 'pluck' on Laravel collection, but could have been retrieved as a query
             $categories_ids = app(Category::class)
                 ->whereIn('slug', (array) $categories)
-                ->get()
+                // ->get()
                 ->pluck('id');
             $categories_arr = Arr::wrap($categories);
 

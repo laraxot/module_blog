@@ -15,7 +15,6 @@ return [
     'approved_comment_mail_body' => 'Posté par :commentator_name',
 
     'enum_description_participating' => 'Lorsque vous participez',
-    'enum_description_participating' => 'Lorsque vous participez',
     'enum_description_all' => 'Sur tous les commentaires',
     'enum_description_none' => 'Jamais',
     'enum_longdescription_participating' => 'Être notifié lors de la participation',

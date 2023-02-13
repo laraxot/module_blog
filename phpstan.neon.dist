@@ -14,10 +14,15 @@ parameters:
         - ./Tests/*
         - ./_ide_helper.php
 
+    viewDirectories:
+        - ./Resources/views
+
     tmpDir: build/phpstan
     reportUnmatchedIgnoredErrors: false
     checkOctaneCompatibility: false
     checkModelProperties: false
     checkMissingIterableValueType: false
     checkGenericClassInNonGenericObjectType: false
+    checkUnusedViews: false
+
 

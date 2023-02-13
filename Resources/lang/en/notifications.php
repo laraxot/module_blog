@@ -15,7 +15,6 @@ return [
     'approved_comment_mail_body' => 'Posted by :commentator_name',
 
     'enum_description_participating' => 'When participating',
-    'enum_description_participating' => 'When participating',
 
     'enum_description_all' => 'On all comments',
     'enum_description_none' => 'Never',
