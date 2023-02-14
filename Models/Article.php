@@ -7,7 +7,6 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 use Modules\Blog\Models\Traits\HasAuthor;
 use Modules\Blog\Models\Traits\HasCategory;
-use Modules\Blog\Models\Traits\HasSlug;
 // use Modules\Blog\Models\Traits\PreparesSearch;
 use Modules\Blog\Models\Traits\HasTimestamps;
 use Modules\Rating\Contracts\HasLikeContract;
