@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 use Modules\Blog\Models\Comment;
 
 class CommentFactory extends Factory {
@@ -23,8 +21,6 @@ class CommentFactory extends Factory {
      * @return array
      */
     public function definition() {
-
-
         return [
             'created_at' => $this->faker->dateTime,
             'created_by' => $this->faker->word,
@@ -37,7 +33,7 @@ class CommentFactory extends Factory {
             'txt' => $this->faker->text,
             'updated_at' => $this->faker->dateTime,
             'updated_by' => $this->faker->word,
-            'user_id' => $this->faker->integer
+            'user_id' => $this->faker->integer,
         ];
     }
 }
