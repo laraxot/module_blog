@@ -16,9 +16,9 @@ use Modules\LU\Casts\UserField;
 use Modules\LU\Models\Traits\HasProfileTrait;
 use Modules\LU\Models\User;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
+use Modules\Xot\Contracts\ModelProfileContract;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
-use Modules\Xot\Contracts\ModelProfileContract;
 use Spatie\Permission\Traits\HasRoles;
 
 /**
