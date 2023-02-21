@@ -18,6 +18,8 @@ use Modules\LU\Models\User;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
+use Modules\Xot\Contracts\ModelProfileContract;
+use Spatie\Permission\Traits\HasRoles;
 
 /**
  * Modules\Blog\Models\Profile.
@@ -144,12 +146,13 @@ use Spatie\ModelStatus\HasStatuses;
  *
  * @mixin \Eloquent
  */
-class Profile extends BaseModelLang {
+class Profile extends BaseModelLang implements ModelProfileContract {
     // use GeoTrait; -- to profile in geo
     use HasProfileTrait;
     // use PrivacyTrait;
     use WidgetTrait;
     use HasStatuses;
+    use HasRoles;
     // use HasTicketTrait;
     // use HasFactory;
 
