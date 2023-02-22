@@ -17,6 +17,7 @@ class GetCategoryOptionsByModelTypeAction {
      * Execute the action.
      */
     public function execute(string $model_type): array {
+        dddx($model_type);
         // $model_class = get_class($model);
         // $model_type = Str::snake(class_basename($model));
         $model_class = collect(config('morph_map'))->get($model_type);
