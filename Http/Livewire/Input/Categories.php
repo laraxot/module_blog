@@ -33,7 +33,7 @@ class Categories extends Component {
     /**
      * @param mixed $value
      */
-    public function mount(string $name, Model $model, $value, $tpl = 'v2'): void {
+    public function mount(string $name, Model $model, $value, string $tpl = 'v2'): void {
         $this->name = $name;
         $this->model = $model;
         $this->model_type = Str::snake(class_basename($model));
@@ -43,7 +43,7 @@ class Categories extends Component {
         $this->values = $value->pluck('id')->all();
     }
 
-    public function setValues(array $values) {
+    public function setValues(array $values): void {
         $this->values = $values;
     }
     /*

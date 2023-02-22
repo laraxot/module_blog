@@ -23,12 +23,13 @@ class CategoryPanel extends XotBasePanel {
      * @param Category $row
      */
     public function optionLabel($row): string {
-        $name = $row->name;
-        if (is_array($name)) {
-            $name = implode('-', $name);
-        }
+        // $name = $row->name;
+        // if (is_array($name)) {
+        //     $name = implode('-', $name);
+        // }
 
-        return (string) $name;
+        // return (string) $name;
+        return (string) $row->id;
     }
 
     /**
