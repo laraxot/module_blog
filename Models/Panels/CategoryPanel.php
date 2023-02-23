@@ -29,7 +29,7 @@ class CategoryPanel extends XotBasePanel {
         // }
 
         // return (string) $name;
-        return (string) $row->id;
+        return (string) $row->name;
     }
 
     /**
