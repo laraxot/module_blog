@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Livewire\Component;
 use Modules\Blog\Actions\GetCategoryOptionsByModelAction;
 use Modules\Blog\Models\Category;
+use Modules\Cms\Actions\GetViewAction;
 
 class Categories extends Component {
     public string $tpl;
@@ -82,7 +83,7 @@ class Categories extends Component {
         /**
          * @phpstan-var view-string
          */
-        $view = 'blog::livewire.input.categories.'.$this->tpl;
+        $view = app(GetViewAction::class)->execute($this->tpl);
 
         $view_params = [
             'view' => $view,

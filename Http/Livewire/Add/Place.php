@@ -6,6 +6,7 @@ namespace Modules\Blog\Http\Livewire\Add;
 
 use Illuminate\Contracts\Support\Renderable;
 use Livewire\Component;
+use Modules\Cms\Actions\GetViewAction;
 
 /**
  * Undocumented Place.
