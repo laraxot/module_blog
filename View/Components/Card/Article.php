@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Blog\View\Components\Card;
 
-use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\View\Component;
+use Modules\Cms\Actions\GetViewAction;
 use Modules\Cms\Services\PanelService;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Support\Renderable;
 
 class Article extends Component {
     public array $attrs = [];
@@ -32,7 +33,8 @@ class Article extends Component {
         /**
          * @phpstan-var view-string
          */
-        $view = 'blog::components.card.article';
+        // $view = 'blog::components.card.article';
+        $view = app(GetViewAction::class)->execute();
         // dddx($this->row);
         $view_params = [
             'view' => $view,
