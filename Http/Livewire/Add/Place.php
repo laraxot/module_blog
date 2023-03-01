@@ -11,11 +11,17 @@ use Livewire\Component;
  * Undocumented Place.
  */
 class Place extends Component {
+    public string $tpl;
+
+    public function mount(string $tpl = 'v1'): void {
+        $this->tpl = $tpl;
+    }
+
     public function render(): Renderable {
         /**
          * @phpstan-var view-string
          */
-        $view = 'blog::livewire.add.place';
+        $view = app(GetViewAction::class)->execute($this->tpl);
 
         $view_params = [
             'view' => $view,
