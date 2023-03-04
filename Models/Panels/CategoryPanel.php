@@ -72,11 +72,6 @@ class CategoryPanel extends XotBasePanel {
                 'name' => 'guid',
                 'comment' => 'not in Doctrine',
             ],
-            /*(object) [
-                'type' => 'SelectCategories',
-                'name' => 'categories',
-                'comment' => 'not in Doctrine',
-            ],*/
         ];
     }
 
