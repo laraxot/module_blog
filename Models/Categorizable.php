@@ -22,8 +22,6 @@ class Categorizable extends BaseMorphPivot {
      */
     protected $fillable = [
         'id',
-        // 'post_id', 'post_type',
-        // 'photo_id', 'related_type',
         'user_id',
         'categorizable_type',
         'categorizable_id',
