@@ -41,7 +41,7 @@ class Categories extends Component {
         $this->value = $value;
         $this->tpl = $tpl;
         $this->options = app(GetCategoryOptionsByModelAction::class)->execute($model);
-        if (method_exists($value, 'pluck')) {
+        if (null != $value && method_exists($value, 'pluck')) {
             $this->values = $value->pluck('id')->all();
         }
         // $this->values = $value->pluck('id')->all();
