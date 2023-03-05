@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection as BaseCollection;
+use Illuminate\Support\Str;
 use Modules\Blog\Models\Category;
 
 trait HasCategory {
@@ -211,6 +212,21 @@ trait HasCategory {
      */
     public function attachCategories($categories) {
         return $this->syncCategories($categories, false);
+    }
+
+    /**
+     * Attach model categories.
+     *
+     * @return $this
+     */
+    public function attachCategoryName(string $name) {
+        $slug = Str::slug($name);
+        $item = app(Category::class)->firstOrCreate(['slug' => $slug], ['name' => $name]);
+        $detaching = false;
+        $categories = [$item->id];
+        $this->categories()->sync($categories, $detaching);
+
+        return $this;
     }
 
     /**

@@ -34,14 +34,17 @@ class Categories extends Component {
     /**
      * @param mixed $value
      */
-    public function mount(string $name, Model $model, $value, string $tpl = 'v2'): void {
+    public function mount(string $name, Model $model, $value, string $tpl = 'v1'): void {
         $this->name = $name;
         $this->model = $model;
         $this->model_type = Str::snake(class_basename($model));
         $this->value = $value;
         $this->tpl = $tpl;
         $this->options = app(GetCategoryOptionsByModelAction::class)->execute($model);
-        $this->values = $value->pluck('id')->all();
+        if (method_exists($value, 'pluck')) {
+            $this->values = $value->pluck('id')->all();
+        }
+        // $this->values = $value->pluck('id')->all();
     }
 
     public function setValues(array $values): void {

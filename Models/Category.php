@@ -217,6 +217,10 @@ class Category extends Model {
         return $this->morphedByMany(self::class, 'categorizable', 'categorizable', 'category_id', 'categorizable_id', 'id', 'id');
     }
 
+    public function types() {
+        return $this->categorizables()->select('categorizable_type')->distinct();
+    }
+
     /**
      * @return string
      */

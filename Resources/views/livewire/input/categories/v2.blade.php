@@ -1,12 +1,19 @@
 <div>
     <div wire:ignore>
         <label for="optionSelect" class="form-label">{{ $name }}</label>
-        <select class="form-select" id="optionSelect"  multiple="multiple" name="{{ $name }}[]" >
-            @foreach($options as $k=>$v)
-                <option value="{{$k}}" {{ in_array($k,$values)?'selected':'' }} >{{ $k }} -{{ $v}}</option>
+        <select class="form-select" id="optionSelect" multiple="multiple" name="{{ $name }}[]">
+            @foreach ($options as $k => $v)
+                <option value="{{ $k }}" {{ in_array($k, $values) ? 'selected' : '' }}>{{ $k }}
+                    -{{ $v }}</option>
             @endforeach
         </select>
     </div>
+
+    <x-button wire:click="$emit('modal.open', 'modal.category.crud', {'model_type': '{{ $model_type }}'})">
+        <i class="bi bi-plus-square-dotted"></i>
+    </x-button>
+
+
     {{--  
     <div class="my-3">
         Selected Tasks :
@@ -20,45 +27,45 @@
     --}}
 </div>
 @push('styles')
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 @endpush
 @push('scripts')
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script>
-    $(document).ready(function() {
-        
-        $('#optionSelect').select2({
-            /*
-            tags: true,
-            createTag: function (params) {
-                console.log('---- params -----');
-                console.log(params);
-                var term = $.trim(params.term);
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
 
-                if (term === '') {
-                    return null;
+            $('#optionSelect').select2({
+                /*
+                tags: true,
+                createTag: function (params) {
+                    console.log('---- params -----');
+                    console.log(params);
+                    var term = $.trim(params.term);
+
+                    if (term === '') {
+                        return null;
+                    }
+
+                    return {
+                        id: term,
+                        text: term,
+                        newTag: true // add additional parameters
+                    }
+                },
+                insertTag: function (data, tag) {
+                    console.log('-------- insertTag ------');
+                    console.log(data);
+                    console.log(tag);
+                    data.push(tag);
                 }
+                */
+            });
 
-                return {
-                    id: term,
-                    text: term,
-                    newTag: true // add additional parameters
-                }
-            },
-            insertTag: function (data, tag) {
-                console.log('-------- insertTag ------');
-                console.log(data);
-                console.log(tag);
-                data.push(tag);
-            }
-            */
+            $('#optionSelect').on('change', function(e) {
+                //alert($(this).val());
+                //@this.set('selectedTasks', $(this).val());
+                @this.setValues($(this).val());
+            });
         });
-
-        $('#optionSelect').on('change', function (e) {
-            //alert($(this).val());
-            //@this.set('selectedTasks', $(this).val());
-            @this.setValues($(this).val());
-        });
-    });
-</script>
+    </script>
 @endpush
