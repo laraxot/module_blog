@@ -17,8 +17,7 @@ use Illuminate\Support\Collection as BaseCollection;
 use Illuminate\Support\Str;
 use Modules\Blog\Models\Category;
 
-trait HasCategory
-{
+trait HasCategory {
     /**
      * Register a saved model event with the dispatcher.
      *
@@ -65,8 +64,7 @@ trait HasCategory
     /**
      * Get all attached categories to the model.
      */
-    public function categories(): MorphToMany
-    {
+    public function categories(): MorphToMany {
         // return $this->morphToMany(config('rinvex.categories.models.category'), 'categorizable', config('rinvex.categories.tables.categorizables'), 'categorizable_id', 'category_id')
         //            ->withTimestamps();
         return $this->morphToMany(Category::class, 'categorizable', 'categorizable', 'categorizable_id', 'category_id');
@@ -77,8 +75,7 @@ trait HasCategory
      *
      * @param int|string|array|\ArrayAccess|\Modules\Blog\Models\Category $categories
      */
-    public function setCategoriesAttribute($categories): void
-    {
+    public function setCategoriesAttribute($categories): void {
         static::saved(function (self $model) use ($categories) {
             $model->syncCategories($categories);
         });
@@ -89,11 +86,10 @@ trait HasCategory
      *
      * @return void
      */
-    public static function bootCategorizable()
-    {
+    public static function bootCategorizable() {
         static::deleted(function (self $model) {
             // Check if this is a soft delete or not by checking if `SoftDeletes::isForceDeleting` method exists
-            (method_exists($model, 'isForceDeleting') && !$model->isForceDeleting()) || $model->categories()->detach();
+            (method_exists($model, 'isForceDeleting') && ! $model->isForceDeleting()) || $model->categories()->detach();
         });
     }
 
@@ -102,8 +98,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function scopeWithAllCategories(Builder $builder, $categories): Builder
-    {
+    public function scopeWithAllCategories(Builder $builder, $categories): Builder {
         $categories = $this->prepareCategoryIds($categories);
 
         collect($categories)->each(function ($category) use ($builder) {
@@ -120,8 +115,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function scopeWithAnyCategories(Builder $builder, $categories): Builder
-    {
+    public function scopeWithAnyCategories(Builder $builder, $categories): Builder {
         $categories = $this->prepareCategoryIds($categories);
 
         return $builder->whereHas('categories', function (Builder $builder) use ($categories) {
@@ -134,8 +128,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function scopeWithCategory(Builder $builder, $category): Builder
-    {
+    public function scopeWithCategory(Builder $builder, $category): Builder {
         return static::scopeWithAnyCategories($builder, [$category]);
     }
 
@@ -144,8 +137,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function scopeWithCategories(Builder $builder, $categories): Builder
-    {
+    public function scopeWithCategories(Builder $builder, $categories): Builder {
         return static::scopeWithAnyCategories($builder, $categories);
     }
 
@@ -154,8 +146,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function scopeWithoutCategories(Builder $builder, $categories): Builder
-    {
+    public function scopeWithoutCategories(Builder $builder, $categories): Builder {
         $categories = $this->prepareCategoryIds($categories);
 
         return $builder->whereDoesntHave('categories', function (Builder $builder) use ($categories) {
@@ -166,8 +157,7 @@ trait HasCategory
     /**
      * Scope query without any categories.
      */
-    public function scopeWithoutAnyCategories(Builder $builder): Builder
-    {
+    public function scopeWithoutAnyCategories(Builder $builder): Builder {
         return $builder->doesntHave('categories');
     }
 
@@ -176,11 +166,10 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function hasCategories($categories): bool
-    {
+    public function hasCategories($categories): bool {
         $categories = $this->prepareCategoryIds($categories);
 
-        return !$this->categories->pluck('id')->intersect($categories)->isEmpty();
+        return ! $this->categories->pluck('id')->intersect($categories)->isEmpty();
     }
 
     /**
@@ -188,8 +177,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function hasAnyCategories($categories): bool
-    {
+    public function hasAnyCategories($categories): bool {
         return static::hasCategories($categories);
     }
 
@@ -198,8 +186,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    public function hasAllCategories($categories): bool
-    {
+    public function hasAllCategories($categories): bool {
         $categories = $this->prepareCategoryIds($categories);
 
         return collect($categories)->diff($this->categories->pluck('id'))->isEmpty();
@@ -212,8 +199,7 @@ trait HasCategory
      *
      * @return $this
      */
-    public function syncCategories($categories, bool $detaching = true)
-    {
+    public function syncCategories($categories, bool $detaching = true) {
         // Find categories
         $categories = $this->prepareCategoryIds($categories);
         // dddx(is_array( $categories));
@@ -234,8 +220,7 @@ trait HasCategory
      *
      * @return $this
      */
-    public function attachCategories($categories)
-    {
+    public function attachCategories($categories) {
         return $this->syncCategories($categories, false);
     }
 
@@ -244,8 +229,7 @@ trait HasCategory
      *
      * @return $this
      */
-    public function attachCategoryName(string $name)
-    {
+    public function attachCategoryName(string $name) {
         $slug = Str::slug($name);
         $item = app(Category::class)->firstOrCreate(['slug' => $slug], ['name' => $name]);
         $detaching = false;
@@ -262,8 +246,7 @@ trait HasCategory
      *
      * @return $this
      */
-    public function detachCategories($categories = null)
-    {
+    public function detachCategories($categories = null) {
         $categories = null !== $categories ? $this->prepareCategoryIds($categories) : null;
 
         // Sync model categories
@@ -277,8 +260,7 @@ trait HasCategory
      *
      * @param mixed $categories
      */
-    protected function prepareCategoryIds($categories): array
-    {
+    protected function prepareCategoryIds($categories): array {
         // Convert collection to plain array
         if ($categories instanceof BaseCollection && \is_string($categories->first())) {
             $categories = $categories->toArray();
