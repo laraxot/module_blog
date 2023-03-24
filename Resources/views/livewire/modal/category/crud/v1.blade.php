@@ -1,6 +1,7 @@
 <x-wire-elements-pro::bootstrap.modal on-submit="delete" :content-padding="false">
     <x-slot name="title">Category Crud</x-slot>
 
+
     <div class="row">
         <div class="col-10">
             <x-input.group type="text" name="name" />
@@ -10,9 +11,6 @@
         </div>
     </div>
     <x-flash-message />
-    {{-- @foreach ($categories as $id => $category)
-        - {{ $category }} <x-button wire:click="sub('{{ $id }}')">-</x-button> <br>
-    @endforeach --}}
     <table>
         @foreach ($categories as $category)
             <tr>
