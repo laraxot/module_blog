@@ -9,10 +9,12 @@ use Spatie\ModelStatus\Status as BaseStatus;
 /**
  * Modules\Blog\Models\Status.
  *
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $model
+ * @property \Illuminate\Database\Eloquent\Model|\Eloquent $model
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Status newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Status newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Status query()
+ *
  * @mixin \Eloquent
  */
 class Status extends BaseStatus {
