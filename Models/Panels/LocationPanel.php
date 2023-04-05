@@ -10,7 +10,8 @@ use Modules\Cms\Models\Panels\XotBasePanel;
 /**
  * Class LocationPanel.
  */
-class LocationPanel extends XotBasePanel {
+class LocationPanel extends XotBasePanel
+{
     /**
      * The model the resource corresponds to.
      */
@@ -33,7 +34,8 @@ class LocationPanel extends XotBasePanel {
      * @return string[]
      * @return string[]
      */
-    public function with(): array {
+    public function with(): array
+    {
         return ['post', 'images'];
     }
 
@@ -41,7 +43,8 @@ class LocationPanel extends XotBasePanel {
      * Get the fields displayed by the resource.
         'value'=>'..',
      */
-    public function fields(): array {
+    public function fields(): array
+    {
         return [
             (object) [
                 'type' => 'Text',
@@ -134,7 +137,8 @@ class LocationPanel extends XotBasePanel {
     /**
      * Get the actions available for the resource.
      */
-    public function actions(): array {
+    public function actions(): array
+    {
         return [];
     }
 }

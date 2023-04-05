@@ -12,13 +12,15 @@ use Illuminate\Support\Str;
 use Modules\Blog\Models\Category;
 use Spatie\QueueableAction\QueueableAction;
 
-class GetCategoryByModelAction {
+class GetCategoryByModelAction
+{
     use QueueableAction;
 
     /**
      * Execute the action.
      */
-    public function execute(Model $model): Collection {
+    public function execute(Model $model): Collection
+    {
         $model_class = get_class($model);
         $model_type = Str::snake(class_basename($model));
         $options = Category::ofType($model_type)->get();

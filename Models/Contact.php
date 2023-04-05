@@ -29,6 +29,7 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class Contact extends BaseModelLang {
+class Contact extends BaseModelLang
+{
     protected $fillable = ['id', 'post_id', 'post_type'];
 }

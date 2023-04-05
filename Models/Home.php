@@ -50,7 +50,8 @@ use Sushi\Sushi;
  *
  * @mixin \Eloquent
  */
-class Home extends BaseModelLang {
+class Home extends BaseModelLang
+{
     use Sushi;
     use WidgetTrait;
 

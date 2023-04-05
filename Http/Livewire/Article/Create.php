@@ -13,18 +13,21 @@ use Modules\Xot\Actions\Model\StoreAction;
 /**
  * Undocumented Place.
  */
-class Create extends Component {
+class Create extends Component
+{
     public array $form_data = [];
     public string $tpl;
 
-    public function mount(string $tpl = 'v1'): void {
+    public function mount(string $tpl = 'v1'): void
+    {
         $this->tpl = $tpl;
     }
 
     /**
      * Undocumented function.
      */
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */
@@ -42,7 +45,8 @@ class Create extends Component {
      *
      * @return void
      */
-    public function store() {
+    public function store()
+    {
         // dddx($this->form_data);
         $model = app(Article::class);
         $data = $this->form_data;

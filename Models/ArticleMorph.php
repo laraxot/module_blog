@@ -38,7 +38,8 @@ namespace Modules\Blog\Models;
  *
  * @mixin \Eloquent
  */
-class ArticleMorph extends BaseMorphPivot {
+class ArticleMorph extends BaseMorphPivot
+{
     /**
      * @var string[]
      */

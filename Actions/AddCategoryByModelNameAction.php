@@ -8,12 +8,14 @@ namespace Modules\Blog\Actions;
 
 use Spatie\QueueableAction\QueueableAction;
 
-class AddCategoryByModelNameAction {
+class AddCategoryByModelNameAction
+{
     use QueueableAction;
 
     /**
      * Execute the action.
      */
-    public function execute(string $category_name, string $model_name): void {
+    public function execute(string $category_name, string $model_name): void
+    {
     }
 }

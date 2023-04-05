@@ -11,14 +11,17 @@ use Modules\Cms\Actions\GetViewAction;
 /**
  * Undocumented Place.
  */
-class Place extends Component {
+class Place extends Component
+{
     public string $tpl;
 
-    public function mount(string $tpl = 'v1'): void {
+    public function mount(string $tpl = 'v1'): void
+    {
         $this->tpl = $tpl;
     }
 
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */

@@ -8,13 +8,15 @@ namespace Modules\Blog\Actions;
 
 use Spatie\QueueableAction\QueueableAction;
 
-class AddCategoryByModelClassAction {
+class AddCategoryByModelClassAction
+{
     use QueueableAction;
 
     /**
      * Execute the action.
      */
-    public function execute(string $name, string $model_class): void {
+    public function execute(string $name, string $model_class): void
+    {
         $tmp = app($model_class)->make();
         $tmp->id = 0;
         $tmp->attachCategoryName($name);

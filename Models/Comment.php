@@ -40,7 +40,8 @@ use Modules\Rating\Models\Traits\RatingTrait;
  *
  * @mixin \Eloquent
  */
-class Comment extends BaseModelLang {
+class Comment extends BaseModelLang
+{
     use RatingTrait;
     protected $fillable = ['created_at', 'created_by', 'deleted_by', 'id', 'lang', 'post_id', 'post_type', 'status', 'txt', 'updated_at', 'updated_by', 'user_id'];
 }
