@@ -5,7 +5,7 @@ declare(strict_types=1);
 return [
     'write_comment' => 'Leave a comment',
     'write_reply' => 'Leave a reply',
-    'cancel' => 'Cancel',
+    'cancel' => 'Annulla',
     'edit' => 'Edit',
     'edit_comment' => 'Save',
     'no_comments_yet' => 'No comments yet…',
