@@ -129,13 +129,10 @@ trait HasCategory
         });
     }
 
-     /**
+    /**
      * Scope query with any of the given categories.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $builder
-     * @param mixed                                 $categories
-     *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @param mixed $categories
      */
     public function scopeWithCategories(Builder $builder, $categories): Builder
     {
