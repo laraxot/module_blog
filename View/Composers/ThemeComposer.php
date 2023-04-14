@@ -19,7 +19,7 @@ class ThemeComposer
      */
     public function getFeaturedArticles(): Collection
     {
-        return Article::query()->limit(10)
+        return Article::query()->whereHas('post')->limit(10)
             ->orderBy('created_at', 'desc')
             ->get();
         // return collect([]);
