@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Blog\Http\Livewire\Article;
 
-use Illuminate\Contracts\Support\Renderable;
 use Livewire\Component;
 use Modules\Blog\Models\Article;
 use Modules\Cms\Actions\GetViewAction;
+use Modules\Cms\Contracts\PanelContract;
 use Modules\Xot\Actions\Model\StoreAction;
+use Illuminate\Contracts\Support\Renderable;
 
 /**
  * Undocumented Place.
@@ -18,7 +19,7 @@ class Edit extends Component
     public array $form_data = [];
     public string $tpl;
 
-    public function mount(string $tpl = 'v1'): void
+    public function mount(PanelContract $panel,  string $tpl = 'v1'): void
     {
         $this->tpl = $tpl;
     }
