@@ -15,11 +15,11 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
  */
 class EditAction extends XotBasePanelAction
 {
-    public bool $onItem= true;
+    public bool $onItem = true;
 
     public string $icon = '<i class="fa fa-arrow-up"></i><i class="fa fa-arrow-down"></i>';
 
-    public string $tpl='v1';
+    public string $tpl = 'v1';
 
     /**
      * Perform the action.
