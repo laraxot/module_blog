@@ -20,6 +20,7 @@ namespace Modules\Blog\Models;
  * @property string|null                     $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Modules\Blog\Database\Factories\ImageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Image   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Image   newQuery()
@@ -35,21 +36,22 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Image   whereSrc($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Image   whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Image   whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class Image extends BaseModel   // BaseModelLang?
 {/**
      * @var string[]
      */
-                                        protected $fillable = [
-                                            'id',
-                                            'post_type',
-                                            'post_id',
-                                            'src',
-                                            'src_out',
-                                            'width',
-                                            'height',
-                                            'user_id',
-                                            'note',
-                                        ];
+                                            protected $fillable = [
+                                                'id',
+                                                'post_type',
+                                                'post_id',
+                                                'src',
+                                                'src_out',
+                                                'width',
+                                                'height',
+                                                'user_id',
+                                                'note',
+                                            ];
 }

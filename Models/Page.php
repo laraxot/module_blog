@@ -18,21 +18,26 @@ use Sushi\Sushi;
  * @property string                                              $ns
  * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
  * @property int|null                                            $sons_count
+ *
  * @method static \Modules\Blog\Database\Factories\PageFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   query()
  * @method static \Illuminate\Database\Eloquent\Builder|Page   whereId($value)
- * @property int|null $parent_id
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ *
+ * @property int|null                                            $parent_id
+ * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereGuid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereNs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereParentId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Page> $sons
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Page> $sons
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Page> $sons
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ *
+ * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
+ *
  * @mixin \Eloquent
  */
 class Page extends BaseModel

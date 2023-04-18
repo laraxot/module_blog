@@ -43,6 +43,7 @@ use Spatie\Translatable\HasTranslations;
  * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
  * @property int|null                                                                          $children_count
  * @property Category|null                                                                     $parent
+ *
  * @method static \Kalnoy\Nestedset\Collection<int,       static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsAndSelf($id, array $columns = [])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsOf($id, array $columns = [])
@@ -97,17 +98,19 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder|Category                        withTrashed()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category withoutRoot()
  * @method static Builder|Category                        withoutTrashed()
- * @property string $slug
- * @property array|null $description
- * @property int $_lft
- * @property int $_rgt
- * @property string|null $icon_src
- * @property \Illuminate\Support\Carbon|null $deleted_at
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $children
- * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
+ *
+ * @property string                                                                            $slug
+ * @property array|null                                                                        $description
+ * @property int                                                                               $_lft
+ * @property int                                                                               $_rgt
+ * @property string|null                                                                       $icon_src
+ * @property \Illuminate\Support\Carbon|null                                                   $deleted_at
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
+ *
+ * @method static \Kalnoy\Nestedset\Collection<int,       static> all($columns = ['*'])
+ * @method static \Kalnoy\Nestedset\Collection<int,       static> get($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDeletedAt($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescription($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIconSrc($value)
@@ -115,26 +118,35 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereName($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereRgt($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereSlug($value)
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $children
+ *
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
+ *
  * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $children
+ *
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
+ *
  * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $children
+ *
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
+ *
  * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property-read \Kalnoy\Nestedset\Collection<int, Category> $children
+ *
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
+ *
  * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
+ *
  * @mixin \Eloquent
  */
 class Category extends Model

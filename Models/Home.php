@@ -34,6 +34,7 @@ use Sushi\Sushi;
  * @property mixed                                                                     $url
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
  * @property int|null                                                                  $widgets_count
+ *
  * @method static \Modules\Blog\Database\Factories\HomeFactory        factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Home          newQuery()
@@ -46,15 +47,17 @@ use Sushi\Sushi;
  * @method static \Illuminate\Database\Eloquent\Builder|Home          whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Home          whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ *
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>  $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>  $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>  $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ *
  * @mixin \Eloquent
  */
 class Home extends BaseModelLang

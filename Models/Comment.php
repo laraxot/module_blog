@@ -29,6 +29,7 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @property int|null                                                                     $rating_objectives_count
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
  * @property mixed                                                                        $url
+ *
  * @method static \Modules\Blog\Database\Factories\CommentFactory     factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       newQuery()
@@ -36,22 +37,24 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       query()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment       withRating()
- * @property int $id
- * @property string|null $commentator_type
- * @property int|null $commentator_id
- * @property string $commentable_type
- * @property int $commentable_id
- * @property int|null $parent_id
- * @property string $original_text
- * @property string $text
- * @property string|null $extra
- * @property string|null $approved_at
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ *
+ * @property int                                                                          $id
+ * @property string|null                                                                  $commentator_type
+ * @property int|null                                                                     $commentator_id
+ * @property string                                                                       $commentable_type
+ * @property int                                                                          $commentable_id
+ * @property int|null                                                                     $parent_id
+ * @property string                                                                       $original_text
+ * @property string                                                                       $text
+ * @property string|null                                                                  $extra
+ * @property string|null                                                                  $approved_at
+ * @property \Illuminate\Support\Carbon|null                                              $created_at
+ * @property \Illuminate\Support\Carbon|null                                              $updated_at
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Comment whereApprovedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment whereCommentableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment whereCommentableType($value)
@@ -64,22 +67,24 @@ use Modules\Rating\Models\Traits\RatingTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Comment whereParentId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Comment whereUpdatedAt($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ *
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ *
  * @mixin \Eloquent
  */
 class Comment extends BaseModelLang

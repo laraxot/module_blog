@@ -13,13 +13,15 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable query()
- * @property int $category_id
- * @property string $categorizable_type
- * @property int $categorizable_id
- * @property string|null $created_by
- * @property string|null $updated_by
+ *
+ * @property int                             $category_id
+ * @property string                          $categorizable_type
+ * @property int                             $categorizable_id
+ * @property string|null                     $created_by
+ * @property string|null                     $updated_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereCategorizableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereCategorizableType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereCategoryId($value)
@@ -27,6 +29,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereCreatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Categorizable whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class Categorizable extends BaseMorphPivot

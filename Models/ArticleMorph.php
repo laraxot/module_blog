@@ -19,6 +19,7 @@ namespace Modules\Blog\Models;
  * @property string|null                     $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph query()
@@ -34,6 +35,7 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereRelatedType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph whereUpdatedBy($value)
+ *
  * @mixin \Eloquent
  */
 class ArticleMorph extends BaseMorphPivot

@@ -19,6 +19,7 @@ namespace Modules\Blog\Models;
  * @property string|null                     $deleted_by
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph query()
@@ -34,10 +35,13 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereRelatedType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUpdatedBy($value)
+ *
  * @property int|null $event_id
  * @property int|null $user_id
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereEventId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|EventMorph whereUserId($value)
+ *
  * @mixin \Eloquent
  */
 class EventMorph extends BaseMorphPivot

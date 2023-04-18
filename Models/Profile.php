@@ -95,6 +95,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @property User|null                                                                    $user
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
  * @property int|null                                                                     $widgets_count
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
  * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
@@ -148,21 +149,23 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- * @property string|null $last_name
- * @property string|null $emails
- * @property string|null $mobiles
- * @property string|null $envelope_id
- * @property int|null $is_signed
- * @property int $company_selected_id
- * @property string $company_data_requests
- * @property string|null $nexi_transaction_code
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role> $roles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ *
+ * @property string|null                                                                  $last_name
+ * @property string|null                                                                  $emails
+ * @property string|null                                                                  $mobiles
+ * @property string|null                                                                  $envelope_id
+ * @property int|null                                                                     $is_signed
+ * @property int                                                                          $company_selected_id
+ * @property string                                                                       $company_data_requests
+ * @property string|null                                                                  $nexi_transaction_code
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status>   $statuses
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCompanyDataRequests($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCompanySelectedId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereEmails($value)
@@ -172,34 +175,36 @@ use Spatie\Permission\Traits\HasRoles;
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereMobiles($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Profile whereNexiTransactionCode($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role> $roles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role> $roles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role> $roles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article> $articles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role> $roles
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ *
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status>   $statuses
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status>   $statuses
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status>   $statuses
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status>   $statuses
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
+ *
  * @mixin \Eloquent
  */
 class Profile extends BaseModelLang implements ModelProfileContract
