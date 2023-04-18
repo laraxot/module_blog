@@ -13,7 +13,8 @@ use Modules\Blog\Actions\GetCategoryOptionsByModelAction;
 use Modules\Blog\Models\Category;
 use Modules\Cms\Actions\GetViewAction;
 
-class Categories extends Component {
+class Categories extends Component
+{
     public string $tpl;
     public string $name;
     public array $form_data = [];
@@ -34,7 +35,8 @@ class Categories extends Component {
     /**
      * @param mixed $value
      */
-    public function mount(string $name, Model $model, $value, string $tpl = 'v1'): void {
+    public function mount(string $name, Model $model, $value, string $tpl = 'v1'): void
+    {
         $this->name = $name;
         $this->model = $model;
         $this->model_type = Str::snake(class_basename($model));
@@ -47,7 +49,8 @@ class Categories extends Component {
         // $this->values = $value->pluck('id')->all();
     }
 
-    public function setValues(array $values): void {
+    public function setValues(array $values): void
+    {
         $this->values = $values;
     }
     /*
@@ -82,7 +85,8 @@ class Categories extends Component {
     }
     */
 
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */
@@ -102,7 +106,8 @@ class Categories extends Component {
      *
      * @return void
      */
-    public function selectedOptions($value) {
+    public function selectedOptions($value)
+    {
         $value = Arr::wrap($value);
         $this->selectedOptions = $value;
     }

@@ -15,7 +15,8 @@ use Modules\Xot\Datas\XotData;
 use WireElements\Pro\Components\Modal\Modal;
 use WireElements\Pro\Concerns\InteractsWithConfirmationModal;
 
-class Crud extends Modal {
+class Crud extends Modal
+{
     use InteractsWithConfirmationModal;
 
     public string $tpl;
@@ -23,7 +24,8 @@ class Crud extends Modal {
     public array $form_data = [];
     public string $model_class;
 
-    public function mount(string $model_type, string $tpl = 'v1'): void {
+    public function mount(string $model_type, string $tpl = 'v1'): void
+    {
         $xot = XotData::make();
 
         $this->tpl = $tpl;
@@ -31,11 +33,13 @@ class Crud extends Modal {
         $this->model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type); // collect(config('morph_map'))->get($model_type);
     }
 
-    public static function getName(): string {
+    public static function getName(): string
+    {
         return 'modal.category.crud';
     }
 
-    public function render(): Renderable {
+    public function render(): Renderable
+    {
         /**
          * @phpstan-var view-string
          */
@@ -50,7 +54,8 @@ class Crud extends Modal {
         return view($view, $view_params);
     }
 
-    public static function behavior(): array {
+    public static function behavior(): array
+    {
         return [
             // Close the modal if the escape key is pressed
             'close-on-escape' => false,
@@ -63,7 +68,8 @@ class Crud extends Modal {
         ];
     }
 
-    public static function attributes(): array {
+    public static function attributes(): array
+    {
         return [
             // Set the modal size to 2xl, you can choose between:
             // xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl
@@ -71,12 +77,14 @@ class Crud extends Modal {
         ];
     }
 
-    public function add(): void {
+    public function add(): void
+    {
         app(AddCategoryByModelClassAction::class)->execute($this->form_data['name'], $this->model_class);
         session()->flash('message', 'Category successfully updated.');
     }
 
-    public function sub(string $id): void {
+    public function sub(string $id): void
+    {
         $this->askForConfirmation(
             callback: function () use ($id) {
                 $tmp = app($this->model_class)->make();

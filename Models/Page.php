@@ -27,7 +27,8 @@ use Sushi\Sushi;
  *
  * @mixin \Eloquent
  */
-class Page extends BaseModel {
+class Page extends BaseModel
+{
     use Sushi;
     /**
      * @var string[]
@@ -50,11 +51,13 @@ class Page extends BaseModel {
 
     // --------- relationship ---------------
 
-    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
+    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    public function getRows(): array {
+    public function getRows(): array
+    {
         // creates nss array
         $nss = [];
 
