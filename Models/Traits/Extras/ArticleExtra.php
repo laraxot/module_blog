@@ -68,6 +68,9 @@ trait ArticleExtra
     public function submittedAt(): ?Carbon
     {
         $res = $this->submitted_at;
+        if (is_string($res)) {
+            $res = Carbon::parse($res);
+        }
 
         return $res;
     }
@@ -75,6 +78,9 @@ trait ArticleExtra
     public function approvedAt(): ?Carbon
     {
         $res = $this->approved_at;
+        if (is_string($res)) {
+            $res = Carbon::parse($res);
+        }
 
         return $res;
     }
