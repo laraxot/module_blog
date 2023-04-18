@@ -13,6 +13,9 @@ use Sushi\Sushi;
  * Modules\Blog\Models\Page.
  *
  * @property int                                                 $id
+ * @property string                                              $title
+ * @property string                                              $guid
+ * @property string                                              $ns
  * @property \Illuminate\Database\Eloquent\Collection<int, Page> $sons
  * @property int|null                                            $sons_count
  *
@@ -24,8 +27,7 @@ use Sushi\Sushi;
  *
  * @mixin \Eloquent
  */
-class Page extends BaseModel
-{
+class Page extends BaseModel {
     use Sushi;
     /**
      * @var string[]
@@ -48,13 +50,11 @@ class Page extends BaseModel
 
     // --------- relationship ---------------
 
-    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
+    public function sons(): \Illuminate\Database\Eloquent\Relations\HasMany {
         return $this->hasMany(self::class, 'parent_id', 'id');
     }
 
-    public function getRows(): array
-    {
+    public function getRows(): array {
         // creates nss array
         $nss = [];
 

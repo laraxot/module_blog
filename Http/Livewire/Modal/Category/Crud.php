@@ -10,49 +10,32 @@ use Modules\Blog\Actions\AddCategoryByModelClassAction;
 use Modules\Blog\Actions\GetCategoryByModelTypeAction;
 use Modules\Blog\Actions\GetCategoryOptionsByModelTypeAction;
 use Modules\Cms\Actions\GetViewAction;
+use Modules\Xot\Actions\GetModelClassByModelTypeAction;
+use Modules\Xot\Datas\XotData;
 use WireElements\Pro\Components\Modal\Modal;
 use WireElements\Pro\Concerns\InteractsWithConfirmationModal;
 
-class Crud extends Modal
-{
+class Crud extends Modal {
     use InteractsWithConfirmationModal;
 
     public string $tpl;
     public string $model_type;
-    // public string $name;
     public array $form_data = [];
     public string $model_class;
-    // public array $options = [];
-    // public array $selectedTasks = [];
-    // public array $selectedOptions = [];
-    // public array $values = [];
 
-    // /**
-    //  * @var mixed
-    //  */
-    // public $value;
+    public function mount(string $model_type, string $tpl = 'v1'): void {
+        $xot = XotData::make();
 
-    // public Model $model;
-
-    // public string $model_type;
-
-    /**
-     * @param mixed $value
-     */
-    public function mount(string $model_type, string $tpl = 'v1'): void
-    {
         $this->tpl = $tpl;
         $this->model_type = $model_type;
-        $this->model_class = collect(config('morph_map'))->get($model_type);
+        $this->model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type); // collect(config('morph_map'))->get($model_type);
     }
 
-    public static function getName()
-    {
+    public static function getName(): string {
         return 'modal.category.crud';
     }
 
-    public function render(): Renderable
-    {
+    public function render(): Renderable {
         /**
          * @phpstan-var view-string
          */
@@ -67,8 +50,7 @@ class Crud extends Modal
         return view($view, $view_params);
     }
 
-    public static function behavior(): array
-    {
+    public static function behavior(): array {
         return [
             // Close the modal if the escape key is pressed
             'close-on-escape' => false,
@@ -81,8 +63,7 @@ class Crud extends Modal
         ];
     }
 
-    public static function attributes(): array
-    {
+    public static function attributes(): array {
         return [
             // Set the modal size to 2xl, you can choose between:
             // xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl
@@ -90,14 +71,12 @@ class Crud extends Modal
         ];
     }
 
-    public function add(): void
-    {
+    public function add(): void {
         app(AddCategoryByModelClassAction::class)->execute($this->form_data['name'], $this->model_class);
         session()->flash('message', 'Category successfully updated.');
     }
 
-    public function sub(string $id): void
-    {
+    public function sub(string $id): void {
         $this->askForConfirmation(
             callback: function () use ($id) {
                 $tmp = app($this->model_class)->make();

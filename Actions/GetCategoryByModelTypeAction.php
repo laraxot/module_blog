@@ -8,19 +8,18 @@ namespace Modules\Blog\Actions;
 
 use Illuminate\Support\Collection;
 use Modules\Blog\Models\Category;
+use Modules\Xot\Actions\GetModelClassByModelTypeAction;
 use Spatie\QueueableAction\QueueableAction;
 
-class GetCategoryByModelTypeAction
-{
+class GetCategoryByModelTypeAction {
     use QueueableAction;
 
     /**
      * Execute the action.
      */
-    public function execute(string $model_type): Collection
-    {
+    public function execute(string $model_type): Collection {
         $options = Category::ofType($model_type)->get();
-        $model_class = collect(config('morph_map'))->get($model_type);
+        $model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
         if (0 == count($options)) {
             $config_key = $model_type.'.categories';
             $all = config($config_key);

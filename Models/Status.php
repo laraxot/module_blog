@@ -9,6 +9,7 @@ use Spatie\ModelStatus\Status as BaseStatus;
 /**
  * Modules\Blog\Models\Status.
  *
+ * @property string                                        $name
  * @property \Illuminate\Database\Eloquent\Model|\Eloquent $model
  *
  * @method static \Illuminate\Database\Eloquent\Builder|Status newModelQuery()
@@ -17,8 +18,7 @@ use Spatie\ModelStatus\Status as BaseStatus;
  *
  * @mixin \Eloquent
  */
-class Status extends BaseStatus
-{
+class Status extends BaseStatus {
     protected $fillable = [
         'id',
         'name',
