@@ -11,7 +11,6 @@ namespace Modules\Blog\Models;
  * @method static \Illuminate\Database\Eloquent\Builder|Label   newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Label   newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Label   query()
- *
  * @mixin \Eloquent
  */
 class Label extends BaseModel

@@ -64,7 +64,6 @@ use Spatie\Tags\HasTags; // spatie tags
  * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\ModelStatus\Status>    $statuses
  * @property int|null                                                                     $statuses_count
  * @property int|null                                                                     $tags_count
- *
  * @method static \Illuminate\Database\Eloquent\Builder|Article       approved()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       article($id)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       author($id)
@@ -113,7 +112,94 @@ use Spatie\Tags\HasTags; // spatie tags
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutAnyCategories()
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutCategories($categories)
  * @method static \Illuminate\Database\Eloquent\Builder|Article       withoutTags(\ArrayAccess|\Spatie\Tags\Tag|array|string $tags, ?string $type = null)
- *
+ * @property int $id
+ * @property int|null $pos
+ * @property int|null $user_id
+ * @property int|null $is_featured
+ * @property int|null $status_id
+ * @property int $show_on_homepage
+ * @property int|null $read_time
+ * @property int|null $author_id
+ * @property int $is_pinned
+ * @property string|null $submitted_at
+ * @property string|null $approved_at
+ * @property string|null $shared_at
+ * @property string|null $declined_at
+ * @property string|null $original_url
+ * @property int|null $series_id
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $articles
+ * @property \Kalnoy\Nestedset\Collection<int, \Modules\Blog\Models\Category> $categories
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Comment> $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Like> $likesRelation
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\Tags\Tag> $tags
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $sons
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereApprovedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereAuthorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereDeclinedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereIsFeatured($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereIsPinned($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereOriginalUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article wherePos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereRatingsAvg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereRatingsCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereReadTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereSeriesId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereSharedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereShowOnHomepage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereStatusId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereSubmittedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Article withCategories($categories)
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $articles
+ * @property \Kalnoy\Nestedset\Collection<int, \Modules\Blog\Models\Category> $categories
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Comment> $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Like> $likesRelation
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\Tags\Tag> $tags
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $sons
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $articles
+ * @property \Kalnoy\Nestedset\Collection<int, \Modules\Blog\Models\Category> $categories
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Comment> $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Like> $likesRelation
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\Tags\Tag> $tags
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $sons
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $articles
+ * @property \Kalnoy\Nestedset\Collection<int, \Modules\Blog\Models\Category> $categories
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Comment> $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Like> $likesRelation
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\Tags\Tag> $tags
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $sons
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $articles
+ * @property \Kalnoy\Nestedset\Collection<int, \Modules\Blog\Models\Category> $categories
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Comment> $comments
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Like> $likesRelation
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $myRatings
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratingObjectives
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Rating\Models\Rating> $ratings
+ * @property \Illuminate\Database\Eloquent\Collection<int, \Spatie\Tags\Tag> $tags
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, Article> $sons
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status> $statuses
  * @mixin \Eloquent
  */
 class Article extends BaseModelLang implements HasLikeContract
