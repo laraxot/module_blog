@@ -67,16 +67,15 @@ trait ArticleExtra
 
     public function submittedAt(): ?Carbon
     {
-        return $this->submitted_at;
+        $res = $this->submitted_at;
+
+        return $res;
     }
 
     public function approvedAt(): ?Carbon
     {
         $res = $this->approved_at;
-        // Call to function is_string() with Illuminate\Support\Carbon|null will always evaluate to false
-        // if(is_string($res)){
-        //    $res=Carbon::parse($res);
-        // }
+
         return $res;
     }
 
