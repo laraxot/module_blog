@@ -30,7 +30,7 @@ class Crud extends Modal
 
         $this->tpl = $tpl;
         $this->model_type = $model_type;
-        $this->model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type); // collect(config('morph_map'))->get($model_type);
+        $this->model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
     }
 
     public static function getName(): string
