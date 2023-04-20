@@ -42,16 +42,17 @@ class CategoryPanel extends XotBasePanel
         // $rows = $this->row->all();
 
         $rows = Category::get();
-        $rows2 = $rows->map(function ($item) {
-            // dddx($item);
-            if ('' !== $item->name) {
-                // dddx($item->name);
-                return [
-                    'label' => $item->name,
-                    'key' => $item->id,
-                ];
-            }
-        })->all();
+        $rows2 = $rows->map(
+            function ($item) {
+                // dddx($item);
+                if ('' !== $item->name) {
+                    // dddx($item->name);
+                    return [
+                        'label' => $item->name,
+                        'key' => $item->id,
+                    ];
+                }
+            })->all();
 
         // dddx($rows2);
 

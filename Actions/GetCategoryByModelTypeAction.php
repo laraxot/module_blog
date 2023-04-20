@@ -17,6 +17,7 @@ class GetCategoryByModelTypeAction
 
     /**
      * Execute the action.
+     * -- da Collection a DataCollection !!
      */
     public function execute(string $model_type): Collection
     {
