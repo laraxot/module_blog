@@ -69,6 +69,10 @@ class CreateCategoriesTable extends XotBaseMigration
                     $table->softDeletes();
                 }
 
+                if (! $this->hasColumn('order_column')) {
+                    $table->unsignedInteger('order_column')->nullable()->index();
+                }
+
                 // --- Change ---
                 // if ($this->hasColumn('parent_id')) {
                 //     $table->integer('parent_id')->default(0)->nullable()->change();

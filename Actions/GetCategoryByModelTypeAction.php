@@ -21,14 +21,15 @@ class GetCategoryByModelTypeAction
      */
     public function execute(string $model_type): Collection
     {
-        $options = Category::ofType($model_type)->get();
-        $model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
+        $options = Category::ofType($model_type)->ordered()->get();
+
         if (0 == count($options)) {
             $config_key = $model_type.'.categories';
             $all = config($config_key);
             if (! is_array($all)) {
                 throw new \Exception('Config key [[ '.$config_key.' ]] is not array');
             }
+            $model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
             $tmp = app($model_class)->make();
             $tmp->id = 0;
             $tmp->attachCategories($all);

@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Modules\Blog\Http\Livewire\Modal\Category;
 
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Database\Eloquent\Model;
 use Modules\Blog\Actions\AddCategoryByModelClassAction;
 use Modules\Blog\Actions\GetCategoryByModelTypeAction;
-use Modules\Blog\Actions\GetCategoryOptionsByModelTypeAction;
+use Modules\Blog\Models\Category;
 use Modules\Cms\Actions\GetViewAction;
+use Modules\UI\Services\ThemeService;
 use Modules\Xot\Actions\GetModelClassByModelTypeAction;
-use Modules\Xot\Datas\XotData;
 use WireElements\Pro\Components\Modal\Modal;
 use WireElements\Pro\Concerns\InteractsWithConfirmationModal;
 
@@ -26,11 +25,10 @@ class Crud extends Modal
 
     public function mount(string $model_type, string $tpl = 'v1'): void
     {
-        $xot = XotData::make();
-
         $this->tpl = $tpl;
         $this->model_type = $model_type;
         $this->model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
+        // ThemeService::add('https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js');
     }
 
     public static function getName(): string
@@ -44,11 +42,11 @@ class Crud extends Modal
          * @phpstan-var view-string
          */
         $view = app(GetViewAction::class)->execute($this->tpl);
+        $categories = app(GetCategoryByModelTypeAction::class)->execute($this->model_type);
 
         $view_params = [
             'view' => $view,
-            // 'categories' => app(GetCategoryOptionsByModelTypeAction::class)->execute($this->model_type),
-            'categories' => app(GetCategoryByModelTypeAction::class)->execute($this->model_type),
+            'categories' => $categories,
         ];
 
         return view($view, $view_params);
@@ -73,14 +71,22 @@ class Crud extends Modal
         return [
             // Set the modal size to 2xl, you can choose between:
             // xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl
-            'size' => 'md',
+            'size' => '2xl',
         ];
+    }
+
+    public function updateOrder(array $list)
+    {
+        $order = collect($list)->pluck('value')->all();
+        Category::setNewOrder($order);
+        $this->emit('refresh');
+        session()->flash('message', 'Order successfully updated. '.now());
     }
 
     public function add(): void
     {
         app(AddCategoryByModelClassAction::class)->execute($this->form_data['name'], $this->model_class);
-        session()->flash('message', 'Category successfully updated.');
+        session()->flash('message', 'Category successfully updated. '.now());
     }
 
     public function sub(string $id): void

@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Kalnoy\Nestedset\NestedSet;
 use Kalnoy\Nestedset\NodeTrait;
 use Modules\Xot\Services\RouteService;
+use Spatie\EloquentSortable\SortableTrait;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
@@ -157,6 +158,7 @@ class Category extends Model
     use NodeTrait;
     use SoftDeletes;
     // use ValidatingTrait;
+    use SortableTrait; // nella versione originale non c'e' ma e' molto utile
 
     /**
      * {@inheritdoc}
@@ -174,6 +176,7 @@ class Category extends Model
      * {@inheritdoc}
      */
     protected $casts = [
+        'id' => 'string',
         'slug' => 'string',
         NestedSet::LFT => 'integer',
         NestedSet::RGT => 'integer',
