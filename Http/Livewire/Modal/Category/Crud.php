@@ -75,7 +75,7 @@ class Crud extends Modal
         ];
     }
 
-    public function updateOrder(array $list)
+    public function updateOrder(array $list): void
     {
         $order = collect($list)->pluck('value')->all();
         Category::setNewOrder($order);
