@@ -25,13 +25,7 @@ class CategoryPanel extends XotBasePanel
      */
     public function optionLabel($row): string
     {
-        // $name = $row->name;
-        // if (is_array($name)) {
-        //     $name = implode('-', $name);
-        // }
-
-        // return (string) $name;
-        return (string) $row->name;
+        return strval($row->name);
     }
 
     /**
