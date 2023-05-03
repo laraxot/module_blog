@@ -5,11 +5,12 @@ declare(strict_types=1);
 namespace Modules\Blog\Models;
 
 /**
- * Modules\Blog\Models\ArticleMorph
+ * Modules\Blog\Models\ArticleMorph.
  *
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ArticleMorph query()
+ *
  * @mixin \Eloquent
  */
 class ArticleMorph extends BaseMorphPivot

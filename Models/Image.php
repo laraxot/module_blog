@@ -7,27 +7,28 @@ namespace Modules\Blog\Models;
 // ----- traits ----
 
 /**
- * Modules\Blog\Models\Image
+ * Modules\Blog\Models\Image.
  *
  * @method static \Modules\Blog\Database\Factories\ImageFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Image newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Image newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Image query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Image   newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Image   newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Image   query()
+ *
  * @mixin \Eloquent
  */
 class Image extends BaseModel   // BaseModelLang?
 {/**
      * @var string[]
      */
-                                                                                        protected $fillable = [
-                                                                                            'id',
-                                                                                            'post_type',
-                                                                                            'post_id',
-                                                                                            'src',
-                                                                                            'src_out',
-                                                                                            'width',
-                                                                                            'height',
-                                                                                            'user_id',
-                                                                                            'note',
-                                                                                        ];
+                                                                                            protected $fillable = [
+                                                                                                'id',
+                                                                                                'post_type',
+                                                                                                'post_id',
+                                                                                                'src',
+                                                                                                'src_out',
+                                                                                                'width',
+                                                                                                'height',
+                                                                                                'user_id',
+                                                                                                'note',
+                                                                                            ];
 }
