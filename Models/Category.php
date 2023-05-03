@@ -28,24 +28,30 @@ use Spatie\Sluggable\SlugOptions;
 use Spatie\Translatable\HasTranslations;
 
 /**
- * Modules\Blog\Models\Category.
+ * Modules\Blog\Models\Category
  *
- * @property int                                                                               $id
- * @property string                                                                            $name
- * @property int                                                                               $parent_id
- * @property string|null                                                                       $created_by
- * @property string|null                                                                       $updated_by
- * @property \Illuminate\Support\Carbon|null                                                   $created_at
- * @property \Illuminate\Support\Carbon|null                                                   $updated_at
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property int|null                                                                          $articles_count
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property int|null                                                                          $categorizables_count
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- * @property int|null                                                                          $children_count
- * @property Category|null                                                                     $parent
- *
- * @method static \Kalnoy\Nestedset\Collection<int,       static> all($columns = ['*'])
+ * @property string $id
+ * @property string $slug
+ * @property array|null $name
+ * @property array|null $description
+ * @property int $_lft
+ * @property int $_rgt
+ * @property int|null $parent_id
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $icon_src
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property int|null $order_column
+ * @property-read \Kalnoy\Nestedset\Collection<int, Category> $articles
+ * @property-read int|null $articles_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
+ * @property-read int|null $categorizables_count
+ * @property-read \Kalnoy\Nestedset\Collection<int, Category> $children
+ * @property-read int|null $children_count
+ * @property-read Category|null $parent
+ * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsAndSelf($id, array $columns = [])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category ancestorsOf($id, array $columns = [])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category applyNestedSetScope(?string $table = null)
@@ -56,7 +62,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category descendantsOf($id, array $columns = [], $andSelf = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category fixSubtree($root)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category fixTree($root = null)
- * @method static \Kalnoy\Nestedset\Collection<int,       static> get($columns = ['*'])
+ * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category getNodeData($id, $required = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category getPlainNodeData($id, $required = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category getTotalErrors()
@@ -69,11 +75,12 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category newModelQuery()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category newQuery()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category ofType(string $type)
- * @method static Builder|Category                        onlyTrashed()
+ * @method static Builder|Category onlyTrashed()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereAncestorOf(bool $id, bool $andSelf = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereDescendantOf($id)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereNodeBetween($values)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category orWhereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category ordered(string $direction = 'asc')
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category query()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category rebuildSubtree($root, array $data, $delete = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category rebuildTree(array $data, $delete = false, $root = null)
@@ -83,71 +90,30 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereAncestorOrSelf($id)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedAt($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereCreatedBy($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDeletedAt($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOf($id, $boolean = 'and', $not = false, $andSelf = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescendantOrSelf(string $id, string $boolean = 'and', string $not = false)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescription($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIconSrc($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereId($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsAfter($id, $boolean = 'and')
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsBefore($id, $boolean = 'and')
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsLeaf()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIsRoot()
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereLft($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereName($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNodeBetween($values, $boolean = 'and', $not = false)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereNotDescendantOf($id)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereOrderColumn($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereParentId($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereRgt($value)
+ * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereSlug($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereUpdatedAt($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereUpdatedBy($value)
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category withDepth(string $as = 'depth')
- * @method static Builder|Category                        withTrashed()
+ * @method static Builder|Category withTrashed()
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category withoutRoot()
- * @method static Builder|Category                        withoutTrashed()
- *
- * @property string                                                                            $slug
- * @property array|null                                                                        $description
- * @property int                                                                               $_lft
- * @property int                                                                               $_rgt
- * @property string|null                                                                       $icon_src
- * @property \Illuminate\Support\Carbon|null                                                   $deleted_at
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- *
- * @method static \Kalnoy\Nestedset\Collection<int,       static> all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\Collection<int,       static> get($columns = ['*'])
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDeletedAt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereDescription($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereIconSrc($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereLft($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereName($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereRgt($value)
- * @method static \Kalnoy\Nestedset\QueryBuilder|Category whereSlug($value)
- *
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- *
- * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- *
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- *
- * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- *
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- *
- * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- *
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- *
- * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
- * @method static \Kalnoy\Nestedset\Collection<int, static> get($columns = ['*'])
- *
+ * @method static Builder|Category withoutTrashed()
  * @mixin \Eloquent
  */
 class Category extends Model
