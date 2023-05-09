@@ -1,10 +1,10 @@
 <x-modal.skin on-submit="delete" :content-padding="false">
     <x-slot name="title">Category Crud</x-slot>
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-10">
             <x-input.group type="text" name="name" />
         </div>
-        <div class="col-2">
+        <div class="col-2 d-flex align-items-end">
             <x-button wire:click="add()">+</x-button>
         </div>
     </div>
