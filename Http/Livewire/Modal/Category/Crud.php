@@ -9,9 +9,9 @@ use Modules\Blog\Actions\AddCategoryByModelClassAction;
 use Modules\Blog\Actions\GetCategoryByModelTypeAction;
 use Modules\Blog\Models\Category;
 use Modules\Cms\Actions\GetViewAction;
-use Modules\Modal\Concerns\InteractsWithConfirmationModal;
-use Modules\Modal\View\Components\Modal\Modal;
 use Modules\UI\Services\ThemeService;
+use Modules\Wire\Concerns\InteractsWithConfirmationModal;
+use Modules\Wire\View\Components\Modal\Modal;
 use Modules\Xot\Actions\GetModelClassByModelTypeAction;
 
 class Crud extends Modal
