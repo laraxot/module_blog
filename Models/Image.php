@@ -20,15 +20,15 @@ class Image extends BaseModel   // BaseModelLang?
 {/**
      * @var string[]
      */
-                                                                                                                                            protected $fillable = [
-                                                                                                                                                'id',
-                                                                                                                                                'post_type',
-                                                                                                                                                'post_id',
-                                                                                                                                                'src',
-                                                                                                                                                'src_out',
-                                                                                                                                                'width',
-                                                                                                                                                'height',
-                                                                                                                                                'user_id',
-                                                                                                                                                'note',
-                                                                                                                                            ];
+                                                                                                                                                protected $fillable = [
+                                                                                                                                                    'id',
+                                                                                                                                                    'post_type',
+                                                                                                                                                    'post_id',
+                                                                                                                                                    'src',
+                                                                                                                                                    'src_out',
+                                                                                                                                                    'width',
+                                                                                                                                                    'height',
+                                                                                                                                                    'user_id',
+                                                                                                                                                    'note',
+                                                                                                                                                ];
 }
