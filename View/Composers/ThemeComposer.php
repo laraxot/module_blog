@@ -201,7 +201,7 @@ class ThemeComposer
      *       ->orderBy('publish_date', 'desc')
      *       ->paginate(10);.
      */
-    public function getPaginatedArticlesByCategoryId(int $id): \Illuminate\Pagination\LengthAwarePaginator
+    public function getPaginatedArticlesByCategoryId(string $id): \Illuminate\Pagination\LengthAwarePaginator
     {
         $rows = Article::published()
             ->publishedUntilToday()
