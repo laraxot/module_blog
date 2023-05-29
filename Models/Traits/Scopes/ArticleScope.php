@@ -17,7 +17,6 @@ trait ArticleScope
      * Scope a query to only include articles different from current article.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param mixed                                 $current_article
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -30,7 +29,6 @@ trait ArticleScope
      * Scope a query to only include articles.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param mixed                                 $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -72,11 +70,11 @@ trait ArticleScope
      * @param int                                   $id
      *
      * @return \Illuminate\Database\Eloquent\Builder
-    public function scopeCategory($query, $id) {
-        return $query->whereHas('category', function ($q) use ($id) {
-            $q->where('id', $id);
-        });
-    }
+     *                                               public function scopeCategory($query, $id) {
+     *                                               return $query->whereHas('category', function ($q) use ($id) {
+     *                                               $q->where('id', $id);
+     *                                               });
+     *                                               }
      */
 
     /**

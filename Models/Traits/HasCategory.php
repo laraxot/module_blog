@@ -99,8 +99,6 @@ trait HasCategory
 
     /**
      * Scope query with all the given categories.
-     *
-     * @param mixed $categories
      */
     public function scopeWithAllCategories(Builder $builder, $categories): Builder
     {
@@ -117,8 +115,6 @@ trait HasCategory
 
     /**
      * Scope query with any of the given categories.
-     *
-     * @param mixed $categories
      */
     public function scopeWithAnyCategories(Builder $builder, $categories): Builder
     {
@@ -131,8 +127,6 @@ trait HasCategory
 
     /**
      * Scope query with any of the given categories.
-     *
-     * @param mixed $categories
      */
     public function scopeWithCategories(Builder $builder, $categories): Builder
     {
@@ -141,8 +135,6 @@ trait HasCategory
 
     /**
      * Scope query without any of the given categories.
-     *
-     * @param mixed $categories
      */
     public function scopeWithoutCategories(Builder $builder, $categories): Builder
     {
@@ -163,8 +155,6 @@ trait HasCategory
 
     /**
      * Determine if the model has any of the given categories.
-     *
-     * @param mixed $categories
      */
     public function hasCategories($categories): bool
     {
@@ -175,8 +165,6 @@ trait HasCategory
 
     /**
      * Determine if the model has any the given categories.
-     *
-     * @param mixed $categories
      */
     public function hasAnyCategories($categories): bool
     {
@@ -185,8 +173,6 @@ trait HasCategory
 
     /**
      * Determine if the model has all of the given categories.
-     *
-     * @param mixed $categories
      */
     public function hasAllCategories($categories): bool
     {
@@ -197,8 +183,6 @@ trait HasCategory
 
     /**
      * Sync model categories.
-     *
-     * @param mixed $categories
      *
      * @return $this
      */
@@ -212,8 +196,6 @@ trait HasCategory
 
     /**
      * Attach model categories.
-     *
-     * @param mixed $categories
      *
      * @return $this
      */
@@ -241,8 +223,6 @@ trait HasCategory
     /**
      * Detach model categories.
      *
-     * @param mixed $categories
-     *
      * @return $this
      */
     public function detachCategories($categories = null)
@@ -257,8 +237,6 @@ trait HasCategory
 
     /**
      * Prepare category IDs.
-     *
-     * @param mixed $categories
      */
     protected function prepareCategoryIds($categories): array
     {

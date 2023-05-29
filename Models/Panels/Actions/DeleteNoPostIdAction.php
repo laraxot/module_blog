@@ -16,9 +16,6 @@ class DeleteNoPostIdAction extends XotBasePanelAction
 
     public string $icon = '<i class="fas fa-heart-broken"></i>';
 
-    /**
-     * @return mixed
-     */
     public function handle()
     {
         $rows = Post::query()

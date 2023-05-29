@@ -60,8 +60,8 @@ class CategoryPanel extends XotBasePanel
 
     /**
      * Get the fields displayed by the resource.
-
-        'value'=>'..',
+     *
+     * 'value'=>'..',
      */
     public function fields(): array
     {

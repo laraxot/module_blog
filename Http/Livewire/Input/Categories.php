@@ -23,18 +23,12 @@ class Categories extends Component
     public array $selectedOptions = [];
     public array $values = [];
 
-    /**
-     * @var mixed
-     */
     public $value;
 
     public Model $model;
 
     public string $model_type;
 
-    /**
-     * @param mixed $value
-     */
     public function mount(string $name, Model $model, $value, string $tpl = 'v1'): void
     {
         $this->name = $name;

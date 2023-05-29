@@ -25,8 +25,6 @@ class SendMsgAction extends XotBasePanelAction
 
     /**
      * Perform the action.
-     *
-     * @return mixed
      */
     public function handle()
     {

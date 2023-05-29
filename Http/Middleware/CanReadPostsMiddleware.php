@@ -11,9 +11,6 @@ use Illuminate\Http\Request;
  */
 class CanReadPostsMiddleware
 {
-    /**
-     * @return mixed
-     */
     public function handle(Request $request, \Closure $next)
     {
         return $next($request);

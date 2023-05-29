@@ -20,9 +20,6 @@ class TestAction extends XotBasePanelAction
 
     public bool $onContainer = true;
 
-    /**
-     * @return mixed
-     */
     public function handle()
     {
         return $this->panel->view();

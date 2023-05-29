@@ -50,7 +50,7 @@ class PivotRequiredRule implements Rule
     /**
      * Create a new rule instance.
      */
-    public function __construct(string $field_name, ?string $field_name_required = null)
+    public function __construct(string $field_name, string $field_name_required = null)
     {
         // dddx($field_name);
         $this->field_name = $field_name;

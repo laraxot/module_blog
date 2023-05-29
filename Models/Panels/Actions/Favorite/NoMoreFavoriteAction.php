@@ -25,7 +25,7 @@ class NoMoreFavoriteAction extends XotBasePanelAction
     /**
      * @var int|string|null
      */
-    public $user_id = null;
+    public $user_id;
 
     /**
      * NoMoreFavoriteAction constructor.
@@ -36,10 +36,6 @@ class NoMoreFavoriteAction extends XotBasePanelAction
     {
         $this->user_id = $user_id;
     }
-
-    /**
-     * @return mixed
-     */
 
     // -- Perform the action on the given models.
     public function handle()
