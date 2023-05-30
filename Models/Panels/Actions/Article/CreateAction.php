@@ -13,7 +13,8 @@ use Modules\Cms\Models\Panels\Actions\XotBasePanelAction;
 /**
  * Class CreateArticleAction.
  */
-class CreateAction extends XotBasePanelAction {
+class CreateAction extends XotBasePanelAction
+{
     public bool $onContainer = true;
 
     public string $icon = '<i class="fa fa-arrow-up"></i><i class="fa fa-arrow-down"></i>';
@@ -21,7 +22,8 @@ class CreateAction extends XotBasePanelAction {
     /**
      * Perform the action.
      */
-    public function handle(): Renderable {
+    public function handle(): Renderable
+    {
         return $this->panel->view();
     }
 }
