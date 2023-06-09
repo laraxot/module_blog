@@ -9,7 +9,6 @@ use Modules\Blog\Actions\AddCategoryByModelClassAction;
 use Modules\Blog\Actions\GetCategoryByModelTypeAction;
 use Modules\Blog\Models\Category;
 use Modules\Cms\Actions\GetViewAction;
-use Modules\UI\Services\ThemeService;
 use Modules\Wire\Concerns\InteractsWithConfirmationModal;
 use Modules\Wire\View\Components\Modal\Modal;
 use Modules\Xot\Actions\GetModelClassByModelTypeAction;
@@ -28,7 +27,6 @@ class Crud extends Modal
         $this->tpl = $tpl;
         $this->model_type = $model_type;
         $this->model_class = app(GetModelClassByModelTypeAction::class)->execute($model_type);
-        // ThemeService::add('https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js');
     }
 
     public static function getName(): string
