@@ -5,8 +5,12 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Panels;
 
 // --- Services --
+use Illuminate\Contracts\Support\Renderable;
+use Modules\Blog\Models\Categorizable;
 use Modules\Blog\Models\Category;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Spatie\QueryBuilder\AllowedFilter;
+use Spatie\QueryBuilder\QueryBuilder;
 
 /**
  * Class CategoryPanel.
@@ -17,6 +21,48 @@ class CategoryPanel extends XotBasePanel
      * The model the resource corresponds to.
      */
     protected static string $model = 'Modules\Blog\Models\Category';
+
+    /**
+     * index navigation.
+     */
+    public function indexNav(): ?Renderable
+    {
+        $categorizable_types = Categorizable::get()->pluck('categorizable_type', 'categorizable_type')->toArray();
+
+        /**
+         * @phpstan-var view-string
+         */
+        $view = 'blog::categories.index.nav';
+        $view_params = [
+            'view' => $view,
+            'categorizable_types' => $categorizable_types,
+        ];
+
+        return view($view, $view_params);
+
+        return null;
+    }
+
+    /**
+     * Build an "index" query for the given resource.
+     * --  \Illuminate\Database\Eloquent\Relations.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     *-- \Illuminate\Database\Eloquent\Builder
+     *
+     * @return \Spatie\QueryBuilder\QueryBuilder
+     */
+    public function indexQuery(array $data, $query)
+    {
+        $query = QueryBuilder::for($query)
+
+            ->allowedFilters([
+                AllowedFilter::scope('of_type'),
+            ]);
+
+        return $query;
+    }
 
     /**
      * on select the option label.

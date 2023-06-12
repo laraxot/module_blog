@@ -9,4 +9,6 @@ return [
         'create' => 'Nuovo',
         'edit' => 'Modifica',
     ],
+    'index' => ['nav' => ['button' => ['search' => 'Cerca']]],
+    'filter[of_type][]' => ['label' => 'Seleziona Modello Associato'],
 ];
