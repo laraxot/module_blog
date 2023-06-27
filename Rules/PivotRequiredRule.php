@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Blog\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
 
 // use Illuminate\Http\Request;

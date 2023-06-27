@@ -11,8 +11,8 @@ use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
 use Modules\Cms\Models\Panels\Actions\ArtisanAction;
 use Modules\Cms\Models\Panels\XotBasePanel;
-use Modules\User\Models\User;
 use Modules\Tag\Models\Tag;
+use Modules\User\Models\User;
 
 /**
  * Class HomePanel.

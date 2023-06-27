@@ -7,8 +7,8 @@ namespace Modules\Blog\View\Composers;
 use Illuminate\Support\Collection;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
-use Modules\User\Services\ProfileService;
 use Modules\Tag\Models\Tag;
+use Modules\User\Services\ProfileService;
 use Modules\Xot\Datas\XotData;
 
 class ThemeComposer
@@ -72,19 +72,19 @@ class ThemeComposer
         return $res;
     }
 
-     public function getArticleCategories(): Collection
-     {
-         $res = Category::ofType('article')->get();
+    public function getArticleCategories(): Collection
+    {
+        $res = Category::ofType('article')->get();
 
-         return $res;
-     }
+        return $res;
+    }
 
-     public function getArticleCategoriesOptions(): Collection
-     {
-         $options = $this->getArticleCategories()->pluck('name', 'id');
+    public function getArticleCategoriesOptions(): Collection
+    {
+        $options = $this->getArticleCategories()->pluck('name', 'id');
 
-         return $options;
-     }
+        return $options;
+    }
 
     /**
      * ----.
@@ -213,16 +213,16 @@ class ThemeComposer
     }
 
     // public function compose(array ...$args):string {
-        /*
-        dddx(
-            [
-            'args'=>$args,
+    /*
+    dddx(
+        [
+        'args'=>$args,
 
-            ]
-        );
-        */
-        // error 404
-        // return 'aaa';
+        ]
+    );
+    */
+    // error 404
+    // return 'aaa';
     // }
     public function getCardEvents(): Collection
     {

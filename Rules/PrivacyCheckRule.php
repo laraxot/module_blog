@@ -6,7 +6,6 @@ namespace Modules\Blog\Rules;
 
 use Illuminate\Contracts\Validation\ImplicitRule;
 use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
 
 // use Illuminate\Http\Request;
