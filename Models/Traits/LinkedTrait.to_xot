@@ -19,7 +19,7 @@ use Modules\Blog\Models\Favorite;
 use Modules\Blog\Models\Image;
 //----- services -----
 use Modules\Lang\Models\Post;
-use Modules\LU\Models\User;
+use Modules\User\Models\User;
 
 use Modules\Cms\Services\PanelService as Panel;
 use Modules\Xot\Services\RouteService;
@@ -31,7 +31,7 @@ use Modules\Tenant\Services\TenantService as Tenant; // per dizionario morph
 /**
  * Modules\Blog\Models\Traits\LinkedTrait.
  *
- * @property \Modules\LU\Models\User|null $user
+ * @property \Modules\User\Models\User|null $user
  * @property \Modules\Lang\Models\Post    $post
  */
 trait LinkedTrait {

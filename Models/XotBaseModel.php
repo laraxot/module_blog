@@ -14,7 +14,7 @@ use Modules\Xot\Traits\Updater;
 /**
  * Modules\Blog\Models\XotBaseModel.
  *
- * @property \Modules\LU\Models\User|null   $user
+ * @property \Modules\User\Models\User|null   $user
  * @property \Modules\Lang\Models\Post|null $post
  * @property string|null                    $post_type
  */

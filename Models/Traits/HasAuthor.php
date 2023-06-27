@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Traits;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Modules\LU\Models\User;
+use Modules\User\Models\User;
 
 trait HasAuthor
 {

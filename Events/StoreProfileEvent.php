@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Events;
 
 use Illuminate\Queue\SerializesModels;
-use Modules\LU\Models\User;
+use Modules\User\Models\User;
 
 /**
  * Class StoreProfileEvent.

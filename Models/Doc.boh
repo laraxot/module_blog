@@ -6,7 +6,7 @@ namespace Modules\Blog\Models;
 
 use Carbon\Carbon;
 //----- traits ----
-use Modules\LU\Models\Traits\HasProfileTrait;
+use Modules\User\Models\Traits\HasProfileTrait;
 use Modules\Rating\Models\Traits\RatingTrait;
 use Modules\Tag\Models\Traits\HasTagTrait;
 
@@ -75,7 +75,7 @@ use Modules\Tag\Models\Traits\HasTagTrait;
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Rating\Models\Rating[] $ratings
  * @property \Illuminate\Database\Eloquent\Collection|\Modules\Blog\Models\Article[]  $sons
  * @property int|null                                                                 $sons_count
- * @property \Modules\LU\Models\User|null                                             $user
+ * @property \Modules\User\Models\User|null                                             $user
  * @method static \Illuminate\Database\Eloquent\Builder|Doc newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Doc newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem($guid)
@@ -98,7 +98,7 @@ use Modules\Tag\Models\Traits\HasTagTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|Doc whereRatingsAvg($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Doc whereRatingsCount($value)
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $linkable
- * @property-read \Modules\LU\Models\PermUser|null $perm
+ * @property-read \Modules\User\Models\PermUser|null $perm
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Lang\Models\Post[] $posts
  * @property-read int|null $posts_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\Modules\Tag\Models\Tag[] $tags

@@ -7,7 +7,7 @@ namespace Modules\Blog\View\Composers;
 use Illuminate\Support\Collection;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Category;
-use Modules\LU\Services\ProfileService;
+use Modules\User\Services\ProfileService;
 use Modules\Tag\Models\Tag;
 use Modules\Xot\Datas\XotData;
 

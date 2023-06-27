@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Modules\Blog\Models\Article;
 use Modules\Blog\Models\Comment;
-use Modules\LU\Models\User;
+use Modules\User\Models\User;
 use Modules\Xot\Models\Image;
 
 /**

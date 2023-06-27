@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Modules\Blog\Models\Traits;
 
 use App\Models\Subscription;
-use App\Models\User;
+use Modules\User\Models\User;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 trait ProvidesSubscriptions

@@ -12,10 +12,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Auth;
 use Modules\Blog\Models\Traits\PrivacyTrait;
 use Modules\Geo\Models\Traits\GeoTrait;
-use Modules\LU\Casts\UserField;
-use Modules\LU\Models\Traits\HasProfileTrait;
-use Modules\LU\Models\User;
+use Modules\User\Casts\UserField;
+use Modules\User\Models\Traits\HasProfileTrait;
 use Modules\Ticket\Models\Traits\HasTicketTrait;
+use Modules\User\Models\User;
 use Modules\Xot\Contracts\ModelProfileContract;
 use Modules\Xot\Models\Traits\WidgetTrait;
 use Spatie\ModelStatus\HasStatuses;
@@ -24,95 +24,133 @@ use Spatie\Permission\Traits\HasRoles;
 /**
  * Modules\Blog\Models\Profile.
  *
- * @property int                                                                          $id
- * @property string|null                                                                  $post_type
- * @property \Illuminate\Support\Carbon|null                                              $created_at
- * @property \Illuminate\Support\Carbon|null                                              $updated_at
- * @property string|null                                                                  $created_by
- * @property string|null                                                                  $updated_by
- * @property string|null                                                                  $deleted_by
- * @property string|null                                                                  $first_name
- * @property string|null                                                                  $last_name
- * @property string|null                                                                  $email
- * @property string|null                                                                  $phone
- * @property string|null                                                                  $address
- * @property int|null                                                                     $user_id
- * @property string|null                                                                  $bio
- * @property string|null                                                                  $emails
- * @property string|null                                                                  $mobiles
- * @property string|null                                                                  $envelope_id
- * @property int|null                                                                     $is_signed
- * @property int                                                                          $company_selected_id
- * @property string                                                                       $company_data_requests
- * @property string|null                                                                  $nexi_transaction_code
- * @property mixed                                                                        $handle
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>  $articles
- * @property int|null                                                                     $articles_count
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $containerWidgets
- * @property int|null                                                                     $container_widgets_count
- * @property string|null                                                                  $full_name
- * @property string|null                                                                  $guid
- * @property string|null                                                                  $image_src
- * @property string|null                                                                  $lang
- * @property string                                                                       $status
- * @property string|null                                                                  $subtitle
- * @property string|null                                                                  $title
- * @property string|null                                                                  $txt
- * @property string|null                                                                  $user_handle
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Permission> $permissions
- * @property int|null                                                                     $permissions_count
- * @property \Modules\Lang\Models\Post|null                                               $post
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post>     $posts
- * @property int|null                                                                     $posts_count
- * @property Profile|null                                                                 $profile
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\LU\Models\Role>       $roles
- * @property int|null                                                                     $roles_count
- * @property mixed                                                                        $url
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Status>   $statuses
- * @property int|null                                                                     $statuses_count
- * @property User|null                                                                    $user
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>    $widgets
- * @property int|null                                                                     $widgets_count
- *
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       currentStatus(...$names)
- * @method static \Modules\Blog\Database\Factories\ProfileFactory     factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       newQuery()
+ * @property int $id
+ * @property string|null $post_type
+ * @property string|null $bio
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $created_by
+ * @property string|null $updated_by
+ * @property string|null $deleted_by
+ * @property string|null $firstname
+ * @property string|null $surname
+ * @property string|null $email
+ * @property string|null $phone
+ * @property string|null $address
+ * @property int|null $user_id
+ * @property string|null $premise
+ * @property string|null $premise_short
+ * @property string|null $locality
+ * @property string|null $locality_short
+ * @property string|null $postal_town
+ * @property string|null $postal_town_short
+ * @property string|null $administrative_area_level_3
+ * @property string|null $administrative_area_level_3_short
+ * @property string|null $administrative_area_level_2
+ * @property string|null $administrative_area_level_2_short
+ * @property string|null $administrative_area_level_1
+ * @property string|null $administrative_area_level_1_short
+ * @property string|null $country
+ * @property string|null $country_short
+ * @property string|null $street_number
+ * @property string|null $street_number_short
+ * @property string|null $route
+ * @property string|null $route_short
+ * @property string|null $postal_code
+ * @property string|null $postal_code_short
+ * @property string|null $googleplace_url
+ * @property string|null $googleplace_url_short
+ * @property string|null $point_of_interest
+ * @property string|null $point_of_interest_short
+ * @property string|null $political
+ * @property string|null $political_short
+ * @property string|null $campground
+ * @property string|null $campground_short
+ * @property string|null $first_name
+ * @property string|null $last_name
+ * @property mixed $handle
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article> $articles
+ * @property-read int|null $articles_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $containerWidgets
+ * @property-read int|null $container_widgets_count
+ * @property string|null $guid
+ * @property string|null $image_src
+ * @property-read string|null $lang
+ * @property string|null $subtitle
+ * @property string|null $title
+ * @property string|null $txt
+ * @property-read string|null $user_handle
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Permission> $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \Modules\Lang\Models\Post|null $post
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Lang\Models\Post> $posts
+ * @property-read int|null $posts_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\User\Models\Role> $roles
+ * @property-read int|null $roles_count
+ * @property-write mixed $url
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Spatie\ModelStatus\Status> $statuses
+ * @property-read int|null $statuses_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget> $widgets
+ * @property-read int|null $widgets_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile currentStatus(...$names)
+ * @method static \Modules\Blog\Database\Factories\ProfileFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang ofItem(string $guid)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       ofLayoutPosition($layout_position)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       otherCurrentStatus(...$names)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       permission($permissions)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       query()
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       role($roles, $guard = null)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereAddress($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereBio($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereCompanyDataRequests($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereCompanySelectedId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereCreatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereDeletedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereEmails($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereEnvelopeId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereFirstName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereIsSigned($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereLastName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereMobiles($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereNexiTransactionCode($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       wherePostType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUpdatedBy($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Profile       whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile ofLayoutPosition(string $layout_position)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile otherCurrentStatus(...$names)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile role($roles, $guard = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAdministrativeAreaLevel1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAdministrativeAreaLevel1Short($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAdministrativeAreaLevel2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAdministrativeAreaLevel2Short($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAdministrativeAreaLevel3($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereAdministrativeAreaLevel3Short($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereBio($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCampground($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCampgroundShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCountry($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCountryShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereCreatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereDeletedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereFirstname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGoogleplaceUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereGoogleplaceUrlShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLastName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLocality($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereLocalityShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePointOfInterest($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePointOfInterestShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePolitical($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePoliticalShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostalCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostalCodeShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostalTown($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePostalTownShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePremise($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile wherePremiseShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereRoute($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereRouteShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereStreetNumber($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereStreetNumberShort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereSurname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUpdatedBy($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Profile whereUserId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|BaseModelLang withPost(string $guid)
- *
  * @mixin \Eloquent
  */
-class Profile extends BaseModelLang implements ModelProfileContract
-{
+class Profile extends BaseModelLang implements ModelProfileContract {
     // use GeoTrait; -- to profile in geo
-    use HasProfileTrait;
+    // use HasProfileTrait;  // E' un profilo, no ha un profilo
     use HasRoles;
     use HasStatuses;
     // use PrivacyTrait;
@@ -155,8 +193,7 @@ class Profile extends BaseModelLang implements ModelProfileContract
 
     // ------- RELATIONSHIP ----------
 
-    public function articles(): HasMany
-    {
+    public function articles(): HasMany {
         return $this->hasMany(Article::class, 'author_id', 'user_id');
     }
 
@@ -177,8 +214,7 @@ class Profile extends BaseModelLang implements ModelProfileContract
     }
     */
 
-    protected function username(): Attribute
-    {
+    protected function username(): Attribute {
         $user = $this->user;
         if (null === $user) {
             // $user1 = User::firstOrCreate(['id' => $this->user_id]);
@@ -193,8 +229,7 @@ class Profile extends BaseModelLang implements ModelProfileContract
         );
     }
 
-    protected function name(): Attribute
-    {
+    protected function name(): Attribute {
         $user = $this->user;
         if (null === $user) {
             $user = (object) [
@@ -208,7 +243,7 @@ class Profile extends BaseModelLang implements ModelProfileContract
     }
 
     /*
-    Access to an undefined property Modules\LU\Models\User::$txt.
+    Access to an undefined property Modules\User\Models\User::$txt.
     protected function bio(): Attribute {
         $user = $this->user;
 
@@ -218,34 +253,29 @@ class Profile extends BaseModelLang implements ModelProfileContract
     }
     */
 
-    protected function githubUsername(): Attribute
-    {
+    protected function githubUsername(): Attribute {
         return Attribute::make(
             get: fn ($value) => $this->github_username ?? '',
         );
     }
 
-    protected function hasTwitterAccount(): Attribute
-    {
+    protected function hasTwitterAccount(): Attribute {
         return Attribute::make(
             get: fn ($value) => false, // ! empty($this->twitter()),
         );
     }
 
-    protected function twitter(): Attribute
-    {
+    protected function twitter(): Attribute {
         return Attribute::make(
             get: fn ($value) => '',
         );
     }
 
-    public function isLoggedInUser(): bool
-    {
+    public function isLoggedInUser(): bool {
         return Auth::id() === $this->getKey();
     }
 
-    public function isBanned(): bool
-    {
+    public function isBanned(): bool {
         return 'ban' === $this->status;
     }
 }// end model
