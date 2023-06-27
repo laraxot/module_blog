@@ -31,7 +31,7 @@ abstract class BasePivot extends Pivot
     /**
      * @var string
      */
-    // protected $connection = 'liveuser_general'; // this will use the specified database conneciton
+    // protected $connection = 'liveuser_general'; // this will use the specified database connection
 
     /**
      * @var array

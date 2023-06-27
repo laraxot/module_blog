@@ -165,7 +165,7 @@ class Profile extends BaseModelLang implements ModelProfileContract
      * se non metto $connection  quando faccio la relazione con lu, prende la connection di lu.
      *
      **/
-    protected $connection = 'mysql'; // this will use the specified database conneciton
+    protected $connection = 'mysql'; // this will use the specified database connection
 
     /**
      * @var string[]
