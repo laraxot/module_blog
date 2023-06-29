@@ -100,15 +100,6 @@ class ProfilePanel extends XotBasePanel
      */
     public function avatar($size = 100): ?string
     {
-        // if (null === $this->row) {
-        //    throw new \Exception('row is null');
-        // }
-        /*
-        if (! property_exists($this->row, 'user')) {
-            throw new \Exception('in ['.get_class($this->row).'] property [user] not exists');
-        }
-        */
-        // 102    Access to an undefined property Illuminate\Database\Eloquent\Model::$user.
         $user = $this->row->user;
 
         if (! \is_object($user) && \is_object($this->row)) {

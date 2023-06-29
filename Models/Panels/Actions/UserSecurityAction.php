@@ -47,9 +47,7 @@ class UserSecurityAction extends XotBasePanelAction
 
         // dddx($data['passwd']);
         $profile = $this->row;
-        if (! property_exists($profile, 'user')) {
-            abort(500);
-        }
+
         $user = $profile->user;
         $user->update(['passwd' => $data['passwd']]);
 
