@@ -1,0 +1,3 @@
+https://github.com/rinvex/laravel-categories
+
+https://github.com/lazychaser/laravel-nestedset  // da collisione su Model Caching for Laravel (https://github.com/GeneaLabs/laravel-model-caching/

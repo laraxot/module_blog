@@ -1,0 +1,23 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+    - phpstan-baseline.neon
+
+parameters:
+
+    level: max
+    paths:
+        - .
+
+    ignoreErrors:
+        - '#Unsafe usage of new static#'
+        - '#Target class [livewire] does not exist#'
+
+    excludePaths:
+        - ./*/*/FileToBeExcluded.php
+        - ./vendor/*/*
+        - ./vendor/*/*/*/*/*
+        - ./vendor/*/*/*/*/*/*
+
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    reportUnmatchedIgnoredErrors: true
