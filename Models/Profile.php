@@ -69,7 +69,7 @@ use Spatie\Permission\Traits\HasRoles;
  * @property string|null                                                                    $first_name
  * @property string|null                                                                    $last_name
  * @property mixed                                                                          $handle
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Article>    $articles
+ * @property \Illuminate\Database\Eloquent\Collection<int, Article>                         $articles
  * @property int|null                                                                       $articles_count
  * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Xot\Models\Widget>      $containerWidgets
  * @property int|null                                                                       $container_widgets_count

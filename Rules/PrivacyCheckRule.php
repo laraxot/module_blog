@@ -49,7 +49,7 @@ class PrivacyCheckRule implements Rule, ImplicitRule
     /**
      * Create a new rule instance.
      */
-    public function __construct(string $field_name = null, string $field_name_required = null)
+    public function __construct(?string $field_name = null, ?string $field_name_required = null)
     {
         // dddx($field_name);
         $this->field_name = $field_name;
@@ -108,6 +108,7 @@ class PrivacyCheckRule implements Rule, ImplicitRule
         if (1 === $value_required && 0 === $value) {
             return false;
         }
+
         // return false;
         // dddx($data);
         return true;

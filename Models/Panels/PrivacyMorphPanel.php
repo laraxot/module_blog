@@ -84,7 +84,7 @@ The field under validation must be yes, on, 1, or true. This is useful for valid
     /**
      * Get the filters available for the resource.
      */
-    public function filters(Request $request = null): array
+    public function filters(?Request $request = null): array
     {
         return [];
     }

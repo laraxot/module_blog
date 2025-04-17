@@ -30,26 +30,26 @@ use Spatie\Translatable\HasTranslations;
 /**
  * Modules\Blog\Models\Category.
  *
- * @property string                                                                            $id
- * @property int                                                                               $parent_id
- * @property string|null                                                                       $created_by
- * @property string|null                                                                       $updated_by
- * @property \Illuminate\Support\Carbon|null                                                   $created_at
- * @property \Illuminate\Support\Carbon|null                                                   $updated_at
- * @property string|null                                                                       $icon_src
- * @property int                                                                               $_rgt
- * @property int                                                                               $_lft
- * @property string                                                                            $slug
- * @property array                                                                             $name
- * @property array|null                                                                        $description
- * @property \Illuminate\Support\Carbon|null                                                   $deleted_at
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $articles
- * @property int|null                                                                          $articles_count
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Categorizable> $categorizables
- * @property int|null                                                                          $categorizables_count
- * @property \Kalnoy\Nestedset\Collection<int, Category>                                       $children
- * @property int|null                                                                          $children_count
- * @property Category|null                                                                     $parent
+ * @property string                                                       $id
+ * @property int                                                          $parent_id
+ * @property string|null                                                  $created_by
+ * @property string|null                                                  $updated_by
+ * @property \Illuminate\Support\Carbon|null                              $created_at
+ * @property \Illuminate\Support\Carbon|null                              $updated_at
+ * @property string|null                                                  $icon_src
+ * @property int                                                          $_rgt
+ * @property int                                                          $_lft
+ * @property string                                                       $slug
+ * @property array                                                        $name
+ * @property array|null                                                   $description
+ * @property \Illuminate\Support\Carbon|null                              $deleted_at
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                  $articles
+ * @property int|null                                                     $articles_count
+ * @property \Illuminate\Database\Eloquent\Collection<int, Categorizable> $categorizables
+ * @property int|null                                                     $categorizables_count
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                  $children
+ * @property int|null                                                     $children_count
+ * @property Category|null                                                $parent
  *
  * @method static \Kalnoy\Nestedset\Collection<int, static> all($columns = ['*'])
  * @method static \Kalnoy\Nestedset\QueryBuilder|Category   ancestorsAndSelf($id, array $columns = [])

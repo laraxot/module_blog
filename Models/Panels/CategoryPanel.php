@@ -51,7 +51,7 @@ class CategoryPanel extends XotBasePanel
      *
      *-- \Illuminate\Database\Eloquent\Builder
      *
-     * @return \Spatie\QueryBuilder\QueryBuilder
+     * @return QueryBuilder
      */
     public function indexQuery(array $data, $query)
     {

@@ -16,9 +16,9 @@ trait ArticleScope
     /**
      * Scope a query to only include articles different from current article.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param Builder $query
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeDifferentFromCurrentArticle($query, $current_article)
     {
@@ -28,9 +28,9 @@ trait ArticleScope
     /**
      * Scope a query to only include articles.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param Builder $query
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeArticle($query, $id)
     {
@@ -40,9 +40,9 @@ trait ArticleScope
     /**
      * Scope a query to only include show on homepage articles.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param Builder $query
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeShowHomepage($query)
     {
@@ -52,9 +52,9 @@ trait ArticleScope
     /**
      * Scope a query to only include posted articles until today.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param Builder $query
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopePublishedUntilToday($query)
     {
@@ -66,24 +66,24 @@ trait ArticleScope
     /** -- rinvex hasCategory Trait
      * Scope a query to only include articles with a specified category.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param int                                   $id
+     * @param Builder $query
+     * @param int     $id
      *
-     * @return \Illuminate\Database\Eloquent\Builder
-     *                                               public function scopeCategory($query, $id) {
-     *                                               return $query->whereHas('category', function ($q) use ($id) {
-     *                                               $q->where('id', $id);
-     *                                               });
-     *                                               }
+     * @return Builder
+     *                 public function scopeCategory($query, $id) {
+     *                 return $query->whereHas('category', function ($q) use ($id) {
+     *                 $q->where('id', $id);
+     *                 });
+     *                 }
      */
 
     /**
      * Scope a query to only include articles that belongs to an author.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param int                                   $id
+     * @param Builder $query
+     * @param int     $id
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeAuthor($query, $id)
     {
@@ -95,10 +95,10 @@ trait ArticleScope
     /**
      * Scope a query to only include articles with a specified tag.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param int                                   $id
+     * @param Builder $query
+     * @param int     $id
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeTag($query, $id)
     {
@@ -110,10 +110,10 @@ trait ArticleScope
     /**
      * Scope a query to only include articles which contains searching words.
      *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     * @param string                                $searching
+     * @param Builder $query
+     * @param string  $searching
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function scopeSearch($query, $searching)
     {

@@ -45,11 +45,11 @@ use Spatie\Tags\HasTags; // spatie tags
  * @property int|null                                                                     $series_id
  * @property \Illuminate\Database\Eloquent\Collection<int, Article>                       $articles
  * @property int|null                                                                     $articles_count
- * @property \Modules\Blog\Models\Profile|null                                            $author
+ * @property Profile|null                                                                 $author
  * @property \Modules\User\Models\User|null                                               $authorRelation
- * @property \Kalnoy\Nestedset\Collection<int, \Modules\Blog\Models\Category>             $categories
+ * @property \Kalnoy\Nestedset\Collection<int, Category>                                  $categories
  * @property int|null                                                                     $categories_count
- * @property \Illuminate\Database\Eloquent\Collection<int, \Modules\Blog\Models\Comment>  $comments
+ * @property \Illuminate\Database\Eloquent\Collection<int, Comment>                       $comments
  * @property int|null                                                                     $comments_count
  * @property string|null                                                                  $guid
  * @property string|null                                                                  $image_src

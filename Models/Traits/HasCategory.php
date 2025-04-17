@@ -49,7 +49,7 @@ trait HasCategory
      * @param string $relatedKey
      * @param bool   $inverse
      *
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     * @return MorphToMany
      */
     abstract public function morphToMany(
         $related,
@@ -59,7 +59,7 @@ trait HasCategory
         $relatedPivotKey = null,
         $parentKey = null,
         $relatedKey = null,
-        $inverse = false
+        $inverse = false,
     );
 
     /**
@@ -75,7 +75,7 @@ trait HasCategory
     /**
      * Attach the given category(ies) to the model.
      *
-     * @param int|string|array|\ArrayAccess|\Modules\Blog\Models\Category $categories
+     * @param int|string|array|\ArrayAccess|Category $categories
      */
     public function setCategoriesAttribute($categories): void
     {

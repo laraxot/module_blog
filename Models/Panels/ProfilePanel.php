@@ -85,11 +85,11 @@ class ProfilePanel extends XotBasePanel
     /**
      * Get the actions available for the resource.
      */
-    public function actions(Request $request = null): array
+    public function actions(?Request $request = null): array
     {
         return [
-            new \Modules\Blog\Models\Panels\Actions\PersonalInfoAction(),
-            new \Modules\Blog\Models\Panels\Actions\UserSecurityAction(),
+            new Actions\PersonalInfoAction(),
+            new Actions\UserSecurityAction(),
         ];
     }
 
@@ -106,6 +106,7 @@ class ProfilePanel extends XotBasePanel
             if (isset($this->row->user_id) && method_exists($this->row, 'user')) {
                 $this->row->user()->create();
             }
+
             // dddx($this->row);
             return null;
         }
@@ -162,6 +163,7 @@ class ProfilePanel extends XotBasePanel
             'text' => trans('food::profile.store_success.text'),
             'footer' => trans('food::profile.store_success.footer'),
         ]);
+
         // dddx($user);dddx($row);
         return $row;
     }

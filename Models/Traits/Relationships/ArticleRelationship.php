@@ -83,7 +83,7 @@ trait ArticleRelationship
      */
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return MorphMany
      */
     public function comments()
     {
